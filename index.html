@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261020">
+<link rel="stylesheet" href="styles.css?v=20261021">
 </head>
 <body>
 <div class="page">
@@ -117,33 +117,49 @@
       <button id="btn-compare" class="btn-secondary">Compare with a friend</button>
     </div>
 
-    <div id="compare-result" class="compare-result hidden"></div>
+    <nav class="results-tabs" id="results-tabs" aria-label="Results sections">
+      <div class="tabs-indicator" id="tabs-indicator"></div>
+      <button class="rtab active" data-tab="summary">Summary</button>
+      <button class="rtab" data-tab="theologians">Theologians</button>
+      <button class="rtab" data-tab="beliefs">Beliefs</button>
+      <button class="rtab" data-tab="reading">Reading</button>
+    </nav>
 
-    <h2 class="section-title">In your own words</h2>
-    <div class="summary-card" id="summary-card"></div>
+    <div class="tab-panel active" id="panel-summary">
+      <div id="compare-result" class="compare-result hidden"></div>
 
-    <h2 class="section-title">Closest theologians</h2>
-    <div class="theologian-grid" id="theologian-grid"></div>
+      <h2 class="section-title">In your own words</h2>
+      <div class="summary-card" id="summary-card"></div>
+      <div id="close-call" class="close-call hidden"></div>
+    </div>
 
-    <h2 class="section-title">Why these matches?</h2>
-    <p class="section-sub">The answers that most pulled you toward each theologian.</p>
-    <div id="why-list"></div>
+    <div class="tab-panel" id="panel-theologians">
+      <h2 class="section-title">Closest theologians</h2>
+      <div class="theologian-grid" id="theologian-grid"></div>
 
-    <h2 class="section-title">Your 12 doctrine axes</h2>
-    <div class="axes-list" id="axes-list"></div>
+      <h2 class="section-title">Why these matches?</h2>
+      <p class="section-sub">The answers that most pulled you toward each theologian.</p>
+      <div id="why-list"></div>
+    </div>
 
-    <h2 class="section-title">All traditions, ranked</h2>
-    <div class="tradition-rank" id="tradition-rank"></div>
-    <div id="close-call" class="close-call hidden"></div>
+    <div class="tab-panel" id="panel-beliefs">
+      <h2 class="section-title">Your 12 doctrine axes</h2>
+      <div class="axes-list" id="axes-list"></div>
 
-    <h2 class="section-title">Your reading list</h2>
-    <p class="section-sub">One essential book from each of your closest theologians.</p>
-    <div id="reading-list" class="reading-list"></div>
+      <h2 class="section-title">All traditions, ranked</h2>
+      <div class="tradition-rank" id="tradition-rank"></div>
+    </div>
 
-    <div id="unsure-wrap" class="hidden">
-      <h2 class="section-title">Explore your unsure answers</h2>
-      <p class="section-sub">You marked these &ldquo;Neutral / unsure&rdquo; — one book per topic to dig deeper.</p>
-      <div id="unsure-list"></div>
+    <div class="tab-panel" id="panel-reading">
+      <h2 class="section-title">Your reading list</h2>
+      <p class="section-sub">One essential book from each of your closest theologians.</p>
+      <div id="reading-list" class="reading-list"></div>
+
+      <div id="unsure-wrap" class="hidden">
+        <h2 class="section-title">Explore your unsure answers</h2>
+        <p class="section-sub">You marked these &ldquo;Neutral / unsure&rdquo; — explore each idea.</p>
+        <div id="unsure-list"></div>
+      </div>
     </div>
 
     <div class="results-actions">
@@ -179,10 +195,10 @@
   </section>
 
 </div>
-<script src="portraits-1.js?v=20261020"></script>
-<script src="portraits-2.js?v=20261020"></script>
-<script src="portraits-3.js?v=20261020"></script>
-<script src="portraits-4.js?v=20261020"></script>
-<script src="app.js?v=20261020"></script>
+<script src="portraits-1.js?v=20261021"></script>
+<script src="portraits-2.js?v=20261021"></script>
+<script src="portraits-3.js?v=20261021"></script>
+<script src="portraits-4.js?v=20261021"></script>
+<script src="app.js?v=20261021"></script>
 </body>
 </html>
