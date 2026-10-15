@@ -526,3 +526,33 @@ button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* ---------- attribute radar ---------- */
+.attr-card { display: flex; gap: 28px; align-items: center; background: var(--card); border: 1.5px solid var(--line); border-radius: var(--radius); padding: 26px; margin-top: 14px; flex-wrap: wrap; }
+.attr-radar { flex: 0 1 300px; width: 100%; max-width: 320px; margin: 0 auto; }
+.radar-svg { width: 100%; height: auto; display: block; }
+.radar-ring { fill: none; stroke: var(--line); stroke-width: 1; }
+.radar-spoke { stroke: var(--line); stroke-width: 1; }
+.radar-poly { fill: rgba(160,82,45,.26); stroke: var(--accent); stroke-width: 2.5; stroke-linejoin: round; }
+.radar-label { font-family: 'Inter', -apple-system, sans-serif; font-size: 12.5px; font-weight: 600; fill: var(--ink); }
+.radar-val { font-size: 11px; font-weight: 400; fill: var(--ink-soft); }
+.attr-list { flex: 1 1 220px; display: grid; gap: 10px; min-width: 200px; }
+.attr-row { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; align-items: baseline; }
+.attr-name { font-weight: 600; font-size: 14px; }
+.attr-score { font-size: 13px; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+.attr-bar-wrap { grid-column: 1 / -1; height: 6px; background: #eee4d3; border-radius: 3px; overflow: hidden; }
+.attr-bar { display: block; height: 100%; width: 0; background: var(--accent); border-radius: 3px; transition: width .9s cubic-bezier(.22,1,.36,1); }
+.attr-note { margin-top: 12px; font-size: 14px; color: var(--ink-soft); }
+/* ---------- breaks card ---------- */
+.breaks-card { margin-top: 22px; background: var(--card); border: 1.5px solid var(--line); border-radius: var(--radius); padding: 24px 26px; }
+.breaks-card.hidden { display: none; }
+.breaks-card h3 { font-family: 'Fraunces', Georgia, serif; font-size: 20px; margin-bottom: 4px; }
+.breaks-intro { font-size: 14px; color: var(--ink-soft); margin-bottom: 10px; }
+.breaks-card ul { margin: 0 0 0 18px; display: grid; gap: 8px; }
+.breaks-card li { font-size: 14px; color: var(--ink-soft); }
+@media (max-width: 560px) {
+  .attr-card { padding: 18px; gap: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .attr-bar { transition: none; }
+}
