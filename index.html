@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=20261015">
 </head>
 <body>
 <div class="page">
@@ -21,21 +21,6 @@
       <p class="lede">Answer a series of propositions honestly, and we'll map your convictions across grace, Scripture, the church, worship, and the last things — then match your profile with historic traditions and the theologians who shaped them.</p>
     </header>
 
-    <section class="theo-carousel-wrap">
-      <h2 class="section-title">Meet the theologians</h2>
-      <div class="spotlight" id="spotlight">
-        <img class="spot-portrait" id="spot-portrait" alt="">
-        <div class="spot-text">
-          <h3 id="spot-name"></h3>
-          <span class="car-tradition" id="spot-tradition"></span>
-          <p class="car-blurb" id="spot-blurb"></p>
-        </div>
-      </div>
-      <div class="marquee" id="marquee">
-        <div class="marquee-track" id="marquee-track"></div>
-      </div>
-      <p class="marquee-hint">Tap anyone to meet them</p>
-    </section>
 
     <h2 class="section-title">Choose your depth</h2>
     <div class="depth-grid" id="depth-grid">
@@ -71,6 +56,22 @@
       </ol>
       <p class="fine-print">There are no trick questions and no "right" answers — only honest ones. Answer with what you actually believe, not what you think your church expects.</p>
     </div>
+
+    <section class="theo-carousel-wrap">
+      <h2 class="section-title">Meet the theologians</h2>
+      <div class="spotlight" id="spotlight">
+        <img class="spot-portrait" id="spot-portrait" alt="">
+        <div class="spot-text">
+          <h3 id="spot-name"></h3>
+          <span class="car-tradition" id="spot-tradition"></span>
+          <p class="car-blurb" id="spot-blurb"></p>
+        </div>
+      </div>
+      <div class="marquee" id="marquee">
+        <div class="marquee-track" id="marquee-track"></div>
+      </div>
+      <p class="marquee-hint">Tap anyone to meet them</p>
+    </section>
   </section>
 
   <!-- ============ QUIZ SCREEN ============ -->
@@ -127,11 +128,34 @@
     <div id="answer-review" class="answer-review hidden"></div>
   </section>
 
+  <!-- ============ THEOLOGIAN DETAIL ============ -->
+  <section id="screen-theologian" class="screen">
+    <div class="theo-topbar">
+      <button id="btn-theo-back" class="text-btn">&larr; Back</button>
+      <button id="btn-theo-quiz" class="btn-small">Take the Quiz</button>
+    </div>
+    <div class="theo-hero">
+      <div class="theo-portrait-wrap"><img class="theo-portrait" id="theo-portrait" alt=""></div>
+      <div class="theo-head">
+        <p class="kicker" id="theo-tradition"></p>
+        <h1 id="theo-name"></h1>
+        <p class="theo-lifespan" id="theo-lifespan"></p>
+      </div>
+    </div>
+    <div class="theo-signature" id="theo-signature"></div>
+    <h2 class="section-title">Impact</h2>
+    <div class="theo-bio" id="theo-impact"></div>
+    <h2 class="section-title">Theological contributions</h2>
+    <div class="theo-bio" id="theo-theology"></div>
+    <h2 class="section-title">Significant events</h2>
+    <div class="theo-events" id="theo-events"></div>
+  </section>
+
 </div>
-<script src="portraits-1.js"></script>
-<script src="portraits-2.js"></script>
-<script src="portraits-3.js"></script>
-<script src="portraits-4.js"></script>
-<script src="app.js"></script>
+<script src="portraits-1.js?v=20261015"></script>
+<script src="portraits-2.js?v=20261015"></script>
+<script src="portraits-3.js?v=20261015"></script>
+<script src="portraits-4.js?v=20261015"></script>
+<script src="app.js?v=20261015"></script>
 </body>
 </html>

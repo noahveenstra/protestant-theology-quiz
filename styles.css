@@ -245,3 +245,56 @@ body {
   width: 84px; height: 84px; border-radius: 20px; object-fit: cover;
   margin-bottom: 12px; box-shadow: 0 4px 14px rgba(0,0,0,.15);
 }
+
+/* ---------- theologian detail page ---------- */
+.theo-topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px; }
+.btn-small {
+  font: inherit; font-weight: 600; font-size: 14px; padding: 10px 22px; border-radius: 24px;
+  background: var(--accent); color: #fff; border: none; cursor: pointer;
+  transition: transform .15s, background .15s, box-shadow .15s;
+}
+.btn-small:hover { background: var(--accent-deep); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,.12); }
+.btn-small:active { transform: scale(.97); }
+.theo-hero { display: flex; gap: 28px; align-items: center; margin-bottom: 28px; }
+.theo-portrait {
+  width: 140px; height: 140px; border-radius: 32px; object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 6px 20px rgba(0,0,0,.15);
+}
+.theo-head h1 { font-family: 'Fraunces', Georgia, serif; font-size: clamp(30px, 5vw, 42px); line-height: 1.1; margin: 8px 0 6px; }
+.theo-lifespan { color: var(--ink-faint); font-size: 14.5px; }
+.theo-signature {
+  background: linear-gradient(180deg, #fffdf8, #fbf6ec);
+  border: 1.5px solid var(--line); border-left: 4px solid var(--accent);
+  border-radius: 14px; padding: 20px 24px; font-size: 16px; color: var(--ink-soft); margin-bottom: 8px;
+}
+.theo-bio p { font-size: 16.5px; line-height: 1.7; color: var(--ink-soft); margin-bottom: 16px; }
+.theo-events { display: grid; gap: 14px; }
+.theo-event {
+  display: flex; gap: 18px; background: var(--card);
+  border: 1.5px solid var(--line); border-radius: 14px; padding: 18px 22px;
+}
+.theo-event-year {
+  font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 18px;
+  color: var(--accent-deep); min-width: 64px; flex-shrink: 0;
+}
+.theo-event-body strong { display: block; margin-bottom: 4px; font-size: 15.5px; }
+.theo-event-body p { font-size: 14.5px; color: var(--ink-soft); margin: 0; }
+@media (max-width: 560px) {
+  .theo-hero { gap: 18px; }
+  .theo-portrait { width: 104px; height: 104px; border-radius: 24px; }
+}
+
+/* ---------- smoothness pass ---------- */
+.screen.active { animation: screenIn .5s cubic-bezier(.22,.8,.3,1); }
+@keyframes screenIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.q-swap { animation: qSwap .38s cubic-bezier(.22,.8,.3,1); }
+@keyframes qSwap { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+.question-card { min-height: 380px; }
+.likert button:active { transform: scale(.96); }
+.btn-primary:active, .btn-secondary:active { transform: scale(.97); }
+.depth-card:active { transform: scale(.98); }
+.spotlight.spot-fade { animation: spotSwap .3s ease; }
+@keyframes spotSwap { from { opacity: .25; } to { opacity: 1; } }
+.theologian-card.clickable { cursor: pointer; transition: transform .15s, box-shadow .15s, border-color .15s; }
+.theologian-card.clickable:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,.08); border-color: var(--accent); }
+.mq-item { transition: opacity .2s, transform .2s, border-color .2s; }
