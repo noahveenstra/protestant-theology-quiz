@@ -807,36 +807,42 @@
   }
 
   // ---------- unsure-answer exploration ----------
-  // Questions answered "Neutral / unsure", grouped by topic (first axis),
-  // each paired with one book to dig deeper.
+  // Questions answered "Neutral / unsure", grouped by topic. Each topic shows
+  // the questions the user was unsure about plus hand-picked resources —
+  // articles, booklets, and books — to help them explore the idea.
   function renderUnsure() {
     var wrap = $('unsure-wrap'), list = $('unsure-list');
     if (!wrap || !list) return;
     list.innerHTML = '';
     var res = (READING && READING.axisResources) || {};
-    var seen = {};
-    var items = [];
+    var byAxis = {};
     queue.forEach(function (q) {
       if (answers[q.id] !== 0) return;
       var axisId = (q.axes && q.axes[0] && q.axes[0].axis) || null;
-      if (!axisId || seen[axisId]) return;
-      seen[axisId] = true;
-      var r = res[axisId];
-      if (!r) return;
-      var axis = null;
-      BANK.axes.forEach(function (a) { if (a.id === axisId) axis = a; });
-      items.push({ label: axis ? axis.label : axisId, r: r });
+      if (!axisId || !res[axisId]) return;
+      (byAxis[axisId] = byAxis[axisId] || []).push(q);
     });
-    if (!items.length) { wrap.classList.add('hidden'); return; }
+    var ids = Object.keys(byAxis);
+    if (!ids.length) { wrap.classList.add('hidden'); return; }
     wrap.classList.remove('hidden');
-    items.forEach(function (it) {
+    ids.forEach(function (axisId) {
+      var r = res[axisId];
+      var qs = byAxis[axisId];
       var card = document.createElement('div');
       card.className = 'unsure-card';
-      card.innerHTML = '<div class="unsure-topic"></div><div class="book-title"></div><div class="book-author"></div><p class="book-note"></p>';
-      card.querySelector('.unsure-topic').textContent = 'Unsure on: ' + it.label;
-      card.querySelector('.book-title').textContent = it.r.title;
-      card.querySelector('.book-author').textContent = 'by ' + it.r.author;
-      card.querySelector('.book-note').textContent = it.r.note;
+      var html = '<div class="unsure-topic">Unsure on: ' + esc(r.label) + '</div>' +
+        '<ul class="unsure-qs">' +
+        qs.map(function (q) { return '<li>' + esc(q.text) + '</li>'; }).join('') +
+        '</ul>' +
+        '<div class="unsure-resources">' +
+        r.resources.map(function (rc) {
+          return '<div class="unsure-res"><span class="res-kind">' + esc(rc.kind) + '</span>' +
+            '<div class="book-title">' + esc(rc.title) + '</div>' +
+            '<div class="book-author">by ' + esc(rc.author) + '</div>' +
+            '<p class="book-note">' + esc(rc.note) + '</p></div>';
+        }).join('') +
+        '</div>';
+      card.innerHTML = html;
       list.appendChild(card);
     });
   }
