@@ -268,7 +268,7 @@
   "questions": [
     {
       "id": 13,
-      "text": "Everything the Bible says is true, including the history and science parts.",
+      "text": "If science and the Bible seem to disagree, I trust the Bible.",
       "category": "Scripture",
       "tier": "essential",
       "axes": [
@@ -291,7 +291,7 @@
     },
     {
       "id": 14,
-      "text": "When the Bible was first written down, it had zero mistakes in it.",
+      "text": "I believe every part of the Bible is true, not just the spiritual parts.",
       "category": "Scripture",
       "tier": "essential",
       "axes": [
@@ -314,7 +314,7 @@
     },
     {
       "id": 59,
-      "text": "Churches can use any worship style the Bible doesn't forbid.",
+      "text": "I love when churches try creative new things in worship.",
       "category": "Worship",
       "tier": "essential",
       "axes": [
@@ -337,7 +337,7 @@
     },
     {
       "id": 58,
-      "text": "Churches should only do in worship what the Bible specifically tells them to.",
+      "text": "I'd feel uneasy if my church added something to worship just because it's creative.",
       "category": "Worship",
       "tier": "essential",
       "axes": [
@@ -360,7 +360,7 @@
     },
     {
       "id": 66,
-      "text": "Each local church should run itself without answering to any higher authority.",
+      "text": "I like the idea that each church answers to no one but God.",
       "category": "Ecclesiology",
       "tier": "essential",
       "axes": [
@@ -383,7 +383,7 @@
     },
     {
       "id": 67,
-      "text": "Churches should be under regional leaders, like bishops or districts, who have real authority over them.",
+      "text": "Churches are healthier when they're accountable to leaders beyond their own walls.",
       "category": "Ecclesiology",
       "tier": "essential",
       "axes": [
@@ -406,7 +406,7 @@
     },
     {
       "id": 23,
-      "text": "Only people who've personally decided to follow Jesus should be baptized.",
+      "text": "Getting baptized felt — or would feel — most meaningful as my own personal decision.",
       "category": "Sacraments/Ordinances",
       "tier": "essential",
       "axes": [
@@ -429,7 +429,7 @@
     },
     {
       "id": 25,
-      "text": "People should be baptized after they've personally put their trust in Jesus.",
+      "text": "Baptism doesn't really count until someone is old enough to choose it themselves.",
       "category": "Sacraments/Ordinances",
       "tier": "essential",
       "axes": [
@@ -452,7 +452,7 @@
     },
     {
       "id": 24,
-      "text": "It's right for Christian parents to baptize their babies.",
+      "text": "I love the idea of babies being welcomed into the faith through baptism.",
       "category": "Sacraments/Ordinances",
       "tier": "essential",
       "axes": [
@@ -475,7 +475,7 @@
     },
     {
       "id": 73,
-      "text": "Communion is just a memorial — the bread and cup only remind us of Jesus' death.",
+      "text": "Communion is mainly about remembering what Jesus did.",
       "category": "Sacraments/Ordinances",
       "tier": "essential",
       "axes": [
@@ -498,7 +498,7 @@
     },
     {
       "id": 74,
-      "text": "When we take communion, we genuinely meet Christ by faith and are spiritually fed.",
+      "text": "I feel like I actually meet God in a special way during communion.",
       "category": "Sacraments/Ordinances",
       "tier": "essential",
       "axes": [
@@ -521,7 +521,7 @@
     },
     {
       "id": 75,
-      "text": "Baptism is mainly a public way of saying 'I follow Jesus' — it doesn't give you grace itself.",
+      "text": "Baptism is mostly a public way of showing you're a Christian.",
       "category": "Sacraments/Ordinances",
       "tier": "essential",
       "axes": [
@@ -544,7 +544,7 @@
     },
     {
       "id": 31,
-      "text": "God still gives miraculous gifts like tongues and prophecy today.",
+      "text": "I expect God still does miracles like healing and prophecy today.",
       "category": "Pneumatology",
       "tier": "essential",
       "axes": [
@@ -567,7 +567,7 @@
     },
     {
       "id": 32,
-      "text": "Speaking in tongues is something Christians can still do today.",
+      "text": "Speaking in tongues is something I'd be open to in my own prayer life.",
       "category": "Pneumatology",
       "tier": "essential",
       "axes": [
@@ -590,7 +590,7 @@
     },
     {
       "id": 33,
-      "text": "God still gives people prophetic words for others today.",
+      "text": "I believe God still gives people specific words for others today.",
       "category": "Pneumatology",
       "tier": "essential",
       "axes": [
@@ -613,7 +613,7 @@
     },
     {
       "id": 90,
-      "text": "Only men should be pastors and elders.",
+      "text": "I'd have a hard time seeing a woman as my senior pastor.",
       "category": "Ecclesiology",
       "tier": "essential",
       "axes": [
@@ -636,7 +636,7 @@
     },
     {
       "id": 91,
-      "text": "Women can serve in any church role, including senior pastor.",
+      "text": "I'd be totally comfortable with a woman preaching every Sunday.",
       "category": "Ecclesiology",
       "tier": "essential",
       "axes": [
@@ -659,7 +659,7 @@
     },
     {
       "id": 50,
-      "text": "The whole Bible tells one connected story of salvation, all centered on Jesus.",
+      "text": "When I read the Bible, it feels like one continuous story about Jesus.",
       "category": "Scripture",
       "tier": "essential",
       "axes": [
@@ -682,7 +682,7 @@
     },
     {
       "id": 49,
-      "text": "God has worked in different ways in different eras of history, with different expectations for each.",
+      "text": "The Old Testament feels like a different era when God worked by different rules.",
       "category": "Scripture",
       "tier": "essential",
       "axes": [
@@ -705,7 +705,7 @@
     },
     {
       "id": 51,
-      "text": "Israel and the church are distinct — God has different plans for each.",
+      "text": "I think of Israel and the church as two different groups in God's plan.",
       "category": "Scripture",
       "tier": "essential",
       "axes": [
@@ -728,7 +728,7 @@
     },
     {
       "id": 42,
-      "text": "God isn't done with Israel as a nation — he still has plans for them.",
+      "text": "I believe God still has special plans for the Jewish people.",
       "category": "Eschatology",
       "tier": "essential",
       "axes": [
@@ -751,7 +751,7 @@
     },
     {
       "id": 40,
-      "text": "Jesus will come back and reign on earth for a literal thousand years.",
+      "text": "I think Jesus will return and set up a real kingdom on earth.",
       "category": "Eschatology",
       "tier": "essential",
       "axes": [
@@ -774,7 +774,7 @@
     },
     {
       "id": 41,
-      "text": "Jesus is already reigning right now — the 'thousand years' isn't a future kingdom on earth.",
+      "text": "I think Jesus is already reigning now — the end is more about him wrapping things up.",
       "category": "Eschatology",
       "tier": "essential",
       "axes": [
@@ -797,7 +797,7 @@
     },
     {
       "id": 97,
-      "text": "If your faith is real, your life will change and you'll do good works.",
+      "text": "If someone's life never changes, I doubt their faith was real.",
       "category": "Soteriology",
       "tier": "essential",
       "axes": [
@@ -820,7 +820,7 @@
     },
     {
       "id": 98,
-      "text": "Someone can be truly saved even if their life doesn't change much on the outside.",
+      "text": "I know Christians whose lives look messy but whose faith I don't question.",
       "category": "Soteriology",
       "tier": "essential",
       "axes": [
@@ -843,7 +843,7 @@
     },
     {
       "id": 3,
-      "text": "If you're truly saved, you'll never walk away from God for good.",
+      "text": "I feel secure that God will keep hold of me even in my worst seasons.",
       "category": "Soteriology",
       "tier": "essential",
       "axes": [
@@ -866,7 +866,7 @@
     },
     {
       "id": 83,
-      "text": "Christians will keep struggling with sin until they die — total victory over sin isn't possible in this life.",
+      "text": "I'll be fighting against sin for the rest of my life.",
       "category": "Christian life",
       "tier": "essential",
       "axes": [
@@ -889,7 +889,7 @@
     },
     {
       "id": 82,
-      "text": "After becoming a Christian, you can have a second experience where God cleanses your heart from sin's grip.",
+      "text": "I believe it's possible to reach a point where sin doesn't control you anymore.",
       "category": "Christian life",
       "tier": "essential",
       "axes": [
