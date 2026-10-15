@@ -303,6 +303,83 @@
       "dates": "Contemporary",
       "tradition": "reformed",
       "blurb": "Cliffe’s son and ministry partner; carrying the ‘Give Me An Answer’ campus dialogues to a new generation."
+    },
+    {
+      "id": "tkeller",
+      "name": "Tim Keller",
+      "dates": "1950-2023",
+      "tradition": "reformed",
+      "blurb": "PCA pastor who planted Redeemer Presbyterian in Manhattan; winsome apologist who translated Reformed theology for urban skeptics."
+    },
+    {
+      "id": "bgraham",
+      "name": "Billy Graham",
+      "dates": "1918-2018",
+      "tradition": "baptist",
+      "blurb": "Worldwide evangelist whose crusades reached millions; the public face of 20th-century evangelicalism."
+    },
+    {
+      "id": "jstott",
+      "name": "John Stott",
+      "dates": "1921-2011",
+      "tradition": "anglican",
+      "blurb": "Rector of All Souls, London; his Basic Christianity discipled evangelicals across the globe."
+    },
+    {
+      "id": "amcpherson",
+      "name": "Aimee Semple McPherson",
+      "dates": "1890-1944",
+      "tradition": "pentecostal",
+      "blurb": "Pentecostal evangelist and media pioneer; founded the Foursquare Church in Los Angeles."
+    },
+    {
+      "id": "shauerwas",
+      "name": "Stanley Hauerwas",
+      "dates": "Contemporary",
+      "tradition": "anabaptist",
+      "blurb": "Ethicist once called America's best theologian; a pacifist witness against Christian nationalism."
+    },
+    {
+      "id": "cscofield",
+      "name": "C.I. Scofield",
+      "dates": "1843-1921",
+      "tradition": "dispensational",
+      "blurb": "His reference Bible systematized dispensational premillennialism for generations of readers."
+    },
+    {
+      "id": "ppalmer",
+      "name": "Phoebe Palmer",
+      "dates": "1807-1874",
+      "tradition": "wesleyan",
+      "blurb": "Methodist evangelist known as the mother of the Holiness movement; preached entire sanctification."
+    },
+    {
+      "id": "jmacarthur",
+      "name": "John MacArthur",
+      "dates": "Contemporary",
+      "tradition": "dispensational",
+      "blurb": "Pastor of Grace Community Church; verse-by-verse expositor and leading dispensational voice."
+    },
+    {
+      "id": "cwalther",
+      "name": "C.F.W. Walther",
+      "dates": "1811-1887",
+      "tradition": "lutheran",
+      "blurb": "First president of the Lutheran Church-Missouri Synod; defender of confessional Lutheran orthodoxy."
+    },
+    {
+      "id": "eelliot",
+      "name": "Elisabeth Elliot",
+      "dates": "1926-2015",
+      "tradition": "anglican",
+      "blurb": "Missionary to Ecuador's Waorani after her husband's martyrdom; author of Through Gates of Splendor."
+    },
+    {
+      "id": "whuff",
+      "name": "Wesley Huff",
+      "dates": "Contemporary",
+      "tradition": "reformed",
+      "blurb": "Reformed Baptist apologist with Apologetics Canada; brought the manuscript case for Scripture to millions."
     }
   ],
   "questions": [
