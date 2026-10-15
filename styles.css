@@ -216,6 +216,18 @@ body {
   font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 24px; color: var(--accent-deep);
 }
 .marquee-hint { text-align: center; font-size: 12.5px; color: var(--ink-faint); margin-top: 10px; }
+.spotlight { cursor: pointer; transition: transform .15s, box-shadow .15s, border-color .15s; }
+.spotlight:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.08); border-color: var(--accent); }
+.spotlight:active { transform: scale(.99); }
+@media (max-width: 560px) {
+  .spotlight { padding: 18px; gap: 16px; }
+  .spot-portrait { width: 88px; height: 88px; border-radius: 20px; }
+  .spot-text h3 { font-size: 19px; }
+  .car-blurb {
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+    overflow: hidden; font-size: 13.5px;
+  }
+}
 
 /* ---------- tooltips ---------- */
 .term { position: relative; cursor: help; border-bottom: 1px dotted var(--ink-faint); }

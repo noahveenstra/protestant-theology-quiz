@@ -183,6 +183,7 @@
 
   // ---------- theologian marquee + spotlight ----------
   var spotIdx = 0;
+  var spotTheologianId = null;
 
   function traditionName(id) {
     var found = BANK.traditions.filter(function (t) { return t.id === id; })[0];
@@ -199,6 +200,7 @@
     var list = BANK.theologians;
     spotIdx = ((i % list.length) + list.length) % list.length;
     var th = list[spotIdx];
+    spotTheologianId = th.id;
     var portraits = (typeof window !== 'undefined' && window.THEOLOGIAN_PORTRAITS) || {};
     var img = $('spot-portrait');
     if (portraits[th.id]) {
@@ -280,6 +282,10 @@
     renderSpotlight(0);
     startSpotFollow();
     startMarqueeDrive();
+    var spot = $('spotlight');
+    if (spot) spot.addEventListener('click', function () {
+      if (spotTheologianId) openTheologian(spotTheologianId);
+    });
   }
 
   // JS-driven marquee: guaranteed auto-scroll, pauses while the user interacts
