@@ -142,6 +142,117 @@
     }).sort(function (a, b) { return b.exact - a.exact; });
   }
 
+  // ---------- theological attributes ----------
+  // Five character-sheet attributes: not positions, but where convictions run
+  // deepest. Each is the mean conviction strength (|axis score|) of its axes.
+  var ATTRIBUTES = [
+    { id: 'word', name: 'The Word', axes: ['scripture'],
+      blurb: 'how defined your view of biblical authority is' },
+    { id: 'grace', name: 'Grace', axes: ['soteriology', 'assurance', 'sanctification'],
+      blurb: 'how defined your understanding of salvation is' },
+    { id: 'church', name: 'The Church', axes: ['baptism', 'ordinances', 'polity', 'worship', 'gender-roles'],
+      blurb: 'how defined your convictions about church life are' },
+    { id: 'spirit', name: 'The Spirit', axes: ['spirit-gifts'],
+      blurb: 'how expectant you are of the Spirit\u2019s present work' },
+    { id: 'kingdom', name: 'The Kingdom', axes: ['eschatology', 'covenant'],
+      blurb: 'how defined your view of God\u2019s unfolding plan is' }
+  ];
+
+  function scoreAttributes(axes) {
+    var byId = {};
+    axes.forEach(function (e) { byId[e.axis.id] = Math.abs(e.score); });
+    return ATTRIBUTES.map(function (a) {
+      var vals = a.axes.map(function (id) { return byId[id] || 0; });
+      var mean = vals.reduce(function (s, v) { return s + v; }, 0) / vals.length;
+      var measured = a.axes.some(function (id) {
+        return queue.some(function (q) {
+          return answers[q.id] !== undefined &&
+            (q.axes || []).some(function (x) { return x.axis === id; });
+        });
+      });
+      return { attr: a, score: Math.round(mean), measured: measured };
+    });
+  }
+
+  function renderRadar(attrs) {
+    var el = $('attr-radar');
+    var size = 300, cx = 150, cy = 148, R = 104, n = attrs.length;
+    function pt(i, r) {
+      var ang = -Math.PI / 2 + i * 2 * Math.PI / n;
+      return [cx + r * Math.cos(ang), cy + r * Math.sin(ang)];
+    }
+    var svg = '<svg viewBox="-60 0 420 300" class="radar-svg" role="img" aria-label="Theological attribute chart">';
+    [0.25, 0.5, 0.75, 1].forEach(function (f) {
+      var pts = [];
+      for (var i = 0; i < n; i++) pts.push(pt(i, R * f).join(','));
+      svg += '<polygon points="' + pts.join(' ') + '" class="radar-ring"/>';
+    });
+    for (var i = 0; i < n; i++) {
+      var sp = pt(i, R);
+      svg += '<line x1="' + cx.toFixed(1) + '" y1="' + cy.toFixed(1) + '" x2="' + sp[0].toFixed(1) +
+        '" y2="' + sp[1].toFixed(1) + '" class="radar-spoke"/>';
+    }
+    attrs.forEach(function (a, i) {
+      var p = pt(i, R + 26);
+      var anchor = Math.abs(p[0] - cx) < 12 ? 'middle' : (p[0] > cx ? 'start' : 'end');
+      svg += '<text x="' + p[0].toFixed(1) + '" y="' + p[1].toFixed(1) + '" text-anchor="' + anchor +
+        '" class="radar-label">' + esc(a.attr.name) +
+        '<tspan class="radar-val" x="' + p[0].toFixed(1) + '" dy="15">' + a.score + '</tspan></text>';
+    });
+    svg += '<polygon id="radar-poly" points="" class="radar-poly"/></svg>';
+    el.innerHTML = svg;
+
+    var list = $('attr-list');
+    list.innerHTML = '';
+    attrs.slice().sort(function (a, b) { return b.score - a.score; }).forEach(function (a) {
+      var row = document.createElement('div');
+      row.className = 'attr-row';
+      row.innerHTML = '<span class="attr-name"></span><span class="attr-score"></span>' +
+        '<span class="attr-bar-wrap"><span class="attr-bar"></span></span>';
+      row.querySelector('.attr-name').textContent = a.attr.name;
+      row.querySelector('.attr-score').textContent = a.measured ? a.score + ' / 100' : 'not covered at this depth';
+      list.appendChild(row);
+      var bar = row.querySelector('.attr-bar');
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () { bar.style.width = a.score + '%'; });
+      });
+    });
+
+    var ranked = attrs.slice().sort(function (a, b) { return b.score - a.score; });
+    var note = $('attr-note');
+    var unmeasured = attrs.filter(function (a) { return !a.measured; });
+    var tail = ranked[ranked.length - 1];
+    if (ranked[0].score - tail.score < 12 && !unmeasured.length) {
+      note.textContent = 'A fairly even pentagon — your convictions are still forming across the board, or you hold them with a light grip everywhere.';
+    } else if (!tail.measured) {
+      note.textContent = 'Your sharpest convictions are about ' + ranked[0].attr.name.toLowerCase() +
+        ' (' + ranked[0].score + '). ' + tail.attr.name + ' wasn\u2019t covered at this quiz depth — try a deeper round to measure it.';
+    } else {
+      note.textContent = 'Your sharpest convictions are about ' + ranked[0].attr.name.toLowerCase() +
+        ' (' + ranked[0].score + '), while your views on ' +
+        tail.attr.name.toLowerCase() + ' (' + tail.score +
+        ') are the least defined.';
+    }
+
+    // animate the polygon from the center outward
+    var poly = el.querySelector('#radar-poly');
+    var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function draw(e) {
+      var pts = attrs.map(function (a, i) { return pt(i, R * (a.score / 100) * e).join(','); });
+      poly.setAttribute('points', pts.join(' '));
+    }
+    if (reduced) { draw(1); return; }
+    var t0 = null, dur = 900;
+    function frame(t) {
+      if (!t0) t0 = t;
+      var k = Math.min(1, (t - t0) / dur);
+      var e = k >= 1 ? 1 : 1 - Math.pow(2, -10 * k);
+      draw(e);
+      if (k < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
   // ---------- close-call analysis ----------
   // When the top traditions are nearly tied, find the questions whose answers
   // separated the winner from each close runner-up.
@@ -540,63 +651,90 @@
 
   // ---------- summary ----------
   // Plain-language belief statements, keyed by axis id + pole (-1 left, 1 right).
-  var BELIEF_LINES = {
-    'soteriology|-1': "salvation is God's work from start to finish — he chooses and keeps his people",
-    'soteriology|1': "salvation involves your genuine response — God invites, and you choose",
-    'baptism|-1': "baptism is for people who've decided to follow Jesus themselves",
-    'baptism|1': "you're at home with infants being welcomed into the faith through baptism",
-    'spirit-gifts|-1': "you don't expect miraculous gifts like tongues and prophecy today",
-    'spirit-gifts|1': "you expect God to still move through gifts like tongues and prophecy",
-    'eschatology|-1': "you expect Jesus to return and set up a real kingdom on earth",
-    'eschatology|1': "you see Jesus as reigning now, with history heading toward his final victory",
-    'covenant|-1': "you read the Bible as God working in distinct eras, with Israel and the church on separate tracks",
-    'covenant|1': "you read the whole Bible as one continuous story about Jesus",
-    'scripture|-1': "you trust the Bible completely, even where it clashes with modern thinking",
-    'scripture|1': "you trust the Bible's message while giving its human authors their historical context",
-    'worship|-1': "you're cautious about adding things to worship that the Bible doesn't command",
-    'worship|1': "you're glad when churches get creative in worship",
-    'polity|-1': "you believe each local church should answer to no one but God",
-    'polity|1': "you value churches being accountable to wider leadership",
-    'gender-roles|-1': "you're convinced church leadership is reserved for men",
-    'gender-roles|1': "you're comfortable with women leading at every level of the church",
-    'assurance|-1': "you see a changed life as the proof of real faith",
-    'assurance|1': "you're confident salvation rests on faith, even when life looks messy",
-    'ordinances|-1': "you see baptism and communion mainly as symbols and remembrances",
-    'ordinances|1': "you sense God truly meeting you in baptism and communion",
-    'sanctification|-1': "you believe real freedom from sin's grip is possible in this life",
-    'sanctification|1': "you expect the fight against sin to last a lifetime"
-  };
+
+
+  function respWord(v) {
+    return v === 2 ? 'strongly agreed' : v === 1 ? 'agreed' : v === -1 ? 'disagreed' : 'strongly disagreed';
+  }
+
+  function marginVerdict(trads) {
+    var gap = trads[0].match - trads[1].match;
+    var g = gap.toFixed(gap < 10 ? 1 : 0);
+    var runner = esc(trads[1].tradition.name);
+    if (gap >= 20) return 'a decisive ' + g + '-point gap over ' + runner;
+    if (gap >= 10) return 'a clear ' + g + '-point gap over ' + runner;
+    if (gap >= 5) return 'a modest ' + g + '-point gap &mdash; ' + runner + ' is close behind';
+    return 'a razor-thin ' + g + '-point gap over ' + runner + ' &mdash; this could genuinely go either way';
+  }
+
+  // Questions where the user went against their top tradition's grain.
+  function findBreaks(trads) {
+    var top = trads[0];
+    var out = [];
+    queue.forEach(function (q) {
+      var resp = answers[q.id];
+      if (resp === undefined || resp === 0) return;
+      var w = (q.traditions || {})[top.tradition.id] || 0;
+      if (Math.abs(w) < 1) return;
+      if ((resp > 0) !== (w > 0)) out.push({ q: q, resp: resp, w: w });
+    });
+    out.sort(function (a, b) { return Math.abs(b.w * b.resp) - Math.abs(a.w * a.resp); });
+    return out.slice(0, 3);
+  }
+
+  function renderBreaks(trads) {
+    var box = $('breaks-card');
+    var br = findBreaks(trads);
+    if (!br.length) { box.classList.add('hidden'); box.innerHTML = ''; return; }
+    var top = trads[0];
+    var html = '<h3>Where you broke from ' + esc(top.tradition.name) + '</h3>';
+    html += '<p class="breaks-intro">Not a clean fit &mdash; on ' +
+      (br.length === 1 ? 'this question' : 'these ' + br.length + ' questions') +
+      ' you went against the ' + esc(top.tradition.name) + ' grain:</p><ul>';
+    br.forEach(function (b) {
+      html += '<li>You ' + respWord(b.resp) + ' that &ldquo;' + esc(b.q.text) + '&rdquo; &mdash; ' +
+        esc(top.tradition.name) + ' typically ' + (b.w > 0 ? 'agrees' : 'disagrees') + '.</li>';
+    });
+    box.innerHTML = html + '</ul>';
+    box.classList.remove('hidden');
+  }
 
   function buildSummary(axes, trads) {
     var top = trads[0];
     var html = '';
-    html += '<p>Your answers point most strongly toward the <strong>' + esc(top.tradition.name) +
-      '</strong> tradition (' + top.match.toFixed(1) + '/100 match).</p>';
 
-    var strong = axes
-      .filter(function (e) { return Math.abs(e.score) >= 20 && BELIEF_LINES[e.axis.id + '|' + (e.score < 0 ? -1 : 1)]; })
-      .sort(function (a, b) { return Math.abs(b.score) - Math.abs(a.score); })
-      .slice(0, 4);
-
-    if (strong.length) {
-      var lines = strong.map(function (e) {
-        return BELIEF_LINES[e.axis.id + '|' + (e.score < 0 ? -1 : 1)];
-      });
-      var sentence;
-      if (lines.length === 1) sentence = 'In particular, ' + lines[0] + '.';
-      else {
-        var last = lines.pop();
-        sentence = 'In particular, ' + lines.join(', ') + ', and ' + last + '.';
-      }
-      html += '<p>' + esc(sentence) + '</p>';
+    // evidence first: the user's firmest actual answers
+    var firm = queue
+      .filter(function (q) { return answers[q.id] !== undefined && answers[q.id] !== 0; })
+      .sort(function (a, b) { return Math.abs(answers[b.id]) - Math.abs(answers[a.id]); });
+    var agree = firm.filter(function (q) { return answers[q.id] > 0; }).slice(0, 2);
+    var disagree = firm.filter(function (q) { return answers[q.id] < 0; }).slice(0, 2);
+    var bits = [];
+    agree.forEach(function (q) {
+      bits.push('you ' + respWord(answers[q.id]) + ' that &ldquo;' + esc(q.text) + '&rdquo;');
+    });
+    disagree.forEach(function (q) {
+      bits.push('you ' + respWord(answers[q.id]) + ' that &ldquo;' + esc(q.text) + '&rdquo;');
+    });
+    if (bits.length) {
+      var ev;
+      if (bits.length === 1) ev = bits[0];
+      else { var last = bits.pop(); ev = bits.join('; ') + '; and ' + last; }
+      html += '<p>Across ' + firm.length + ' answered questions, your firmest convictions were: ' + ev + '.</p>';
     }
+
+    // inference second, hedged by the margin
+    html += '<p>That pattern points toward the <strong>' + esc(top.tradition.name) +
+      '</strong> tradition &mdash; ' + marginVerdict(trads) + '.</p>';
 
     var theos = BANK.theologians.filter(function (t) { return t.tradition === top.tradition.id; });
     if (theos.length) {
-      html += '<p>You think most like <strong>' + esc(theos[0].name) + '</strong> — ' + esc(theos[0].blurb) + '</p>';
+      html += '<p>Within that stream, you may resonate with <strong>' + esc(theos[0].name) +
+        '</strong> &mdash; ' + esc(theos[0].blurb) + '</p>';
     }
     return html;
   }
+
 
   function esc(s) {
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -648,6 +786,13 @@
     // written summary
     $('summary-card').innerHTML = buildSummary(axes, trads);
 
+    // theological attribute radar
+    var attrs = scoreAttributes(axes);
+    renderRadar(attrs);
+
+    // where the user broke from their top tradition
+    renderBreaks(trads);
+
     // theologians of the top tradition (up to 3)
     var theoGrid = $('theologian-grid');
     theoGrid.innerHTML = '';
@@ -675,7 +820,7 @@
     });
 
     // cache for share / compare actions
-    LAST = { axes: axes, trads: trads, theos: theos };
+    LAST = { axes: axes, trads: trads, theos: theos, attrs: attrs };
 
     // friend comparison (when opened from a ?compare= link)
     renderCompare(axes, trads);
@@ -1025,6 +1170,12 @@
     var theos = LAST.theos || [];
     var lines = [];
     lines.push('My Protestant Theology Profile');
+    lines.push('');
+    lines.push('Strongest attribute: ' + (function () {
+      var list = (LAST.attrs || []).filter(function (a) { return a.measured; });
+      var a = list.sort(function (x, y) { return y.score - x.score; })[0];
+      return a ? a.attr.name + ' (' + a.score + '/100)' : 'n/a';
+    })());
     lines.push('');
     lines.push(top.tradition.name + ' — ' + top.match.toFixed(1) + '/100 match');
     if (theos.length) {
