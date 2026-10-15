@@ -30,6 +30,7 @@
       $('qcount').textContent = BANK.questions.length;
       wireDepthCards();
       wireTooltips();
+      initCarousel();
     })
     .catch(function () {
       document.querySelector('.hero .lede').textContent =
@@ -174,6 +175,60 @@
     });
     box.innerHTML = html;
     box.classList.remove('hidden');
+  }
+
+  // ---------- theologian carousel ----------
+  var carIdx = 0, carTimer = null;
+
+  function traditionName(id) {
+    var found = BANK.traditions.filter(function (t) { return t.id === id; })[0];
+    return found ? found.name : id;
+  }
+
+  function renderCar(i) {
+    var list = BANK.theologians;
+    carIdx = ((i % list.length) + list.length) % list.length;
+    var th = list[carIdx];
+    var portraits = (typeof window !== 'undefined' && window.THEOLOGIAN_PORTRAITS) || {};
+    var img = $('car-portrait');
+    if (portraits[th.id]) {
+      img.src = portraits[th.id];
+      img.style.display = '';
+    } else {
+      img.removeAttribute('src');
+      img.style.display = 'none';
+    }
+    img.alt = 'Portrait of ' + th.name;
+    $('car-name').textContent = th.name;
+    $('car-tradition').textContent = traditionName(th.tradition);
+    $('car-blurb').textContent = th.blurb;
+    $('car-count').textContent = (carIdx + 1) + ' / ' + list.length;
+    var card = $('car-card');
+    card.classList.remove('car-fade');
+    void card.offsetWidth;
+    card.classList.add('car-fade');
+  }
+
+  function restartCar() {
+    if (carTimer) clearInterval(carTimer);
+    carTimer = setInterval(function () { renderCar(carIdx + 1); }, 6000);
+  }
+
+  function initCarousel() {
+    $('car-next').addEventListener('click', function () { renderCar(carIdx + 1); restartCar(); });
+    $('car-prev').addEventListener('click', function () { renderCar(carIdx - 1); restartCar(); });
+    var wrap = document.querySelector('.theo-carousel-wrap');
+    if (wrap) {
+      wrap.addEventListener('mouseenter', function () { if (carTimer) clearInterval(carTimer); });
+      wrap.addEventListener('mouseleave', restartCar);
+    }
+    // pause auto-cycle when the tab is hidden
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) { if (carTimer) clearInterval(carTimer); }
+      else restartCar();
+    });
+    renderCar(0);
+    restartCar();
   }
 
   // ---------- tooltips ----------
