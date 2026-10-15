@@ -5,7 +5,7 @@
       "label": "Soteriology",
       "left": "Monergism (Calvinist)",
       "right": "Synergism (Arminian)",
-      "description": "Whether salvation is God's work alone or involves genuine human cooperation."
+      "description": "Whether salvation is God's work alone or involves genuine human cooperation. Lutheran monergism-with-resistible-grace does not map cleanly onto this binary."
     },
     {
       "id": "baptism",
@@ -26,7 +26,7 @@
       "label": "Eschatology",
       "left": "Premillennial",
       "right": "Amillennial",
-      "description": "Whether Christ returns before a future earthly millennium or reigns now from heaven."
+      "description": "Whether Christ returns before a future earthly millennium or reigns now from heaven. Postmillennial views (not confessionally defined in most standards) fall between the poles."
     },
     {
       "id": "covenant",
@@ -40,7 +40,7 @@
       "label": "Scripture",
       "left": "Strict Inerrancy",
       "right": "Infallibility",
-      "description": "Whether the Bible is without error in all it affirms or authoritative without strict errorlessness."
+      "description": "Whether the Bible is without error in all it affirms, or fully authoritative and trustworthy without all traditions adopting strict-errorlessness language. NOTE: 'infallible' is the Assemblies of God's own term for the strong position (AG Statement Art. 1), so the pole labels describe vocabulary, not rank."
     },
     {
       "id": "worship",
@@ -68,7 +68,7 @@
       "label": "Faith and Assurance",
       "left": "Lordship Salvation",
       "right": "Free Grace",
-      "description": "Whether saving faith necessarily transforms the life or rests on belief alone."
+      "description": "Whether saving faith necessarily transforms the life or rests on belief alone. The pole labels come from an intra-Reformed debate; non-Reformed traditions land on the 'lordship' side by default, not by self-identification."
     },
     {
       "id": "ordinances",
@@ -971,54 +971,8 @@
   ],
   "questions": [
     {
-      "id": 13,
-      "text": "If science and the Bible seem to disagree, I trust the Bible.",
-      "category": "Scripture",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "scripture",
-          "direction": -1,
-          "weight": 3
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "baptist": 2,
-        "lutheran": 1,
-        "dispensational": 2,
-        "wesleyan": 1,
-        "pentecostal": 1,
-        "anabaptist": 1,
-        "anglican": 0
-      }
-    },
-    {
-      "id": 14,
-      "text": "I believe every part of the Bible is true, not just the spiritual parts.",
-      "category": "Scripture",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "scripture",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "baptist": 2,
-        "lutheran": 2,
-        "dispensational": 2,
-        "wesleyan": 1,
-        "pentecostal": 1,
-        "anabaptist": 1,
-        "anglican": 0
-      }
-    },
-    {
       "id": 59,
-      "text": "I love when churches try creative new things in worship.",
+      "text": "Churches should try creative new things in worship.",
       "category": "Worship",
       "tier": "essential",
       "axes": [
@@ -1029,19 +983,16 @@
         }
       ],
       "traditions": {
-        "pentecostal": 2,
-        "wesleyan": 1,
-        "anglican": 1,
-        "dispensational": 1,
-        "baptist": 0,
-        "anabaptist": -1,
+        "reformed": -2,
         "lutheran": -1,
-        "reformed": -2
+        "wesleyan": 1,
+        "baptist": -2,
+        "anglican": 1
       }
     },
     {
       "id": 58,
-      "text": "I'd feel uneasy if my church added something to worship just because it's creative.",
+      "text": "Churches should not add worship elements merely because they are creative.",
       "category": "Worship",
       "tier": "essential",
       "axes": [
@@ -1053,18 +1004,14 @@
       ],
       "traditions": {
         "reformed": 2,
-        "baptist": 1,
-        "anabaptist": 1,
-        "lutheran": 0,
         "wesleyan": -1,
-        "anglican": -1,
-        "dispensational": -1,
-        "pentecostal": -2
+        "baptist": 2,
+        "anglican": -1
       }
     },
     {
       "id": 66,
-      "text": "I like the idea that each church answers to no one but God.",
+      "text": "Each local church should answer to no one but God.",
       "category": "Ecclesiology",
       "tier": "essential",
       "axes": [
@@ -1075,13 +1022,9 @@
         }
       ],
       "traditions": {
-        "baptist": 2,
-        "anabaptist": 2,
-        "pentecostal": 1,
-        "dispensational": 1,
-        "wesleyan": -2,
         "reformed": -2,
         "lutheran": -2,
+        "baptist": 2,
         "anglican": -2
       }
     },
@@ -1100,17 +1043,13 @@
       "traditions": {
         "reformed": 2,
         "lutheran": 2,
-        "anglican": 2,
-        "wesleyan": 1,
-        "pentecostal": -1,
         "baptist": -2,
-        "anabaptist": -2,
-        "dispensational": -1
+        "anglican": 2
       }
     },
     {
       "id": 23,
-      "text": "Getting baptized felt — or would feel — most meaningful as my own personal decision.",
+      "text": "Baptism is primarily a person's own decision to follow Christ.",
       "category": "Sacraments/Ordinances",
       "tier": "essential",
       "axes": [
@@ -1121,14 +1060,14 @@
         }
       ],
       "traditions": {
-        "baptist": 2,
-        "anabaptist": 2,
-        "pentecostal": 2,
-        "dispensational": 2,
-        "wesleyan": -1,
-        "reformed": -2,
+        "reformed": -1,
         "lutheran": -2,
-        "anglican": -2
+        "wesleyan": -1,
+        "baptist": 1,
+        "pentecostal": 2,
+        "anabaptist": 2,
+        "anglican": -2,
+        "dispensational": 2
       }
     },
     {
@@ -1144,19 +1083,19 @@
         }
       ],
       "traditions": {
+        "reformed": -2,
+        "lutheran": -2,
+        "wesleyan": -2,
         "baptist": 2,
-        "anabaptist": 2,
         "pentecostal": 1,
-        "dispensational": 1,
-        "wesleyan": 0,
-        "reformed": -1,
-        "lutheran": -1,
-        "anglican": -1
+        "anabaptist": -2,
+        "anglican": -2,
+        "dispensational": 2
       }
     },
     {
       "id": 24,
-      "text": "I love the idea of babies being welcomed into the faith through baptism.",
+      "text": "Babies should be welcomed into the faith through baptism.",
       "category": "Sacraments/Ordinances",
       "tier": "essential",
       "axes": [
@@ -1169,11 +1108,11 @@
       "traditions": {
         "reformed": 2,
         "lutheran": 2,
-        "anglican": 2,
-        "wesleyan": 1,
+        "wesleyan": 2,
         "baptist": -2,
-        "anabaptist": -2,
         "pentecostal": -2,
+        "anabaptist": -2,
+        "anglican": 2,
         "dispensational": -2
       }
     },
@@ -1190,19 +1129,19 @@
         }
       ],
       "traditions": {
-        "baptist": 2,
-        "dispensational": 2,
-        "anabaptist": 1,
-        "pentecostal": 1,
-        "wesleyan": -1,
-        "anglican": -1,
         "reformed": -2,
-        "lutheran": -2
+        "lutheran": -2,
+        "wesleyan": -1,
+        "baptist": 1,
+        "pentecostal": 2,
+        "anabaptist": 2,
+        "anglican": -1,
+        "dispensational": 2
       }
     },
     {
       "id": 74,
-      "text": "I feel like I actually meet God in a special way during communion.",
+      "text": "Believers truly meet God in a special way in communion.",
       "category": "Sacraments/Ordinances",
       "tier": "essential",
       "axes": [
@@ -1215,12 +1154,12 @@
       "traditions": {
         "reformed": 2,
         "lutheran": 2,
-        "anglican": 2,
-        "wesleyan": 1,
-        "baptist": -2,
-        "dispensational": -2,
+        "wesleyan": 2,
+        "baptist": -1,
         "pentecostal": -1,
-        "anabaptist": -1
+        "anabaptist": -1,
+        "anglican": 2,
+        "dispensational": -2
       }
     },
     {
@@ -1236,14 +1175,14 @@
         }
       ],
       "traditions": {
-        "baptist": 2,
-        "dispensational": 2,
-        "pentecostal": 1,
-        "anabaptist": 1,
-        "wesleyan": -1,
-        "anglican": -1,
         "reformed": -2,
-        "lutheran": -2
+        "lutheran": -2,
+        "wesleyan": -2,
+        "baptist": -1,
+        "pentecostal": 1,
+        "anabaptist": -1,
+        "anglican": -2,
+        "dispensational": 2
       }
     },
     {
@@ -1259,19 +1198,16 @@
         }
       ],
       "traditions": {
-        "pentecostal": 2,
+        "reformed": -1,
+        "lutheran": -1,
         "wesleyan": 1,
-        "anabaptist": 0,
-        "anglican": 0,
-        "reformed": -2,
-        "lutheran": -2,
-        "baptist": -1,
-        "dispensational": -2
+        "pentecostal": 2,
+        "dispensational": -1
       }
     },
     {
       "id": 32,
-      "text": "Speaking in tongues is something I'd be open to in my own prayer life.",
+      "text": "Speaking in tongues is a valid practice for Christians today.",
       "category": "Pneumatology",
       "tier": "essential",
       "axes": [
@@ -1282,13 +1218,9 @@
         }
       ],
       "traditions": {
-        "pentecostal": 2,
-        "wesleyan": 0,
-        "anabaptist": 0,
-        "anglican": 0,
         "reformed": -1,
-        "lutheran": -2,
-        "baptist": -1,
+        "wesleyan": 1,
+        "pentecostal": 2,
         "dispensational": -2
       }
     },
@@ -1305,82 +1237,11 @@
         }
       ],
       "traditions": {
-        "pentecostal": 2,
-        "wesleyan": 1,
-        "anabaptist": 0,
-        "anglican": 0,
         "reformed": -2,
         "lutheran": -1,
-        "baptist": -1,
-        "dispensational": -2
-      }
-    },
-    {
-      "id": 90,
-      "text": "I'd have a hard time seeing a woman as my senior pastor.",
-      "category": "Ecclesiology",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "gender-roles",
-          "direction": -1,
-          "weight": 3
-        }
-      ],
-      "traditions": {
-        "baptist": 2,
-        "reformed": 2,
-        "lutheran": 2,
-        "dispensational": 2,
-        "pentecostal": 0,
-        "anabaptist": 0,
-        "anglican": 0,
-        "wesleyan": -2
-      }
-    },
-    {
-      "id": 91,
-      "text": "I'd be totally comfortable with a woman preaching every Sunday.",
-      "category": "Ecclesiology",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "gender-roles",
-          "direction": 1,
-          "weight": 3
-        }
-      ],
-      "traditions": {
-        "wesleyan": 2,
-        "anabaptist": 1,
-        "anglican": 1,
-        "pentecostal": 1,
-        "baptist": -2,
-        "reformed": -2,
-        "lutheran": -2,
-        "dispensational": -2
-      }
-    },
-    {
-      "id": 50,
-      "text": "When I read the Bible, it feels like one continuous story about Jesus.",
-      "category": "Scripture",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "covenant",
-          "direction": 1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "lutheran": 2,
-        "anglican": 1,
-        "baptist": 1,
         "wesleyan": 1,
-        "anabaptist": 1,
-        "pentecostal": -1,
+        "baptist": -1,
+        "pentecostal": 2,
         "dispensational": -2
       }
     },
@@ -1397,19 +1258,18 @@
         }
       ],
       "traditions": {
-        "dispensational": 2,
-        "baptist": 1,
-        "pentecostal": 1,
-        "anabaptist": 0,
-        "wesleyan": -1,
-        "anglican": -1,
         "reformed": -2,
-        "lutheran": -2
+        "lutheran": -2,
+        "wesleyan": -1,
+        "baptist": -2,
+        "anabaptist": 1,
+        "anglican": -1,
+        "dispensational": 2
       }
     },
     {
       "id": 51,
-      "text": "I think of Israel and the church as two different groups in God's plan.",
+      "text": "Israel and the church are two distinct groups in God's plan.",
       "category": "Scripture",
       "tier": "essential",
       "axes": [
@@ -1420,14 +1280,11 @@
         }
       ],
       "traditions": {
-        "dispensational": 2,
-        "pentecostal": 1,
-        "baptist": 1,
-        "anabaptist": 0,
-        "wesleyan": -1,
-        "anglican": -1,
         "reformed": -2,
-        "lutheran": -2
+        "lutheran": -1,
+        "pentecostal": 1,
+        "anglican": -1,
+        "dispensational": 2
       }
     },
     {
@@ -1443,19 +1300,16 @@
         }
       ],
       "traditions": {
-        "dispensational": 2,
-        "pentecostal": 1,
-        "baptist": 1,
-        "wesleyan": 0,
-        "anabaptist": 0,
         "reformed": -2,
-        "lutheran": -2,
-        "anglican": -1
+        "wesleyan": 2,
+        "pentecostal": 2,
+        "anglican": -1,
+        "dispensational": 2
       }
     },
     {
       "id": 40,
-      "text": "I think Jesus will return and set up a real kingdom on earth.",
+      "text": "Jesus will return and establish a literal, earthly kingdom.",
       "category": "Eschatology",
       "tier": "essential",
       "axes": [
@@ -1466,14 +1320,11 @@
         }
       ],
       "traditions": {
-        "dispensational": 2,
-        "pentecostal": 1,
-        "baptist": 1,
-        "wesleyan": 0,
-        "anabaptist": 0,
         "reformed": -2,
         "lutheran": -2,
-        "anglican": -1
+        "pentecostal": 2,
+        "anglican": -1,
+        "dispensational": 2
       }
     },
     {
@@ -1491,17 +1342,14 @@
       "traditions": {
         "reformed": 2,
         "lutheran": 2,
+        "pentecostal": -1,
         "anglican": 1,
-        "wesleyan": 1,
-        "anabaptist": 0,
-        "dispensational": -2,
-        "baptist": -1,
-        "pentecostal": -1
+        "dispensational": -2
       }
     },
     {
       "id": 97,
-      "text": "If someone's life never changes, I doubt their faith was real.",
+      "text": "If someone's life never changes, their faith was probably not genuine.",
       "category": "Soteriology",
       "tier": "essential",
       "axes": [
@@ -1513,18 +1361,18 @@
       ],
       "traditions": {
         "reformed": 2,
-        "lutheran": 2,
-        "baptist": 2,
-        "anabaptist": 2,
+        "lutheran": 1,
         "wesleyan": 1,
+        "baptist": 2,
+        "pentecostal": 1,
+        "anabaptist": 2,
         "anglican": 1,
-        "pentecostal": 0,
-        "dispensational": -1
+        "dispensational": -2
       }
     },
     {
       "id": 98,
-      "text": "I know Christians whose lives look messy but whose faith I don't question.",
+      "text": "Christians whose lives look messy can still have genuine faith.",
       "category": "Soteriology",
       "tier": "essential",
       "axes": [
@@ -1535,19 +1383,17 @@
         }
       ],
       "traditions": {
-        "dispensational": 2,
-        "pentecostal": 1,
-        "baptist": -1,
-        "wesleyan": -1,
-        "anglican": -1,
-        "reformed": -2,
-        "lutheran": -2,
-        "anabaptist": -2
+        "lutheran": 1,
+        "wesleyan": 1,
+        "baptist": 1,
+        "anabaptist": -2,
+        "anglican": 1,
+        "dispensational": 2
       }
     },
     {
       "id": 3,
-      "text": "I feel secure that God will keep hold of me even in my worst seasons.",
+      "text": "God keeps hold of believers even in their worst seasons.",
       "category": "Soteriology",
       "tier": "essential",
       "axes": [
@@ -1559,18 +1405,17 @@
       ],
       "traditions": {
         "reformed": 2,
-        "baptist": 2,
         "lutheran": 1,
-        "dispensational": 1,
-        "anglican": 0,
-        "wesleyan": -2,
-        "pentecostal": -1,
-        "anabaptist": -1
+        "wesleyan": 1,
+        "baptist": 2,
+        "anabaptist": -1,
+        "anglican": 1,
+        "dispensational": 2
       }
     },
     {
       "id": 83,
-      "text": "I'll be fighting against sin for the rest of my life.",
+      "text": "Believers will struggle against sin for the rest of their lives.",
       "category": "Christian life",
       "tier": "essential",
       "axes": [
@@ -1583,12 +1428,11 @@
       "traditions": {
         "reformed": 2,
         "lutheran": 2,
-        "baptist": 2,
-        "anglican": 1,
-        "dispensational": 1,
         "wesleyan": -2,
-        "pentecostal": -1,
-        "anabaptist": -1
+        "baptist": 2,
+        "pentecostal": 1,
+        "anglican": 2,
+        "dispensational": 2
       }
     },
     {
@@ -1604,19 +1448,19 @@
         }
       ],
       "traditions": {
-        "wesleyan": 2,
-        "pentecostal": 1,
-        "anabaptist": 0,
-        "anglican": -1,
-        "dispensational": -1,
         "reformed": -2,
         "lutheran": -2,
-        "baptist": -2
+        "wesleyan": 2,
+        "baptist": -1,
+        "pentecostal": 1,
+        "anabaptist": 1,
+        "anglican": -1,
+        "dispensational": -1
       }
     },
     {
       "id": 1,
-      "text": "No one would ever choose God on their own — he has to change their heart first.",
+      "text": "No one would choose God on their own; God must change the heart first.",
       "category": "Soteriology",
       "tier": "essential",
       "axes": [
@@ -1628,18 +1472,17 @@
       ],
       "traditions": {
         "reformed": 2,
-        "lutheran": 1,
-        "baptist": 1,
-        "anglican": 0,
+        "lutheran": 2,
         "wesleyan": -1,
-        "pentecostal": -1,
+        "baptist": 2,
         "anabaptist": -1,
-        "dispensational": 0
+        "anglican": 1,
+        "dispensational": 1
       }
     },
     {
       "id": 2,
-      "text": "God wants everyone to be saved, and it's up to each person to accept or reject him.",
+      "text": "God wants everyone to be saved, and each person must accept or reject him.",
       "category": "Soteriology",
       "tier": "essential",
       "axes": [
@@ -1650,14 +1493,13 @@
         }
       ],
       "traditions": {
-        "wesleyan": 2,
-        "pentecostal": 1,
-        "anabaptist": 1,
-        "dispensational": 1,
         "reformed": -2,
-        "lutheran": -1,
-        "baptist": 0,
-        "anglican": 0
+        "wesleyan": 2,
+        "baptist": -2,
+        "pentecostal": 1,
+        "anabaptist": 2,
+        "anglican": 1,
+        "dispensational": -1
       }
     },
     {
@@ -1673,14 +1515,14 @@
         }
       ],
       "traditions": {
-        "wesleyan": 2,
-        "lutheran": 2,
-        "anabaptist": 1,
-        "pentecostal": 1,
-        "anglican": 1,
-        "dispensational": 0,
         "reformed": -2,
-        "baptist": -1
+        "lutheran": 2,
+        "wesleyan": 2,
+        "baptist": -2,
+        "pentecostal": 2,
+        "anabaptist": 2,
+        "anglican": 1,
+        "dispensational": 2
       }
     },
     {
@@ -1696,14 +1538,13 @@
         }
       ],
       "traditions": {
-        "wesleyan": 2,
-        "pentecostal": 1,
-        "anabaptist": 1,
-        "anglican": 1,
         "reformed": -2,
-        "lutheran": -1,
-        "baptist": -1,
-        "dispensational": -1
+        "lutheran": -2,
+        "wesleyan": 2,
+        "baptist": -2,
+        "pentecostal": 1,
+        "anabaptist": 2,
+        "anglican": 1
       }
     },
     {
@@ -1719,14 +1560,11 @@
         }
       ],
       "traditions": {
-        "wesleyan": 2,
-        "pentecostal": 1,
-        "anabaptist": 1,
-        "dispensational": 1,
-        "anglican": 0,
         "reformed": -2,
-        "lutheran": -1,
-        "baptist": -1
+        "lutheran": -2,
+        "wesleyan": 2,
+        "baptist": -2,
+        "anglican": -1
       }
     },
     {
@@ -1742,60 +1580,13 @@
         }
       ],
       "traditions": {
-        "anglican": 1,
-        "wesleyan": 0,
         "reformed": -2,
-        "baptist": -2,
         "lutheran": -1,
-        "dispensational": -2,
-        "pentecostal": -1,
-        "anabaptist": -1
-      }
-    },
-    {
-      "id": 16,
-      "text": "I think some parts of the Bible reflect what people understood about science back then.",
-      "category": "Scripture",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "scripture",
-          "direction": 1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "anglican": 1,
-        "wesleyan": 0,
-        "reformed": -2,
-        "baptist": -2,
-        "lutheran": -1,
-        "dispensational": -2,
-        "pentecostal": -1,
-        "anabaptist": -1
-      }
-    },
-    {
-      "id": 17,
-      "text": "When the Bible's human authors wrote, God guided their words so fully that the result is exactly what he intended.",
-      "category": "Scripture",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "scripture",
-          "direction": -1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "baptist": 1,
-        "lutheran": 1,
-        "dispensational": 1,
         "wesleyan": 1,
-        "pentecostal": 1,
-        "anabaptist": 1,
-        "anglican": 0
+        "baptist": -2,
+        "pentecostal": -1,
+        "anglican": 2,
+        "dispensational": -2
       }
     },
     {
@@ -1812,12 +1603,10 @@
       ],
       "traditions": {
         "reformed": 2,
-        "lutheran": 1,
-        "anglican": 1,
-        "wesleyan": 1,
         "baptist": -2,
-        "anabaptist": -2,
         "pentecostal": -2,
+        "anabaptist": -2,
+        "anglican": 1,
         "dispensational": -2
       }
     },
@@ -1834,37 +1623,14 @@
         }
       ],
       "traditions": {
-        "anabaptist": 2,
-        "baptist": 1,
-        "pentecostal": 1,
-        "dispensational": 1,
-        "wesleyan": -1,
         "reformed": -2,
         "lutheran": -2,
-        "anglican": -2
-      }
-    },
-    {
-      "id": 34,
-      "text": "I don't think there are real apostles anymore like there were in the Bible.",
-      "category": "Pneumatology",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "spirit-gifts",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
+        "wesleyan": -2,
         "baptist": 2,
-        "lutheran": 2,
-        "dispensational": 2,
-        "wesleyan": 1,
-        "anabaptist": 1,
-        "anglican": 1,
-        "pentecostal": -1
+        "pentecostal": 1,
+        "anabaptist": 2,
+        "anglican": -2,
+        "dispensational": 2
       }
     },
     {
@@ -1880,14 +1646,13 @@
         }
       ],
       "traditions": {
-        "pentecostal": 2,
         "reformed": -2,
         "lutheran": -2,
+        "wesleyan": -2,
         "baptist": -2,
-        "wesleyan": -1,
-        "anabaptist": -1,
+        "pentecostal": 2,
         "anglican": -1,
-        "dispensational": -1
+        "dispensational": -2
       }
     },
     {
@@ -1903,13 +1668,10 @@
         }
       ],
       "traditions": {
-        "pentecostal": 2,
-        "wesleyan": 1,
-        "anabaptist": 0,
-        "anglican": 0,
         "reformed": -2,
-        "lutheran": -2,
-        "baptist": -1,
+        "lutheran": -1,
+        "wesleyan": 1,
+        "pentecostal": 2,
         "dispensational": -2
       }
     },
@@ -1926,14 +1688,11 @@
         }
       ],
       "traditions": {
-        "dispensational": 2,
-        "pentecostal": 1,
-        "baptist": 1,
-        "wesleyan": -1,
-        "anabaptist": -1,
         "reformed": -2,
         "lutheran": -2,
-        "anglican": -2
+        "pentecostal": 1,
+        "anglican": -2,
+        "dispensational": 2
       }
     },
     {
@@ -1943,19 +1702,16 @@
       "tier": "standard",
       "axes": [
         {
-          "axis": "eschatology",
+          "axis": "covenant",
           "direction": 1,
           "weight": 1
         }
       ],
       "traditions": {
-        "reformed": 1,
+        "reformed": 2,
         "lutheran": 1,
-        "anglican": 1,
-        "wesleyan": 1,
-        "anabaptist": 0,
-        "baptist": 0,
         "pentecostal": -1,
+        "anglican": 1,
         "dispensational": -2
       }
     },
@@ -1972,19 +1728,15 @@
         }
       ],
       "traditions": {
-        "dispensational": 2,
-        "pentecostal": 1,
-        "baptist": 1,
-        "wesleyan": 0,
-        "anabaptist": 0,
         "reformed": -1,
-        "lutheran": -1,
-        "anglican": -1
+        "wesleyan": -1,
+        "pentecostal": 2,
+        "dispensational": 2
       }
     },
     {
       "id": 52,
-      "text": "The Old Testament law no longer binds Christians directly; we live entirely under grace.",
+      "text": "Christians are free from the Old Testament law and live entirely under grace.",
       "category": "Scripture",
       "tier": "standard",
       "axes": [
@@ -1995,14 +1747,13 @@
         }
       ],
       "traditions": {
-        "dispensational": 1,
+        "reformed": -2,
+        "lutheran": -2,
+        "wesleyan": -2,
+        "baptist": -2,
         "anabaptist": 1,
-        "pentecostal": 0,
-        "wesleyan": 0,
         "anglican": -1,
-        "lutheran": -1,
-        "baptist": -1,
-        "reformed": -2
+        "dispensational": 2
       }
     },
     {
@@ -2019,12 +1770,10 @@
       ],
       "traditions": {
         "reformed": 2,
-        "lutheran": 1,
+        "lutheran": 2,
+        "wesleyan": 2,
+        "baptist": 2,
         "anglican": 1,
-        "wesleyan": 1,
-        "baptist": 1,
-        "pentecostal": 0,
-        "anabaptist": -1,
         "dispensational": -1
       }
     },
@@ -2041,60 +1790,10 @@
         }
       ],
       "traditions": {
-        "dispensational": 2,
-        "pentecostal": 1,
-        "baptist": 1,
-        "wesleyan": 0,
-        "anabaptist": 0,
-        "anglican": -1,
         "reformed": -2,
-        "lutheran": -2
-      }
-    },
-    {
-      "id": 60,
-      "text": "I'd be into it if my church did drama or dance in a Sunday service.",
-      "category": "Worship",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "worship",
-          "direction": 1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "pentecostal": 2,
-        "wesleyan": 1,
-        "anglican": 1,
-        "dispensational": 1,
-        "anabaptist": -1,
-        "lutheran": -1,
-        "baptist": -1,
-        "reformed": -2
-      }
-    },
-    {
-      "id": 61,
-      "text": "It is wrong to introduce worship elements just because they attract visitors.",
-      "category": "Worship",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "worship",
-          "direction": -1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "reformed": 1,
-        "lutheran": 1,
-        "baptist": 1,
-        "anabaptist": 1,
-        "wesleyan": 0,
-        "anglican": 0,
-        "pentecostal": -1,
-        "dispensational": -1
+        "lutheran": -2,
+        "anglican": -1,
+        "dispensational": 2
       }
     },
     {
@@ -2110,13 +1809,10 @@
         }
       ],
       "traditions": {
-        "baptist": 2,
-        "anabaptist": 2,
-        "pentecostal": 1,
-        "dispensational": 1,
-        "wesleyan": -2,
         "reformed": -2,
         "lutheran": -2,
+        "baptist": 2,
+        "anabaptist": 2,
         "anglican": -2
       }
     },
@@ -2133,19 +1829,14 @@
         }
       ],
       "traditions": {
-        "lutheran": 2,
-        "anglican": 2,
-        "wesleyan": 2,
-        "reformed": 1,
-        "pentecostal": -1,
         "baptist": -2,
         "anabaptist": -2,
-        "dispensational": -1
+        "anglican": 2
       }
     },
     {
       "id": 76,
-      "text": "God uses baptism to actually convey grace and forgiveness to the recipient.",
+      "text": "God uses baptism to convey grace and forgiveness to the recipient.",
       "category": "Sacraments/Ordinances",
       "tier": "standard",
       "axes": [
@@ -2156,14 +1847,14 @@
         }
       ],
       "traditions": {
-        "lutheran": 2,
-        "anglican": 2,
         "reformed": 1,
-        "wesleyan": 1,
+        "lutheran": 2,
+        "wesleyan": 2,
         "baptist": -2,
-        "anabaptist": -2,
-        "dispensational": -2,
-        "pentecostal": -1
+        "pentecostal": -1,
+        "anabaptist": -1,
+        "anglican": 2,
+        "dispensational": -2
       }
     },
     {
@@ -2180,36 +1871,12 @@
       ],
       "traditions": {
         "reformed": 2,
-        "lutheran": 2,
+        "lutheran": 1,
+        "wesleyan": 2,
+        "baptist": 2,
+        "anabaptist": -1,
         "anglican": 1,
-        "wesleyan": 1,
-        "baptist": -1,
-        "dispensational": -2,
-        "pentecostal": -1,
-        "anabaptist": -1
-      }
-    },
-    {
-      "id": 78,
-      "text": "The Lord's Supper should be celebrated frequently — weekly if possible.",
-      "category": "Sacraments/Ordinances",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "ordinances",
-          "direction": 1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "lutheran": 2,
-        "reformed": 1,
-        "anglican": 1,
-        "wesleyan": 1,
-        "pentecostal": 0,
-        "anabaptist": 0,
-        "baptist": -1,
-        "dispensational": -1
+        "dispensational": -2
       }
     },
     {
@@ -2227,12 +1894,10 @@
       "traditions": {
         "reformed": 2,
         "lutheran": 2,
-        "baptist": 1,
+        "wesleyan": -2,
+        "baptist": 2,
         "anglican": 1,
-        "dispensational": 1,
-        "anabaptist": 0,
-        "pentecostal": -1,
-        "wesleyan": -2
+        "dispensational": 2
       }
     },
     {
@@ -2248,65 +1913,17 @@
         }
       ],
       "traditions": {
-        "wesleyan": 2,
-        "pentecostal": 1,
-        "anabaptist": 0,
-        "anglican": -1,
-        "dispensational": -1,
         "reformed": -2,
         "lutheran": -2,
-        "baptist": -2
-      }
-    },
-    {
-      "id": 92,
-      "text": "Husbands have a God-given leadership role in the home.",
-      "category": "Christian life",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "gender-roles",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "baptist": 2,
-        "reformed": 2,
-        "lutheran": 1,
-        "dispensational": 2,
-        "pentecostal": 1,
-        "anabaptist": 0,
-        "anglican": 0,
-        "wesleyan": -1
-      }
-    },
-    {
-      "id": 93,
-      "text": "Men and women are equally called to all forms of ministry; gifts, not gender, determine roles.",
-      "category": "Ecclesiology",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "gender-roles",
-          "direction": 1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
         "wesleyan": 2,
-        "anabaptist": 1,
-        "anglican": 1,
-        "pentecostal": 1,
         "baptist": -2,
-        "reformed": -2,
-        "lutheran": -2,
+        "anglican": -1,
         "dispensational": -2
       }
     },
     {
       "id": 99,
-      "text": "If someone claims to be a Christian but lives in unrepentant sin, we should doubt whether their faith is real.",
+      "text": "If someone claims to be a Christian but lives in unrepentant sin, we should doubt whether their faith is genuine.",
       "category": "Soteriology",
       "tier": "standard",
       "axes": [
@@ -2318,59 +1935,13 @@
       ],
       "traditions": {
         "reformed": 2,
-        "baptist": 2,
-        "anabaptist": 2,
         "lutheran": 1,
         "wesleyan": 1,
-        "anglican": 0,
-        "pentecostal": -1,
-        "dispensational": -2
-      }
-    },
-    {
-      "id": 100,
-      "text": "Repentance from sin is part of what it means to believe the gospel, not an optional add-on.",
-      "category": "Soteriology",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "assurance",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "lutheran": 2,
         "baptist": 2,
-        "wesleyan": 2,
+        "pentecostal": 1,
         "anabaptist": 2,
         "anglican": 1,
-        "pentecostal": 0,
         "dispensational": -2
-      }
-    },
-    {
-      "id": 7,
-      "text": "God's decree to save the elect logically preceded his decree to permit the fall.",
-      "category": "Soteriology",
-      "tier": "advanced",
-      "axes": [
-        {
-          "axis": "soteriology",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": 1,
-        "lutheran": 0,
-        "baptist": 0,
-        "wesleyan": 0,
-        "anglican": 0,
-        "pentecostal": 0,
-        "anabaptist": 0,
-        "dispensational": 0
       }
     },
     {
@@ -2387,36 +1958,10 @@
       ],
       "traditions": {
         "reformed": 2,
-        "baptist": 1,
-        "lutheran": 0,
-        "anglican": 0,
         "wesleyan": -2,
-        "pentecostal": -1,
-        "anabaptist": -1,
-        "dispensational": -1
-      }
-    },
-    {
-      "id": 18,
-      "text": "The Chicago Statement on Biblical Inerrancy (1978) accurately expresses what Christians should believe about the Bible.",
-      "category": "Scripture",
-      "tier": "advanced",
-      "axes": [
-        {
-          "axis": "scripture",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
         "baptist": 2,
-        "dispensational": 2,
-        "lutheran": 1,
-        "pentecostal": 1,
-        "wesleyan": 0,
-        "anabaptist": 0,
-        "anglican": -1
+        "pentecostal": -1,
+        "anabaptist": -1
       }
     },
     {
@@ -2432,36 +1977,10 @@
         }
       ],
       "traditions": {
-        "anglican": 1,
-        "wesleyan": 1,
-        "lutheran": 0,
         "reformed": -1,
-        "baptist": -1,
-        "dispensational": -1,
-        "pentecostal": 0,
-        "anabaptist": 0
-      }
-    },
-    {
-      "id": 28,
-      "text": "The children of believers should receive communion as well as baptism.",
-      "category": "Sacraments/Ordinances",
-      "tier": "advanced",
-      "axes": [
-        {
-          "axis": "baptism",
-          "direction": 1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "reformed": 1,
-        "lutheran": 0,
-        "anglican": 0,
-        "wesleyan": 0,
-        "baptist": -2,
-        "anabaptist": -1,
-        "pentecostal": -1,
+        "wesleyan": 1,
+        "baptist": 2,
+        "anglican": 1,
         "dispensational": -1
       }
     },
@@ -2478,60 +1997,9 @@
         }
       ],
       "traditions": {
-        "dispensational": 2,
-        "reformed": 1,
-        "baptist": 1,
-        "lutheran": 1,
-        "anabaptist": 0,
-        "anglican": 0,
         "wesleyan": -1,
-        "pentecostal": -2
-      }
-    },
-    {
-      "id": 46,
-      "text": "The great tribulation already happened when Rome destroyed Jerusalem in AD 70.",
-      "category": "Eschatology",
-      "tier": "advanced",
-      "axes": [
-        {
-          "axis": "eschatology",
-          "direction": 1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "reformed": 1,
-        "lutheran": 0,
-        "anglican": 0,
-        "wesleyan": 0,
-        "anabaptist": 0,
-        "baptist": -1,
-        "pentecostal": -1,
-        "dispensational": -1
-      }
-    },
-    {
-      "id": 47,
-      "text": "The world will grow progressively more Christianized before Christ returns.",
-      "category": "Eschatology",
-      "tier": "advanced",
-      "axes": [
-        {
-          "axis": "eschatology",
-          "direction": 1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "reformed": 1,
-        "lutheran": 0,
-        "anglican": 0,
-        "wesleyan": 0,
-        "anabaptist": 0,
-        "baptist": 0,
-        "pentecostal": 0,
-        "dispensational": -1
+        "pentecostal": -2,
+        "dispensational": 1
       }
     },
     {
@@ -2549,11 +2017,6 @@
       "traditions": {
         "reformed": 2,
         "baptist": 1,
-        "anglican": 1,
-        "lutheran": 0,
-        "wesleyan": 0,
-        "anabaptist": 0,
-        "pentecostal": -1,
         "dispensational": -2
       }
     },
@@ -2571,13 +2034,10 @@
       ],
       "traditions": {
         "reformed": 1,
-        "lutheran": -1,
-        "baptist": -1,
-        "anglican": -1,
-        "wesleyan": -1,
-        "anabaptist": -1,
-        "dispensational": -1,
-        "pentecostal": -2
+        "lutheran": -2,
+        "wesleyan": -2,
+        "baptist": -2,
+        "anglican": -1
       }
     },
     {
@@ -2593,14 +2053,11 @@
         }
       ],
       "traditions": {
-        "anglican": 2,
-        "lutheran": 1,
-        "wesleyan": 0,
-        "reformed": -1,
+        "reformed": -2,
+        "lutheran": -2,
         "baptist": -2,
         "anabaptist": -2,
-        "pentecostal": -2,
-        "dispensational": -2
+        "anglican": 2
       }
     },
     {
@@ -2616,13 +2073,12 @@
         }
       ],
       "traditions": {
+        "reformed": -2,
         "lutheran": 2,
-        "anglican": 0,
-        "wesleyan": 0,
-        "reformed": -1,
-        "anabaptist": -1,
-        "pentecostal": -1,
+        "wesleyan": -2,
         "baptist": -2,
+        "pentecostal": -1,
+        "anabaptist": -1,
         "dispensational": -2
       }
     },
@@ -2639,42 +2095,18 @@
         }
       ],
       "traditions": {
+        "reformed": -2,
+        "lutheran": -2,
         "wesleyan": 2,
-        "pentecostal": 1,
-        "anabaptist": 0,
-        "anglican": 0,
-        "reformed": -1,
-        "baptist": -1,
-        "dispensational": -1,
-        "lutheran": -2
-      }
-    },
-    {
-      "id": 94,
-      "text": "The Bible's instructions about women remaining silent in church apply to all times and cultures.",
-      "category": "Ecclesiology",
-      "tier": "advanced",
-      "axes": [
-        {
-          "axis": "gender-roles",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "dispensational": 2,
-        "baptist": 1,
-        "reformed": 1,
-        "lutheran": 1,
-        "anabaptist": -1,
-        "anglican": -1,
+        "baptist": -2,
         "pentecostal": -1,
-        "wesleyan": -2
+        "anglican": -1,
+        "dispensational": -2
       }
     },
     {
       "id": 101,
-      "text": "Jesus must be received as Lord, not just as Savior, for salvation.",
+      "text": "Salvation requires receiving Jesus as Lord, not only as Savior.",
       "category": "Soteriology",
       "tier": "advanced",
       "axes": [
@@ -2686,12 +2118,12 @@
       ],
       "traditions": {
         "reformed": 2,
-        "baptist": 1,
         "lutheran": 1,
         "wesleyan": 1,
+        "baptist": 1,
+        "pentecostal": 1,
         "anabaptist": 1,
         "anglican": 1,
-        "pentecostal": 0,
         "dispensational": -2
       }
     },
@@ -2709,13 +2141,10 @@
       ],
       "traditions": {
         "reformed": 2,
-        "baptist": 1,
-        "lutheran": 1,
-        "anglican": 0,
+        "lutheran": -1,
         "wesleyan": -2,
-        "pentecostal": -1,
-        "anabaptist": -1,
-        "dispensational": -1
+        "baptist": 2,
+        "anabaptist": -2
       }
     },
     {
@@ -2732,13 +2161,12 @@
       ],
       "traditions": {
         "reformed": 2,
-        "baptist": 1,
         "lutheran": -1,
-        "anglican": -1,
         "wesleyan": -2,
+        "baptist": 2,
         "pentecostal": -1,
         "anabaptist": -2,
-        "dispensational": -1
+        "anglican": -1
       }
     },
     {
@@ -2754,14 +2182,12 @@
         }
       ],
       "traditions": {
-        "wesleyan": 2,
-        "pentecostal": 1,
-        "anabaptist": 1,
-        "anglican": 0,
         "reformed": -2,
+        "lutheran": 2,
+        "wesleyan": 2,
         "baptist": -2,
-        "lutheran": -1,
-        "dispensational": -1
+        "anabaptist": 2,
+        "dispensational": -2
       }
     },
     {
@@ -2777,83 +2203,13 @@
         }
       ],
       "traditions": {
-        "wesleyan": 2,
-        "anabaptist": 1,
-        "pentecostal": 1,
-        "anglican": 1,
         "reformed": -2,
-        "baptist": -1,
-        "lutheran": -1,
-        "dispensational": -1
-      }
-    },
-    {
-      "id": 20,
-      "text": "Apparent contradictions in the Bible can always be resolved with enough study.",
-      "category": "Scripture",
-      "tier": "complete",
-      "axes": [
-        {
-          "axis": "scripture",
-          "direction": -1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "reformed": 1,
-        "baptist": 1,
         "lutheran": 1,
-        "dispensational": 1,
-        "anglican": -1,
-        "wesleyan": 0,
-        "pentecostal": 0,
-        "anabaptist": 0
-      }
-    },
-    {
-      "id": 21,
-      "text": "Jesus's own view of the Old Testament commits Christians to affirming its complete truthfulness.",
-      "category": "Scripture",
-      "tier": "complete",
-      "axes": [
-        {
-          "axis": "scripture",
-          "direction": -1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "reformed": 1,
-        "baptist": 1,
-        "lutheran": 1,
-        "dispensational": 1,
-        "wesleyan": 1,
-        "anglican": 0,
-        "pentecostal": 0,
-        "anabaptist": 0
-      }
-    },
-    {
-      "id": 22,
-      "text": "God accommodated his revelation to the cultural and scientific assumptions of the original audience.",
-      "category": "Scripture",
-      "tier": "complete",
-      "axes": [
-        {
-          "axis": "scripture",
-          "direction": 1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "anglican": 1,
-        "wesleyan": 1,
-        "lutheran": 0,
-        "reformed": -1,
+        "wesleyan": 2,
         "baptist": -1,
-        "dispensational": -1,
-        "pentecostal": 0,
-        "anabaptist": 0
+        "pentecostal": 1,
+        "anabaptist": 1,
+        "anglican": 1
       }
     },
     {
@@ -2870,13 +2226,10 @@
       ],
       "traditions": {
         "reformed": 1,
-        "lutheran": 1,
-        "anglican": 1,
-        "wesleyan": 1,
-        "anabaptist": 0,
         "baptist": -2,
         "pentecostal": -1,
-        "dispensational": -1
+        "anglican": 1,
+        "dispensational": -2
       }
     },
     {
@@ -2892,14 +2245,14 @@
         }
       ],
       "traditions": {
+        "reformed": -2,
+        "lutheran": -2,
+        "wesleyan": -2,
         "baptist": 1,
-        "anabaptist": 1,
         "pentecostal": 1,
-        "dispensational": 1,
-        "wesleyan": 0,
-        "reformed": -1,
-        "lutheran": -1,
-        "anglican": -1
+        "anabaptist": 1,
+        "anglican": -1,
+        "dispensational": 2
       }
     },
     {
@@ -2915,14 +2268,13 @@
         }
       ],
       "traditions": {
-        "pentecostal": 2,
-        "wesleyan": 1,
-        "anabaptist": -1,
-        "anglican": -1,
         "reformed": -2,
         "lutheran": -2,
+        "wesleyan": 1,
         "baptist": -2,
-        "dispensational": -1
+        "pentecostal": 2,
+        "anglican": -1,
+        "dispensational": -2
       }
     },
     {
@@ -2938,37 +2290,11 @@
         }
       ],
       "traditions": {
-        "pentecostal": 2,
+        "reformed": 1,
         "wesleyan": 1,
-        "anabaptist": 1,
+        "pentecostal": 2,
         "anglican": 1,
-        "reformed": 0,
-        "lutheran": 0,
-        "baptist": 0,
         "dispensational": -1
-      }
-    },
-    {
-      "id": 48,
-      "text": "Current events in the Middle East are fulfilling biblical prophecy about the end times.",
-      "category": "Eschatology",
-      "tier": "complete",
-      "axes": [
-        {
-          "axis": "eschatology",
-          "direction": -1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "dispensational": 2,
-        "pentecostal": 1,
-        "baptist": 1,
-        "wesleyan": 0,
-        "anabaptist": -1,
-        "anglican": -1,
-        "reformed": -2,
-        "lutheran": -2
       }
     },
     {
@@ -2984,14 +2310,11 @@
         }
       ],
       "traditions": {
-        "dispensational": 2,
-        "pentecostal": 1,
-        "baptist": 1,
-        "wesleyan": -1,
-        "anabaptist": 0,
-        "anglican": -1,
         "reformed": -2,
-        "lutheran": -2
+        "wesleyan": 1,
+        "pentecostal": 1,
+        "anglican": -1,
+        "dispensational": 2
       }
     },
     {
@@ -3008,13 +2331,9 @@
       ],
       "traditions": {
         "reformed": 1,
-        "lutheran": 1,
+        "baptist": -1,
         "anglican": 1,
-        "wesleyan": 1,
-        "baptist": 0,
-        "pentecostal": 0,
-        "anabaptist": 0,
-        "dispensational": -1
+        "dispensational": -2
       }
     },
     {
@@ -3030,83 +2349,11 @@
         }
       ],
       "traditions": {
-        "pentecostal": 2,
-        "wesleyan": 1,
-        "dispensational": 1,
-        "baptist": 1,
-        "anabaptist": 0,
-        "anglican": 0,
         "reformed": -1,
-        "lutheran": -1
-      }
-    },
-    {
-      "id": 64,
-      "text": "Worship should engage the emotions, not just the mind.",
-      "category": "Worship",
-      "tier": "complete",
-      "axes": [
-        {
-          "axis": "worship",
-          "direction": 1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "pentecostal": 2,
-        "wesleyan": 1,
-        "dispensational": 1,
-        "baptist": 0,
-        "anabaptist": 0,
-        "anglican": 0,
-        "lutheran": 0,
-        "reformed": -1
-      }
-    },
-    {
-      "id": 65,
-      "text": "A worship service should center on preaching, prayer, and the ordinances rather than on creating an emotional experience.",
-      "category": "Worship",
-      "tier": "complete",
-      "axes": [
-        {
-          "axis": "worship",
-          "direction": -1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "reformed": 1,
         "lutheran": 1,
-        "baptist": 1,
-        "anabaptist": 1,
-        "wesleyan": 0,
-        "anglican": 0,
-        "pentecostal": -2,
-        "dispensational": -1
-      }
-    },
-    {
-      "id": 71,
-      "text": "A single pastor, rather than a team of elders, should lead each congregation.",
-      "category": "Ecclesiology",
-      "tier": "complete",
-      "axes": [
-        {
-          "axis": "polity",
-          "direction": -1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "baptist": 1,
-        "pentecostal": 1,
-        "dispensational": 1,
-        "lutheran": 0,
-        "wesleyan": 0,
-        "anabaptist": -1,
-        "anglican": -1,
-        "reformed": -2
+        "wesleyan": 1,
+        "baptist": -1,
+        "anglican": 1
       }
     },
     {
@@ -3122,13 +2369,10 @@
         }
       ],
       "traditions": {
+        "reformed": -2,
         "baptist": 2,
-        "dispensational": 1,
         "pentecostal": 1,
         "anabaptist": 1,
-        "wesleyan": -1,
-        "reformed": -1,
-        "lutheran": -1,
         "anglican": -1
       }
     },
@@ -3146,13 +2390,10 @@
       ],
       "traditions": {
         "reformed": 2,
-        "lutheran": 1,
-        "anglican": 1,
-        "wesleyan": 0,
         "baptist": -2,
         "anabaptist": -2,
-        "dispensational": -2,
-        "pentecostal": -1
+        "anglican": 1,
+        "dispensational": -2
       }
     },
     {
@@ -3168,13 +2409,12 @@
         }
       ],
       "traditions": {
+        "reformed": -2,
         "lutheran": 2,
-        "anglican": 1,
-        "wesleyan": 0,
-        "reformed": -1,
-        "pentecostal": -1,
         "baptist": -2,
-        "anabaptist": -2,
+        "pentecostal": -2,
+        "anabaptist": -1,
+        "anglican": 1,
         "dispensational": -2
       }
     },
@@ -3191,37 +2431,13 @@
         }
       ],
       "traditions": {
-        "lutheran": 2,
         "reformed": 2,
-        "baptist": 1,
-        "anglican": 1,
-        "dispensational": 1,
-        "wesleyan": -2,
-        "pentecostal": -1,
-        "anabaptist": -1
-      }
-    },
-    {
-      "id": 88,
-      "text": "The normal Christian life includes real victory over deliberate sin, not just forgiveness for it.",
-      "category": "Christian life",
-      "tier": "complete",
-      "axes": [
-        {
-          "axis": "sanctification",
-          "direction": -1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "wesleyan": 2,
+        "lutheran": 2,
+        "wesleyan": -1,
+        "baptist": 2,
         "pentecostal": 1,
-        "anabaptist": 1,
-        "baptist": 0,
-        "anglican": 0,
-        "dispensational": 0,
-        "reformed": -1,
-        "lutheran": -1
+        "anglican": 2,
+        "dispensational": 2
       }
     },
     {
@@ -3242,60 +2458,11 @@
         }
       ],
       "traditions": {
-        "pentecostal": 2,
-        "wesleyan": 1,
-        "anabaptist": 0,
-        "anglican": 0,
-        "dispensational": 0,
         "reformed": -1,
-        "lutheran": -1,
-        "baptist": -1
-      }
-    },
-    {
-      "id": 95,
-      "text": "Complementarianism best honors both the equality and the differences God built into men and women.",
-      "category": "Ecclesiology",
-      "tier": "complete",
-      "axes": [
-        {
-          "axis": "gender-roles",
-          "direction": -1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "baptist": 2,
-        "reformed": 2,
-        "lutheran": 1,
-        "dispensational": 1,
-        "pentecostal": 0,
-        "anabaptist": 0,
-        "anglican": 0,
-        "wesleyan": -1
-      }
-    },
-    {
-      "id": 96,
-      "text": "Restricting church offices by gender has more to do with culture than with Scripture.",
-      "category": "Ecclesiology",
-      "tier": "complete",
-      "axes": [
-        {
-          "axis": "gender-roles",
-          "direction": 1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "wesleyan": 2,
-        "anabaptist": 1,
-        "anglican": 1,
-        "pentecostal": 1,
-        "lutheran": -1,
-        "baptist": -2,
-        "reformed": -2,
-        "dispensational": -2
+        "wesleyan": 1,
+        "baptist": -1,
+        "pentecostal": 2,
+        "dispensational": -1
       }
     },
     {
@@ -3311,14 +2478,14 @@
         }
       ],
       "traditions": {
-        "dispensational": 2,
-        "lutheran": 1,
-        "pentecostal": 1,
-        "anglican": 0,
-        "wesleyan": -1,
         "reformed": -1,
+        "lutheran": 2,
+        "wesleyan": -2,
         "baptist": -1,
-        "anabaptist": -1
+        "pentecostal": 1,
+        "anabaptist": -1,
+        "anglican": 1,
+        "dispensational": 2
       }
     },
     {
@@ -3334,14 +2501,13 @@
         }
       ],
       "traditions": {
-        "dispensational": 2,
-        "pentecostal": 0,
-        "anglican": 0,
-        "reformed": -2,
         "lutheran": -1,
+        "wesleyan": -2,
         "baptist": -1,
-        "wesleyan": -1,
-        "anabaptist": -1
+        "pentecostal": -1,
+        "anabaptist": -2,
+        "anglican": -1,
+        "dispensational": 2
       }
     },
     {
@@ -3358,13 +2524,13 @@
       ],
       "traditions": {
         "reformed": 2,
-        "baptist": 1,
         "lutheran": 1,
         "wesleyan": 1,
-        "anabaptist": 1,
+        "baptist": 1,
+        "pentecostal": 1,
+        "anabaptist": 2,
         "anglican": 1,
-        "pentecostal": 0,
-        "dispensational": -1
+        "dispensational": -2
       }
     },
     {
@@ -3380,14 +2546,13 @@
         }
       ],
       "traditions": {
-        "dispensational": 2,
-        "pentecostal": 1,
-        "baptist": -1,
-        "lutheran": -1,
-        "anglican": -1,
-        "wesleyan": -2,
         "reformed": -2,
-        "anabaptist": -2
+        "lutheran": -2,
+        "wesleyan": -2,
+        "baptist": -1,
+        "anabaptist": -2,
+        "anglican": -1,
+        "dispensational": 2
       }
     }
   ]
