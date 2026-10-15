@@ -971,494 +971,6 @@
   ],
   "questions": [
     {
-      "id": 59,
-      "text": "Churches should try creative new things in worship.",
-      "category": "Worship",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "worship",
-          "direction": 1,
-          "weight": 3
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -1,
-        "wesleyan": 1,
-        "baptist": -2,
-        "anglican": 1
-      }
-    },
-    {
-      "id": 58,
-      "text": "Churches should not add worship elements merely because they are creative.",
-      "category": "Worship",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "worship",
-          "direction": -1,
-          "weight": 3
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "wesleyan": -1,
-        "baptist": 2,
-        "anglican": -1
-      }
-    },
-    {
-      "id": 66,
-      "text": "Each local church should answer to no one but God.",
-      "category": "Ecclesiology",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "polity",
-          "direction": -1,
-          "weight": 3
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -2,
-        "baptist": 2,
-        "anglican": -2
-      }
-    },
-    {
-      "id": 67,
-      "text": "Churches are healthier when they're accountable to leaders beyond their own walls.",
-      "category": "Ecclesiology",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "polity",
-          "direction": 1,
-          "weight": 3
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "lutheran": 2,
-        "baptist": -2,
-        "anglican": 2
-      }
-    },
-    {
-      "id": 23,
-      "text": "Baptism is primarily a person's own decision to follow Christ.",
-      "category": "Sacraments/Ordinances",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "baptism",
-          "direction": -1,
-          "weight": 3
-        }
-      ],
-      "traditions": {
-        "reformed": -1,
-        "lutheran": -2,
-        "wesleyan": -1,
-        "baptist": 1,
-        "pentecostal": 2,
-        "anabaptist": 2,
-        "anglican": -2,
-        "dispensational": 2
-      }
-    },
-    {
-      "id": 25,
-      "text": "Baptism doesn't really count until someone is old enough to choose it themselves.",
-      "category": "Sacraments/Ordinances",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "baptism",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -2,
-        "wesleyan": -2,
-        "baptist": 2,
-        "pentecostal": 1,
-        "anabaptist": -2,
-        "anglican": -2,
-        "dispensational": 2
-      }
-    },
-    {
-      "id": 24,
-      "text": "Babies should be welcomed into the faith through baptism.",
-      "category": "Sacraments/Ordinances",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "baptism",
-          "direction": 1,
-          "weight": 3
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "lutheran": 2,
-        "wesleyan": 2,
-        "baptist": -2,
-        "pentecostal": -2,
-        "anabaptist": -2,
-        "anglican": 2,
-        "dispensational": -2
-      }
-    },
-    {
-      "id": 73,
-      "text": "Communion is mainly about remembering what Jesus did.",
-      "category": "Sacraments/Ordinances",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "ordinances",
-          "direction": -1,
-          "weight": 3
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -2,
-        "wesleyan": -1,
-        "baptist": 1,
-        "pentecostal": 2,
-        "anabaptist": 2,
-        "anglican": -1,
-        "dispensational": 2
-      }
-    },
-    {
-      "id": 74,
-      "text": "Believers truly meet God in a special way in communion.",
-      "category": "Sacraments/Ordinances",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "ordinances",
-          "direction": 1,
-          "weight": 3
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "lutheran": 2,
-        "wesleyan": 2,
-        "baptist": -1,
-        "pentecostal": -1,
-        "anabaptist": -1,
-        "anglican": 2,
-        "dispensational": -2
-      }
-    },
-    {
-      "id": 75,
-      "text": "Baptism is mostly a public way of showing you're a Christian.",
-      "category": "Sacraments/Ordinances",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "ordinances",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -2,
-        "wesleyan": -2,
-        "baptist": -1,
-        "pentecostal": 1,
-        "anabaptist": -1,
-        "anglican": -2,
-        "dispensational": 2
-      }
-    },
-    {
-      "id": 31,
-      "text": "I expect God still does miracles like healing and prophecy today.",
-      "category": "Pneumatology",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "spirit-gifts",
-          "direction": 1,
-          "weight": 3
-        }
-      ],
-      "traditions": {
-        "reformed": -1,
-        "lutheran": -1,
-        "wesleyan": 1,
-        "pentecostal": 2,
-        "dispensational": -1
-      }
-    },
-    {
-      "id": 32,
-      "text": "Speaking in tongues is a valid practice for Christians today.",
-      "category": "Pneumatology",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "spirit-gifts",
-          "direction": 1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": -1,
-        "wesleyan": 1,
-        "pentecostal": 2,
-        "dispensational": -2
-      }
-    },
-    {
-      "id": 33,
-      "text": "I believe God still gives people specific words for others today.",
-      "category": "Pneumatology",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "spirit-gifts",
-          "direction": 1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -1,
-        "wesleyan": 1,
-        "baptist": -1,
-        "pentecostal": 2,
-        "dispensational": -2
-      }
-    },
-    {
-      "id": 49,
-      "text": "The Old Testament feels like a different era when God worked by different rules.",
-      "category": "Scripture",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "covenant",
-          "direction": -1,
-          "weight": 3
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -2,
-        "wesleyan": -1,
-        "baptist": -2,
-        "anabaptist": 1,
-        "anglican": -1,
-        "dispensational": 2
-      }
-    },
-    {
-      "id": 51,
-      "text": "Israel and the church are two distinct groups in God's plan.",
-      "category": "Scripture",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "covenant",
-          "direction": -1,
-          "weight": 3
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -1,
-        "pentecostal": 1,
-        "anglican": -1,
-        "dispensational": 2
-      }
-    },
-    {
-      "id": 42,
-      "text": "I believe God still has special plans for the Jewish people.",
-      "category": "Eschatology",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "eschatology",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "wesleyan": 2,
-        "pentecostal": 2,
-        "anglican": -1,
-        "dispensational": 2
-      }
-    },
-    {
-      "id": 40,
-      "text": "Jesus will return and establish a literal, earthly kingdom.",
-      "category": "Eschatology",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "eschatology",
-          "direction": -1,
-          "weight": 3
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -2,
-        "pentecostal": 2,
-        "anglican": -1,
-        "dispensational": 2
-      }
-    },
-    {
-      "id": 41,
-      "text": "I think Jesus is already reigning now — the end is more about him wrapping things up.",
-      "category": "Eschatology",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "eschatology",
-          "direction": 1,
-          "weight": 3
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "lutheran": 2,
-        "pentecostal": -1,
-        "anglican": 1,
-        "dispensational": -2
-      }
-    },
-    {
-      "id": 97,
-      "text": "If someone's life never changes, their faith was probably not genuine.",
-      "category": "Soteriology",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "assurance",
-          "direction": -1,
-          "weight": 3
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "lutheran": 1,
-        "wesleyan": 1,
-        "baptist": 2,
-        "pentecostal": 1,
-        "anabaptist": 2,
-        "anglican": 1,
-        "dispensational": -2
-      }
-    },
-    {
-      "id": 98,
-      "text": "Christians whose lives look messy can still have genuine faith.",
-      "category": "Soteriology",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "assurance",
-          "direction": 1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "lutheran": 1,
-        "wesleyan": 1,
-        "baptist": 1,
-        "anabaptist": -2,
-        "anglican": 1,
-        "dispensational": 2
-      }
-    },
-    {
-      "id": 3,
-      "text": "God keeps hold of believers even in their worst seasons.",
-      "category": "Soteriology",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "soteriology",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "lutheran": 1,
-        "wesleyan": 1,
-        "baptist": 2,
-        "anabaptist": -1,
-        "anglican": 1,
-        "dispensational": 2
-      }
-    },
-    {
-      "id": 83,
-      "text": "Believers will struggle against sin for the rest of their lives.",
-      "category": "Christian life",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "sanctification",
-          "direction": 1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "lutheran": 2,
-        "wesleyan": -2,
-        "baptist": 2,
-        "pentecostal": 1,
-        "anglican": 2,
-        "dispensational": 2
-      }
-    },
-    {
-      "id": 82,
-      "text": "I believe it's possible to reach a point where sin doesn't control you anymore.",
-      "category": "Christian life",
-      "tier": "essential",
-      "axes": [
-        {
-          "axis": "sanctification",
-          "direction": -1,
-          "weight": 3
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -2,
-        "wesleyan": 2,
-        "baptist": -1,
-        "pentecostal": 1,
-        "anabaptist": 1,
-        "anglican": -1,
-        "dispensational": -1
-      }
-    },
-    {
       "id": 1,
       "text": "No one would choose God on their own; God must change the heart first.",
       "category": "Soteriology",
@@ -1500,6 +1012,28 @@
         "anabaptist": 2,
         "anglican": 1,
         "dispensational": -1
+      }
+    },
+    {
+      "id": 3,
+      "text": "God keeps hold of believers even in their worst seasons.",
+      "category": "Soteriology",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "soteriology",
+          "direction": -1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": 2,
+        "lutheran": 1,
+        "wesleyan": 1,
+        "baptist": 2,
+        "anabaptist": -1,
+        "anglican": 1,
+        "dispensational": 2
       }
     },
     {
@@ -1568,383 +1102,6 @@
       }
     },
     {
-      "id": 15,
-      "text": "The Bible's authority rests on its saving message, not on being error-free in historical or scientific details.",
-      "category": "Scripture",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "scripture",
-          "direction": 1,
-          "weight": 3
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -1,
-        "wesleyan": 1,
-        "baptist": -2,
-        "pentecostal": -1,
-        "anglican": 2,
-        "dispensational": -2
-      }
-    },
-    {
-      "id": 26,
-      "text": "Baptism is the New Testament counterpart to circumcision, marking out believers' children as part of God's covenant people.",
-      "category": "Sacraments/Ordinances",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "baptism",
-          "direction": 1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "baptist": -2,
-        "pentecostal": -2,
-        "anabaptist": -2,
-        "anglican": 1,
-        "dispensational": -2
-      }
-    },
-    {
-      "id": 27,
-      "text": "A baby baptism doesn't really count — you should be baptized again once you believe for yourself.",
-      "category": "Sacraments/Ordinances",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "baptism",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -2,
-        "wesleyan": -2,
-        "baptist": 2,
-        "pentecostal": 1,
-        "anabaptist": 2,
-        "anglican": -2,
-        "dispensational": 2
-      }
-    },
-    {
-      "id": 35,
-      "text": "Speaking in tongues is the expected initial sign of being baptized in the Holy Spirit.",
-      "category": "Pneumatology",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "spirit-gifts",
-          "direction": 1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -2,
-        "wesleyan": -2,
-        "baptist": -2,
-        "pentecostal": 2,
-        "anglican": -1,
-        "dispensational": -2
-      }
-    },
-    {
-      "id": 36,
-      "text": "Christians should actively seek and practice spiritual gifts like healing and prophecy.",
-      "category": "Pneumatology",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "spirit-gifts",
-          "direction": 1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -1,
-        "wesleyan": 1,
-        "pentecostal": 2,
-        "dispensational": -2
-      }
-    },
-    {
-      "id": 43,
-      "text": "I believe Christians will be raptured before the really bad stuff happens.",
-      "category": "Eschatology",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "eschatology",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -2,
-        "pentecostal": 1,
-        "anglican": -2,
-        "dispensational": 2
-      }
-    },
-    {
-      "id": 44,
-      "text": "The church is the continuation and fulfillment of Israel in God's plan.",
-      "category": "Eschatology",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "covenant",
-          "direction": 1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "lutheran": 1,
-        "pentecostal": -1,
-        "anglican": 1,
-        "dispensational": -2
-      }
-    },
-    {
-      "id": 45,
-      "text": "Jesus could return at any moment, without any prophesied events needing to happen first.",
-      "category": "Eschatology",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "eschatology",
-          "direction": -1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "reformed": -1,
-        "wesleyan": -1,
-        "pentecostal": 2,
-        "dispensational": 2
-      }
-    },
-    {
-      "id": 52,
-      "text": "Christians are free from the Old Testament law and live entirely under grace.",
-      "category": "Scripture",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "covenant",
-          "direction": -1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -2,
-        "wesleyan": -2,
-        "baptist": -2,
-        "anabaptist": 1,
-        "anglican": -1,
-        "dispensational": 2
-      }
-    },
-    {
-      "id": 53,
-      "text": "God's moral law, like the Ten Commandments, still guides Christian obedience today.",
-      "category": "Scripture",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "covenant",
-          "direction": 1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "lutheran": 2,
-        "wesleyan": 2,
-        "baptist": 2,
-        "anglican": 1,
-        "dispensational": -1
-      }
-    },
-    {
-      "id": 54,
-      "text": "The church began at Pentecost as something entirely new, not as the continuation of Israel.",
-      "category": "Scripture",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "covenant",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -2,
-        "anglican": -1,
-        "dispensational": 2
-      }
-    },
-    {
-      "id": 68,
-      "text": "The final human authority in a local church is the congregation as a whole.",
-      "category": "Ecclesiology",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "polity",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -2,
-        "baptist": 2,
-        "anabaptist": 2,
-        "anglican": -2
-      }
-    },
-    {
-      "id": 69,
-      "text": "Pastors should be appointed by church leaders, not chosen by congregational vote.",
-      "category": "Ecclesiology",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "polity",
-          "direction": 1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "baptist": -2,
-        "anabaptist": -2,
-        "anglican": 2
-      }
-    },
-    {
-      "id": 76,
-      "text": "God uses baptism to convey grace and forgiveness to the recipient.",
-      "category": "Sacraments/Ordinances",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "ordinances",
-          "direction": 1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": 1,
-        "lutheran": 2,
-        "wesleyan": 2,
-        "baptist": -2,
-        "pentecostal": -1,
-        "anabaptist": -1,
-        "anglican": 2,
-        "dispensational": -2
-      }
-    },
-    {
-      "id": 77,
-      "text": "Christ is spiritually present in the Lord's Supper in a special way, beyond his general presence everywhere.",
-      "category": "Sacraments/Ordinances",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "ordinances",
-          "direction": 1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "lutheran": 1,
-        "wesleyan": 2,
-        "baptist": 2,
-        "anabaptist": -1,
-        "anglican": 1,
-        "dispensational": -2
-      }
-    },
-    {
-      "id": 84,
-      "text": "Growth in holiness happens gradually over a lifetime, not in a single crisis moment.",
-      "category": "Christian life",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "sanctification",
-          "direction": 1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "lutheran": 2,
-        "wesleyan": -2,
-        "baptist": 2,
-        "anglican": 1,
-        "dispensational": 2
-      }
-    },
-    {
-      "id": 85,
-      "text": "A Christian can reach a state of not sinning willfully in this life.",
-      "category": "Christian life",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "sanctification",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -2,
-        "wesleyan": 2,
-        "baptist": -2,
-        "anglican": -1,
-        "dispensational": -2
-      }
-    },
-    {
-      "id": 99,
-      "text": "If someone claims to be a Christian but lives in unrepentant sin, we should doubt whether their faith is genuine.",
-      "category": "Soteriology",
-      "tier": "standard",
-      "axes": [
-        {
-          "axis": "assurance",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "lutheran": 1,
-        "wesleyan": 1,
-        "baptist": 2,
-        "pentecostal": 1,
-        "anabaptist": 2,
-        "anglican": 1,
-        "dispensational": -2
-      }
-    },
-    {
       "id": 8,
       "text": "Regeneration (the new birth) happens before and causes a person's faith, not the other way around.",
       "category": "Soteriology",
@@ -1962,169 +1119,6 @@
         "baptist": 2,
         "pentecostal": -1,
         "anabaptist": -1
-      }
-    },
-    {
-      "id": 19,
-      "text": "The Bible's authority comes from the God who speaks through it, not from a theory about how it was written.",
-      "category": "Scripture",
-      "tier": "advanced",
-      "axes": [
-        {
-          "axis": "scripture",
-          "direction": 1,
-          "weight": 1
-        }
-      ],
-      "traditions": {
-        "reformed": -1,
-        "wesleyan": 1,
-        "baptist": 2,
-        "anglican": 1,
-        "dispensational": -1
-      }
-    },
-    {
-      "id": 37,
-      "text": "The 'perfect' of 1 Corinthians 13 refers to the completion of the New Testament canon.",
-      "category": "Pneumatology",
-      "tier": "advanced",
-      "axes": [
-        {
-          "axis": "spirit-gifts",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "wesleyan": -1,
-        "pentecostal": -2,
-        "dispensational": 1
-      }
-    },
-    {
-      "id": 55,
-      "text": "The 'covenant of works' with Adam and the 'covenant of grace' in Christ are the right framework for reading the whole Bible.",
-      "category": "Scripture",
-      "tier": "advanced",
-      "axes": [
-        {
-          "axis": "covenant",
-          "direction": 1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "baptist": 1,
-        "dispensational": -2
-      }
-    },
-    {
-      "id": 62,
-      "text": "Only psalms should be sung in gathered worship; uninspired hymns are not permitted.",
-      "category": "Worship",
-      "tier": "advanced",
-      "axes": [
-        {
-          "axis": "worship",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": 1,
-        "lutheran": -2,
-        "wesleyan": -2,
-        "baptist": -2,
-        "anglican": -1
-      }
-    },
-    {
-      "id": 70,
-      "text": "An unbroken line of bishops back to the apostles matters for a church's legitimacy.",
-      "category": "Ecclesiology",
-      "tier": "advanced",
-      "axes": [
-        {
-          "axis": "polity",
-          "direction": 1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -2,
-        "baptist": -2,
-        "anabaptist": -2,
-        "anglican": 2
-      }
-    },
-    {
-      "id": 79,
-      "text": "In communion, Christ's body and blood are truly present 'in, with, and under' the bread and wine.",
-      "category": "Sacraments/Ordinances",
-      "tier": "advanced",
-      "axes": [
-        {
-          "axis": "ordinances",
-          "direction": 1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": 2,
-        "wesleyan": -2,
-        "baptist": -2,
-        "pentecostal": -1,
-        "anabaptist": -1,
-        "dispensational": -2
-      }
-    },
-    {
-      "id": 86,
-      "text": "John Wesley's doctrine of entire sanctification is a faithful reading of Scripture.",
-      "category": "Christian life",
-      "tier": "advanced",
-      "axes": [
-        {
-          "axis": "sanctification",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": -2,
-        "lutheran": -2,
-        "wesleyan": 2,
-        "baptist": -2,
-        "pentecostal": -1,
-        "anglican": -1,
-        "dispensational": -2
-      }
-    },
-    {
-      "id": 101,
-      "text": "Salvation requires receiving Jesus as Lord, not only as Savior.",
-      "category": "Soteriology",
-      "tier": "advanced",
-      "axes": [
-        {
-          "axis": "assurance",
-          "direction": -1,
-          "weight": 2
-        }
-      ],
-      "traditions": {
-        "reformed": 2,
-        "lutheran": 1,
-        "wesleyan": 1,
-        "baptist": 1,
-        "pentecostal": 1,
-        "anabaptist": 1,
-        "anglican": 1,
-        "dispensational": -2
       }
     },
     {
@@ -2213,6 +1207,161 @@
       }
     },
     {
+      "id": 15,
+      "text": "The Bible's authority rests on its saving message, not on being error-free in historical or scientific details.",
+      "category": "Scripture",
+      "tier": "standard",
+      "axes": [
+        {
+          "axis": "scripture",
+          "direction": 1,
+          "weight": 3
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -1,
+        "wesleyan": 1,
+        "baptist": -2,
+        "pentecostal": -1,
+        "anglican": 2,
+        "dispensational": -2
+      }
+    },
+    {
+      "id": 19,
+      "text": "The Bible's authority comes from the God who speaks through it, not from a theory about how it was written.",
+      "category": "Scripture",
+      "tier": "advanced",
+      "axes": [
+        {
+          "axis": "scripture",
+          "direction": 1,
+          "weight": 1
+        }
+      ],
+      "traditions": {
+        "reformed": -1,
+        "wesleyan": 1,
+        "baptist": 2,
+        "anglican": 1,
+        "dispensational": -1
+      }
+    },
+    {
+      "id": 23,
+      "text": "Baptism is primarily a person's own decision to follow Christ.",
+      "category": "Sacraments/Ordinances",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "baptism",
+          "direction": -1,
+          "weight": 3
+        }
+      ],
+      "traditions": {
+        "reformed": -1,
+        "lutheran": -2,
+        "wesleyan": -1,
+        "baptist": 1,
+        "pentecostal": 2,
+        "anabaptist": 2,
+        "anglican": -2,
+        "dispensational": 2
+      }
+    },
+    {
+      "id": 24,
+      "text": "Babies should be welcomed into the faith through baptism.",
+      "category": "Sacraments/Ordinances",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "baptism",
+          "direction": 1,
+          "weight": 3
+        }
+      ],
+      "traditions": {
+        "reformed": 2,
+        "lutheran": 2,
+        "wesleyan": 2,
+        "baptist": -2,
+        "pentecostal": -2,
+        "anabaptist": -2,
+        "anglican": 2,
+        "dispensational": -2
+      }
+    },
+    {
+      "id": 25,
+      "text": "Baptism doesn't really count until someone is old enough to choose it themselves.",
+      "category": "Sacraments/Ordinances",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "baptism",
+          "direction": -1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -2,
+        "wesleyan": -2,
+        "baptist": 2,
+        "pentecostal": 1,
+        "anabaptist": -2,
+        "anglican": -2,
+        "dispensational": 2
+      }
+    },
+    {
+      "id": 26,
+      "text": "Baptism is the New Testament counterpart to circumcision, marking out believers' children as part of God's covenant people.",
+      "category": "Sacraments/Ordinances",
+      "tier": "standard",
+      "axes": [
+        {
+          "axis": "baptism",
+          "direction": 1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": 2,
+        "baptist": -2,
+        "pentecostal": -2,
+        "anabaptist": -2,
+        "anglican": 1,
+        "dispensational": -2
+      }
+    },
+    {
+      "id": 27,
+      "text": "A baby baptism doesn't really count — you should be baptized again once you believe for yourself.",
+      "category": "Sacraments/Ordinances",
+      "tier": "standard",
+      "axes": [
+        {
+          "axis": "baptism",
+          "direction": -1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -2,
+        "wesleyan": -2,
+        "baptist": 2,
+        "pentecostal": 1,
+        "anabaptist": 2,
+        "anglican": -2,
+        "dispensational": 2
+      }
+    },
+    {
       "id": 29,
       "text": "The mode of baptism doesn't matter — immersion, pouring, and sprinkling are all valid when done in the triune name.",
       "category": "Sacraments/Ordinances",
@@ -2253,6 +1402,126 @@
         "anabaptist": 1,
         "anglican": -1,
         "dispensational": 2
+      }
+    },
+    {
+      "id": 31,
+      "text": "I expect God still does miracles like healing and prophecy today.",
+      "category": "Pneumatology",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "spirit-gifts",
+          "direction": 1,
+          "weight": 3
+        }
+      ],
+      "traditions": {
+        "reformed": -1,
+        "lutheran": -1,
+        "wesleyan": 1,
+        "pentecostal": 2,
+        "dispensational": -1
+      }
+    },
+    {
+      "id": 32,
+      "text": "Speaking in tongues is a valid practice for Christians today.",
+      "category": "Pneumatology",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "spirit-gifts",
+          "direction": 1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": -1,
+        "wesleyan": 1,
+        "pentecostal": 2,
+        "dispensational": -2
+      }
+    },
+    {
+      "id": 33,
+      "text": "I believe God still gives people specific words for others today.",
+      "category": "Pneumatology",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "spirit-gifts",
+          "direction": 1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -1,
+        "wesleyan": 1,
+        "baptist": -1,
+        "pentecostal": 2,
+        "dispensational": -2
+      }
+    },
+    {
+      "id": 35,
+      "text": "Speaking in tongues is the expected initial sign of being baptized in the Holy Spirit.",
+      "category": "Pneumatology",
+      "tier": "standard",
+      "axes": [
+        {
+          "axis": "spirit-gifts",
+          "direction": 1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -2,
+        "wesleyan": -2,
+        "baptist": -2,
+        "pentecostal": 2,
+        "anglican": -1,
+        "dispensational": -2
+      }
+    },
+    {
+      "id": 36,
+      "text": "Christians should actively seek and practice spiritual gifts like healing and prophecy.",
+      "category": "Pneumatology",
+      "tier": "standard",
+      "axes": [
+        {
+          "axis": "spirit-gifts",
+          "direction": 1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -1,
+        "wesleyan": 1,
+        "pentecostal": 2,
+        "dispensational": -2
+      }
+    },
+    {
+      "id": 37,
+      "text": "The 'perfect' of 1 Corinthians 13 refers to the completion of the New Testament canon.",
+      "category": "Pneumatology",
+      "tier": "advanced",
+      "axes": [
+        {
+          "axis": "spirit-gifts",
+          "direction": -1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "wesleyan": -1,
+        "pentecostal": -2,
+        "dispensational": 1
       }
     },
     {
@@ -2298,6 +1567,247 @@
       }
     },
     {
+      "id": 40,
+      "text": "Jesus will return and establish a literal, earthly kingdom.",
+      "category": "Eschatology",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "eschatology",
+          "direction": -1,
+          "weight": 3
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -2,
+        "pentecostal": 2,
+        "anglican": -1,
+        "dispensational": 2
+      }
+    },
+    {
+      "id": 41,
+      "text": "I think Jesus is already reigning now — the end is more about him wrapping things up.",
+      "category": "Eschatology",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "eschatology",
+          "direction": 1,
+          "weight": 3
+        }
+      ],
+      "traditions": {
+        "reformed": 2,
+        "lutheran": 2,
+        "pentecostal": -1,
+        "anglican": 1,
+        "dispensational": -2
+      }
+    },
+    {
+      "id": 42,
+      "text": "I believe God still has special plans for the Jewish people.",
+      "category": "Eschatology",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "eschatology",
+          "direction": -1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "wesleyan": 2,
+        "pentecostal": 2,
+        "anglican": -1,
+        "dispensational": 2
+      }
+    },
+    {
+      "id": 43,
+      "text": "I believe Christians will be raptured before the really bad stuff happens.",
+      "category": "Eschatology",
+      "tier": "standard",
+      "axes": [
+        {
+          "axis": "eschatology",
+          "direction": -1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -2,
+        "pentecostal": 1,
+        "anglican": -2,
+        "dispensational": 2
+      }
+    },
+    {
+      "id": 44,
+      "text": "The church is the continuation and fulfillment of Israel in God's plan.",
+      "category": "Eschatology",
+      "tier": "standard",
+      "axes": [
+        {
+          "axis": "covenant",
+          "direction": 1,
+          "weight": 1
+        }
+      ],
+      "traditions": {
+        "reformed": 2,
+        "lutheran": 1,
+        "pentecostal": -1,
+        "anglican": 1,
+        "dispensational": -2
+      }
+    },
+    {
+      "id": 45,
+      "text": "Jesus could return at any moment, without any prophesied events needing to happen first.",
+      "category": "Eschatology",
+      "tier": "standard",
+      "axes": [
+        {
+          "axis": "eschatology",
+          "direction": -1,
+          "weight": 1
+        }
+      ],
+      "traditions": {
+        "reformed": -1,
+        "wesleyan": -1,
+        "pentecostal": 2,
+        "dispensational": 2
+      }
+    },
+    {
+      "id": 49,
+      "text": "The Old Testament feels like a different era when God worked by different rules.",
+      "category": "Scripture",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "covenant",
+          "direction": -1,
+          "weight": 3
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -2,
+        "wesleyan": -1,
+        "baptist": -2,
+        "anabaptist": 1,
+        "anglican": -1,
+        "dispensational": 2
+      }
+    },
+    {
+      "id": 51,
+      "text": "Israel and the church are two distinct groups in God's plan.",
+      "category": "Scripture",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "covenant",
+          "direction": -1,
+          "weight": 3
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -1,
+        "pentecostal": 1,
+        "anglican": -1,
+        "dispensational": 2
+      }
+    },
+    {
+      "id": 52,
+      "text": "Christians are free from the Old Testament law and live entirely under grace.",
+      "category": "Scripture",
+      "tier": "standard",
+      "axes": [
+        {
+          "axis": "covenant",
+          "direction": -1,
+          "weight": 1
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -2,
+        "wesleyan": -2,
+        "baptist": -2,
+        "anabaptist": 1,
+        "anglican": -1,
+        "dispensational": 2
+      }
+    },
+    {
+      "id": 53,
+      "text": "God's moral law, like the Ten Commandments, still guides Christian obedience today.",
+      "category": "Scripture",
+      "tier": "standard",
+      "axes": [
+        {
+          "axis": "covenant",
+          "direction": 1,
+          "weight": 1
+        }
+      ],
+      "traditions": {
+        "reformed": 2,
+        "lutheran": 2,
+        "wesleyan": 2,
+        "baptist": 2,
+        "anglican": 1,
+        "dispensational": -1
+      }
+    },
+    {
+      "id": 54,
+      "text": "The church began at Pentecost as something entirely new, not as the continuation of Israel.",
+      "category": "Scripture",
+      "tier": "standard",
+      "axes": [
+        {
+          "axis": "covenant",
+          "direction": -1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -2,
+        "anglican": -1,
+        "dispensational": 2
+      }
+    },
+    {
+      "id": 55,
+      "text": "The 'covenant of works' with Adam and the 'covenant of grace' in Christ are the right framework for reading the whole Bible.",
+      "category": "Scripture",
+      "tier": "advanced",
+      "axes": [
+        {
+          "axis": "covenant",
+          "direction": 1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": 2,
+        "baptist": 1,
+        "dispensational": -2
+      }
+    },
+    {
       "id": 56,
       "text": "Prophecies given to Israel should be read literally as referring to ethnic Israel, not spiritually as referring to the church.",
       "category": "Scripture",
@@ -2337,6 +1847,65 @@
       }
     },
     {
+      "id": 58,
+      "text": "Churches should not add worship elements merely because they are creative.",
+      "category": "Worship",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "worship",
+          "direction": -1,
+          "weight": 3
+        }
+      ],
+      "traditions": {
+        "reformed": 2,
+        "wesleyan": -1,
+        "baptist": 2,
+        "anglican": -1
+      }
+    },
+    {
+      "id": 59,
+      "text": "Churches should try creative new things in worship.",
+      "category": "Worship",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "worship",
+          "direction": 1,
+          "weight": 3
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -1,
+        "wesleyan": 1,
+        "baptist": -2,
+        "anglican": 1
+      }
+    },
+    {
+      "id": 62,
+      "text": "Only psalms should be sung in gathered worship; uninspired hymns are not permitted.",
+      "category": "Worship",
+      "tier": "advanced",
+      "axes": [
+        {
+          "axis": "worship",
+          "direction": -1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": 1,
+        "lutheran": -2,
+        "wesleyan": -2,
+        "baptist": -2,
+        "anglican": -1
+      }
+    },
+    {
       "id": 63,
       "text": "A church's worship style should adapt to its local culture to reach people effectively.",
       "category": "Worship",
@@ -2357,6 +1926,102 @@
       }
     },
     {
+      "id": 66,
+      "text": "Each local church should answer to no one but God.",
+      "category": "Ecclesiology",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "polity",
+          "direction": -1,
+          "weight": 3
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -2,
+        "baptist": 2,
+        "anglican": -2
+      }
+    },
+    {
+      "id": 67,
+      "text": "Churches are healthier when they're accountable to leaders beyond their own walls.",
+      "category": "Ecclesiology",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "polity",
+          "direction": 1,
+          "weight": 3
+        }
+      ],
+      "traditions": {
+        "reformed": 2,
+        "lutheran": 2,
+        "baptist": -2,
+        "anglican": 2
+      }
+    },
+    {
+      "id": 68,
+      "text": "The final human authority in a local church is the congregation as a whole.",
+      "category": "Ecclesiology",
+      "tier": "standard",
+      "axes": [
+        {
+          "axis": "polity",
+          "direction": -1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -2,
+        "baptist": 2,
+        "anabaptist": 2,
+        "anglican": -2
+      }
+    },
+    {
+      "id": 69,
+      "text": "Pastors should be appointed by church leaders, not chosen by congregational vote.",
+      "category": "Ecclesiology",
+      "tier": "standard",
+      "axes": [
+        {
+          "axis": "polity",
+          "direction": 1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "baptist": -2,
+        "anabaptist": -2,
+        "anglican": 2
+      }
+    },
+    {
+      "id": 70,
+      "text": "An unbroken line of bishops back to the apostles matters for a church's legitimacy.",
+      "category": "Ecclesiology",
+      "tier": "advanced",
+      "axes": [
+        {
+          "axis": "polity",
+          "direction": 1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -2,
+        "baptist": -2,
+        "anabaptist": -2,
+        "anglican": 2
+      }
+    },
+    {
       "id": 72,
       "text": "Local churches should cooperate in associations or conventions while remaining self-governing.",
       "category": "Ecclesiology",
@@ -2374,6 +2039,142 @@
         "pentecostal": 1,
         "anabaptist": 1,
         "anglican": -1
+      }
+    },
+    {
+      "id": 73,
+      "text": "Communion is mainly about remembering what Jesus did.",
+      "category": "Sacraments/Ordinances",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "ordinances",
+          "direction": -1,
+          "weight": 3
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -2,
+        "wesleyan": -1,
+        "baptist": 1,
+        "pentecostal": 2,
+        "anabaptist": 2,
+        "anglican": -1,
+        "dispensational": 2
+      }
+    },
+    {
+      "id": 74,
+      "text": "Believers truly meet God in a special way in communion.",
+      "category": "Sacraments/Ordinances",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "ordinances",
+          "direction": 1,
+          "weight": 3
+        }
+      ],
+      "traditions": {
+        "reformed": 2,
+        "lutheran": 2,
+        "wesleyan": 2,
+        "baptist": -1,
+        "pentecostal": -1,
+        "anabaptist": -1,
+        "anglican": 2,
+        "dispensational": -2
+      }
+    },
+    {
+      "id": 75,
+      "text": "Baptism is mostly a public way of showing you're a Christian.",
+      "category": "Sacraments/Ordinances",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "ordinances",
+          "direction": -1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -2,
+        "wesleyan": -2,
+        "baptist": -1,
+        "pentecostal": 1,
+        "anabaptist": -1,
+        "anglican": -2,
+        "dispensational": 2
+      }
+    },
+    {
+      "id": 76,
+      "text": "God uses baptism to convey grace and forgiveness to the recipient.",
+      "category": "Sacraments/Ordinances",
+      "tier": "standard",
+      "axes": [
+        {
+          "axis": "ordinances",
+          "direction": 1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": 1,
+        "lutheran": 2,
+        "wesleyan": 2,
+        "baptist": -2,
+        "pentecostal": -1,
+        "anabaptist": -1,
+        "anglican": 2,
+        "dispensational": -2
+      }
+    },
+    {
+      "id": 77,
+      "text": "Christ is spiritually present in the Lord's Supper in a special way, beyond his general presence everywhere.",
+      "category": "Sacraments/Ordinances",
+      "tier": "standard",
+      "axes": [
+        {
+          "axis": "ordinances",
+          "direction": 1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": 2,
+        "lutheran": 1,
+        "wesleyan": 2,
+        "baptist": 2,
+        "anabaptist": -1,
+        "anglican": 1,
+        "dispensational": -2
+      }
+    },
+    {
+      "id": 79,
+      "text": "In communion, Christ's body and blood are truly present 'in, with, and under' the bread and wine.",
+      "category": "Sacraments/Ordinances",
+      "tier": "advanced",
+      "axes": [
+        {
+          "axis": "ordinances",
+          "direction": 1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": 2,
+        "wesleyan": -2,
+        "baptist": -2,
+        "pentecostal": -1,
+        "anabaptist": -1,
+        "dispensational": -2
       }
     },
     {
@@ -2415,6 +2216,115 @@
         "pentecostal": -2,
         "anabaptist": -1,
         "anglican": 1,
+        "dispensational": -2
+      }
+    },
+    {
+      "id": 82,
+      "text": "I believe it's possible to reach a point where sin doesn't control you anymore.",
+      "category": "Christian life",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "sanctification",
+          "direction": -1,
+          "weight": 3
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -2,
+        "wesleyan": 2,
+        "baptist": -1,
+        "pentecostal": 1,
+        "anabaptist": 1,
+        "anglican": -1,
+        "dispensational": -1
+      }
+    },
+    {
+      "id": 83,
+      "text": "Believers will struggle against sin for the rest of their lives.",
+      "category": "Christian life",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "sanctification",
+          "direction": 1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": 2,
+        "lutheran": 2,
+        "wesleyan": -2,
+        "baptist": 2,
+        "pentecostal": 1,
+        "anglican": 2,
+        "dispensational": 2
+      }
+    },
+    {
+      "id": 84,
+      "text": "Growth in holiness happens gradually over a lifetime, not in a single crisis moment.",
+      "category": "Christian life",
+      "tier": "standard",
+      "axes": [
+        {
+          "axis": "sanctification",
+          "direction": 1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": 2,
+        "lutheran": 2,
+        "wesleyan": -2,
+        "baptist": 2,
+        "anglican": 1,
+        "dispensational": 2
+      }
+    },
+    {
+      "id": 85,
+      "text": "A Christian can reach a state of not sinning willfully in this life.",
+      "category": "Christian life",
+      "tier": "standard",
+      "axes": [
+        {
+          "axis": "sanctification",
+          "direction": -1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -2,
+        "wesleyan": 2,
+        "baptist": -2,
+        "anglican": -1,
+        "dispensational": -2
+      }
+    },
+    {
+      "id": 86,
+      "text": "John Wesley's doctrine of entire sanctification is a faithful reading of Scripture.",
+      "category": "Christian life",
+      "tier": "advanced",
+      "axes": [
+        {
+          "axis": "sanctification",
+          "direction": -1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": -2,
+        "lutheran": -2,
+        "wesleyan": 2,
+        "baptist": -2,
+        "pentecostal": -1,
+        "anglican": -1,
         "dispensational": -2
       }
     },
@@ -2463,6 +2373,96 @@
         "baptist": -1,
         "pentecostal": 2,
         "dispensational": -1
+      }
+    },
+    {
+      "id": 97,
+      "text": "If someone's life never changes, their faith was probably not genuine.",
+      "category": "Soteriology",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "assurance",
+          "direction": -1,
+          "weight": 3
+        }
+      ],
+      "traditions": {
+        "reformed": 2,
+        "lutheran": 1,
+        "wesleyan": 1,
+        "baptist": 2,
+        "pentecostal": 1,
+        "anabaptist": 2,
+        "anglican": 1,
+        "dispensational": -2
+      }
+    },
+    {
+      "id": 98,
+      "text": "Christians whose lives look messy can still have genuine faith.",
+      "category": "Soteriology",
+      "tier": "essential",
+      "axes": [
+        {
+          "axis": "assurance",
+          "direction": 1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "lutheran": 1,
+        "wesleyan": 1,
+        "baptist": 1,
+        "anabaptist": -2,
+        "anglican": 1,
+        "dispensational": 2
+      }
+    },
+    {
+      "id": 99,
+      "text": "If someone claims to be a Christian but lives in unrepentant sin, we should doubt whether their faith is genuine.",
+      "category": "Soteriology",
+      "tier": "standard",
+      "axes": [
+        {
+          "axis": "assurance",
+          "direction": -1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": 2,
+        "lutheran": 1,
+        "wesleyan": 1,
+        "baptist": 2,
+        "pentecostal": 1,
+        "anabaptist": 2,
+        "anglican": 1,
+        "dispensational": -2
+      }
+    },
+    {
+      "id": 101,
+      "text": "Salvation requires receiving Jesus as Lord, not only as Savior.",
+      "category": "Soteriology",
+      "tier": "advanced",
+      "axes": [
+        {
+          "axis": "assurance",
+          "direction": -1,
+          "weight": 2
+        }
+      ],
+      "traditions": {
+        "reformed": 2,
+        "lutheran": 1,
+        "wesleyan": 1,
+        "baptist": 1,
+        "pentecostal": 1,
+        "anabaptist": 1,
+        "anglican": 1,
+        "dispensational": -2
       }
     },
     {
@@ -2553,6 +2553,331 @@
         "anabaptist": -2,
         "anglican": -1,
         "dispensational": 2
+      }
+    },
+    {
+      "axes": [
+        {
+          "axis": "scripture",
+          "direction": -1,
+          "weight": 3
+        }
+      ],
+      "category": "Scripture",
+      "id": 201,
+      "text": "The Bible is without error in everything it affirms, including its claims about history and the natural world.",
+      "tier": "essential",
+      "traditions": {
+        "anglican": -1,
+        "baptist": 2,
+        "dispensational": 2,
+        "lutheran": 1,
+        "pentecostal": 2,
+        "reformed": 2,
+        "wesleyan": -1
+      }
+    },
+    {
+      "axes": [
+        {
+          "axis": "scripture",
+          "direction": 1,
+          "weight": 2
+        }
+      ],
+      "category": "Scripture",
+      "id": 202,
+      "text": "Christians can trust the Bible partly because the church has recognized these books, without doubting them, across the centuries.",
+      "tier": "standard",
+      "traditions": {
+        "anglican": 2,
+        "baptist": -2,
+        "reformed": -2,
+        "wesleyan": 1
+      }
+    },
+    {
+      "axes": [
+        {
+          "axis": "scripture",
+          "direction": -1,
+          "weight": 2
+        }
+      ],
+      "category": "Scripture",
+      "id": 203,
+      "text": "A Christian's deepest certainty that the Bible is true comes from the Holy Spirit's inward witness, not from historical or rational proofs.",
+      "tier": "standard",
+      "traditions": {
+        "anglican": -1,
+        "baptist": 2,
+        "reformed": 2,
+        "wesleyan": -1
+      }
+    },
+    {
+      "axes": [
+        {
+          "axis": "scripture",
+          "direction": 1,
+          "weight": 2
+        }
+      ],
+      "category": "Scripture",
+      "id": 204,
+      "text": "Christians should not describe the Bible as 'inerrant,' since the word goes beyond what the church's confessions have historically claimed.",
+      "tier": "standard",
+      "traditions": {
+        "anabaptist": 1,
+        "anglican": 1,
+        "baptist": -1,
+        "dispensational": -2,
+        "lutheran": 1,
+        "reformed": -1,
+        "wesleyan": 1
+      }
+    },
+    {
+      "axes": [
+        {
+          "axis": "scripture",
+          "direction": -1,
+          "weight": 2
+        }
+      ],
+      "category": "Scripture",
+      "id": 205,
+      "text": "It is important for Christians to affirm that the Bible contains no errors.",
+      "tier": "standard",
+      "traditions": {
+        "anabaptist": -1,
+        "anglican": -1,
+        "baptist": 1,
+        "dispensational": 2,
+        "lutheran": -1,
+        "pentecostal": 2,
+        "reformed": 1,
+        "wesleyan": -1
+      }
+    },
+    {
+      "axes": [
+        {
+          "axis": "scripture",
+          "direction": -1,
+          "weight": 2
+        }
+      ],
+      "category": "Scripture",
+      "id": 206,
+      "text": "The Bible's authority comes from God alone, not from any human or churchly testimony about it.",
+      "tier": "standard",
+      "traditions": {
+        "anglican": -1,
+        "baptist": 2,
+        "dispensational": 1,
+        "lutheran": 1,
+        "pentecostal": 1,
+        "reformed": 2,
+        "wesleyan": -1
+      }
+    },
+    {
+      "axes": [
+        {
+          "axis": "scripture",
+          "direction": 1,
+          "weight": 1
+        }
+      ],
+      "category": "Scripture",
+      "id": 207,
+      "text": "Debates about the Bible's inerrancy distract Christians from its saving message.",
+      "tier": "advanced",
+      "traditions": {
+        "anglican": 1,
+        "baptist": -1,
+        "dispensational": -2,
+        "reformed": -1,
+        "wesleyan": 1
+      }
+    },
+    {
+      "axes": [
+        {
+          "axis": "worship",
+          "direction": 1,
+          "weight": 2
+        }
+      ],
+      "category": "Worship",
+      "id": 208,
+      "text": "It is fitting for churches to use musical instruments in gathered worship, not only voices.",
+      "tier": "standard",
+      "traditions": {
+        "anglican": 1,
+        "baptist": -1,
+        "lutheran": 1,
+        "reformed": -1,
+        "wesleyan": 1
+      }
+    },
+    {
+      "axes": [
+        {
+          "axis": "worship",
+          "direction": 1,
+          "weight": 2
+        }
+      ],
+      "category": "Worship",
+      "id": 209,
+      "text": "Churches should observe the historic Christian seasons (such as Advent, Lent, and Easter) in their worship life.",
+      "tier": "standard",
+      "traditions": {
+        "anglican": 2,
+        "baptist": -1,
+        "lutheran": 1,
+        "reformed": -1,
+        "wesleyan": 1
+      }
+    },
+    {
+      "axes": [
+        {
+          "axis": "worship",
+          "direction": 1,
+          "weight": 2
+        }
+      ],
+      "category": "Worship",
+      "id": 210,
+      "text": "Crosses, banners, and other visual art have a proper place in the room where a church gathers for worship.",
+      "tier": "standard",
+      "traditions": {
+        "anglican": 1,
+        "baptist": -1,
+        "lutheran": 1,
+        "reformed": -1
+      }
+    },
+    {
+      "axes": [
+        {
+          "axis": "worship",
+          "direction": -1,
+          "weight": 2
+        }
+      ],
+      "category": "Worship",
+      "id": 211,
+      "text": "It is wrong for a church to require its ministers to follow a prescribed prayer book.",
+      "tier": "advanced",
+      "traditions": {
+        "anglican": -2,
+        "baptist": 1,
+        "lutheran": -1,
+        "reformed": 1,
+        "wesleyan": -1
+      }
+    },
+    {
+      "axes": [
+        {
+          "axis": "worship",
+          "direction": -1,
+          "weight": 2
+        }
+      ],
+      "category": "Worship",
+      "id": 212,
+      "text": "Christians are still commanded to rest from ordinary work one day in seven.",
+      "tier": "advanced",
+      "traditions": {
+        "baptist": 2,
+        "dispensational": -1,
+        "lutheran": -2,
+        "reformed": 2
+      }
+    },
+    {
+      "axes": [
+        {
+          "axis": "eschatology",
+          "direction": -1,
+          "weight": 3
+        }
+      ],
+      "category": "Eschatology",
+      "id": 213,
+      "text": "A rebuilt temple in Jerusalem, with animal sacrifices, will be part of the future millennial kingdom.",
+      "tier": "advanced",
+      "traditions": {
+        "anglican": -1,
+        "baptist": -2,
+        "dispensational": 2,
+        "pentecostal": 1,
+        "reformed": -2
+      }
+    },
+    {
+      "axes": [
+        {
+          "axis": "eschatology",
+          "direction": 1,
+          "weight": 3
+        }
+      ],
+      "category": "Eschatology",
+      "id": 214,
+      "text": "The 'thousand years' of Revelation 20 describes Christ's present reign through the church, not a future earthly kingdom.",
+      "tier": "advanced",
+      "traditions": {
+        "dispensational": -2,
+        "lutheran": 1,
+        "pentecostal": -1,
+        "reformed": 1
+      }
+    },
+    {
+      "axes": [
+        {
+          "axis": "eschatology",
+          "direction": 1,
+          "weight": 2
+        }
+      ],
+      "category": "Eschatology",
+      "id": 215,
+      "text": "Certain prophesied events — like the worldwide spread of the gospel — must happen before Christ can return.",
+      "tier": "standard",
+      "traditions": {
+        "dispensational": -2,
+        "pentecostal": -2,
+        "reformed": 1,
+        "wesleyan": 1
+      }
+    },
+    {
+      "axes": [
+        {
+          "axis": "eschatology",
+          "direction": 1,
+          "weight": 3
+        }
+      ],
+      "category": "Eschatology",
+      "id": 216,
+      "text": "At Christ's return there will be one general resurrection and one final judgment of all people together.",
+      "tier": "essential",
+      "traditions": {
+        "anabaptist": 2,
+        "anglican": 1,
+        "baptist": 2,
+        "dispensational": -2,
+        "lutheran": 2,
+        "pentecostal": -2,
+        "reformed": 2
       }
     }
   ]
