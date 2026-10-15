@@ -950,108 +950,49 @@
     });
   }
 
-  // ---------- shareable results card ----------
-  function fitText(g, text, cx, y, maxW, startSize, font) {
-    var size = startSize;
-    do {
-      g.font = '700 ' + size + 'px ' + font;
-      size -= 4;
-    } while (g.measureText(text).width > maxW && size > 28);
-    g.fillText(text, cx, y);
-  }
-
-  function wrapText(g, text, cx, y, maxW, lineH, maxLines) {
-    var words = text.split(' ');
-    var lines = [], line = '';
-    words.forEach(function (w) {
-      var t = line ? line + ' ' + w : w;
-      if (g.measureText(t).width > maxW && line) { lines.push(line); line = w; }
-      else line = t;
-    });
-    if (line) lines.push(line);
-    lines = lines.slice(0, maxLines);
-    lines.forEach(function (l, i) { g.fillText(l, cx, y + i * lineH); });
-  }
-
-  function loadImg(src) {
-    return new Promise(function (resolve) {
-      if (!src) return resolve(null);
-      var im = new Image();
-      im.onload = function () { resolve(im); };
-      im.onerror = function () { resolve(null); };
-      im.src = src;
-    });
+  // ---------- shareable results (text) ----------
+  // Builds a compact, textable summary of the results — copy/paste into
+  // Messages, social posts, etc. Uses the OS share sheet when available.
+  function buildShareText() {
+    var top = LAST.trads[0];
+    var theos = LAST.theos || [];
+    var lines = [];
+    lines.push('My Protestant Theology Profile');
+    lines.push('');
+    lines.push(top.tradition.name + ' — ' + top.match.toFixed(1) + '/100 match');
+    if (theos.length) {
+      lines.push('Closest theologians: ' + theos.map(function (t) { return t.name; }).join(', '));
+    }
+    lines.push('');
+    lines.push('Strongest convictions:');
+    LAST.axes.slice()
+      .sort(function (a, b) { return Math.abs(b.score) - Math.abs(a.score); })
+      .slice(0, 3)
+      .forEach(function (e) {
+        var pole = e.score >= 0 ? e.axis.right : e.axis.left;
+        lines.push('\u2022 ' + e.axis.label + ': ' + (e.score > 0 ? '+' : '') + e.score + ' (' + pole + ')');
+      });
+    lines.push('');
+    lines.push('Take the quiz: noahveenstra.com/protestant-theology-quiz');
+    return lines.join('\n');
   }
 
   function shareResults() {
     if (!LAST) return;
-    var top = LAST.trads[0];
-    var theos = LAST.theos;
-    var W = 1080, H = 1350;
-    var c = document.createElement('canvas');
-    c.width = W; c.height = H;
-    var g = c.getContext('2d');
-
-    var portraits = (window.THEOLOGIAN_PORTRAITS) || {};
-    var jobs = theos.map(function (t) { return loadImg(portraits[t.id]); });
-    Promise.all(jobs).then(function (imgs) {
-      // background + frame
-      g.fillStyle = '#faf7f1'; g.fillRect(0, 0, W, H);
-      g.strokeStyle = '#a0522d'; g.lineWidth = 6; g.strokeRect(36, 36, W - 72, H - 72);
-      g.textAlign = 'center';
-
-      g.fillStyle = '#a0522d'; g.font = '600 32px Inter, sans-serif';
-      g.fillText('M Y   P R O T E S T A N T   T H E O L O G Y   P R O F I L E', W / 2, 150);
-
-      g.fillStyle = '#1c1814';
-      fitText(g, top.tradition.name, W / 2, 265, W - 200, 92, 'Georgia, serif');
-
-      g.fillStyle = '#5c554b'; g.font = '500 40px Inter, sans-serif';
-      g.fillText(top.match.toFixed(1) + ' / 100 match', W / 2, 335);
-
-      // portraits
-      var cy = 560, r = 118, gap = 300;
-      var startX = W / 2 - gap * (theos.length - 1) / 2;
-      theos.forEach(function (t, i) {
-        var x = startX + i * gap;
-        g.save();
-        g.beginPath(); g.arc(x, cy, r, 0, Math.PI * 2); g.clip();
-        var im = imgs[i];
-        if (im) {
-          var s = Math.max((r * 2) / im.width, (r * 2) / im.height);
-          g.drawImage(im, x - im.width * s / 2, cy - im.height * s / 2, im.width * s, im.height * s);
-        } else {
-          g.fillStyle = '#e5ddcd'; g.fillRect(x - r, cy - r, r * 2, r * 2);
-          g.fillStyle = '#a0522d'; g.font = '700 64px Georgia, serif';
-          g.fillText(initials(t.name), x, cy + 22);
-        }
-        g.restore();
-        g.strokeStyle = '#a0522d'; g.lineWidth = 4;
-        g.beginPath(); g.arc(x, cy, r, 0, Math.PI * 2); g.stroke();
-        g.fillStyle = '#1c1814'; g.font = '600 34px Georgia, serif';
-        fitText(g, t.name, x, cy + r + 52, gap - 30, 34, 'Georgia, serif');
-      });
-
-      // tradition description
-      g.fillStyle = '#5c554b'; g.font = '400 34px Inter, sans-serif';
-      wrapText(g, top.tradition.description || '', W / 2, 880, W - 240, 50, 4);
-
-      g.fillStyle = '#8a8177'; g.font = '500 30px Inter, sans-serif';
-      g.fillText('noahveenstra.com/protestant-theology-quiz', W / 2, H - 100);
-
-      c.toBlob(function (blob) {
-        if (!blob) return;
-        var file = new File([blob], 'theology-results.png', { type: 'image/png' });
-        if (navigator.canShare && navigator.canShare({ files: [file] })) {
-          navigator.share({ files: [file], title: 'My Protestant theology profile' }).catch(function () {});
-        } else {
-          var a = document.createElement('a');
-          a.href = URL.createObjectURL(blob);
-          a.download = 'theology-results.png';
-          document.body.appendChild(a); a.click();
-          setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 4000);
-        }
-      }, 'image/png');
-    });
+    var text = buildShareText();
+    var btn = $('btn-share');
+    var orig = btn ? btn.textContent : '';
+    function done(msg) {
+      if (!btn) return;
+      btn.textContent = msg;
+      setTimeout(function () { btn.textContent = orig; }, 2500);
+    }
+    if (navigator.share) {
+      navigator.share({ title: 'My Protestant theology profile', text: text })
+        .then(function () { done('Shared!'); })
+        .catch(function () { /* user dismissed — copy instead */ copyText(text, function (ok) { done(ok ? 'Copied — paste it anywhere!' : 'Copy failed'); }); });
+    } else {
+      copyText(text, function (ok) { done(ok ? 'Copied — paste it anywhere!' : 'Copy failed'); });
+    }
   }
 })();
