@@ -192,7 +192,7 @@ body {
 }
 .marquee-track {
   display: flex; width: max-content;
-  animation: marquee 55s linear infinite;
+  animation: marquee 95s linear infinite;
 }
 .mq-half { display: flex; gap: 14px; padding-right: 14px; }
 .marquee:hover .marquee-track { animation-play-state: paused; }
