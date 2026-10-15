@@ -279,6 +279,35 @@
     buildMarquee();
     renderSpotlight(0);
     startSpotFollow();
+    startMarqueeDrive();
+  }
+
+  // JS-driven marquee: guaranteed auto-scroll, pauses while the user interacts
+  var mqX = 0, mqLast = 0, mqHold = false;
+  var MQ_SPEED = 30; // px per second
+  function marqueeStep(ts) {
+    if (!mqLast) mqLast = ts;
+    var dt = (ts - mqLast) / 1000;
+    mqLast = ts;
+    var track = $('marquee-track');
+    if (track && !mqHold && !document.hidden && dt > 0 && dt < 0.25) {
+      mqX -= MQ_SPEED * dt;
+      var half = track.scrollWidth / 2;
+      if (half > 0 && -mqX >= half) mqX += half;
+      track.style.transform = 'translateX(' + mqX + 'px)';
+    }
+    requestAnimationFrame(marqueeStep);
+  }
+  function startMarqueeDrive() {
+    var marquee = $('marquee');
+    if (marquee) {
+      marquee.addEventListener('mouseenter', function () { mqHold = true; });
+      marquee.addEventListener('mouseleave', function () { mqHold = false; });
+      marquee.addEventListener('touchstart', function () { mqHold = true; }, { passive: true });
+      marquee.addEventListener('touchend', function () { mqHold = false; }, { passive: true });
+      marquee.addEventListener('touchcancel', function () { mqHold = false; }, { passive: true });
+    }
+    requestAnimationFrame(marqueeStep);
   }
 
   // ---------- theologian detail page ----------
@@ -288,6 +317,40 @@
     if (th.born && th.died) return 'Lived ' + (th.died - th.born) + ' years \u2022 ' + th.born + '\u2013' + th.died;
     if (th.born && !th.died) return 'Born ' + th.born + ' \u2022 Living';
     return 'Contemporary';
+  }
+
+  function renderTheoStrip(activeId) {
+    var strip = $('theo-strip');
+    var portraits = (typeof window !== 'undefined' && window.THEOLOGIAN_PORTRAITS) || {};
+    if (!strip.dataset.built) {
+      BANK.theologians.forEach(function (t) {
+        var b = document.createElement('button');
+        b.className = 'theo-strip-item';
+        b.dataset.tid = t.id;
+        b.setAttribute('aria-label', t.name);
+        if (portraits[t.id]) {
+          var im = document.createElement('img');
+          im.src = portraits[t.id];
+          im.alt = '';
+          im.loading = 'lazy';
+          b.appendChild(im);
+        } else {
+          var sp = document.createElement('span');
+          sp.className = 'theo-strip-initials';
+          sp.textContent = initials(t.name);
+          b.appendChild(sp);
+        }
+        b.addEventListener('click', function () { openTheologian(t.id); });
+        strip.appendChild(b);
+      });
+      strip.dataset.built = '1';
+    }
+    var items = strip.querySelectorAll('.theo-strip-item');
+    items.forEach(function (el) {
+      var on = el.dataset.tid === activeId;
+      el.classList.toggle('active', on);
+      if (on) el.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    });
   }
 
   function openTheologian(id) {
@@ -308,6 +371,7 @@
       img.style.display = 'none';
     }
     img.alt = 'Portrait of ' + th.name;
+    renderTheoStrip(th.id);
     $('theo-tradition').textContent = traditionName(th.tradition);
     $('theo-name').textContent = th.name;
     $('theo-lifespan').textContent = lifespanLine(th);
