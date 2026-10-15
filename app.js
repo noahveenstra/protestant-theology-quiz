@@ -603,7 +603,25 @@
   }
 
   // ---------- results ----------
+  // ---------- low-signal detection ----------
+  // Uniform responding (e.g. "disagree with everything") is adversarial input:
+  // no honest weighting can turn it into a real profile, so refuse instead of
+  // crowning a fake winner.
+  function isLowSignal() {
+    var vals = Object.keys(answers).map(function (k) { return answers[k]; });
+    if (vals.length < 10) return false;
+    var counts = {};
+    vals.forEach(function (v) { counts[v] = (counts[v] || 0) + 1; });
+    var top = Math.max.apply(null, Object.keys(counts).map(function (k) { return counts[k]; }));
+    return top / vals.length >= 0.9;
+  }
+
   function finishQuiz() {
+    if (isLowSignal()) {
+      showScreen('screen-lowsignal');
+      window.scrollTo(0, 0);
+      return;
+    }
     $('progress-fill').style.width = '100%';
     var axes = scoreAxes();
     var trads = scoreTraditions();
@@ -750,6 +768,12 @@
   });
 
   $('btn-retake').addEventListener('click', function () {
+    showScreen('screen-start');
+    window.scrollTo(0, 0);
+  });
+
+  var lowBtn = $('btn-lowsignal-retake');
+  if (lowBtn) lowBtn.addEventListener('click', function () {
     showScreen('screen-start');
     window.scrollTo(0, 0);
   });
