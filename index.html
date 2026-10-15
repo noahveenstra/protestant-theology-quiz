@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261019">
+<link rel="stylesheet" href="styles.css?v=20261020">
 </head>
 <body>
 <div class="page">
@@ -20,6 +20,10 @@
       <h1>Where do you fit in the Protestant tradition?</h1>
       <p class="lede">Answer a series of propositions honestly, and we'll map your convictions across grace, Scripture, the church, worship, and the last things — then match your profile with historic traditions and the theologians who shaped them.</p>
     </header>
+
+    <div id="compare-banner" class="compare-banner hidden">
+      <p><strong>Someone wants to compare theologies with you.</strong> Take the quiz, and you'll see where you agree — and where you differ — at the end.</p>
+    </div>
 
 
     <h2 class="section-title">Choose your depth</h2>
@@ -108,11 +112,22 @@
       <p class="lede" id="result-desc"></p>
     </header>
 
+    <div class="results-actions share-row">
+      <button id="btn-share" class="btn-primary">Share my results</button>
+      <button id="btn-compare" class="btn-secondary">Compare with a friend</button>
+    </div>
+
+    <div id="compare-result" class="compare-result hidden"></div>
+
     <h2 class="section-title">In your own words</h2>
     <div class="summary-card" id="summary-card"></div>
 
     <h2 class="section-title">Closest theologians</h2>
     <div class="theologian-grid" id="theologian-grid"></div>
+
+    <h2 class="section-title">Why these matches?</h2>
+    <p class="section-sub">The answers that most pulled you toward each theologian.</p>
+    <div id="why-list"></div>
 
     <h2 class="section-title">Your 12 doctrine axes</h2>
     <div class="axes-list" id="axes-list"></div>
@@ -120,6 +135,16 @@
     <h2 class="section-title">All traditions, ranked</h2>
     <div class="tradition-rank" id="tradition-rank"></div>
     <div id="close-call" class="close-call hidden"></div>
+
+    <h2 class="section-title">Your reading list</h2>
+    <p class="section-sub">One essential book from each of your closest theologians.</p>
+    <div id="reading-list" class="reading-list"></div>
+
+    <div id="unsure-wrap" class="hidden">
+      <h2 class="section-title">Explore your unsure answers</h2>
+      <p class="section-sub">You marked these &ldquo;Neutral / unsure&rdquo; — one book per topic to dig deeper.</p>
+      <div id="unsure-list"></div>
+    </div>
 
     <div class="results-actions">
       <button id="btn-retake" class="btn-primary">Retake the quiz</button>
@@ -154,10 +179,10 @@
   </section>
 
 </div>
-<script src="portraits-1.js?v=20261019"></script>
-<script src="portraits-2.js?v=20261019"></script>
-<script src="portraits-3.js?v=20261019"></script>
-<script src="portraits-4.js?v=20261019"></script>
-<script src="app.js?v=20261019"></script>
+<script src="portraits-1.js?v=20261020"></script>
+<script src="portraits-2.js?v=20261020"></script>
+<script src="portraits-3.js?v=20261020"></script>
+<script src="portraits-4.js?v=20261020"></script>
+<script src="app.js?v=20261020"></script>
 </body>
 </html>
