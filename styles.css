@@ -154,3 +154,29 @@ body {
   .quiz-topbar { flex-wrap: wrap; }
   .category-tag { order: 3; }
 }
+
+/* ---------- summary ---------- */
+.summary-card {
+  background: var(--card); border: 1.5px solid var(--line); border-radius: 18px;
+  padding: 32px 30px; font-size: 16.5px; color: var(--ink-soft);
+}
+.summary-card p { margin-bottom: 14px; }
+.summary-card p:last-child { margin-bottom: 0; }
+.summary-card strong { color: var(--ink); }
+
+/* ---------- tooltips ---------- */
+.term { position: relative; cursor: help; border-bottom: 1px dotted var(--ink-faint); }
+.term:hover { color: var(--accent-deep); }
+.tooltip {
+  position: fixed; z-index: 50; max-width: 280px; background: var(--ink); color: #fdfbf7;
+  font-size: 13px; line-height: 1.5; padding: 12px 14px; border-radius: 10px;
+  box-shadow: 0 8px 28px rgba(0,0,0,.28); pointer-events: none;
+}
+.tooltip strong { color: var(--gold); display: block; margin-bottom: 2px; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
+
+/* ---------- theologian portraits ---------- */
+.theologian-card { text-align: left; }
+.theologian-portrait {
+  width: 84px; height: 84px; border-radius: 20px; object-fit: cover;
+  margin-bottom: 12px; box-shadow: 0 4px 14px rgba(0,0,0,.15);
+}

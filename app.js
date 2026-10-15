@@ -3,6 +3,7 @@
   'use strict';
 
   var BANK = null;
+  var GLOSSARY = {};
   var queue = [];        // questions for this run
   var idx = 0;
   var answers = {};      // questionId -> -2..2
@@ -19,12 +20,16 @@
   var DEPTH_LABELS = { essential: 'Essential', standard: 'Standard', advanced: 'Advanced', complete: 'Complete' };
 
   // ---------- boot ----------
-  fetch('question-bank.json')
-    .then(function (r) { if (!r.ok) throw new Error('bank load failed'); return r.json(); })
-    .then(function (data) {
-      BANK = data;
+  Promise.all([
+    fetch('question-bank.json').then(function (r) { if (!r.ok) throw new Error('bank'); return r.json(); }),
+    fetch('glossary.json').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
+  ])
+    .then(function (results) {
+      BANK = results[0];
+      GLOSSARY = results[1] || {};
       $('qcount').textContent = BANK.questions.length;
       wireDepthCards();
+      wireTooltips();
     })
     .catch(function () {
       document.querySelector('.hero .lede').textContent =
@@ -119,6 +124,104 @@
     }).sort(function (a, b) { return b.match - a.match; });
   }
 
+  // ---------- tooltips ----------
+  function glossaryKey(label) {
+    return label.toLowerCase().replace(/\s*\(.*?\)\s*/g, '').trim();
+  }
+
+  function wireTooltips() {
+    var tip = null;
+    function hideTip() { if (tip) { tip.remove(); tip = null; } }
+    document.addEventListener('click', function (e) {
+      var el = e.target.closest ? e.target.closest('.term') : null;
+      if (!el) { hideTip(); return; }
+      e.stopPropagation();
+      var key = glossaryKey(el.dataset.term || el.textContent);
+      var def = GLOSSARY[key];
+      if (!def) return;
+      if (tip && tip.dataset.for === key) { hideTip(); return; }
+      hideTip();
+      tip = document.createElement('div');
+      tip.className = 'tooltip';
+      tip.dataset.for = key;
+      var title = document.createElement('strong');
+      title.textContent = el.dataset.term || el.textContent;
+      var body = document.createElement('span');
+      body.textContent = def;
+      tip.appendChild(title);
+      tip.appendChild(body);
+      document.body.appendChild(tip);
+      var r = el.getBoundingClientRect();
+      tip.style.left = Math.min(Math.max(8, r.left - 40), window.innerWidth - 296) + 'px';
+      tip.style.top = (r.bottom + window.scrollY + 8) + 'px';
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') hideTip(); });
+  }
+
+  // ---------- summary ----------
+  // Plain-language belief statements, keyed by axis id + pole (-1 left, 1 right).
+  var BELIEF_LINES = {
+    'soteriology|-1': "salvation is God's work from start to finish — he chooses and keeps his people",
+    'soteriology|1': "salvation involves your genuine response — God invites, and you choose",
+    'baptism|-1': "baptism is for people who've decided to follow Jesus themselves",
+    'baptism|1': "you're at home with infants being welcomed into the faith through baptism",
+    'spirit-gifts|-1': "you don't expect miraculous gifts like tongues and prophecy today",
+    'spirit-gifts|1': "you expect God to still move through gifts like tongues and prophecy",
+    'eschatology|-1': "you expect Jesus to return and set up a real kingdom on earth",
+    'eschatology|1': "you see Jesus as reigning now, with history heading toward his final victory",
+    'covenant|-1': "you read the Bible as God working in distinct eras, with Israel and the church on separate tracks",
+    'covenant|1': "you read the whole Bible as one continuous story about Jesus",
+    'scripture|-1': "you trust the Bible completely, even where it clashes with modern thinking",
+    'scripture|1': "you trust the Bible's message while giving its human authors their historical context",
+    'worship|-1': "you're cautious about adding things to worship that the Bible doesn't command",
+    'worship|1': "you're glad when churches get creative in worship",
+    'polity|-1': "you believe each local church should answer to no one but God",
+    'polity|1': "you value churches being accountable to wider leadership",
+    'gender-roles|-1': "you're convinced church leadership is reserved for men",
+    'gender-roles|1': "you're comfortable with women leading at every level of the church",
+    'assurance|-1': "you see a changed life as the proof of real faith",
+    'assurance|1': "you're confident salvation rests on faith, even when life looks messy",
+    'ordinances|-1': "you see baptism and communion mainly as symbols and remembrances",
+    'ordinances|1': "you sense God truly meeting you in baptism and communion",
+    'sanctification|-1': "you believe real freedom from sin's grip is possible in this life",
+    'sanctification|1': "you expect the fight against sin to last a lifetime"
+  };
+
+  function buildSummary(axes, trads) {
+    var top = trads[0];
+    var html = '';
+    html += '<p>Your answers point most strongly toward the <strong>' + esc(top.tradition.name) +
+      '</strong> tradition (' + top.match + '/100 match).</p>';
+
+    var strong = axes
+      .filter(function (e) { return Math.abs(e.score) >= 20 && BELIEF_LINES[e.axis.id + '|' + (e.score < 0 ? -1 : 1)]; })
+      .sort(function (a, b) { return Math.abs(b.score) - Math.abs(a.score); })
+      .slice(0, 4);
+
+    if (strong.length) {
+      var lines = strong.map(function (e) {
+        return BELIEF_LINES[e.axis.id + '|' + (e.score < 0 ? -1 : 1)];
+      });
+      var sentence;
+      if (lines.length === 1) sentence = 'In particular, ' + lines[0] + '.';
+      else {
+        var last = lines.pop();
+        sentence = 'In particular, ' + lines.join(', ') + ', and ' + last + '.';
+      }
+      html += '<p>' + esc(sentence) + '</p>';
+    }
+
+    var theos = BANK.theologians.filter(function (t) { return t.tradition === top.tradition.id; });
+    if (theos.length) {
+      html += '<p>You think most like <strong>' + esc(theos[0].name) + '</strong> — ' + esc(theos[0].blurb) + '</p>';
+    }
+    return html;
+  }
+
+  function esc(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
   // ---------- results ----------
   function finishQuiz() {
     $('progress-fill').style.width = '100%';
@@ -143,6 +246,9 @@
     $('result-match').textContent = top.match;
     $('result-desc').textContent = top.tradition.description;
 
+    // written summary
+    $('summary-card').innerHTML = buildSummary(axes, trads);
+
     // theologians of the top tradition (up to 3)
     var theoGrid = $('theologian-grid');
     theoGrid.innerHTML = '';
@@ -154,7 +260,13 @@
     theos.forEach(function (t) {
       var card = document.createElement('div');
       card.className = 'theologian-card';
-      card.innerHTML = '<h3></h3><div class="theologian-dates"></div><p></p>';
+      card.innerHTML = '<img class="theologian-portrait" alt=""><h3></h3><div class="theologian-dates"></div><p></p>';
+      var img = card.querySelector('img');
+      var portraits = (typeof window !== 'undefined' && window.THEOLOGIAN_PORTRAITS) || {};
+      img.src = portraits[t.id] || '';
+      img.alt = 'Portrait of ' + t.name;
+      if (!img.src) img.style.display = 'none';
+      img.onerror = function () { img.style.display = 'none'; };
       card.querySelector('h3').textContent = t.name;
       card.querySelector('.theologian-dates').textContent = t.dates || '';
       card.querySelector('p').textContent = t.blurb;
@@ -180,6 +292,10 @@
       var poles = row.querySelectorAll('.axis-poles span');
       poles[0].textContent = entry.axis.left;
       poles[1].textContent = entry.axis.right;
+      poles[0].className = 'term';
+      poles[1].className = 'term';
+      poles[0].dataset.term = entry.axis.left;
+      poles[1].dataset.term = entry.axis.right;
       axesList.appendChild(row);
     });
 
