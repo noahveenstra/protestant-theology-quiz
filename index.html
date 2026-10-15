@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261022">
+<link rel="stylesheet" href="styles.css?v=20261023">
 </head>
 <body>
 <div class="page">
@@ -30,23 +30,23 @@
     <div class="depth-grid" id="depth-grid">
       <button class="depth-card" data-depth="essential">
         <span class="depth-name">Essential</span>
-        <span class="depth-count">30 questions</span>
-        <span class="depth-time">~6 minutes &middot; broad orientation</span>
+        <span class="depth-count">25 questions</span>
+        <span class="depth-time">~5 minutes &middot; broad orientation</span>
       </button>
       <button class="depth-card recommended" data-depth="standard">
         <span class="depth-badge">Recommended</span>
         <span class="depth-name">Standard</span>
-        <span class="depth-count">60 questions</span>
-        <span class="depth-time">~12 minutes &middot; major traditions + axes</span>
+        <span class="depth-count">46 questions</span>
+        <span class="depth-time">~10 minutes &middot; major traditions + axes</span>
       </button>
       <button class="depth-card" data-depth="advanced">
         <span class="depth-name">Advanced</span>
-        <span class="depth-count">75 questions</span>
-        <span class="depth-time">~18 minutes &middot; finer distinctions</span>
+        <span class="depth-count">55 questions</span>
+        <span class="depth-time">~15 minutes &middot; finer distinctions</span>
       </button>
       <button class="depth-card" data-depth="complete">
         <span class="depth-name">Complete</span>
-        <span class="depth-count">105 questions</span>
+        <span class="depth-count">75 questions</span>
         <span class="depth-time">Every active question</span>
       </button>
     </div>
@@ -170,6 +170,18 @@
     <div id="answer-review" class="answer-review hidden"></div>
   </section>
 
+  <!-- ============ LOW SIGNAL ============ -->
+  <section id="screen-lowsignal" class="screen">
+    <header class="hero">
+      <p class="kicker">Not enough signal</p>
+      <h1>We couldn't build your profile.</h1>
+      <p class="lede">You answered nearly every question the same way. The quiz tells traditions apart by where you <em>disagree</em> — honest, varied answers are the whole engine. Answer what you actually believe, including the ones that make you uncomfortable.</p>
+    </header>
+    <div class="results-actions">
+      <button id="btn-lowsignal-retake" class="btn-primary">Retake the quiz</button>
+    </div>
+  </section>
+
   <!-- ============ THEOLOGIAN DETAIL ============ -->
   <section id="screen-theologian" class="screen">
     <div class="theo-topbar">
@@ -195,10 +207,10 @@
   </section>
 
 </div>
-<script src="portraits-1.js?v=20261022"></script>
-<script src="portraits-2.js?v=20261022"></script>
-<script src="portraits-3.js?v=20261022"></script>
-<script src="portraits-4.js?v=20261022"></script>
-<script src="app.js?v=20261022"></script>
+<script src="portraits-1.js?v=20261023"></script>
+<script src="portraits-2.js?v=20261023"></script>
+<script src="portraits-3.js?v=20261023"></script>
+<script src="portraits-4.js?v=20261023"></script>
+<script src="app.js?v=20261023"></script>
 </body>
 </html>
