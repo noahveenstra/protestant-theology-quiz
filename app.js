@@ -179,6 +179,7 @@
 
   // ---------- theologian marquee + spotlight ----------
   var spotIdx = 0;
+  var manualUntil = 0; // timestamp: tap overrides auto-follow until this time
 
   function traditionName(id) {
     var found = BANK.traditions.filter(function (t) { return t.id === id; })[0];
@@ -244,16 +245,41 @@
           fb.textContent = initials(th.name);
           b.appendChild(fb);
         }
-        b.addEventListener('click', function () { renderSpotlight(i); });
+        b.addEventListener('click', function () {
+          renderSpotlight(i);
+          manualUntil = Date.now() + 8000; // hold the tap for 8s, then auto-follow resumes
+        });
         half.appendChild(b);
       });
       track.appendChild(half);
     });
   }
 
+  function startSpotFollow() {
+    var marquee = $('marquee');
+    var track = $('marquee-track');
+    if (!marquee || !track) return;
+    setInterval(function () {
+      if (Date.now() < manualUntil) return; // user tapped; hold their pick
+      if (document.hidden) return;
+      var mRect = marquee.getBoundingClientRect();
+      var spotX = mRect.left + mRect.width * 0.4; // spotlight zone
+      var best = -1, bestDist = Infinity;
+      var items = track.querySelectorAll('.mq-item');
+      for (var k = 0; k < items.length; k++) {
+        var r = items[k].getBoundingClientRect();
+        if (r.right < mRect.left || r.left > mRect.right) continue; // offscreen
+        var d = Math.abs((r.left + r.right) / 2 - spotX);
+        if (d < bestDist) { bestDist = d; best = parseInt(items[k].dataset.idx, 10); }
+      }
+      if (best >= 0 && best !== spotIdx) renderSpotlight(best);
+    }, 150);
+  }
+
   function initCarousel() {
     buildMarquee();
     renderSpotlight(0);
+    startSpotFollow();
   }
 
   // ---------- tooltips ----------
