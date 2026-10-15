@@ -555,9 +555,15 @@
         '<span class="trad-bar-wrap"><span class="trad-bar"></span></span>' +
         '<span class="trad-score"></span>';
       row.querySelector('.trad-name').textContent = entry.tradition.name;
-      row.querySelector('.trad-bar').style.width = entry.match + '%';
+      var bar = row.querySelector('.trad-bar');
+      bar.style.width = '0%';
       row.querySelector('.trad-score').textContent = entry.match.toFixed(1);
       rank.appendChild(row);
+      (function (b, m) {
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () { b.style.width = m + '%'; });
+        });
+      })(bar, entry.match);
     });
 
     // close-call explainer (only when the top is nearly tied)

@@ -103,7 +103,11 @@ body {
 .match-line { font-size: 17px; color: var(--ink-soft); margin-bottom: 18px; }
 .match-line strong { color: var(--accent-deep); font-size: 22px; }
 
-.theologian-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.theologian-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+@media (max-width: 480px) {
+  .theologian-grid { gap: 10px; }
+  .theologian-card { padding: 16px; }
+}
 .theologian-card { background: var(--card); border: 1.5px solid var(--line); border-radius: var(--radius); padding: 20px; }
 .theologian-card h3 { font-family: 'Fraunces', Georgia, serif; font-size: 18px; margin-bottom: 2px; }
 .theologian-dates { font-size: 12.5px; color: var(--ink-faint); margin-bottom: 8px; }
@@ -128,7 +132,7 @@ body {
 .trad-row.top { border-color: var(--accent); background: linear-gradient(180deg, #fffdf8, #fbf6ec); }
 .trad-name { font-weight: 600; flex: 1; }
 .trad-bar-wrap { flex: 2; height: 8px; background: var(--paper-deep); border-radius: 4px; overflow: hidden; }
-.trad-bar { height: 100%; background: var(--accent); border-radius: 4px; }
+.trad-bar { display: block; height: 100%; background: var(--accent); border-radius: 4px; transition: width .9s cubic-bezier(.22,.8,.3,1); }
 .trad-score { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--accent-deep); min-width: 44px; text-align: right; }
 
 .results-actions { display: flex; gap: 12px; margin: 40px 0 24px; flex-wrap: wrap; }
