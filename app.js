@@ -291,16 +291,52 @@
   // JS-driven marquee: guaranteed auto-scroll, pauses while the user interacts
   var mqX = 0, mqLast = 0, mqHold = false;
   var MQ_SPEED = 30; // px per second
+  var mqRing = { x: 0, y: 0, w: 0, h: 0, init: false };
   function marqueeStep(ts) {
     if (!mqLast) mqLast = ts;
     var dt = (ts - mqLast) / 1000;
     mqLast = ts;
     var track = $('marquee-track');
-    if (track && !mqHold && !document.hidden && dt > 0 && dt < 0.25) {
+    var marquee = $('marquee');
+    if (track && marquee && !mqHold && !document.hidden && dt > 0 && dt < 0.25) {
       mqX -= MQ_SPEED * dt;
       var half = track.scrollWidth / 2;
       if (half > 0 && -mqX >= half) mqX += half;
       track.style.transform = 'translateX(' + mqX + 'px)';
+    }
+    // glide the shared indicator ring onto the active portrait (wedding-nav principle)
+    var ring = $('mq-ring');
+    if (ring && marquee && track) {
+      var mRect = marquee.getBoundingClientRect();
+      var target = null;
+      var items = track.querySelectorAll('.mq-item');
+      for (var k = 0; k < items.length; k++) {
+        if (parseInt(items[k].dataset.idx, 10) === spotIdx) {
+          var r = items[k].getBoundingClientRect();
+          if (r.right > mRect.left && r.left < mRect.right) {
+            target = { x: r.left - mRect.left, y: r.top - mRect.top, w: r.width, h: r.height };
+          }
+          break;
+        }
+      }
+      if (target) {
+        var kk = 1 - Math.exp(-dt / 0.09); // ~400ms expo ease-out settle
+        if (!mqRing.init) {
+          mqRing.x = target.x; mqRing.y = target.y; mqRing.w = target.w; mqRing.h = target.h;
+          mqRing.init = true;
+        } else {
+          mqRing.x += (target.x - mqRing.x) * kk;
+          mqRing.y += (target.y - mqRing.y) * kk;
+          mqRing.w += (target.w - mqRing.w) * kk;
+          mqRing.h += (target.h - mqRing.h) * kk;
+        }
+        ring.style.opacity = '1';
+        ring.style.transform = 'translate(' + mqRing.x + 'px,' + mqRing.y + 'px)';
+        ring.style.width = mqRing.w + 'px';
+        ring.style.height = mqRing.h + 'px';
+      } else {
+        ring.style.opacity = '0';
+      }
     }
     requestAnimationFrame(marqueeStep);
   }
@@ -350,13 +386,23 @@
         strip.appendChild(b);
       });
       strip.dataset.built = '1';
+      strip.addEventListener('scroll', function () { positionStripRing(); }, { passive: true });
     }
     var items = strip.querySelectorAll('.theo-strip-item');
     items.forEach(function (el) {
-      var on = el.dataset.tid === activeId;
-      el.classList.toggle('active', on);
-      if (on) el.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      el.classList.toggle('active', el.dataset.tid === activeId);
     });
+  }
+
+  function positionStripRing() {
+    var strip = $('theo-strip'), ring = $('theo-strip-ring');
+    if (!strip || !ring) return;
+    var active = strip.querySelector('.theo-strip-item.active');
+    if (!active) { ring.style.opacity = '0'; return; }
+    ring.style.opacity = '1';
+    ring.style.transform = 'translate(' + active.offsetLeft + 'px,' + active.offsetTop + 'px)';
+    ring.style.width = active.offsetWidth + 'px';
+    ring.style.height = active.offsetHeight + 'px';
   }
 
   function openTheologian(id) {
@@ -421,6 +467,14 @@
       ev.appendChild(item);
     });
     showScreen('screen-theologian');
+    var tscr = $('screen-theologian');
+    tscr.classList.remove('theo-swap');
+    void tscr.offsetWidth;
+    tscr.classList.add('theo-swap');
+    // strip needs the screen visible before measuring
+    var stripActive = $('theo-strip').querySelector('.theo-strip-item.active');
+    if (stripActive) stripActive.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    positionStripRing();
     window.scrollTo(0, 0);
   }
 
