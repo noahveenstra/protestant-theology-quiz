@@ -27,7 +27,6 @@
     .then(function (results) {
       BANK = results[0];
       GLOSSARY = results[1] || {};
-      $('qcount').textContent = BANK.questions.length;
       wireDepthCards();
       wireTooltips();
       initCarousel();
