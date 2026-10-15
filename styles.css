@@ -344,3 +344,59 @@ body {
 .theologian-card.clickable { cursor: pointer; transition: transform .15s, box-shadow .15s, border-color .15s; }
 .theologian-card.clickable:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,.08); border-color: var(--accent); }
 .mq-item { transition: opacity .2s, transform .2s, border-color .2s; }
+
+/* ---------- new results features (share, compare, why, reading) ---------- */
+.section-sub { font-size: 14px; color: var(--ink-faint); margin: -8px 0 16px; }
+.share-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 4px 0 28px; }
+.share-row .btn-primary, .share-row .btn-secondary { flex: 1 1 200px; }
+
+.compare-banner {
+  background: linear-gradient(180deg, #fffdf8, #fbf6ec);
+  border: 1.5px solid var(--accent); border-radius: var(--radius);
+  padding: 16px 20px; margin: 0 0 28px; font-size: 15px; color: var(--ink-soft);
+}
+.compare-banner strong { color: var(--ink); }
+
+.compare-result {
+  background: var(--card); border: 1.5px solid var(--line); border-radius: 18px;
+  padding: 26px 26px 22px; margin-bottom: 32px;
+}
+.cmp-title { font-family: 'Fraunces', Georgia, serif; font-size: 22px; margin-bottom: 12px; }
+.cmp-headlines { display: grid; gap: 8px; margin-bottom: 14px; }
+.cmp-line { display: flex; gap: 10px; align-items: center; font-size: 15px; color: var(--ink-soft); }
+.cmp-line strong { color: var(--ink); }
+.cmp-shared { font-size: 14px; color: var(--ink-soft); margin-bottom: 16px; }
+.cmp-rows { display: grid; gap: 8px; }
+.cmp-row { display: grid; grid-template-columns: 130px 1fr 92px; gap: 10px; align-items: center; font-size: 13px; }
+.cmp-name { color: var(--ink-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cmp-bars { position: relative; height: 14px; }
+.cmp-bar { position: absolute; left: 0; height: 6px; border-radius: 3px; }
+.cmp-bar.cmp-me { top: 0; background: var(--accent); }
+.cmp-bar.cmp-them { top: 8px; background: var(--gold); }
+.cmp-scores { text-align: right; color: var(--ink-faint); }
+.cmp-scores b { color: var(--ink); }
+.cmp-legend { margin-top: 12px; font-size: 12.5px; color: var(--ink-faint); display: flex; gap: 6px; align-items: center; }
+.cmp-key { display: inline-block; width: 22px; height: 6px; border-radius: 3px; }
+.cmp-key.cmp-me { background: var(--accent); }
+.cmp-key.cmp-them { background: var(--gold); }
+@media (max-width: 480px) { .cmp-row { grid-template-columns: 96px 1fr 76px; } }
+
+#why-list { display: grid; gap: 14px; margin-bottom: 8px; }
+.why-card { background: var(--card); border: 1.5px solid var(--line); border-radius: var(--radius); padding: 20px 22px; }
+.why-card h4 { font-family: 'Fraunces', Georgia, serif; font-size: 17px; margin-bottom: 10px; }
+.why-card ol { margin: 0 0 0 20px; display: grid; gap: 12px; }
+.why-q { display: block; font-size: 14.5px; color: var(--ink); margin-bottom: 2px; }
+.why-a { font-size: 13px; color: var(--ink-faint); }
+.why-a strong { color: var(--accent-deep); }
+.why-empty { font-size: 14px; color: var(--ink-faint); }
+
+.reading-list { display: grid; gap: 14px; grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 640px) { .reading-list { grid-template-columns: 1fr; } }
+.book-card { background: var(--card); border: 1.5px solid var(--line); border-radius: var(--radius); padding: 20px; }
+.book-title { font-family: 'Fraunces', Georgia, serif; font-size: 17px; font-weight: 600; margin-bottom: 2px; }
+.book-author { font-size: 13px; color: var(--accent-deep); font-weight: 600; margin-bottom: 8px; }
+.book-note { font-size: 13.5px; color: var(--ink-soft); }
+
+#unsure-list { display: grid; gap: 14px; }
+.unsure-card { background: linear-gradient(180deg, #fffdf8, #fbf6ec); border: 1.5px dashed var(--accent); border-radius: var(--radius); padding: 20px 22px; }
+.unsure-topic { font-size: 12.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--accent-deep); margin-bottom: 8px; }
