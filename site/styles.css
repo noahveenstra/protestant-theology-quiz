@@ -173,22 +173,26 @@ body {
 /* ---------- theologian marquee ---------- */
 .theo-carousel-wrap { margin-top: 40px; }
 .spotlight {
-  display: flex; gap: 20px; align-items: center;
+  display: grid; grid-template-columns: auto 1fr;
+  grid-template-areas: "portrait head" "portrait blurb";
+  column-gap: 20px; row-gap: 6px; align-items: center;
   background: var(--card); border: 1.5px solid var(--line); border-radius: 18px;
-  padding: 24px; min-height: 176px; margin-bottom: 18px;
+  padding: 24px; margin-bottom: 18px;
 }
 .spotlight.spot-fade { animation: fadeUp .35s ease; }
 .spot-portrait {
+  grid-area: portrait;
   width: 110px; height: 110px; border-radius: 24px; object-fit: cover;
   box-shadow: 0 4px 14px rgba(0,0,0,.15); flex-shrink: 0;
 }
-.spot-text h3 { font-family: 'Fraunces', Georgia, serif; font-size: 22px; margin-bottom: 6px; }
+.spot-head { grid-area: head; align-self: end; min-width: 0; }
+.spot-head h3 { font-family: 'Fraunces', Georgia, serif; font-size: 22px; margin-bottom: 6px; }
 .car-tradition {
   display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .08em;
   text-transform: uppercase; color: var(--accent-deep); background: #f3e7d8;
-  padding: 4px 12px; border-radius: 20px; margin-bottom: 10px;
+  padding: 4px 12px; border-radius: 20px;
 }
-.car-blurb { font-size: 14.5px; color: var(--ink-soft); }
+.car-blurb { grid-area: blurb; align-self: start; margin: 0; font-size: 14.5px; color: var(--ink-soft); }
 
 .marquee {
   position: relative;
@@ -225,13 +229,10 @@ body {
 .spotlight:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.08); border-color: var(--accent); }
 .spotlight:active { transform: scale(.99); }
 @media (max-width: 560px) {
-  .spotlight { padding: 18px; gap: 16px; }
+  .spotlight { grid-template-areas: "portrait head" "blurb blurb"; padding: 18px; column-gap: 16px; row-gap: 12px; }
   .spot-portrait { width: 88px; height: 88px; border-radius: 20px; }
-  .spot-text h3 { font-size: 19px; }
-  .car-blurb {
-    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
-    overflow: hidden; font-size: 13.5px;
-  }
+  .spot-head h3 { font-size: 19px; }
+  .car-blurb { font-size: 14px; }
 }
 
 /* ---------- tooltips ---------- */
