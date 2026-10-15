@@ -168,7 +168,7 @@
     var box = $('close-call');
     if (!entries.length) { box.classList.add('hidden'); box.innerHTML = ''; return; }
     var top = trads[0];
-    var html = '<h3>Why ' + esc(top.tradition.name) + ' edged it</h3>';
+    var html = '<h3>Why ' + esc(top.tradition.name) + ' came out on top</h3>';
     html += '<p class="close-intro">Separated by less than two points — here is what tipped it.</p>';
     entries.forEach(function (entry) {
       html += '<div class="close-row"><div class="close-head"><strong>' + esc(top.tradition.name) +
