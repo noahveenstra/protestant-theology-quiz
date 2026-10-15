@@ -91,12 +91,11 @@
       "name": "Reformed / Calvinist",
       "description": "Confesses God's sovereign grace in salvation: unconditional election, definite atonement, and perseverance of the saints. Worships by the regulative principle, baptizes believers' children, and reads the Bible through covenant theology. Includes Presbyterians and Reformed Baptists.",
       "theologians": [
+        "barth",
         "calvin",
         "edwards",
         "sproul",
-        "barth",
-        "cknechtle",
-        "sknechtle"
+        "tkeller"
       ]
     },
     {
@@ -104,8 +103,9 @@
       "name": "Confessional Lutheran",
       "description": "Centers on justification by faith alone and the real presence of Christ in Word and sacrament. Holds monergistic conversion with universal atonement, baptizes infants, and follows historic liturgy under the Lutheran confessions. Law and gospel frame its reading of Scripture.",
       "theologians": [
-        "luther",
-        "bonhoeffer"
+        "bonhoeffer",
+        "cwalther",
+        "luther"
       ]
     },
     {
@@ -113,18 +113,21 @@
       "name": "Wesleyan / Arminian",
       "description": "Teaches that God's prevenient grace frees every person to respond to the gospel, and that believers may fall from grace. Expects both gradual growth and crisis experiences of entire sanctification. Methodist and Holiness churches typically baptize infants and ordain women.",
       "theologians": [
+        "ppalmer",
+        "tozer",
         "wesley"
       ]
     },
     {
       "id": "baptist",
       "name": "Confessional Baptist",
-      "description": "Calvinistic in soteriology but baptistic in ecclesiology: believers' baptism by immersion, congregational government, and usually a memorialist Lord's Supper. Affirms the 1689 London Baptist Confession alongside strict biblical inerrancy.",
+      "description": "Baptistic in ecclesiology: believers' baptism by immersion, congregational government, and usually a memorialist Lord's Supper. Ranges from Calvinistic (1689 London Baptist Confession) to decisional revivalist (Billy Graham); all share strict biblical inerrancy.",
       "theologians": [
-        "spurgeon",
-        "piper",
+        "bgraham",
         "jpokluda",
-        "bcrawford"
+        "piper",
+        "spurgeon",
+        "whuff"
       ]
     },
     {
@@ -132,7 +135,8 @@
       "name": "Pentecostal / Charismatic",
       "description": "Expects the miraculous gifts of the Spirit — tongues, prophecy, healing — to operate today, often with a distinct baptism in the Holy Spirit after conversion. Typically Arminian, credobaptist, premillennial, and expressive in worship.",
       "theologians": [
-        "tozer",
+        "amcpherson",
+        "bcrawford",
         "rmadu"
       ]
     },
@@ -141,7 +145,8 @@
       "name": "Anabaptist",
       "description": "Baptizes only confessing believers into a disciplined, discipleship-shaped community. Emphasizes the Sermon on the Mount, simple worship, congregational discernment, and a costly obedience that proves faith genuine.",
       "theologians": [
-        "menno"
+        "menno",
+        "shauerwas"
       ]
     },
     {
@@ -149,9 +154,11 @@
       "name": "Anglican",
       "description": "Worships through the Book of Common Prayer with bishops, infant baptism, and a sacramental view of communion. Theologically broad — from Reformed to Anglo-Catholic — but classically holds Scripture, tradition, and reason together.",
       "theologians": [
+        "eelliot",
+        "jstott",
         "lewis",
-        "wright",
-        "packer"
+        "packer",
+        "wright"
       ]
     },
     {
@@ -159,7 +166,11 @@
       "name": "Dispensationalist",
       "description": "Reads the Bible through distinct dispensations, keeps Israel and the church as separate peoples with separate destinies, and expects a pretribulational rapture and literal millennium. Usually credobaptist, memorialist, inerrantist, and 'free grace' on assurance.",
       "theologians": [
-        "moody"
+        "cknechtle",
+        "cscofield",
+        "jmacarthur",
+        "moody",
+        "sknechtle"
       ]
     }
   ],
@@ -190,49 +201,49 @@
       "name": "Jonathan Edwards",
       "dates": "1703-1758",
       "tradition": "reformed",
-      "blurb": "American theologian of revival, divine sovereignty, and religious affections."
+      "blurb": "America's greatest Calvinist theologian; defended divine sovereignty and insisted communion is for visible saints only — a stand that cost him his Northampton pulpit."
     },
     {
       "id": "spurgeon",
       "name": "Charles Spurgeon",
       "dates": "1834-1892",
       "tradition": "baptist",
-      "blurb": "Calvinistic Baptist 'Prince of Preachers' in Victorian London."
+      "blurb": "Calvinistic Baptist ‘Prince of Preachers’; preached believer's baptism, biblical inerrancy, and Christ's premillennial return to thousands in Victorian London."
     },
     {
       "id": "lewis",
       "name": "C.S. Lewis",
       "dates": "1898-1963",
       "tradition": "anglican",
-      "blurb": "Oxford apologist whose Mere Christianity shaped lay evangelical faith."
+      "blurb": "Oxford scholar and Anglican whose Mere Christianity and Narnia shaped lay faith for generations; an Anglo-Catholic who believed in purgatory and made confession to a priest."
     },
     {
       "id": "barth",
       "name": "Karl Barth",
       "dates": "1886-1968",
       "tradition": "reformed",
-      "blurb": "Swiss theologian whose neo-orthodox theology of the Word reshaped 20th-century Protestant thought."
+      "blurb": "Swiss Reformed theologian who re-centered election on Jesus Christ himself — and late in life broke with his own tradition by opposing infant baptism."
     },
     {
       "id": "wright",
       "name": "N.T. Wright",
       "dates": "1948-",
       "tradition": "anglican",
-      "blurb": "New Testament scholar behind the New Perspective on Paul."
+      "blurb": "Anglican bishop of Durham and New Testament scholar; his ‘New Perspective’ redefined justification as God's declaration of covenant membership — a view most Reformed theologians reject."
     },
     {
       "id": "piper",
       "name": "John Piper",
       "dates": "1946-",
       "tradition": "baptist",
-      "blurb": "Reformed Baptist pastor who taught Christian hedonism: God glorified in our joy in him."
+      "blurb": "Reformed Baptist pastor of Bethlehem Baptist who taught ‘Christian hedonism’ — God is most glorified when we are most satisfied in him; a Calvinist in soteriology but a continuationist on the gifts."
     },
     {
       "id": "sproul",
       "name": "R.C. Sproul",
       "dates": "1939-2017",
       "tradition": "reformed",
-      "blurb": "Presbyterian teacher who popularized Reformed theology through Ligonier Ministries."
+      "blurb": "PCA Presbyterian who popularized Reformed theology through Ligonier Ministries; a staunch cessationist who taught the sign gifts ended with the apostles."
     },
     {
       "id": "menno",
@@ -246,98 +257,98 @@
       "name": "D.L. Moody",
       "dates": "1837-1899",
       "tradition": "dispensational",
-      "blurb": "American evangelist whose premillennial crusades shaped popular evangelicalism."
+      "blurb": "America's most famous 19th-century evangelist; a premillennialist shaped by the Niagara Bible conferences who popularized dispensational ideas without systematizing them."
     },
     {
       "id": "tozer",
       "name": "A.W. Tozer",
       "dates": "1897-1963",
-      "tradition": "pentecostal",
-      "blurb": "Alliance pastor whose deeper-life writings on the Holy Spirit shaped charismatic evangelicalism."
+      "tradition": "wesleyan",
+      "blurb": "Christian and Missionary Alliance pastor of the ‘deeper life’; taught that believers can know God's presence intimately, that holiness is a second work of grace, and that the Spirit's gifts continue but must be tested by Scripture."
     },
     {
       "id": "bonhoeffer",
       "name": "Dietrich Bonhoeffer",
       "dates": "1906-1945",
       "tradition": "lutheran",
-      "blurb": "German Lutheran pastor-theologian, martyred for resisting the Nazis; wrote on discipleship and costly grace."
+      "blurb": "German Lutheran pastor executed for resisting the Nazis; preached ‘costly grace’ — discipleship that costs everything — and held the Lutheran real presence of Christ in communion."
     },
     {
       "id": "packer",
       "name": "J.I. Packer",
       "dates": "1926-2020",
       "tradition": "anglican",
-      "blurb": "Anglican evangelical whose Knowing God taught a generation to think biblically about God."
+      "blurb": "Anglican evangelical whose Knowing God taught a generation to think biblically about God; a Calvinist in soteriology who defended infant baptism and the Book of Common Prayer."
     },
     {
       "id": "jpokluda",
       "name": "Jonathan \"JP\" Pokluda",
       "dates": "Contemporary",
       "tradition": "baptist",
-      "blurb": "Lead pastor of Harris Creek Baptist Church in Waco; known for direct, Scripture-driven teaching to young adults."
+      "blurb": "Preaches eternal security — once you're born again, ‘you cannot undo that birthing’ — with a blunt, free-choice call to respond to the gospel, teaching Scripture as the final authority in all of life."
     },
     {
       "id": "rmadu",
       "name": "Robert Madu",
       "dates": "Contemporary",
       "tradition": "pentecostal",
-      "blurb": "Lead pastor of Social Dallas; charismatic preacher known for high-energy, story-driven sermons."
+      "blurb": "Lead pastor of Social Dallas; a Pentecostal preacher whose church affirms Spirit-baptism, present-day spiritual gifts, and divine healing — preached in his signature high-energy, story-driven style."
     },
     {
       "id": "bcrawford",
       "name": "Bryce Crawford",
       "dates": "Contemporary",
-      "tradition": "baptist",
-      "blurb": "Gen Z evangelist and apologist reaching millions online with street-level gospel conversations."
+      "tradition": "pentecostal",
+      "blurb": "Preaches salvation by grace through faith with a Pentecostal edge — believers seeking the Holy Spirit's power for ministry, divine healing in the atonement, and Christ returning to reign on earth."
     },
     {
       "id": "cknechtle",
       "name": "Cliffe Knechtle",
       "dates": "Contemporary",
-      "tradition": "reformed",
-      "blurb": "Traveling campus evangelist behind ‘Give Me An Answer’; decades of open-air Q&A with skeptics."
+      "tradition": "dispensational",
+      "blurb": "Campus evangelist who treats Christianity as reasonable rather than blind belief, inviting skeptics to examine the evidence and choose. His theology is classic dispensational-evangelical: believer's baptism by immersion, a pretribulational rapture, and a free-will response to God's grace."
     },
     {
       "id": "sknechtle",
       "name": "Stuart Knechtle",
       "dates": "Contemporary",
-      "tradition": "reformed",
-      "blurb": "Cliffe’s son and ministry partner; carrying the ‘Give Me An Answer’ campus dialogues to a new generation."
+      "tradition": "dispensational",
+      "blurb": "Cliffe's son and co-host of Give Me An Answer, sharing his father's dispensational-evangelical framework — believer's baptism, a pretribulational rapture, and a free-will response to grace — while bringing a pastoral-counselor's posture to campus dialogues."
     },
     {
       "id": "tkeller",
       "name": "Tim Keller",
       "dates": "1950-2023",
       "tradition": "reformed",
-      "blurb": "PCA pastor who planted Redeemer Presbyterian in Manhattan; winsome apologist who translated Reformed theology for urban skeptics."
+      "blurb": "PCA Presbyterian minister and self-identified Calvinist; an amillennial, paedobaptist, complementarian Reformed theologian who remained open to the charismatic gifts — best known for winsome apologetics to urban skeptics."
     },
     {
       "id": "bgraham",
       "name": "Billy Graham",
       "dates": "1918-2018",
       "tradition": "baptist",
-      "blurb": "Worldwide evangelist whose crusades reached millions; the public face of 20th-century evangelicalism."
+      "blurb": "Southern Baptist revivalist of the great crusades: preach ‘the Bible says,’ call ‘whosoever will’ to decide for Christ at the altar, and send converts back into their own churches. Decisional evangelism over doctrinal system."
     },
     {
       "id": "jstott",
       "name": "John Stott",
       "dates": "1921-2011",
       "tradition": "anglican",
-      "blurb": "Rector of All Souls, London; his Basic Christianity discipled evangelicals across the globe."
+      "blurb": "Anglican evangelical scholar-pastor: Scripture supreme, penal-substitutionary atonement, Spirit-baptism at conversion with no second blessing, and social engagement as gospel fruit — evangelical conviction inside the prayer book and bishops."
     },
     {
       "id": "amcpherson",
       "name": "Aimee Semple McPherson",
       "dates": "1890-1944",
       "tradition": "pentecostal",
-      "blurb": "Pentecostal evangelist and media pioneer; founded the Foursquare Church in Los Angeles."
+      "blurb": "Founder of the Foursquare Church; preached a ‘Foursquare Gospel’ of Jesus as Savior, Healer, Baptizer with the Holy Spirit, and Soon-Coming King. Taught Spirit baptism with tongues as a distinct second experience after conversion, and believed believers could fall from grace."
     },
     {
       "id": "shauerwas",
       "name": "Stanley Hauerwas",
       "dates": "Contemporary",
       "tradition": "anabaptist",
-      "blurb": "Ethicist once called America's best theologian; a pacifist witness against Christian nationalism."
+      "blurb": "America's best theologian (Time, 2001) and a committed Methodist whose signature is neo-Anabaptist Christian pacifism: he taught a generation that Jesus' nonviolence is the Gospel's political center and that the church's job is to bear witness, not to manage the empire."
     },
     {
       "id": "cscofield",
@@ -351,35 +362,35 @@
       "name": "Phoebe Palmer",
       "dates": "1807-1874",
       "tradition": "wesleyan",
-      "blurb": "Methodist evangelist known as the mother of the Holiness movement; preached entire sanctification."
+      "blurb": "Methodist ‘mother of the Holiness movement’; taught entire sanctification — a second, instantaneous work of grace she also called the baptism with the Holy Spirit — received by faith alone, and used Pentecost to defend women's right to preach."
     },
     {
       "id": "jmacarthur",
       "name": "John MacArthur",
       "dates": "Contemporary",
       "tradition": "dispensational",
-      "blurb": "Pastor of Grace Community Church; verse-by-verse expositor and leading dispensational voice."
+      "blurb": "Verse-by-verse expositor and five-point Calvinist famous for Lordship Salvation and the cessationist ‘Strange Fire’ controversy; a self-described dispensationalist who keeps Israel and the church distinct and holds a pretribulational rapture."
     },
     {
       "id": "cwalther",
       "name": "C.F.W. Walther",
       "dates": "1811-1887",
       "tradition": "lutheran",
-      "blurb": "First president of the Lutheran Church-Missouri Synod; defender of confessional Lutheran orthodoxy."
+      "blurb": "First president of the Missouri Synod who made American Lutheranism confessional: justification by faith alone as the article everything hangs on, salvation as God's work alone (even rejecting election ‘in view of faith’), and Christ truly present in the Supper."
     },
     {
       "id": "eelliot",
       "name": "Elisabeth Elliot",
       "dates": "1926-2015",
       "tradition": "anglican",
-      "blurb": "Missionary to Ecuador's Waorani after her husband's martyrdom; author of Through Gates of Splendor."
+      "blurb": "Episcopalian missionary author; taught that suffering is God's refining gift and that Scripture ordains distinct, complementary roles for men and women."
     },
     {
       "id": "whuff",
       "name": "Wesley Huff",
       "dates": "Contemporary",
-      "tradition": "reformed",
-      "blurb": "Reformed Baptist apologist with Apologetics Canada; brought the manuscript case for Scripture to millions."
+      "tradition": "baptist",
+      "blurb": "Reformed Baptist pastor-elder and Apologetics Canada apologist; defended the Bible's reliability through manuscript evidence to millions. Affirms sovereign electing grace, believer's baptism, and a cautious, non-normative view of the sign gifts."
     }
   ],
   "questions": [
