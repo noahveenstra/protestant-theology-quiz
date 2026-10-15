@@ -41,6 +41,7 @@
       wireTooltips();
       wireTheologianPage();
       wireResultsActions();
+      wireResultsTabs();
       initCarousel();
     })
     .catch(function () {
@@ -621,6 +622,7 @@
 
   function renderResults(axes, trads) {
     var top = trads[0];
+    resetResultsTabs();
     $('result-tradition').textContent = top.tradition.name;
     $('result-match').textContent = top.match.toFixed(1);
     $('result-desc').textContent = top.tradition.description;
@@ -798,7 +800,10 @@
       if (!b) return;
       var card = document.createElement('div');
       card.className = 'book-card';
-      card.innerHTML = '<div class="book-title"></div><div class="book-author"></div><p class="book-note"></p>';
+      var titleHtml = b.url
+        ? '<a class="book-link" href="' + esc(b.url) + '" target="_blank" rel="noopener">Read / find it <span aria-hidden="true">&rarr;</span></a>'
+        : '';
+      card.innerHTML = '<div class="book-title"></div><div class="book-author"></div><p class="book-note"></p>' + titleHtml;
       card.querySelector('.book-title').textContent = b.title;
       card.querySelector('.book-author').textContent = 'by ' + b.author;
       card.querySelector('.book-note').textContent = b.note;
@@ -836,10 +841,13 @@
         '</ul>' +
         '<div class="unsure-resources">' +
         r.resources.map(function (rc) {
+          var link = rc.url
+            ? '<a class="book-link" href="' + esc(rc.url) + '" target="_blank" rel="noopener">Read / find it <span aria-hidden="true">&rarr;</span></a>'
+            : '';
           return '<div class="unsure-res"><span class="res-kind">' + esc(rc.kind) + '</span>' +
             '<div class="book-title">' + esc(rc.title) + '</div>' +
             '<div class="book-author">by ' + esc(rc.author) + '</div>' +
-            '<p class="book-note">' + esc(rc.note) + '</p></div>';
+            '<p class="book-note">' + esc(rc.note) + '</p>' + link + '</div>';
         }).join('') +
         '</div>';
       card.innerHTML = html;
@@ -932,6 +940,41 @@
       '<p class="cmp-legend"><span class="cmp-key cmp-me"></span> You <span class="cmp-key cmp-them"></span> Them</p>';
     wrap.innerHTML = html;
   }
+
+  function wireResultsTabs() {
+    var nav = $('results-tabs');
+    if (!nav) return;
+    var tabs = Array.prototype.slice.call(nav.querySelectorAll('.rtab'));
+    var indicator = $('tabs-indicator');
+    function moveIndicator(btn) {
+      if (!indicator || !btn) return;
+      indicator.style.width = btn.offsetWidth + 'px';
+      indicator.style.transform = 'translateX(' + btn.offsetLeft + 'px)';
+    }
+    function selectTab(btn) {
+      tabs.forEach(function (t) { t.classList.toggle('active', t === btn); });
+      document.querySelectorAll('.tab-panel').forEach(function (p) {
+        p.classList.toggle('active', p.id === 'panel-' + btn.dataset.tab);
+      });
+      moveIndicator(btn);
+    }
+    tabs.forEach(function (btn) {
+      btn.addEventListener('click', function () { selectTab(btn); });
+    });
+    window.addEventListener('resize', function () {
+      moveIndicator(nav.querySelector('.rtab.active'));
+    });
+    // called on every renderResults so a retake starts on Summary
+    resetResultsTabs = function () {
+      tabs.forEach(function (t) { t.classList.toggle('active', t === tabs[0]); });
+      document.querySelectorAll('.tab-panel').forEach(function (p) {
+        p.classList.toggle('active', p.id === 'panel-summary');
+      });
+      // layout may not be settled yet; wait a frame
+      requestAnimationFrame(function () { moveIndicator(tabs[0]); });
+    };
+  }
+  var resetResultsTabs = function () {};
 
   function wireResultsActions() {
     var shareBtn = $('btn-share'), cmpBtn = $('btn-compare');
