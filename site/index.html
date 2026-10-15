@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Protestant Theology Quiz — Where do you fit?</title>
+<meta name="description" content="Map your convictions across 12 doctrine axes and discover your closest Protestant tradition and theologians.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page">
+
+  <!-- ============ START SCREEN ============ -->
+  <section id="screen-start" class="screen active">
+    <header class="hero">
+      <p class="kicker">A theological assessment</p>
+      <h1>Where do you fit in the Protestant tradition?</h1>
+      <p class="lede">Answer a series of propositions honestly, and we'll map your convictions across grace, Scripture, the church, worship, and the last things — then match your profile with historic traditions and the theologians who shaped them.</p>
+    </header>
+
+
+    <h2 class="section-title">Choose your depth</h2>
+    <div class="depth-grid" id="depth-grid">
+      <button class="depth-card" data-depth="essential">
+        <span class="depth-name">Essential</span>
+        <span class="depth-count">30 questions</span>
+        <span class="depth-time">~6 minutes &middot; broad orientation</span>
+      </button>
+      <button class="depth-card recommended" data-depth="standard">
+        <span class="depth-badge">Recommended</span>
+        <span class="depth-name">Standard</span>
+        <span class="depth-count">60 questions</span>
+        <span class="depth-time">~12 minutes &middot; major traditions + axes</span>
+      </button>
+      <button class="depth-card" data-depth="advanced">
+        <span class="depth-name">Advanced</span>
+        <span class="depth-count">75 questions</span>
+        <span class="depth-time">~18 minutes &middot; finer distinctions</span>
+      </button>
+      <button class="depth-card" data-depth="complete">
+        <span class="depth-name">Complete</span>
+        <span class="depth-count">105 questions</span>
+        <span class="depth-time">Every active question</span>
+      </button>
+    </div>
+
+    <div class="how-it-works">
+      <h2 class="section-title">How it works</h2>
+      <ol>
+        <li><strong>12 doctrine axes</strong> — bipolar theological spectra scored directly from your answers.</li>
+        <li><strong>8 traditions</strong> — your closest historic Protestant family, with a match score.</li>
+        <li><strong>31 theologians</strong> — the thinkers whose positions most resemble yours.</li>
+      </ol>
+      <p class="fine-print">There are no trick questions and no "right" answers — only honest ones. Answer with what you actually believe, not what you think your church expects.</p>
+    </div>
+
+    <section class="theo-carousel-wrap">
+      <h2 class="section-title">Meet the theologians</h2>
+      <div class="spotlight" id="spotlight">
+        <img class="spot-portrait" id="spot-portrait" alt="">
+        <div class="spot-text">
+          <h3 id="spot-name"></h3>
+          <span class="car-tradition" id="spot-tradition"></span>
+          <p class="car-blurb" id="spot-blurb"></p>
+        </div>
+      </div>
+      <div class="marquee" id="marquee">
+        <div class="marquee-track" id="marquee-track"></div>
+      </div>
+      <p class="marquee-hint">Tap anyone to meet them</p>
+    </section>
+  </section>
+
+  <!-- ============ QUIZ SCREEN ============ -->
+  <section id="screen-quiz" class="screen">
+    <div class="quiz-topbar">
+      <button id="btn-back" class="text-btn">&larr; Back</button>
+      <div class="progress-wrap">
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        <span class="progress-label" id="progress-label">1 / 60</span>
+      </div>
+      <span class="category-tag" id="category-tag">Soteriology</span>
+    </div>
+
+    <div class="question-card">
+      <p class="q-number" id="q-number">Question 1</p>
+      <h2 class="q-text" id="q-text"></h2>
+      <div class="likert" id="likert">
+        <button data-val="-2"><span class="likert-dot"></span><span class="likert-label">Strongly<br>disagree</span></button>
+        <button data-val="-1"><span class="likert-dot"></span><span class="likert-label">Disagree</span></button>
+        <button data-val="0"><span class="likert-dot"></span><span class="likert-label">Neutral /<br>unsure</span></button>
+        <button data-val="1"><span class="likert-dot"></span><span class="likert-label">Agree</span></button>
+        <button data-val="2"><span class="likert-dot"></span><span class="likert-label">Strongly<br>agree</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ RESULTS SCREEN ============ -->
+  <section id="screen-results" class="screen">
+    <header class="hero results-hero">
+      <p class="kicker">Your theological profile</p>
+      <h1 id="result-tradition">—</h1>
+      <p class="match-line">Match <strong id="result-match">—</strong> / 100</p>
+      <p class="lede" id="result-desc"></p>
+    </header>
+
+    <h2 class="section-title">In your own words</h2>
+    <div class="summary-card" id="summary-card"></div>
+
+    <h2 class="section-title">Closest theologians</h2>
+    <div class="theologian-grid" id="theologian-grid"></div>
+
+    <h2 class="section-title">Your 12 doctrine axes</h2>
+    <div class="axes-list" id="axes-list"></div>
+
+    <h2 class="section-title">All traditions, ranked</h2>
+    <div class="tradition-rank" id="tradition-rank"></div>
+    <div id="close-call" class="close-call hidden"></div>
+
+    <div class="results-actions">
+      <button id="btn-retake" class="btn-primary">Retake the quiz</button>
+      <button id="btn-review" class="btn-secondary">Review my answers</button>
+    </div>
+
+    <div id="answer-review" class="answer-review hidden"></div>
+  </section>
+
+  <!-- ============ THEOLOGIAN DETAIL ============ -->
+  <section id="screen-theologian" class="screen">
+    <div class="theo-topbar">
+      <button id="btn-theo-back" class="text-btn">&larr; Back</button>
+      <button id="btn-theo-quiz" class="btn-small">Take the Quiz</button>
+    </div>
+    <div class="theo-hero">
+      <div class="theo-portrait-wrap"><img class="theo-portrait" id="theo-portrait" alt=""></div>
+      <div class="theo-head">
+        <p class="kicker" id="theo-tradition"></p>
+        <h1 id="theo-name"></h1>
+        <p class="theo-lifespan" id="theo-lifespan"></p>
+      </div>
+    </div>
+    <div class="theo-signature" id="theo-signature"></div>
+    <h2 class="section-title">Impact</h2>
+    <div class="theo-bio" id="theo-impact"></div>
+    <h2 class="section-title">Theological contributions</h2>
+    <div class="theo-bio" id="theo-theology"></div>
+    <h2 class="section-title">Significant events</h2>
+    <div class="theo-events" id="theo-events"></div>
+  </section>
+
+</div>
+<script src="portraits-1.js"></script>
+<script src="portraits-2.js"></script>
+<script src="portraits-3.js"></script>
+<script src="portraits-4.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
