@@ -4,6 +4,9 @@
 
   var BANK = null;
   var GLOSSARY = {};
+  var READING = {};
+  var COMPARE_WITH = null;   // decoded ?compare= payload from a friend
+  var LAST = null;           // { axes, trads, theos } of the latest results
   var queue = [];        // questions for this run
   var idx = 0;
   var answers = {};      // questionId -> -2..2
@@ -22,14 +25,22 @@
   // ---------- boot ----------
   Promise.all([
     fetch('question-bank.json').then(function (r) { if (!r.ok) throw new Error('bank'); return r.json(); }),
-    fetch('glossary.json').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
+    fetch('glossary.json').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
+    fetch('reading.json').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
   ])
     .then(function (results) {
       BANK = results[0];
       GLOSSARY = results[1] || {};
+      READING = results[2] || {};
+      COMPARE_WITH = readCompareParam();
+      if (COMPARE_WITH) {
+        var cb = $('compare-banner');
+        if (cb) cb.classList.remove('hidden');
+      }
       wireDepthCards();
       wireTooltips();
       wireTheologianPage();
+      wireResultsActions();
       initCarousel();
     })
     .catch(function () {
@@ -643,6 +654,15 @@
       theoGrid.appendChild(card);
     });
 
+    // cache for share / compare actions
+    LAST = { axes: axes, trads: trads, theos: theos };
+
+    // friend comparison (when opened from a ?compare= link)
+    renderCompare(axes, trads);
+
+    // why these matches?
+    renderWhy(theos);
+
     // axes
     var axesList = $('axes-list');
     axesList.innerHTML = '';
@@ -693,6 +713,10 @@
     // close-call explainer (only when the top is nearly tied)
     renderCloseCall(trads);
 
+    // reading list + unsure-answer exploration
+    renderReadingList(LAST.theos);
+    renderUnsure();
+
     // answer review (built lazily on toggle)
     var review = $('answer-review');
     review.classList.add('hidden');
@@ -727,4 +751,301 @@
     showScreen('screen-start');
     window.scrollTo(0, 0);
   });
+
+  // ---------- "why these matches?" ----------
+  // For each matched theologian, surface the 3 answers that contributed most
+  // to their tradition's score (weight x response, positive contributions only).
+  function renderWhy(theos) {
+    var wrap = $('why-list');
+    if (!wrap) return;
+    wrap.innerHTML = '';
+    theos.forEach(function (t) {
+      var tid = t.tradition;
+      var scored = [];
+      queue.forEach(function (q) {
+        var resp = answers[q.id];
+        if (resp === undefined) return;
+        var w = (q.traditions || {})[tid] || 0;
+        var contrib = w * resp;
+        if (contrib > 0) scored.push({ q: q, contrib: contrib, resp: resp });
+      });
+      scored.sort(function (a, b) { return b.contrib - a.contrib; });
+      var top3 = scored.slice(0, 3);
+      var card = document.createElement('div');
+      card.className = 'why-card';
+      var html = '<h4>' + esc(t.name) + '</h4>';
+      if (!top3.length) {
+        html += '<p class="why-empty">No single answer drove this match — it came from your overall pattern.</p>';
+      } else {
+        html += '<ol>' + top3.map(function (s) {
+          return '<li><span class="why-q">' + esc(s.q.text) + '</span>' +
+            '<span class="why-a">You answered: <strong>' + esc(RESP_LABELS[String(s.resp)]) + '</strong></span></li>';
+        }).join('') + '</ol>';
+      }
+      card.innerHTML = html;
+      wrap.appendChild(card);
+    });
+  }
+
+  // ---------- reading list ----------
+  function renderReadingList(theos) {
+    var wrap = $('reading-list');
+    if (!wrap) return;
+    wrap.innerHTML = '';
+    var books = (READING && READING.books) || {};
+    theos.forEach(function (t) {
+      var b = books[t.id];
+      if (!b) return;
+      var card = document.createElement('div');
+      card.className = 'book-card';
+      card.innerHTML = '<div class="book-title"></div><div class="book-author"></div><p class="book-note"></p>';
+      card.querySelector('.book-title').textContent = b.title;
+      card.querySelector('.book-author').textContent = 'by ' + b.author;
+      card.querySelector('.book-note').textContent = b.note;
+      wrap.appendChild(card);
+    });
+  }
+
+  // ---------- unsure-answer exploration ----------
+  // Questions answered "Neutral / unsure", grouped by topic (first axis),
+  // each paired with one book to dig deeper.
+  function renderUnsure() {
+    var wrap = $('unsure-wrap'), list = $('unsure-list');
+    if (!wrap || !list) return;
+    list.innerHTML = '';
+    var res = (READING && READING.axisResources) || {};
+    var seen = {};
+    var items = [];
+    queue.forEach(function (q) {
+      if (answers[q.id] !== 0) return;
+      var axisId = (q.axes && q.axes[0] && q.axes[0].axis) || null;
+      if (!axisId || seen[axisId]) return;
+      seen[axisId] = true;
+      var r = res[axisId];
+      if (!r) return;
+      var axis = null;
+      BANK.axes.forEach(function (a) { if (a.id === axisId) axis = a; });
+      items.push({ label: axis ? axis.label : axisId, r: r });
+    });
+    if (!items.length) { wrap.classList.add('hidden'); return; }
+    wrap.classList.remove('hidden');
+    items.forEach(function (it) {
+      var card = document.createElement('div');
+      card.className = 'unsure-card';
+      card.innerHTML = '<div class="unsure-topic"></div><div class="book-title"></div><div class="book-author"></div><p class="book-note"></p>';
+      card.querySelector('.unsure-topic').textContent = 'Unsure on: ' + it.label;
+      card.querySelector('.book-title').textContent = it.r.title;
+      card.querySelector('.book-author').textContent = 'by ' + it.r.author;
+      card.querySelector('.book-note').textContent = it.r.note;
+      list.appendChild(card);
+    });
+  }
+
+  // ---------- take-it-together compare mode ----------
+  function readCompareParam() {
+    try {
+      var m = /[?&]compare=([^&]+)/.exec(window.location.search);
+      if (!m) return null;
+      var s = decodeURIComponent(m[1]).replace(/-/g, '+').replace(/_/g, '/');
+      while (s.length % 4) s += '=';
+      var obj = JSON.parse(atob(s));
+      if (!obj || obj.v !== 1 || !Array.isArray(obj.a) || !obj.t) return null;
+      return obj;
+    } catch (e) { return null; }
+  }
+
+  function encodeCompare(axes, trads) {
+    var payload = { v: 1, a: axes.map(function (e) { return e.score; }), t: {} };
+    trads.forEach(function (e) { payload.t[e.tradition.id] = e.match; });
+    return btoa(JSON.stringify(payload)).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  }
+
+  function copyText(text, done) {
+    function fallback() {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+      done(ok);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { done(true); }, fallback);
+    } else fallback();
+  }
+
+  function tradById(id) {
+    var found = null;
+    BANK.traditions.forEach(function (t) { if (t.id === id) found = t; });
+    return found;
+  }
+
+  function renderCompare(axes, trads) {
+    var wrap = $('compare-result');
+    if (!wrap) return;
+    wrap.innerHTML = '';
+    if (!COMPARE_WITH) { wrap.classList.add('hidden'); return; }
+    wrap.classList.remove('hidden');
+    var other = COMPARE_WITH;
+
+    // axis agreement
+    var diffs = axes.map(function (e, i) {
+      var o = (other.a && typeof other.a[i] === 'number') ? other.a[i] : 0;
+      return { label: e.axis.label, mine: e.score, theirs: o, diff: Math.abs(e.score - o) };
+    });
+    var agree = diffs.slice().sort(function (a, b) { return a.diff - b.diff; })[0];
+    var differ = diffs.slice().sort(function (a, b) { return b.diff - a.diff; })[0];
+
+    // shared top-3 traditions
+    var mine = trads.slice(0, 3).map(function (e) { return e.tradition.id; });
+    var theirIds = Object.keys(other.t || {}).sort(function (a, b) { return other.t[b] - other.t[a]; }).slice(0, 3);
+    var shared = mine.filter(function (id) { return theirIds.indexOf(id) !== -1; });
+
+    var html = '<h3 class="cmp-title">Theology compare</h3>' +
+      '<div class="cmp-headlines">' +
+      '<div class="cmp-line"><span class="cmp-emoji">🤝</span><span>You agree most on <strong>' + esc(agree.label) + '</strong></span></div>' +
+      '<div class="cmp-line"><span class="cmp-emoji">⚡</span><span>You differ most on <strong>' + esc(differ.label) + '</strong></span></div>' +
+      '</div>';
+    if (shared.length) {
+      html += '<p class="cmp-shared">Shared top traditions: ' +
+        shared.map(function (id) { var t = tradById(id); return '<strong>' + esc(t ? t.name : id) + '</strong>'; }).join(', ') +
+        '</p>';
+    }
+    html += '<div class="cmp-rows">' + BANK.traditions.map(function (t) {
+      var me = null, them = (other.t || {})[t.id];
+      trads.forEach(function (e) { if (e.tradition.id === t.id) me = e.match; });
+      me = me === null ? 0 : me;
+      them = typeof them === 'number' ? them : 0;
+      return '<div class="cmp-row"><span class="cmp-name">' + esc(t.name) + '</span>' +
+        '<span class="cmp-bars"><span class="cmp-bar cmp-me" style="width:' + me.toFixed(1) + '%"></span>' +
+        '<span class="cmp-bar cmp-them" style="width:' + them.toFixed(1) + '%"></span></span>' +
+        '<span class="cmp-scores"><b>' + me.toFixed(0) + '</b> vs ' + them.toFixed(0) + '</span></div>';
+    }).join('') + '</div>' +
+      '<p class="cmp-legend"><span class="cmp-key cmp-me"></span> You <span class="cmp-key cmp-them"></span> Them</p>';
+    wrap.innerHTML = html;
+  }
+
+  function wireResultsActions() {
+    var shareBtn = $('btn-share'), cmpBtn = $('btn-compare');
+    if (shareBtn) shareBtn.addEventListener('click', shareResults);
+    if (cmpBtn) cmpBtn.addEventListener('click', function () {
+      if (!LAST) return;
+      var code = encodeCompare(LAST.axes, LAST.trads);
+      var url = window.location.origin + window.location.pathname + '?compare=' + code;
+      var btn = this;
+      var orig = btn.textContent;
+      copyText(url, function (ok) {
+        btn.textContent = ok ? 'Link copied — send it!' : 'Copy this link:';
+        if (!ok) { try { window.prompt('Copy your compare link:', url); } catch (e) {} }
+        setTimeout(function () { btn.textContent = orig; }, 2500);
+      });
+    });
+  }
+
+  // ---------- shareable results card ----------
+  function fitText(g, text, cx, y, maxW, startSize, font) {
+    var size = startSize;
+    do {
+      g.font = '700 ' + size + 'px ' + font;
+      size -= 4;
+    } while (g.measureText(text).width > maxW && size > 28);
+    g.fillText(text, cx, y);
+  }
+
+  function wrapText(g, text, cx, y, maxW, lineH, maxLines) {
+    var words = text.split(' ');
+    var lines = [], line = '';
+    words.forEach(function (w) {
+      var t = line ? line + ' ' + w : w;
+      if (g.measureText(t).width > maxW && line) { lines.push(line); line = w; }
+      else line = t;
+    });
+    if (line) lines.push(line);
+    lines = lines.slice(0, maxLines);
+    lines.forEach(function (l, i) { g.fillText(l, cx, y + i * lineH); });
+  }
+
+  function loadImg(src) {
+    return new Promise(function (resolve) {
+      if (!src) return resolve(null);
+      var im = new Image();
+      im.onload = function () { resolve(im); };
+      im.onerror = function () { resolve(null); };
+      im.src = src;
+    });
+  }
+
+  function shareResults() {
+    if (!LAST) return;
+    var top = LAST.trads[0];
+    var theos = LAST.theos;
+    var W = 1080, H = 1350;
+    var c = document.createElement('canvas');
+    c.width = W; c.height = H;
+    var g = c.getContext('2d');
+
+    var portraits = (window.THEOLOGIAN_PORTRAITS) || {};
+    var jobs = theos.map(function (t) { return loadImg(portraits[t.id]); });
+    Promise.all(jobs).then(function (imgs) {
+      // background + frame
+      g.fillStyle = '#faf7f1'; g.fillRect(0, 0, W, H);
+      g.strokeStyle = '#a0522d'; g.lineWidth = 6; g.strokeRect(36, 36, W - 72, H - 72);
+      g.textAlign = 'center';
+
+      g.fillStyle = '#a0522d'; g.font = '600 32px Inter, sans-serif';
+      g.fillText('M Y   P R O T E S T A N T   T H E O L O G Y   P R O F I L E', W / 2, 150);
+
+      g.fillStyle = '#1c1814';
+      fitText(g, top.tradition.name, W / 2, 265, W - 200, 92, 'Georgia, serif');
+
+      g.fillStyle = '#5c554b'; g.font = '500 40px Inter, sans-serif';
+      g.fillText(top.match.toFixed(1) + ' / 100 match', W / 2, 335);
+
+      // portraits
+      var cy = 560, r = 118, gap = 300;
+      var startX = W / 2 - gap * (theos.length - 1) / 2;
+      theos.forEach(function (t, i) {
+        var x = startX + i * gap;
+        g.save();
+        g.beginPath(); g.arc(x, cy, r, 0, Math.PI * 2); g.clip();
+        var im = imgs[i];
+        if (im) {
+          var s = Math.max((r * 2) / im.width, (r * 2) / im.height);
+          g.drawImage(im, x - im.width * s / 2, cy - im.height * s / 2, im.width * s, im.height * s);
+        } else {
+          g.fillStyle = '#e5ddcd'; g.fillRect(x - r, cy - r, r * 2, r * 2);
+          g.fillStyle = '#a0522d'; g.font = '700 64px Georgia, serif';
+          g.fillText(initials(t.name), x, cy + 22);
+        }
+        g.restore();
+        g.strokeStyle = '#a0522d'; g.lineWidth = 4;
+        g.beginPath(); g.arc(x, cy, r, 0, Math.PI * 2); g.stroke();
+        g.fillStyle = '#1c1814'; g.font = '600 34px Georgia, serif';
+        fitText(g, t.name, x, cy + r + 52, gap - 30, 34, 'Georgia, serif');
+      });
+
+      // tradition description
+      g.fillStyle = '#5c554b'; g.font = '400 34px Inter, sans-serif';
+      wrapText(g, top.tradition.description || '', W / 2, 880, W - 240, 50, 4);
+
+      g.fillStyle = '#8a8177'; g.font = '500 30px Inter, sans-serif';
+      g.fillText('noahveenstra.com/protestant-theology-quiz', W / 2, H - 100);
+
+      c.toBlob(function (blob) {
+        if (!blob) return;
+        var file = new File([blob], 'theology-results.png', { type: 'image/png' });
+        if (navigator.canShare && navigator.canShare({ files: [file] })) {
+          navigator.share({ files: [file], title: 'My Protestant theology profile' }).catch(function () {});
+        } else {
+          var a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = 'theology-results.png';
+          document.body.appendChild(a); a.click();
+          setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 4000);
+        }
+      }, 'image/png');
+    });
+  }
 })();
