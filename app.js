@@ -5,12 +5,17 @@
   var BANK = null;
   var GLOSSARY = {};
   var READING = {};
+  var CITATIONS = {};
+  var THEO_VECTORS = null;
+  var THEO_META = null;
   var COMPARE_WITH = null;   // decoded ?compare= payload from a friend
   var LAST = null;           // { axes, trads, theos } of the latest results
   var queue = [];        // questions for this run
   var idx = 0;
   var answers = {};      // questionId -> -2..2
   var depthName = '';
+  var isAdaptive = false;
+  var ADAPTIVE_TARGET = 25, ADAPTIVE_MIN = 12, ADAPTIVE_MARGIN = 15;
 
   var $ = function (id) { return document.getElementById(id); };
 
@@ -20,18 +25,34 @@
     advanced: ['essential', 'standard', 'advanced'],
     complete: ['essential', 'standard', 'advanced', 'complete']
   };
-  var DEPTH_LABELS = { essential: 'Essential', standard: 'Standard', advanced: 'Advanced', complete: 'Complete' };
+  var DEPTH_LABELS = { adaptive: 'Adaptive', essential: 'Essential', standard: 'Standard', advanced: 'Advanced', complete: 'Complete' };
 
   // ---------- boot ----------
   Promise.all([
     fetch('question-bank.json').then(function (r) { if (!r.ok) throw new Error('bank'); return r.json(); }),
     fetch('glossary.json').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
-    fetch('reading.json').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; })
+    fetch('reading.json').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
+    fetch('citations.json').then(function (r) { return r.ok ? r.json() : {}; }).catch(function () { return {}; }),
+    fetch('theologian-vectors.json').then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; }),
+    fetch('theologian-vectors-meta.json').then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; })
   ])
     .then(function (results) {
       BANK = results[0];
       GLOSSARY = results[1] || {};
       READING = results[2] || {};
+      CITATIONS = results[3] || {};
+      THEO_VECTORS = results[4] || null;
+      THEO_META = results[5] || null;
+      // precompute per-question discrimination: sum of |w_i - w_j| over tradition pairs
+      BANK.questions.forEach(function (q) {
+        var ws = BANK.traditions.map(function (t) { return (q.traditions || {})[t.id] || 0; });
+        var d = 0;
+        for (var i = 0; i < ws.length; i++)
+          for (var j = i + 1; j < ws.length; j++)
+            d += Math.abs(ws[i] - ws[j]);
+        q._disc = d;
+      });
+      buildOpposedPairs();
       COMPARE_WITH = readCompareParam();
       if (COMPARE_WITH) {
         var cb = $('compare-banner');
@@ -59,13 +80,46 @@
   // ---------- quiz flow ----------
   function startQuiz(depth) {
     depthName = DEPTH_LABELS[depth] || depth;
-    var allowed = TIERS[depth] || TIERS.complete;
-    queue = BANK.questions.filter(function (q) { return allowed.indexOf(q.tier) !== -1; });
+    isAdaptive = depth === 'adaptive';
+    if (isAdaptive) {
+      // screener: the 6 most discriminating questions, then adapt
+      queue = BANK.questions.slice()
+        .sort(function (a, b) { return (b._disc || 0) - (a._disc || 0); })
+        .slice(0, 6);
+    } else {
+      var allowed = TIERS[depth] || TIERS.complete;
+      queue = BANK.questions.filter(function (q) { return allowed.indexOf(q.tier) !== -1; });
+    }
     idx = 0;
     answers = {};
     showScreen('screen-quiz');
     renderQuestion();
     window.scrollTo(0, 0);
+  }
+
+  // Pick the unasked question that best separates the user's current top two.
+  function pickNextAdaptive() {
+    var trads = scoreTraditions();
+    var t1 = trads[0].tradition.id, t2 = trads[1].tradition.id;
+    var asked = {};
+    queue.forEach(function (q) { asked[q.id] = true; });
+    var best = null, bestKey = -1;
+    BANK.questions.forEach(function (q) {
+      if (asked[q.id]) return;
+      var w1 = (q.traditions || {})[t1] || 0;
+      var w2 = (q.traditions || {})[t2] || 0;
+      var key = Math.abs(w1 - w2) * 1000 + (q._disc || 0);
+      if (key > bestKey) { bestKey = key; best = q; }
+    });
+    return best;
+  }
+
+  function adaptiveDone() {
+    var n = Object.keys(answers).length;
+    if (n < ADAPTIVE_MIN) return false;
+    if (n >= ADAPTIVE_TARGET) return true;
+    var trads = scoreTraditions();
+    return (trads[0].exact - trads[1].exact) >= ADAPTIVE_MARGIN;
   }
 
   function showScreen(id) {
@@ -79,11 +133,17 @@
     card.classList.remove('q-swap');
     void card.offsetWidth;
     card.classList.add('q-swap');
-    $('q-number').textContent = 'Question ' + (idx + 1) + ' of ' + queue.length;
+    $('q-number').textContent = isAdaptive
+      ? 'Question ' + (idx + 1) + ' of ~' + ADAPTIVE_TARGET
+      : 'Question ' + (idx + 1) + ' of ' + queue.length;
     $('q-text').textContent = q.text;
     $('category-tag').textContent = q.category;
-    $('progress-fill').style.width = ((idx) / queue.length * 100) + '%';
-    $('progress-label').textContent = (idx + 1) + ' / ' + queue.length;
+    $('progress-fill').style.width = isAdaptive
+      ? (idx / ADAPTIVE_TARGET * 100) + '%'
+      : ((idx) / queue.length * 100) + '%';
+    $('progress-label').textContent = isAdaptive
+      ? (idx + 1) + ' / ~' + ADAPTIVE_TARGET
+      : (idx + 1) + ' / ' + queue.length;
     $('btn-back').style.visibility = idx === 0 ? 'hidden' : 'visible';
 
     var likert = $('likert');
@@ -98,6 +158,12 @@
     answers[queue[i].id] = val;
     // brief beat so the selection registers visually
     setTimeout(function () {
+      if (isAdaptive) {
+        if (adaptiveDone()) { finishQuiz(); return; }
+        var nxt = pickNextAdaptive();
+        if (!nxt) { finishQuiz(); return; }
+        queue.push(nxt);
+      }
       if (idx < queue.length - 1) { idx++; renderQuestion(); }
       else { finishQuiz(); }
     }, 160);
@@ -253,7 +319,98 @@
     requestAnimationFrame(frame);
   }
 
-  // ---------- close-call analysis ----------
+  // ---------- confessional citations ----------
+  // Article-level citations from each tradition's own documents (audit data).
+  var CITE_SRC = {
+    reformed: 'Westminster Confession',
+    lutheran: 'Book of Concord',
+    wesleyan: 'Methodist Articles of Religion',
+    baptist: '1689 London Baptist Confession',
+    pentecostal: 'AG Statement of Fundamental Truths',
+    anabaptist: 'Schleitheim / Dordrecht Confessions',
+    anglican: 'Thirty-Nine Articles',
+    dispensational: 'DTS Doctrinal Statement'
+  };
+
+  function citeTag(tradId, qid) {
+    if (!CITATIONS || !CITATIONS[tradId]) return '';
+    var c = CITATIONS[tradId][String(qid)];
+    if (!c || /silent/i.test(c)) return '';
+    var short = c.length > 30 ? c.slice(0, 30) + '\u2026' : c;
+    if (tradId === 'baptist' && /^[0-9]/.test(c)) short = '1689 ' + short;
+    if (tradId === 'anglican' && /^Art/i.test(c)) short = '39 ' + short;
+    if (tradId === 'wesleyan' && /^Art/i.test(c)) short = 'Meth. ' + short;
+    return '<span class="cite-tag" title="' + esc((CITE_SRC[tradId] || '') + ': ' + c) + '">' +
+      esc(short) + '</span>';
+  }
+
+  // ---------- contradiction detection ----------
+  // Pairs of questions on the same axis pulling opposite directions.
+  // Agreeing strongly with both is either deep nuance or yea-saying —
+  // either way it's worth a second look.
+  var OPPOSED_PAIRS = [];
+
+  function buildOpposedPairs() {
+    OPPOSED_PAIRS = [];
+    var seen = {};
+    BANK.questions.forEach(function (a) {
+      BANK.questions.forEach(function (b) {
+        if (a.id >= b.id) return;
+        (a.axes || []).forEach(function (xa) {
+          (b.axes || []).forEach(function (xb) {
+            if (xa.axis !== xb.axis || xa.direction === xb.direction) return;
+            if (Math.abs(xa.weight) < 1 || Math.abs(xb.weight) < 1) return;
+            var key = a.id + ':' + b.id;
+            if (seen[key]) return;
+            seen[key] = true;
+            OPPOSED_PAIRS.push({ a: a, b: b, axis: xa.axis, dirA: xa.direction, dirB: xb.direction });
+          });
+        });
+      });
+    });
+  }
+
+  function findContradictions() {
+    var out = [], used = {};
+    OPPOSED_PAIRS.forEach(function (p) {
+      var ra = answers[p.a.id], rb = answers[p.b.id];
+      if (ra === undefined || rb === undefined || ra === 0 || rb === 0) return;
+      if (Math.abs(ra) + Math.abs(rb) < 3) return;
+      var ca = p.dirA * ra, cb = p.dirB * rb;
+      if ((ca > 0) === (cb > 0)) return;
+      out.push({ pair: p, ra: ra, rb: rb, strength: Math.abs(ca) + Math.abs(cb) });
+    });
+    out.sort(function (x, y) { return y.strength - x.strength; });
+    var top = [];
+    out.forEach(function (o) {
+      if (top.length >= 2) return;
+      if (used[o.pair.a.id] || used[o.pair.b.id]) return;
+      used[o.pair.a.id] = used[o.pair.b.id] = true;
+      top.push(o);
+    });
+    return top;
+  }
+
+  function renderContradictions() {
+    var box = $('contra-card');
+    var list = findContradictions();
+    if (!box || !list.length) { if (box) { box.classList.add('hidden'); box.innerHTML = ''; } return; }
+    var axisName = function (id) {
+      var ax = BANK.axes.filter(function (a) { return a.id === id; })[0];
+      return ax ? ax.label : id;
+    };
+    var html = '<h3>Worth a second look</h3>' +
+      '<p class="breaks-intro">You leaned strongly both ways on ' +
+      (list.length === 1 ? 'this pair' : 'these pairs') +
+      ' — they point in opposite directions. Nothing wrong with tension, but sit with it:</p><ul>';
+    list.forEach(function (o) {
+      html += '<li>On <strong>' + esc(axisName(o.pair.axis)) + '</strong>: you ' +
+        respWord(o.ra) + ' that &ldquo;' + esc(o.pair.a.text) + '&rdquo; but also ' +
+        respWord(o.rb) + ' that &ldquo;' + esc(o.pair.b.text) + '&rdquo;.</li>';
+    });
+    box.innerHTML = html + '</ul>';
+    box.classList.remove('hidden');
+  }
   // When the top traditions are nearly tied, find the questions whose answers
   // separated the winner from each close runner-up.
   function closeCallEntries(trads) {
@@ -294,7 +451,8 @@
           var verb = d.resp > 0 ? 'agreed' : 'disagreed';
           var opp = (d.w2 * d.resp < 0) ? 'leans the other way' : 'is neutral here';
           html += '<li>You ' + verb + ' that &ldquo;' + esc(d.q.text) + '&rdquo; — ' +
-            esc(top.tradition.name) + ' affirms this; ' + esc(entry.runner.tradition.name) + ' ' + opp + '.</li>';
+            esc(top.tradition.name) + ' affirms this' + citeTag(top.tradition.id, d.q.id) +
+            '; ' + esc(entry.runner.tradition.name) + ' ' + opp + '.</li>';
         });
         html += '</ul>';
       }
@@ -693,13 +851,14 @@
       ' you went against the ' + esc(top.tradition.name) + ' grain:</p><ul>';
     br.forEach(function (b) {
       html += '<li>You ' + respWord(b.resp) + ' that &ldquo;' + esc(b.q.text) + '&rdquo; &mdash; ' +
-        esc(top.tradition.name) + ' typically ' + (b.w > 0 ? 'agrees' : 'disagrees') + '.</li>';
+        esc(top.tradition.name) + ' typically ' + (b.w > 0 ? 'agrees' : 'disagrees') +
+        citeTag(top.tradition.id, b.q.id) + '.</li>';
     });
     box.innerHTML = html + '</ul>';
     box.classList.remove('hidden');
   }
 
-  function buildSummary(axes, trads) {
+  function buildSummary(axes, trads, topTheo) {
     var top = trads[0];
     var html = '';
 
@@ -728,9 +887,12 @@
       '</strong> tradition &mdash; ' + marginVerdict(trads) + '.</p>';
 
     var theos = BANK.theologians.filter(function (t) { return t.tradition === top.tradition.id; });
-    if (theos.length) {
-      html += '<p>Within that stream, you may resonate with <strong>' + esc(theos[0].name) +
-        '</strong> &mdash; ' + esc(theos[0].blurb) + '</p>';
+    var closest = (topTheo && topTheo.theo) ? topTheo.theo : theos[0];
+    if (closest) {
+      var simTxt = (topTheo && topTheo.sim !== undefined && topTheo.sim !== null)
+        ? ' (' + topTheo.sim + '% similar to your answers)' : '';
+      html += '<p>Your closest individual thinker is <strong>' + esc(closest.name) +
+        '</strong>' + simTxt + ' &mdash; ' + esc(closest.blurb) + '</p>';
     }
     return html;
   }
@@ -783,8 +945,12 @@
     $('result-match').textContent = top.match.toFixed(1);
     $('result-desc').textContent = top.tradition.description;
 
+    // theologians nearest to the user's axis profile (vector distance)
+    var rankedTheos = scoreTheologians(axes, trads);
+    var theos = rankedTheos.slice(0, 3).map(function (r) { return r.theo; });
+
     // written summary
-    $('summary-card').innerHTML = buildSummary(axes, trads);
+    $('summary-card').innerHTML = buildSummary(axes, trads, rankedTheos[0]);
 
     // theological attribute radar
     var attrs = scoreAttributes(axes);
@@ -793,15 +959,12 @@
     // where the user broke from their top tradition
     renderBreaks(trads);
 
-    // theologians of the top tradition (up to 3)
+    // opposed-pair contradictions
+    renderContradictions();
+
     var theoGrid = $('theologian-grid');
     theoGrid.innerHTML = '';
-    var theos = BANK.theologians.filter(function (t) { return t.tradition === top.tradition.id; }).slice(0, 3);
-    if (!theos.length) {
-      // fall back to theologians of the runner-up tradition
-      theos = BANK.theologians.filter(function (t) { return t.tradition === trads[1].tradition.id; }).slice(0, 3);
-    }
-    theos.forEach(function (t) {
+    theos.forEach(function (t, i) {
       var card = document.createElement('div');
       card.className = 'theologian-card';
       card.innerHTML = '<img class="theologian-portrait" alt=""><h3></h3><div class="theologian-dates"></div><p></p>';
@@ -812,7 +975,9 @@
       if (!img.src) img.style.display = 'none';
       img.onerror = function () { img.style.display = 'none'; };
       card.querySelector('h3').textContent = t.name;
-      card.querySelector('.theologian-dates').textContent = t.dates || '';
+      var sim = rankedTheos[i] && rankedTheos[i].sim !== undefined && rankedTheos[i].sim !== null
+        ? rankedTheos[i].sim + '% match' : '';
+      card.querySelector('.theologian-dates').textContent = (t.dates || '') + (sim ? ' · ' + sim : '');
       card.querySelector('p').textContent = t.blurb;
       card.classList.add('clickable');
       card.addEventListener('click', function () { openTheologian(t.id); });
@@ -826,7 +991,7 @@
     renderCompare(axes, trads);
 
     // why these matches?
-    renderWhy(theos);
+    renderWhy(rankedTheos);
 
     // axes
     var axesList = $('axes-list');
@@ -926,7 +1091,74 @@
   // ---------- "why these matches?" ----------
   // For each matched theologian, surface the 3 answers that contributed most
   // to their tradition's score (weight x response, positive contributions only).
-  function renderWhy(theos) {
+  // ---------- theologian vector matching ----------
+  // Nearest-neighbor on the 12 axes against researched theologian vectors.
+  // Falls back to tradition order when vectors are unavailable.
+  function scoreTheologians(axes, trads) {
+    if (!THEO_VECTORS) {
+      var top = trads[0];
+      var fb = BANK.theologians.filter(function (t) { return t.tradition === top.tradition.id; });
+      if (!fb.length) fb = BANK.theologians.filter(function (t) { return t.tradition === trads[1].tradition.id; });
+      return fb.slice(0, 3).map(function (t) { return { theo: t, dist: null }; });
+    }
+    return BANK.theologians.map(function (t) {
+      var v = THEO_VECTORS[t.id];
+      if (!v) return null;
+      var sum = 0, n = 0;
+      axes.forEach(function (e) {
+        var tv = v[e.axis.id];
+        if (tv === undefined || tv === null) return;
+        sum += Math.abs(e.score - tv);
+        n++;
+      });
+      if (!n) return null;
+      var dist = sum / n; // 0..200 mean abs gap
+      return { theo: t, dist: dist, sim: Math.max(0, Math.round(100 - dist / 2)) };
+    }).filter(Boolean).sort(function (a, b) { return a.dist - b.dist; });
+  }
+
+  function fmtAxisScore(s) {
+    return (s > 0 ? '+' : '') + s;
+  }
+
+  function renderWhy(ranked) {
+    var wrap = $('why-list');
+    if (!wrap) return;
+    wrap.innerHTML = '';
+    if (!THEO_VECTORS) { renderWhyLegacy(ranked.map(function (r) { return r.theo; })); return; }
+    ranked.slice(0, 3).forEach(function (r) {
+      var t = r.theo;
+      var v = THEO_VECTORS[t.id] || {};
+      // only cite researched positions in explanations, never prior-filled cells
+      var researched = (THEO_META && THEO_META[t.id] && THEO_META[t.id].researched) || null;
+      var gaps = LAST.axes.map(function (e) {
+        var tv = v[e.axis.id];
+        if (tv === undefined || tv === null) return null;
+        if (researched && researched.indexOf(e.axis.id) === -1) return null;
+        return { axis: e.axis, user: e.score, theo: tv, gap: Math.abs(e.score - tv) };
+      }).filter(Boolean).sort(function (a, b) { return a.gap - b.gap; });
+      var card = document.createElement('div');
+      card.className = 'why-card';
+      var lastName = t.name.split(' ').pop();
+      var html = '<h4>' + esc(t.name) + '</h4>';
+      html += '<p class="why-sim">' + r.sim + '% similar to your answers</p>';
+      if (gaps.length) {
+        var c = gaps[0];
+        html += '<ul class="why-vec"><li>Closest to you on <strong>' + esc(c.axis.label) +
+          '</strong> — you ' + fmtAxisScore(c.user) + ', ' + esc(lastName) + ' ' + fmtAxisScore(c.theo) + '.</li>';
+        var f = gaps[gaps.length - 1];
+        if (gaps.length > 1 && f.gap - c.gap >= 20) {
+          html += '<li>Furthest on <strong>' + esc(f.axis.label) +
+            '</strong> — you ' + fmtAxisScore(f.user) + ', ' + esc(lastName) + ' ' + fmtAxisScore(f.theo) + '.</li>';
+        }
+        html += '</ul>';
+      }
+      card.innerHTML = html;
+      wrap.appendChild(card);
+    });
+  }
+
+  function renderWhyLegacy(theos) {
     var wrap = $('why-list');
     if (!wrap) return;
     wrap.innerHTML = '';
@@ -950,7 +1182,8 @@
       } else {
         html += '<ol>' + top3.map(function (s) {
           return '<li><span class="why-q">' + esc(s.q.text) + '</span>' +
-            '<span class="why-a">You answered: <strong>' + esc(RESP_LABELS[String(s.resp)]) + '</strong></span></li>';
+            '<span class="why-a">You answered: <strong>' + esc(RESP_LABELS[String(s.resp)]) + '</strong>' +
+            citeTag(tid, s.q.id) + '</span></li>';
         }).join('') + '</ol>';
       }
       card.innerHTML = html;
