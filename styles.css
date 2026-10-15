@@ -153,9 +153,8 @@ body {
   .likert-label { font-size: 10px; }
   .quiz-topbar { flex-wrap: wrap; }
   .category-tag { order: 3; }
-  .car-portrait { width: 76px; height: 76px; border-radius: 18px; }
-  .car-card { padding: 18px; gap: 14px; }
-  .car-arrow { width: 38px; height: 38px; font-size: 20px; }
+  .spot-portrait { width: 76px; height: 76px; border-radius: 18px; }
+  .spotlight { padding: 18px; gap: 14px; }
 }
 
 /* ---------- summary ---------- */
@@ -167,36 +166,55 @@ body {
 .summary-card p:last-child { margin-bottom: 0; }
 .summary-card strong { color: var(--ink); }
 
-/* ---------- theologian carousel ---------- */
+/* ---------- theologian marquee ---------- */
 .theo-carousel-wrap { margin-top: 40px; }
-.carousel { display: flex; align-items: stretch; gap: 12px; }
-.car-card {
-  flex: 1; display: flex; gap: 20px; align-items: center;
+.spotlight {
+  display: flex; gap: 20px; align-items: center;
   background: var(--card); border: 1.5px solid var(--line); border-radius: 18px;
-  padding: 24px; min-height: 176px;
+  padding: 24px; min-height: 176px; margin-bottom: 18px;
 }
-.car-card.car-fade { animation: fadeUp .4s ease; }
-.car-portrait {
+.spotlight.spot-fade { animation: fadeUp .35s ease; }
+.spot-portrait {
   width: 110px; height: 110px; border-radius: 24px; object-fit: cover;
   box-shadow: 0 4px 14px rgba(0,0,0,.15); flex-shrink: 0;
 }
-.car-text h3 { font-family: 'Fraunces', Georgia, serif; font-size: 22px; margin-bottom: 6px; }
+.spot-text h3 { font-family: 'Fraunces', Georgia, serif; font-size: 22px; margin-bottom: 6px; }
 .car-tradition {
   display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: .08em;
   text-transform: uppercase; color: var(--accent-deep); background: #f3e7d8;
   padding: 4px 12px; border-radius: 20px; margin-bottom: 10px;
 }
 .car-blurb { font-size: 14.5px; color: var(--ink-soft); }
-.car-arrow {
-  background: var(--card); border: 1.5px solid var(--line); border-radius: 50%;
-  width: 46px; height: 46px; font-size: 26px; line-height: 1; cursor: pointer;
-  color: var(--ink-soft); flex-shrink: 0; align-self: center; padding-bottom: 4px;
+
+.marquee {
+  overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
-.car-arrow:hover { border-color: var(--accent); color: var(--accent-deep); }
-.car-count {
-  text-align: center; font-size: 13px; color: var(--ink-faint);
-  margin-top: 12px; font-variant-numeric: tabular-nums;
+.marquee-track {
+  display: flex; width: max-content;
+  animation: marquee 55s linear infinite;
 }
+.mq-half { display: flex; gap: 14px; padding-right: 14px; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+.mq-item {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  width: 96px; cursor: pointer; padding: 6px 4px; border-radius: 14px;
+  border: 1.5px solid transparent; background: none; font: inherit; color: inherit;
+}
+.mq-item:hover { border-color: var(--line); background: var(--card); }
+.mq-item.active { border-color: var(--accent); background: #fdf6ec; }
+.mq-item img {
+  width: 72px; height: 72px; border-radius: 18px; object-fit: cover;
+  box-shadow: 0 3px 10px rgba(0,0,0,.12);
+}
+.mq-initials {
+  width: 72px; height: 72px; border-radius: 18px; background: var(--paper-deep);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 24px; color: var(--accent-deep);
+}
+.mq-name { font-size: 11px; text-align: center; line-height: 1.3; color: var(--ink-soft); }
+.marquee-hint { text-align: center; font-size: 12.5px; color: var(--ink-faint); margin-top: 10px; }
 
 /* ---------- tooltips ---------- */
 .term { position: relative; cursor: help; border-bottom: 1px dotted var(--ink-faint); }

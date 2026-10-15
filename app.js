@@ -177,20 +177,26 @@
     box.classList.remove('hidden');
   }
 
-  // ---------- theologian carousel ----------
-  var carIdx = 0, carTimer = null;
+  // ---------- theologian marquee + spotlight ----------
+  var spotIdx = 0;
 
   function traditionName(id) {
     var found = BANK.traditions.filter(function (t) { return t.id === id; })[0];
     return found ? found.name : id;
   }
 
-  function renderCar(i) {
+  function initials(name) {
+    // strip quotes/nicknames, take first letters of first two words
+    var clean = name.replace(/"[^"]*"/g, '').trim().split(/\s+/);
+    return (clean[0][0] + (clean[1] ? clean[1][0] : '')).toUpperCase();
+  }
+
+  function renderSpotlight(i) {
     var list = BANK.theologians;
-    carIdx = ((i % list.length) + list.length) % list.length;
-    var th = list[carIdx];
+    spotIdx = ((i % list.length) + list.length) % list.length;
+    var th = list[spotIdx];
     var portraits = (typeof window !== 'undefined' && window.THEOLOGIAN_PORTRAITS) || {};
-    var img = $('car-portrait');
+    var img = $('spot-portrait');
     if (portraits[th.id]) {
       img.src = portraits[th.id];
       img.style.display = '';
@@ -199,36 +205,59 @@
       img.style.display = 'none';
     }
     img.alt = 'Portrait of ' + th.name;
-    $('car-name').textContent = th.name;
-    $('car-tradition').textContent = traditionName(th.tradition);
-    $('car-blurb').textContent = th.blurb;
-    $('car-count').textContent = (carIdx + 1) + ' / ' + list.length;
-    var card = $('car-card');
-    card.classList.remove('car-fade');
-    void card.offsetWidth;
-    card.classList.add('car-fade');
+    $('spot-name').textContent = th.name;
+    $('spot-tradition').textContent = traditionName(th.tradition);
+    $('spot-blurb').textContent = th.blurb;
+    var spot = $('spotlight');
+    spot.classList.remove('spot-fade');
+    void spot.offsetWidth;
+    spot.classList.add('spot-fade');
+    // mark active in marquee (both copies)
+    var items = document.querySelectorAll('.mq-item');
+    items.forEach(function (el) {
+      el.classList.toggle('active', parseInt(el.dataset.idx, 10) === spotIdx);
+    });
   }
 
-  function restartCar() {
-    if (carTimer) clearInterval(carTimer);
-    carTimer = setInterval(function () { renderCar(carIdx + 1); }, 6000);
+  function buildMarquee() {
+    var track = $('marquee-track');
+    var portraits = (typeof window !== 'undefined' && window.THEOLOGIAN_PORTRAITS) || {};
+    track.innerHTML = '';
+    // duplicate the list so the scroll loops seamlessly
+    [0, 1].forEach(function () {
+      var half = document.createElement('div');
+      half.className = 'mq-half';
+      BANK.theologians.forEach(function (th, i) {
+        var b = document.createElement('button');
+        b.className = 'mq-item';
+        b.dataset.idx = i;
+        b.setAttribute('aria-label', th.name);
+        if (portraits[th.id]) {
+          var img = document.createElement('img');
+          img.src = portraits[th.id];
+          img.alt = '';
+          img.loading = 'lazy';
+          b.appendChild(img);
+        } else {
+          var fb = document.createElement('span');
+          fb.className = 'mq-initials';
+          fb.textContent = initials(th.name);
+          b.appendChild(fb);
+        }
+        var nm = document.createElement('span');
+        nm.className = 'mq-name';
+        nm.textContent = th.name;
+        b.appendChild(nm);
+        b.addEventListener('click', function () { renderSpotlight(i); });
+        half.appendChild(b);
+      });
+      track.appendChild(half);
+    });
   }
 
   function initCarousel() {
-    $('car-next').addEventListener('click', function () { renderCar(carIdx + 1); restartCar(); });
-    $('car-prev').addEventListener('click', function () { renderCar(carIdx - 1); restartCar(); });
-    var wrap = document.querySelector('.theo-carousel-wrap');
-    if (wrap) {
-      wrap.addEventListener('mouseenter', function () { if (carTimer) clearInterval(carTimer); });
-      wrap.addEventListener('mouseleave', restartCar);
-    }
-    // pause auto-cycle when the tab is hidden
-    document.addEventListener('visibilitychange', function () {
-      if (document.hidden) { if (carTimer) clearInterval(carTimer); }
-      else restartCar();
-    });
-    renderCar(0);
-    restartCar();
+    buildMarquee();
+    renderSpotlight(0);
   }
 
   // ---------- tooltips ----------
