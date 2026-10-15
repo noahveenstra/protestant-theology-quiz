@@ -244,10 +244,6 @@
           fb.textContent = initials(th.name);
           b.appendChild(fb);
         }
-        var nm = document.createElement('span');
-        nm.className = 'mq-name';
-        nm.textContent = th.name;
-        b.appendChild(nm);
         b.addEventListener('click', function () { renderSpotlight(i); });
         half.appendChild(b);
       });
