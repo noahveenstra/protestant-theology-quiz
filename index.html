@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261024">
+<link rel="stylesheet" href="styles.css?v=20261025">
 </head>
 <body>
 <div class="page">
@@ -28,25 +28,30 @@
 
     <h2 class="section-title">Choose your depth</h2>
     <div class="depth-grid" id="depth-grid">
+      <button class="depth-card recommended" data-depth="adaptive">
+        <span class="depth-badge">Recommended</span>
+        <span class="depth-name">Adaptive</span>
+        <span class="depth-count">~25 questions</span>
+        <span class="depth-time">~5 minutes &middot; questions chosen for you</span>
+      </button>
       <button class="depth-card" data-depth="essential">
         <span class="depth-name">Essential</span>
-        <span class="depth-count">25 questions</span>
+        <span class="depth-count">27 questions</span>
         <span class="depth-time">~5 minutes &middot; broad orientation</span>
       </button>
-      <button class="depth-card recommended" data-depth="standard">
-        <span class="depth-badge">Recommended</span>
+      <button class="depth-card" data-depth="standard">
         <span class="depth-name">Standard</span>
-        <span class="depth-count">46 questions</span>
+        <span class="depth-count">57 questions</span>
         <span class="depth-time">~10 minutes &middot; major traditions + axes</span>
       </button>
       <button class="depth-card" data-depth="advanced">
         <span class="depth-name">Advanced</span>
-        <span class="depth-count">55 questions</span>
+        <span class="depth-count">71 questions</span>
         <span class="depth-time">~15 minutes &middot; finer distinctions</span>
       </button>
       <button class="depth-card" data-depth="complete">
         <span class="depth-name">Complete</span>
-        <span class="depth-count">75 questions</span>
+        <span class="depth-count">91 questions</span>
         <span class="depth-time">Every active question</span>
       </button>
     </div>
@@ -58,7 +63,7 @@
         <li><strong>8 traditions</strong> — your closest historic Protestant family, with a match score.</li>
         <li><strong>31 theologians</strong> — the thinkers whose positions most resemble yours.</li>
       </ol>
-      <p class="fine-print">There are no trick questions and no "right" answers — only honest ones. Answer with what you actually believe, not what you think your church expects.</p>
+      <p class="fine-print">There are no trick questions and no "right" answers — only honest ones. Answer with what you actually believe, not what you think your church expects. <strong>Adaptive</strong> picks each question to separate your closest traditions, so ~25 questions go further.</p>
     </div>
 
     <section class="theo-carousel-wrap">
@@ -140,6 +145,7 @@
       <p class="attr-note" id="attr-note"></p>
 
       <div id="breaks-card" class="breaks-card hidden"></div>
+      <div id="contra-card" class="breaks-card hidden"></div>
       <div id="close-call" class="close-call hidden"></div>
     </div>
 
@@ -217,10 +223,10 @@
   </section>
 
 </div>
-<script src="portraits-1.js?v=20261024"></script>
-<script src="portraits-2.js?v=20261024"></script>
-<script src="portraits-3.js?v=20261024"></script>
-<script src="portraits-4.js?v=20261024"></script>
-<script src="app.js?v=20261024"></script>
+<script src="portraits-1.js?v=20261025"></script>
+<script src="portraits-2.js?v=20261025"></script>
+<script src="portraits-3.js?v=20261025"></script>
+<script src="portraits-4.js?v=20261025"></script>
+<script src="app.js?v=20261025"></script>
 </body>
 </html>
