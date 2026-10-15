@@ -556,3 +556,11 @@ button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
 @media (prefers-reduced-motion: reduce) {
   .attr-bar { transition: none; }
 }
+
+/* ---------- confessional citation tags ---------- */
+.cite-tag { display: inline-block; font-size: 11px; font-weight: 600; color: var(--accent-deep); background: #f3e7d8; padding: 2px 9px; border-radius: 11px; margin-left: 8px; white-space: nowrap; vertical-align: 1px; cursor: help; }
+
+/* ---------- vector-based why cards ---------- */
+.why-sim { font-size: 13px; font-weight: 600; color: var(--accent-deep); margin-bottom: 8px; }
+.why-vec { margin: 0 0 0 18px; display: grid; gap: 6px; }
+.why-vec li { font-size: 14px; color: var(--ink-soft); }
