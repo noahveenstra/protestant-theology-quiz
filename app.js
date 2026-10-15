@@ -119,9 +119,61 @@
         max += Math.abs(w) * 2;
       });
       var norm = max > 0 ? raw / max * 100 : 0;   // -100..100
-      var match = Math.round((norm + 100) / 2);     // 0..100
-      return { tradition: t, score: norm, match: match };
-    }).sort(function (a, b) { return b.match - a.match; });
+      var exact = (norm + 100) / 2;                // 0..100, unrounded
+      var match = Math.round(exact * 10) / 10;    // one decimal
+      return { tradition: t, score: norm, match: match, exact: exact };
+    }).sort(function (a, b) { return b.exact - a.exact; });
+  }
+
+  // ---------- close-call analysis ----------
+  // When the top traditions are nearly tied, find the questions whose answers
+  // separated the winner from each close runner-up.
+  function closeCallEntries(trads) {
+    var top = trads[0];
+    var close = trads.slice(1).filter(function (t) { return top.exact - t.exact < 2; });
+    if (!close.length) return [];
+    return close.map(function (runner) {
+      var decisive = [];
+      queue.forEach(function (q) {
+        var resp = answers[q.id];
+        if (resp === undefined || resp === 0) return;
+        var w1 = (q.traditions || {})[top.tradition.id] || 0;
+        var w2 = (q.traditions || {})[runner.tradition.id] || 0;
+        var gap = (w1 - w2) * resp;
+        if (gap > 0) decisive.push({ q: q, resp: resp, w2: w2, gap: gap });
+      });
+      decisive.sort(function (a, b) { return b.gap - a.gap; });
+      return { runner: runner, decisive: decisive.slice(0, 2) };
+    });
+  }
+
+  function renderCloseCall(trads) {
+    var entries = closeCallEntries(trads);
+    var box = $('close-call');
+    if (!entries.length) { box.classList.add('hidden'); box.innerHTML = ''; return; }
+    var top = trads[0];
+    var html = '<h3>Why ' + esc(top.tradition.name) + ' edged it</h3>';
+    html += '<p class="close-intro">Separated by less than two points — here is what tipped it.</p>';
+    entries.forEach(function (entry) {
+      html += '<div class="close-row"><div class="close-head"><strong>' + esc(top.tradition.name) +
+        '</strong> ' + top.match.toFixed(1) + ' vs <strong>' + esc(entry.runner.tradition.name) +
+        '</strong> ' + entry.runner.match.toFixed(1) + '</div>';
+      if (!entry.decisive.length) {
+        html += '<p class="close-note">No single answer separated them — the gap comes from small leans across many questions.</p>';
+      } else {
+        html += '<ul>';
+        entry.decisive.forEach(function (d) {
+          var verb = d.resp > 0 ? 'agreed' : 'disagreed';
+          var opp = (d.w2 * d.resp < 0) ? 'leans the other way' : 'is neutral here';
+          html += '<li>You ' + verb + ' that &ldquo;' + esc(d.q.text) + '&rdquo; — ' +
+            esc(top.tradition.name) + ' affirms this; ' + esc(entry.runner.tradition.name) + ' ' + opp + '.</li>';
+        });
+        html += '</ul>';
+      }
+      html += '</div>';
+    });
+    box.innerHTML = html;
+    box.classList.remove('hidden');
   }
 
   // ---------- tooltips ----------
@@ -191,7 +243,7 @@
     var top = trads[0];
     var html = '';
     html += '<p>Your answers point most strongly toward the <strong>' + esc(top.tradition.name) +
-      '</strong> tradition (' + top.match + '/100 match).</p>';
+      '</strong> tradition (' + top.match.toFixed(1) + '/100 match).</p>';
 
     var strong = axes
       .filter(function (e) { return Math.abs(e.score) >= 20 && BELIEF_LINES[e.axis.id + '|' + (e.score < 0 ? -1 : 1)]; })
@@ -243,7 +295,7 @@
   function renderResults(axes, trads) {
     var top = trads[0];
     $('result-tradition').textContent = top.tradition.name;
-    $('result-match').textContent = top.match;
+    $('result-match').textContent = top.match.toFixed(1);
     $('result-desc').textContent = top.tradition.description;
 
     // written summary
@@ -310,9 +362,12 @@
         '<span class="trad-score"></span>';
       row.querySelector('.trad-name').textContent = entry.tradition.name;
       row.querySelector('.trad-bar').style.width = entry.match + '%';
-      row.querySelector('.trad-score').textContent = entry.match;
+      row.querySelector('.trad-score').textContent = entry.match.toFixed(1);
       rank.appendChild(row);
     });
+
+    // close-call explainer (only when the top is nearly tied)
+    renderCloseCall(trads);
 
     // answer review (built lazily on toggle)
     var review = $('answer-review');
