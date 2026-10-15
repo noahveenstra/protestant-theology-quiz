@@ -410,3 +410,113 @@ body {
 
 /* general utility: hidden always hides */
 .hidden { display: none !important; }
+
+/* ---------- results tabs ---------- */
+.results-tabs {
+  position: relative; display: flex; gap: 2px;
+  background: var(--paper-deep); border: 1.5px solid var(--line);
+  border-radius: 999px; padding: 6px; margin: 0 0 30px;
+  overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+}
+.results-tabs::-webkit-scrollbar { display: none; }
+.rtab {
+  position: relative; z-index: 1; flex: 1 0 auto; white-space: nowrap;
+  border: 0; background: transparent; font-family: 'Inter', sans-serif;
+  font-weight: 600; font-size: 14.5px; color: var(--ink-soft);
+  padding: 10px 20px; border-radius: 999px; cursor: pointer;
+  min-height: 44px; -webkit-tap-highlight-color: transparent;
+}
+.rtab.active { color: #fff; }
+.tabs-indicator {
+  position: absolute; top: 6px; left: 0; height: calc(100% - 12px); width: 0;
+  background: var(--accent); border-radius: 999px; z-index: 0;
+  transition: transform .4s cubic-bezier(.22,1,.36,1), width .4s cubic-bezier(.22,1,.36,1);
+}
+.tab-panel { display: none; }
+.tab-panel.active { display: block; animation: panelIn .35s cubic-bezier(.22,1,.36,1); }
+@keyframes panelIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+/* ---------- resource links ---------- */
+.book-link {
+  display: inline-block; margin-top: 10px; font-size: 13.5px; font-weight: 700;
+  color: var(--accent-deep); text-decoration: none;
+}
+.book-link:hover { text-decoration: underline; }
+
+/* ---------- mobile overhaul ---------- */
+html { -webkit-text-size-adjust: 100%; }
+body { overflow-x: hidden; }
+img { max-width: 100%; }
+button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: clamp(30px, 8.5vw, 44px); line-height: 1.08; }
+  .results-hero h1 { font-size: clamp(34px, 10vw, 54px); line-height: 1.05; }
+  .results-hero .match-line { font-size: 16px; }
+  .lede { font-size: 16px; }
+  .section-title { font-size: 21px; margin-bottom: 14px; }
+  .section-sub { font-size: 13.5px; }
+
+  /* tabs: compact, scrollable */
+  .results-tabs { margin: 0 -4px 24px; padding: 5px; }
+  .rtab { padding: 10px 14px; font-size: 13.5px; }
+
+  /* share / actions stack full-width */
+  .share-row { gap: 10px; margin-bottom: 24px; }
+  .share-row .btn-primary, .share-row .btn-secondary,
+  .results-actions .btn-primary, .results-actions .btn-secondary {
+    flex: 1 1 100%; min-height: 52px; font-size: 16px;
+  }
+
+  /* summary */
+  .summary-card { padding: 22px 20px; font-size: 15.5px; border-radius: 16px; }
+  .compare-result { padding: 18px; border-radius: 16px; }
+  .compare-banner { padding: 14px 16px; font-size: 14px; }
+
+  /* theologians */
+  .theologian-grid { gap: 10px; }
+  .theologian-card { padding: 14px; }
+  .theologian-card h3 { font-size: 15.5px; }
+  .theologian-portrait { width: 64px; height: 64px; border-radius: 16px; margin-bottom: 8px; }
+  .theologian-dates { font-size: 11.5px; }
+  .theologian-card p { font-size: 12.5px; }
+  .why-card { padding: 16px; }
+  .why-card h4 { font-size: 16px; }
+  .why-q { font-size: 13.5px; }
+
+  /* beliefs */
+  .axes-list { gap: 12px; }
+  .axis-row { padding: 14px 16px; border-radius: 12px; }
+  .axis-name { font-size: 14px; }
+  .axis-desc { font-size: 12px; }
+  .axis-poles { font-size: 11px; }
+  .trad-row { font-size: 13.5px; }
+
+  /* reading */
+  .book-card, .unsure-card { padding: 16px; border-radius: 12px; }
+  .book-title { font-size: 16px; }
+  .unsure-qs { font-size: 13px; }
+
+  /* quiz screen */
+  .question-card { min-height: 0; padding: 24px 18px; }
+  .q-text { font-size: 21px; line-height: 1.3; }
+  .likert { gap: 6px; }
+  .likert button { padding: 10px 4px; min-height: 64px; }
+  .likert-dot { width: 16px; height: 16px; }
+  .depth-card { padding: 18px 16px; }
+
+  /* theologian detail */
+  .theo-bio, .theo-events { font-size: 15px; }
+}
+
+/* small phones */
+@media (max-width: 380px) {
+  .page { padding: 28px 14px 64px; }
+  .rtab { padding: 10px 11px; font-size: 12.5px; }
+  .theologian-portrait { width: 56px; height: 56px; }
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
