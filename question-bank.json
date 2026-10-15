@@ -180,217 +180,793 @@
       "name": "John Calvin",
       "dates": "1509-1564",
       "tradition": "reformed",
-      "blurb": "Genevan Reformer whose Institutes systematized the doctrines of grace."
+      "blurb": "Genevan Reformer whose Institutes systematized the doctrines of grace.",
+      "born": 1509,
+      "died": 1564,
+      "impact": "John Calvin was the most influential Protestant thinker of the Reformation's second generation. From Geneva, Switzerland, he built a model Protestant city — with disciplined church life, schools, and a trained pastorate — that was copied across Europe. His followers, called Calvinists, became the majority faith in Scotland, the Netherlands, and parts of France and Hungary, and his ideas later traveled to North America and South Africa.",
+      "theology": "Calvin's Institutes of the Christian Religion (1536) gave Protestantism its first complete system of doctrine. He taught that God is absolutely sovereign in salvation — choosing who is saved apart from human merit, a teaching called predestination — and that worship must follow only what Scripture commands. He belongs under 'Reformed' because Reformed theology is essentially his theology: the doctrines of grace, covenant, and God's sovereignty that still define Presbyterian and Reformed churches.",
+      "events": [
+        {
+          "year": "1536",
+          "title": "Publishes the Institutes",
+          "text": "At 26, Calvin publishes the first edition of the Institutes of the Christian Religion in Basel — a compact defense of Protestant doctrine that he will keep expanding, reaching its final form in 1559."
+        },
+        {
+          "year": "1541",
+          "title": "Returns to Geneva",
+          "text": "Recalled by the city, Calvin implements his Ecclesiastical Ordinances: elder-led church government, disciplined moral life, and constant preaching that make Geneva the model Reformed city."
+        },
+        {
+          "year": "1559",
+          "title": "Founds the Academy of Geneva",
+          "text": "Calvin establishes a school to train Reformed pastors; it becomes the intellectual engine exporting Calvinism to France, Scotland, and the Netherlands."
+        }
+      ]
     },
     {
       "id": "luther",
       "name": "Martin Luther",
       "dates": "1483-1546",
       "tradition": "lutheran",
-      "blurb": "German Reformer who recovered justification by faith alone."
+      "blurb": "German Reformer who recovered justification by faith alone.",
+      "born": 1483,
+      "died": 1546,
+      "impact": "Martin Luther's protest against the sale of indulgences in 1517 split Western Christianity and launched the Protestant Reformation. His German translation of the New Testament put Scripture into ordinary people's hands and helped standardize the German language. Within his lifetime, much of Germany and Scandinavia broke with Rome, and the movement he started became the Lutheran Church — now one of the world's largest Protestant families.",
+      "theology": "Luther recovered the teaching that sinners are made right with God by faith alone, not by good works or purchased pardons — the doctrine of justification. He insisted Scripture alone is the final authority and that every baptized Christian belongs to a 'priesthood of all believers.' He anchors the 'Lutheran' bucket because Lutheran confessions are simply his teachings written down.",
+      "events": [
+        {
+          "year": "1517",
+          "title": "The 95 Theses",
+          "text": "On October 31, Luther posts 95 theses challenging the sale of indulgences, igniting a Europe-wide debate that becomes the Protestant Reformation."
+        },
+        {
+          "year": "1521",
+          "title": "Diet of Worms",
+          "text": "Summoned before the emperor, Luther refuses to recant — 'Here I stand, I can do no other' — and is declared an outlaw; friends hide him away in Wartburg Castle."
+        },
+        {
+          "year": "1522",
+          "title": "German New Testament",
+          "text": "In hiding, Luther translates the New Testament into German in eleven weeks, putting Scripture into the people's language for the first time."
+        }
+      ]
     },
     {
       "id": "wesley",
       "name": "John Wesley",
       "dates": "1703-1791",
       "tradition": "wesleyan",
-      "blurb": "Founder of Methodism; preached prevenient grace and entire sanctification."
+      "blurb": "Founder of Methodism; preached prevenient grace and entire sanctification.",
+      "born": 1703,
+      "died": 1791,
+      "impact": "John Wesley founded Methodism, which grew from small London societies into a worldwide movement of tens of millions. An itinerant preacher, he is said to have preached some 40,000 sermons and traveled a quarter-million miles on horseback across Britain and Ireland. Methodism fueled social reform — opposing slavery, founding schools and orphanages — and reshaped English-speaking Protestantism.",
+      "theology": "Wesley taught that God's grace reaches out to every person first (prevenient grace), freeing each one to choose or reject salvation — the Arminian alternative to Calvinist predestination. He also taught 'entire sanctification,' a second work of grace in which a believer can be cleansed of inward sin in this life. He defines the 'Wesleyan' tradition: his name is on it.",
+      "events": [
+        {
+          "year": "1738",
+          "title": "Aldersgate: heart strangely warmed",
+          "text": "On May 24 at a meeting on Aldersgate Street, London, Wesley feels his 'heart strangely warmed' and trusts Christ alone for salvation — the spiritual turning point of his life."
+        },
+        {
+          "year": "1739",
+          "title": "Open-air preaching begins",
+          "text": "Barred from many pulpits, Wesley preaches outdoors to coal miners in Bristol and organizes the first Methodist societies — disciplined small groups that become the movement's backbone."
+        },
+        {
+          "year": "1784",
+          "title": "American Methodism launched",
+          "text": "Wesley sends instructions and ordained ministers to America; the Christmas Conference in Baltimore founds the Methodist Episcopal Church."
+        }
+      ]
     },
     {
       "id": "edwards",
       "name": "Jonathan Edwards",
       "dates": "1703-1758",
       "tradition": "reformed",
-      "blurb": "America's greatest Calvinist theologian; defended divine sovereignty and insisted communion is for visible saints only — a stand that cost him his Northampton pulpit."
+      "blurb": "America's greatest Calvinist theologian; defended divine sovereignty and insisted communion is for visible saints only — a stand that cost him his Northampton pulpit.",
+      "born": 1703,
+      "died": 1758,
+      "impact": "Jonathan Edwards was the intellectual engine of the First Great Awakening, the 1730s–40s revivals that reshaped American religion. His sermon 'Sinners in the Hands of an Angry God' (1741) became a classic of American literature. He later served as a missionary to Native Americans and briefly as president of Princeton before his death in 1758.",
+      "theology": "Edwards was America's greatest Calvinist theologian: he defended God's absolute sovereignty, human moral inability, and original sin in works like Freedom of the Will. In Religious Affections he gave pastors a careful test for genuine conversion during revival. He sits under 'Reformed' because his thought is rooted in Puritan Calvinism — though he was Congregational, not Presbyterian, in church government.",
+      "events": [
+        {
+          "year": "1741",
+          "title": "'Sinners in the Hands of an Angry God'",
+          "text": "Preached at Enfield, Connecticut during the Great Awakening, this vivid sermon on divine judgment becomes the most famous sermon in American history."
+        },
+        {
+          "year": "1750",
+          "title": "Dismissed from Northampton",
+          "text": "Edwards insists that only people giving credible evidence of conversion may take communion — rejecting the looser Half-Way Covenant — and his congregation votes him out after 23 years."
+        },
+        {
+          "year": "1758",
+          "title": "Princeton presidency and death",
+          "text": "Edwards accepts the presidency of the College of New Jersey (Princeton) but dies weeks later, on March 22, from a smallpox inoculation."
+        }
+      ]
     },
     {
       "id": "spurgeon",
       "name": "Charles Spurgeon",
       "dates": "1834-1892",
       "tradition": "baptist",
-      "blurb": "Calvinistic Baptist ‘Prince of Preachers’; preached believer's baptism, biblical inerrancy, and Christ's premillennial return to thousands in Victorian London."
+      "blurb": "Calvinistic Baptist ‘Prince of Preachers’; preached believer's baptism, biblical inerrancy, and Christ's premillennial return to thousands in Victorian London.",
+      "born": 1834,
+      "died": 1892,
+      "impact": "Charles Spurgeon, the 'Prince of Preachers,' drew crowds of 10,000 in Victorian London and preached to an estimated ten million people in his lifetime. His sermons were printed weekly and translated worldwide — he remains the most-published Christian author in history. He also founded a pastors' college, an orphanage, and almshouses, pairing massive evangelism with social care.",
+      "theology": "Spurgeon was a Particular (Calvinist) Baptist who preached sovereign grace with evangelistic urgency, opposing both hyper-Calvinism and theological liberalism. He defended believer's baptism by immersion, biblical inerrancy, and Christ's personal return. He is the model 'Baptist' in this quiz: Calvinistic in doctrine, baptistic in church life.",
+      "events": [
+        {
+          "year": "1854",
+          "title": "Pastor at 20",
+          "text": "Just four years after his conversion, Spurgeon becomes pastor of London's New Park Street Chapel; crowds quickly overflow the building."
+        },
+        {
+          "year": "1861",
+          "title": "Metropolitan Tabernacle opens",
+          "text": "A 6,000-seat church is built for his ministry; he preaches there to packed houses for 31 years while founding a college and orphanage."
+        },
+        {
+          "year": "1887",
+          "title": "The Downgrade Controversy",
+          "text": "Spurgeon publicly charges the Baptist Union with doctrinal decline and resigns from it, defending biblical inerrancy against liberal trends."
+        }
+      ]
     },
     {
       "id": "lewis",
       "name": "C.S. Lewis",
       "dates": "1898-1963",
       "tradition": "anglican",
-      "blurb": "Oxford scholar and Anglican whose Mere Christianity and Narnia shaped lay faith for generations; an Anglo-Catholic who believed in purgatory and made confession to a priest."
+      "blurb": "Oxford scholar and Anglican whose Mere Christianity and Narnia shaped lay faith for generations; an Anglo-Catholic who believed in purgatory and made confession to a priest.",
+      "born": 1898,
+      "died": 1963,
+      "impact": "C. S. Lewis was the most beloved Christian writer of the 20th century for ordinary readers. His wartime BBC radio talks brought him national fame; The Chronicles of Narnia enchanted generations of children; Mere Christianity became the best-selling lay defense of the faith ever written. In 2013 he was honored with a memorial in Poets' Corner of Westminster Abbey.",
+      "theology": "Lewis was an Anglican lay theologian who defended 'mere Christianity' — the core all Christians share — through story, logic, and imagination. His famous 'trilemma' argued Jesus must be liar, lunatic, or Lord. His churchmanship leaned Anglo-Catholic: he believed in purgatory and made confession to a priest. He fits the 'Anglican' bucket as a lifelong Church of England layman.",
+      "events": [
+        {
+          "year": "1931",
+          "title": "Returns to Christianity",
+          "text": "After years as an atheist, long talks with J.R.R. Tolkien persuade Lewis that Christianity is the 'true myth'; he becomes, in his words, 'a very ordinary layman of the Church of England.'"
+        },
+        {
+          "year": "1942",
+          "title": "The Screwtape Letters",
+          "text": "His satirical letters from a senior demon become a bestseller, establishing Lewis as the most readable Christian apologist of his generation."
+        },
+        {
+          "year": "1950",
+          "title": "Narnia begins",
+          "text": "The Lion, the Witch and the Wardrobe is published — the first of seven Chronicles of Narnia that will enchant millions of children and carry Christian themes worldwide."
+        }
+      ]
     },
     {
       "id": "barth",
       "name": "Karl Barth",
       "dates": "1886-1968",
       "tradition": "reformed",
-      "blurb": "Swiss Reformed theologian who re-centered election on Jesus Christ himself — and late in life broke with his own tradition by opposing infant baptism."
+      "blurb": "Swiss Reformed theologian who re-centered election on Jesus Christ himself — and late in life broke with his own tradition by opposing infant baptism.",
+      "born": 1886,
+      "died": 1968,
+      "impact": "Karl Barth is widely considered the greatest Protestant theologian of the 20th century — he even made the cover of Time magazine in 1962. He helped found Germany's Confessing Church, which resisted Nazi control of Protestantism, and was expelled from his Bonn professorship for refusing loyalty to Hitler. His students and readers, from Bonhoeffer to Hauerwas, carried his influence across continents.",
+      "theology": "Barth broke with 19th-century liberal theology by insisting God is 'wholly other' and known only through his own revelation in Jesus Christ. In his massive Church Dogmatics he re-centered the doctrine of election on Christ himself — Jesus as both the choosing God and the chosen human. He belongs under 'Reformed' as a Swiss Reformed minister, though he is a revisionist: late in life he even opposed infant baptism, breaking with his own tradition.",
+      "events": [
+        {
+          "year": "1919",
+          "title": "Commentary on Romans",
+          "text": "Barth's explosive commentary on Paul's letter to the Romans — rewritten in a second edition in 1922 — demolishes liberal theology and makes him famous overnight."
+        },
+        {
+          "year": "1932",
+          "title": "Begins the Church Dogmatics",
+          "text": "Barth starts publishing his multi-volume Church Dogmatics, the great systematic theology of the 20th century, completed in thirteen part-volumes by 1967."
+        },
+        {
+          "year": "1934",
+          "title": "The Barmen Declaration",
+          "text": "Barth is the principal author of the Confessing Church's Barmen Declaration, declaring Christ — not the Führer — the church's only head."
+        }
+      ]
     },
     {
       "id": "wright",
       "name": "N.T. Wright",
       "dates": "1948-",
       "tradition": "anglican",
-      "blurb": "Anglican bishop of Durham and New Testament scholar; his ‘New Perspective’ redefined justification as God's declaration of covenant membership — a view most Reformed theologians reject."
+      "blurb": "Anglican bishop of Durham and New Testament scholar; his ‘New Perspective’ redefined justification as God's declaration of covenant membership — a view most Reformed theologians reject.",
+      "born": 1948,
+      "died": null,
+      "impact": "Nicholas Thomas Wright served as Bishop of Durham from 2003 to 2010 and is one of the world's leading biblical scholars. His massive scholarly works on Jesus and the resurrection sit alongside popular books like Simply Christian.",
+      "theology": "He is best known for the 'New Perspective on Paul,' which re-reads justification as God's declaration of who belongs to his covenant people rather than the crediting of Christ's righteousness — a view that sparked a major debate with Reformed theologians like John Piper. He belongs in the Anglican tradition as a Church of England bishop formed by its liturgy and episcopal order.",
+      "events": [
+        {
+          "year": "1975",
+          "title": "Ordained in the Church of England",
+          "text": "Ordained as an Anglican priest after studying theology at Oxford, beginning a career divided between scholarship and church leadership."
+        },
+        {
+          "year": "2003",
+          "title": "Becomes Bishop of Durham",
+          "text": "Appointed Bishop of Durham, one of the senior bishoprics in the Church of England, serving until 2010."
+        },
+        {
+          "year": "2013",
+          "title": "Paul and the Faithfulness of God",
+          "text": "Publishes his 1,700-page magnum opus on the apostle Paul, described as the most comprehensive work on Paul in Christian history."
+        }
+      ]
     },
     {
       "id": "piper",
       "name": "John Piper",
       "dates": "1946-",
       "tradition": "baptist",
-      "blurb": "Reformed Baptist pastor of Bethlehem Baptist who taught ‘Christian hedonism’ — God is most glorified when we are most satisfied in him; a Calvinist in soteriology but a continuationist on the gifts."
+      "blurb": "Reformed Baptist pastor of Bethlehem Baptist who taught ‘Christian hedonism’ — God is most glorified when we are most satisfied in him; a Calvinist in soteriology but a continuationist on the gifts.",
+      "born": 1946,
+      "died": null,
+      "impact": "John Piper led Bethlehem Baptist Church in Minneapolis for 33 years (1980-2013). His Desiring God ministry and the Ask Pastor John podcast, with over 2,000 episodes, made him a defining voice of the modern Reformed resurgence.",
+      "theology": "His 1986 book Desiring God introduced 'Christian hedonism,' the idea that God is most glorified when people find their deepest satisfaction in him. A five-point Calvinist who nonetheless believes the spiritual gifts continue today, he sits in the Baptist tradition because of his believer's-baptism convictions and congregational churchmanship.",
+      "events": [
+        {
+          "year": "1980",
+          "title": "Pastor of Bethlehem Baptist",
+          "text": "Becomes pastor for preaching at Bethlehem Baptist Church in Minneapolis, where he will serve for 33 years."
+        },
+        {
+          "year": "1986",
+          "title": "Desiring God published",
+          "text": "Publishes Desiring God: Meditations of a Christian Hedonist, the book that names his theology and later his worldwide teaching ministry."
+        },
+        {
+          "year": "2013",
+          "title": "Retirement from Bethlehem",
+          "text": "Steps down after 33 years to devote himself full-time to the Desiring God ministry of books, sermons, and the Ask Pastor John podcast."
+        }
+      ]
     },
     {
       "id": "sproul",
       "name": "R.C. Sproul",
       "dates": "1939-2017",
       "tradition": "reformed",
-      "blurb": "PCA Presbyterian who popularized Reformed theology through Ligonier Ministries; a staunch cessationist who taught the sign gifts ended with the apostles."
+      "blurb": "PCA Presbyterian who popularized Reformed theology through Ligonier Ministries; a staunch cessationist who taught the sign gifts ended with the apostles.",
+      "born": 1939,
+      "died": 2017,
+      "impact": "Robert Charles Sproul founded Ligonier Ministries and was described as the most influential promoter of the recovery of Reformed theology in the last century. He taught the doctrines of grace to millions through his daily Renewing Your Mind radio broadcast.",
+      "theology": "An ordained Presbyterian minister in the PCA, he defended the Bible's complete truthfulness as a chief architect of the 1978 Chicago Statement on Biblical Inerrancy. He belongs in the Reformed/Calvinist tradition as a confessional Presbyterian who made Calvinist theology understandable to ordinary believers.",
+      "events": [
+        {
+          "year": "1971",
+          "title": "Founds Ligonier Ministries",
+          "text": "Starts the Ligonier Valley Study Center in Pennsylvania, which grows into Ligonier Ministries, its Tabletalk magazine, and a library of teaching series."
+        },
+        {
+          "year": "1978",
+          "title": "Chicago Statement on Biblical Inerrancy",
+          "text": "Serves as a chief architect of the landmark Chicago Statement defending the Bible's complete truthfulness against liberal scholarship."
+        },
+        {
+          "year": "1982",
+          "title": "Renewing Your Mind goes on air",
+          "text": "Launches the daily radio broadcast that carries his plain-spoken theology teaching to a worldwide audience."
+        }
+      ]
     },
     {
       "id": "menno",
       "name": "Menno Simons",
       "dates": "1496-1561",
       "tradition": "anabaptist",
-      "blurb": "Dutch Anabaptist leader who gave his name to the Mennonites."
+      "blurb": "Dutch Anabaptist leader who gave his name to the Mennonites.",
+      "born": 1496,
+      "died": 1561,
+      "impact": "Menno Simons gave his name to the Mennonites. After the violent Anabaptist disaster at Münster (1534–36), he gathered the scattered, persecuted movement and turned it peaceful — organizing congregations across the Netherlands and northern Germany through tireless travel and writing. His followers became one of the historic peace churches, known for pacifism and simple living on several continents.",
+      "theology": "Menno taught that baptism belongs only to believers who confess their faith — he found no scriptural warrant for baptizing infants — and that the church is a voluntary community of the committed. He preached nonresistance: Christians must not wield the sword or swear oaths, following Jesus' Sermon on the Mount. He is the defining figure of the 'Anabaptist' tradition in this quiz.",
+      "events": [
+        {
+          "year": "1536",
+          "title": "Breaks with Rome",
+          "text": "After years of doubting Catholic teaching on the Eucharist and infant baptism, Menno renounces his priesthood and joins the Anabaptists, who baptize him as a believer."
+        },
+        {
+          "year": "1539",
+          "title": "Foundation of Christian Doctrine",
+          "text": "Menno publishes his major doctrinal work, giving the scattered peaceful Anabaptists a coherent theology of believer's baptism, nonresistance, and discipleship."
+        }
+      ]
     },
     {
       "id": "moody",
       "name": "D.L. Moody",
       "dates": "1837-1899",
       "tradition": "dispensational",
-      "blurb": "America's most famous 19th-century evangelist; a premillennialist shaped by the Niagara Bible conferences who popularized dispensational ideas without systematizing them."
+      "blurb": "America's most famous 19th-century evangelist; a premillennialist shaped by the Niagara Bible conferences who popularized dispensational ideas without systematizing them.",
+      "born": 1837,
+      "died": 1899,
+      "impact": "D. L. Moody was the most famous evangelist of 19th-century America. With singer Ira Sankey, his campaigns filled halls across America and Britain in the 1870s, and his plain-spoken gospel invitations became the template for modern mass evangelism. He founded the Moody Church in Chicago, Northfield schools, the Moody Bible Institute, and a publishing house that still operate today.",
+      "theology": "Moody preached a simple, decision-centered gospel: hear, believe, and choose Christ. Absorbing the premillennial teaching of the Niagara Bible conferences, he expected Christ's imminent return and helped popularize that outlook across evangelicalism. He sits in the 'Dispensationalist' bucket as its great popularizer — a better fit than any other, though he systematized nothing himself.",
+      "events": [
+        {
+          "year": "1855",
+          "title": "Converted in a Boston shoe store",
+          "text": "At 18, working as a shoe salesman, Moody is led to Christ by his Sunday school teacher Edward Kimball — the start of his evangelistic life."
+        },
+        {
+          "year": "1873",
+          "title": "British campaigns with Sankey",
+          "text": "Moody and singer Ira Sankey tour the British Isles for two years, drawing enormous crowds and making Moody internationally famous."
+        },
+        {
+          "year": "1886",
+          "title": "Founds the Chicago Evangelization Society",
+          "text": "Moody starts a school to train urban evangelists; it becomes the Moody Bible Institute, still training ministers today."
+        }
+      ]
     },
     {
       "id": "tozer",
       "name": "A.W. Tozer",
       "dates": "1897-1963",
       "tradition": "wesleyan",
-      "blurb": "Christian and Missionary Alliance pastor of the ‘deeper life’; taught that believers can know God's presence intimately, that holiness is a second work of grace, and that the Spirit's gifts continue but must be tested by Scripture."
+      "blurb": "Christian and Missionary Alliance pastor of the ‘deeper life’; taught that believers can know God's presence intimately, that holiness is a second work of grace, and that the Spirit's gifts continue but must be tested by Scripture.",
+      "born": 1897,
+      "died": 1963,
+      "impact": "Aiden Wilson Tozer spent 44 years in the Christian and Missionary Alliance, including 31 years at Southside Alliance Church in Chicago. With almost no formal schooling, he taught himself theology and became known as a '20th-century prophet' for books like The Pursuit of God and The Knowledge of the Holy, which called Christians to a deeper, more reverent experience of God.",
+      "theology": "His teaching that holiness is a 'second work of grace' after conversion comes from the holiness movement rooted in John Wesley's theology. That lineage is why he belongs in the Wesleyan/Arminian tradition here rather than among the Pentecostals who read him.",
+      "events": [
+        {
+          "year": "1919",
+          "title": "First pastorate",
+          "text": "Without any theological training, Tozer accepts his first church, a small storefront in Nutter Fort, West Virginia, beginning 44 years of ministry in the Christian and Missionary Alliance."
+        },
+        {
+          "year": "1948",
+          "title": "The Pursuit of God published",
+          "text": "Publishes The Pursuit of God, the book that makes his name and is still considered a Christian classic on hungering after God."
+        },
+        {
+          "year": "1950",
+          "title": "Editor of The Alliance Weekly",
+          "text": "Elected editor of his denomination's magazine (now Alliance Life), using it to warn the church against compromising with worldly concerns until his death."
+        }
+      ]
     },
     {
       "id": "bonhoeffer",
       "name": "Dietrich Bonhoeffer",
       "dates": "1906-1945",
       "tradition": "lutheran",
-      "blurb": "German Lutheran pastor executed for resisting the Nazis; preached ‘costly grace’ — discipleship that costs everything — and held the Lutheran real presence of Christ in communion."
+      "blurb": "German Lutheran pastor executed for resisting the Nazis; preached ‘costly grace’ — discipleship that costs everything — and held the Lutheran real presence of Christ in communion.",
+      "born": 1906,
+      "died": 1945,
+      "impact": "Dietrich Bonhoeffer co-founded the Confessing Church that defied Hitler's attempt to Nazify German Protestantism. Drawn into the military resistance, he was arrested in 1943 and hanged at Flossenbürg concentration camp on April 9, 1945 — just weeks before the war ended. He is remembered as a modern martyr, and his prison letters are read worldwide.",
+      "theology": "Bonhoeffer, a Lutheran pastor, preached 'costly grace' — forgiveness that demands real discipleship — against the 'cheap grace' of nominal Christianity. His book The Cost of Discipleship (1937) remains a modern classic, and he held the Lutheran teaching of Christ's real presence in communion. He anchors the 'Lutheran' bucket as a Confessing Church Lutheran formed entirely by that heritage.",
+      "events": [
+        {
+          "year": "1934",
+          "title": "Confessing Church founded",
+          "text": "Bonhoeffer helps lead German pastors who refuse Nazi control of the church; the Barmen Declaration becomes their charter of resistance."
+        },
+        {
+          "year": "1937",
+          "title": "The Cost of Discipleship",
+          "text": "Written from his underground seminary at Finkenwalde, Bonhoeffer's book contrasting 'cheap' and 'costly' grace becomes a modern classic."
+        },
+        {
+          "year": "1945",
+          "title": "Executed at Flossenbürg",
+          "text": "Implicated in resistance plots against Hitler, Bonhoeffer is hanged on April 9, 1945 — just weeks before Germany surrenders."
+        }
+      ]
     },
     {
       "id": "packer",
       "name": "J.I. Packer",
       "dates": "1926-2020",
       "tradition": "anglican",
-      "blurb": "Anglican evangelical whose Knowing God taught a generation to think biblically about God; a Calvinist in soteriology who defended infant baptism and the Book of Common Prayer."
+      "blurb": "Anglican evangelical whose Knowing God taught a generation to think biblically about God; a Calvinist in soteriology who defended infant baptism and the Book of Common Prayer.",
+      "born": 1926,
+      "died": 2020,
+      "impact": "James Innell Packer was counted among the most influential evangelicals of the 20th century. His 1973 book Knowing God taught a generation to think carefully and warmly about who God is, he served as general editor of the English Standard Version of the Bible, and he spent his final decades teaching theology at Regent College in Vancouver.",
+      "theology": "An evangelical Anglican in the Calvinist tradition, he defended infant baptism and the Book of Common Prayer. That combination — Reformed-leaning theology held inside bishops, prayer book, and parish — is why he is listed under the Anglican tradition.",
+      "events": [
+        {
+          "year": "1944",
+          "title": "Conversion at Oxford",
+          "text": "Commits his life to Christ at an InterVarsity evangelistic service two weeks into his studies at Oxford University."
+        },
+        {
+          "year": "1973",
+          "title": "Knowing God published",
+          "text": "Publishes Knowing God, which sells over a million copies and is later ranked among the most influential evangelical books of the century."
+        },
+        {
+          "year": "2001",
+          "title": "General editor of the ESV",
+          "text": "Serves as general editor of the newly published English Standard Version Bible translation, now used by millions of Christians."
+        }
+      ]
     },
     {
       "id": "jpokluda",
       "name": "Jonathan \"JP\" Pokluda",
       "dates": "Contemporary",
       "tradition": "baptist",
-      "blurb": "Preaches eternal security — once you're born again, ‘you cannot undo that birthing’ — with a blunt, free-choice call to respond to the gospel, teaching Scripture as the final authority in all of life."
+      "blurb": "Preaches eternal security — once you're born again, ‘you cannot undo that birthing’ — with a blunt, free-choice call to respond to the gospel, teaching Scripture as the final authority in all of life.",
+      "born": null,
+      "died": null,
+      "impact": "Jonathan 'JP' Pokluda previously led The Porch, a Dallas young-adult ministry that grew from 150 to more than 7,000 under his leadership, and he is the bestselling author of Welcome to Adulting. He is now the lead pastor of Harris Creek Baptist Church in Waco, Texas.",
+      "theology": "He preaches eternal security — that a person truly born again cannot lose salvation — with a blunt, decide-today call to respond to the gospel. He belongs under the Baptist tradition for his believer's-baptism, Scripture-as-final-authority, autonomous-church convictions.",
+      "events": [
+        {
+          "year": "2019",
+          "title": "Moved to Waco as Harris Creek lead pastor",
+          "text": "Left The Porch, the largest weekly young-adult gathering in the country, to lead the 145-year-old Harris Creek Baptist Church, bringing his direct, Scripture-driven teaching to a congregational pastorate."
+        }
+      ]
     },
     {
       "id": "rmadu",
       "name": "Robert Madu",
       "dates": "Contemporary",
       "tradition": "pentecostal",
-      "blurb": "Lead pastor of Social Dallas; a Pentecostal preacher whose church affirms Spirit-baptism, present-day spiritual gifts, and divine healing — preached in his signature high-energy, story-driven style."
+      "blurb": "Lead pastor of Social Dallas; a Pentecostal preacher whose church affirms Spirit-baptism, present-day spiritual gifts, and divine healing — preached in his signature high-energy, story-driven style.",
+      "born": 1984,
+      "died": null,
+      "impact": "Robert Madu (born 1984) is the lead pastor of Social Dallas, a church he and his wife Taylor launched in April 2021. Trained at Southwestern Assemblies of God University, he spent years as a traveling preacher before planting the church, and he is known for high-energy, story-driven sermons.",
+      "theology": "His church's statement of faith affirms Spirit-baptism as empowerment for witness, the present-day operation of spiritual gifts, and divine healing. That Pentecostal doctrine — not just his preaching style — is why he is listed under the Pentecostal tradition.",
+      "events": [
+        {
+          "year": "2021",
+          "title": "Launched Social Dallas",
+          "text": "Founded the church with his wife Taylor in April 2021, building one of the fastest-growing congregations in Dallas around engaging worship and his signature preaching."
+        }
+      ]
     },
     {
       "id": "bcrawford",
       "name": "Bryce Crawford",
       "dates": "Contemporary",
       "tradition": "pentecostal",
-      "blurb": "Preaches salvation by grace through faith with a Pentecostal edge — believers seeking the Holy Spirit's power for ministry, divine healing in the atonement, and Christ returning to reign on earth."
+      "blurb": "Preaches salvation by grace through faith with a Pentecostal edge — believers seeking the Holy Spirit's power for ministry, divine healing in the atonement, and Christ returning to reign on earth.",
+      "born": null,
+      "died": null,
+      "impact": "Bryce Crawford is a Gen Z street evangelist and founder of the Jesus in the Street ministry. At 17, after years of anxiety and depression, he describes a dramatic conversion on Christmas Day 2020 that redirected his life toward evangelism. He takes the gospel to streets, campuses, and festivals, and has built a massive online following through raw, face-to-face gospel conversations.",
+      "theology": "His ministry's statement of faith teaches that believers should seek the Holy Spirit's power for ministry and that healing is part of Christ's atonement — classic Pentecostal convictions, which is why he is listed here rather than under Baptist.",
+      "events": [
+        {
+          "year": "2020",
+          "title": "Dramatic conversion",
+          "text": "On Christmas Day 2020, at age 17, after years of depression and anxiety, Crawford describes a life-changing encounter with God at a Waffle House that ended his despair and launched him into ministry."
+        },
+        {
+          "year": "2026",
+          "title": "I Love Jesus US Tour",
+          "text": "From February to March 2026 he toured 22 cities in 18 states, combining preaching, worship, and street-level gospel conversations in one of the largest recent evangelistic tours by a Gen Z figure."
+        }
+      ]
     },
     {
       "id": "cknechtle",
       "name": "Cliffe Knechtle",
       "dates": "Contemporary",
       "tradition": "dispensational",
-      "blurb": "Campus evangelist who treats Christianity as reasonable rather than blind belief, inviting skeptics to examine the evidence and choose. His theology is classic dispensational-evangelical: believer's baptism by immersion, a pretribulational rapture, and a free-will response to God's grace."
+      "blurb": "Campus evangelist who treats Christianity as reasonable rather than blind belief, inviting skeptics to examine the evidence and choose. His theology is classic dispensational-evangelical: believer's baptism by immersion, a pretribulational rapture, and a free-will response to God's grace.",
+      "born": 1954,
+      "died": null,
+      "impact": "Cliffe Knechtle (born 1954) is an American evangelist and the senior pastor of Grace Community Church in New Canaan, Connecticut. Since the late 1970s he has held open-air question-and-answer sessions on university campuses, inviting skeptics to examine the evidence for Christianity; his Give Me An Answer ministry, founded in 1991, now reaches millions online.",
+      "theology": "His church's confession teaches believer's baptism by immersion, a pretribulational rapture (the belief that Christ will remove the church before a coming tribulation), and a free-will response to God's grace. Those dispensational-evangelical distinctives are why he is listed under the Dispensationalist tradition.",
+      "events": [
+        {
+          "year": "1991",
+          "title": "Founded Give Me An Answer",
+          "text": "Launched the campus outreach ministry of open-air Q&A with skeptics, which grew from a television program into one of the most-watched apologetics channels online."
+        },
+        {
+          "year": "2001",
+          "title": "Became senior pastor of Grace Community Church",
+          "text": "Took the pastorate of the New Canaan, Connecticut congregation, continuing his campus evangelism alongside local church ministry."
+        }
+      ]
     },
     {
       "id": "sknechtle",
       "name": "Stuart Knechtle",
       "dates": "Contemporary",
       "tradition": "dispensational",
-      "blurb": "Cliffe's son and co-host of Give Me An Answer, sharing his father's dispensational-evangelical framework — believer's baptism, a pretribulational rapture, and a free-will response to grace — while bringing a pastoral-counselor's posture to campus dialogues."
+      "blurb": "Cliffe's son and co-host of Give Me An Answer, sharing his father's dispensational-evangelical framework — believer's baptism, a pretribulational rapture, and a free-will response to grace — while bringing a pastoral-counselor's posture to campus dialogues.",
+      "born": 1988,
+      "died": null,
+      "impact": "Stuart Knechtle (born 1988) is the son of Cliffe Knechtle and co-host of the Give Me An Answer campus ministry, which he joined in 2015. He serves as an assistant pastor at Grace Community Church in New Canaan and brings a pastoral counselor's posture to the same open-air dialogues with skeptics.",
+      "theology": "He ministers under the same church confession as his father — believer's baptism, a pretribulational rapture (the belief that Christ will remove the church before a coming tribulation), and free-will soteriology — which places him in the Dispensationalist tradition here.",
+      "events": [
+        {
+          "year": "2015",
+          "title": "Joined Give Me An Answer",
+          "text": "Teamed up with his father Cliffe for campus dialogues, becoming the ministry's co-host and bringing a new generation's voice to its apologetics work."
+        }
+      ]
     },
     {
       "id": "tkeller",
       "name": "Tim Keller",
       "dates": "1950-2023",
       "tradition": "reformed",
-      "blurb": "PCA Presbyterian minister and self-identified Calvinist; an amillennial, paedobaptist, complementarian Reformed theologian who remained open to the charismatic gifts — best known for winsome apologetics to urban skeptics."
+      "blurb": "PCA Presbyterian minister and self-identified Calvinist; an amillennial, paedobaptist, complementarian Reformed theologian who remained open to the charismatic gifts — best known for winsome apologetics to urban skeptics.",
+      "born": 1950,
+      "died": 2023,
+      "impact": "Timothy James Keller founded Redeemer Presbyterian Church in New York City in 1989. He became famous for presenting the Christian faith persuasively to urban skeptics, especially in his 2008 bestseller The Reason for God, carrying Reformed theology into the cultural mainstream.",
+      "theology": "An ordained minister in the Presbyterian Church in America and a self-described Calvinist (though raised in a Lutheran church), he is known for winsome apologetics. He sits in the Reformed/Calvinist tradition as a confessional Presbyterian whose apologetics brought Calvinist thought to a broad audience.",
+      "events": [
+        {
+          "year": "1989",
+          "title": "Founds Redeemer Presbyterian",
+          "text": "Plants Redeemer Presbyterian Church in Manhattan with his wife Kathy; it grows into a hub for church planting across New York City."
+        },
+        {
+          "year": "2008",
+          "title": "The Reason for God",
+          "text": "Publishes The Reason for God: Belief in an Age of Skepticism, which becomes a New York Times bestseller."
+        },
+        {
+          "year": "2020",
+          "title": "Pancreatic cancer diagnosis",
+          "text": "Announces a pancreatic cancer diagnosis and spends his final years writing and teaching about facing death with gospel hope."
+        }
+      ]
     },
     {
       "id": "bgraham",
       "name": "Billy Graham",
       "dates": "1918-2018",
       "tradition": "baptist",
-      "blurb": "Southern Baptist revivalist of the great crusades: preach ‘the Bible says,’ call ‘whosoever will’ to decide for Christ at the altar, and send converts back into their own churches. Decisional evangelism over doctrinal system."
+      "blurb": "Southern Baptist revivalist of the great crusades: preach ‘the Bible says,’ call ‘whosoever will’ to decide for Christ at the altar, and send converts back into their own churches. Decisional evangelism over doctrinal system.",
+      "born": 1918,
+      "died": 2018,
+      "impact": "William Franklin Graham Jr. preached to more people in person than anyone in history — over 200 million across 185 countries. His 1949 Los Angeles crusade made him a national figure, his simple call to decide for Christ shaped modern evangelicalism, and he counseled every U.S. president from Truman to Obama.",
+      "theology": "He was an ordained Southern Baptist minister, baptized by immersion and ordained in 1939. He belongs in the Baptist tradition as a lifelong Southern Baptist representing the decisional, revivalist stream of Baptist life rather than its Calvinist wing.",
+      "events": [
+        {
+          "year": "1934",
+          "title": "Conversion",
+          "text": "Makes a personal commitment to Christ at a Charlotte, North Carolina revival meeting led by evangelist Mordecai Ham."
+        },
+        {
+          "year": "1949",
+          "title": "Los Angeles crusade",
+          "text": "An eight-week tent crusade in Los Angeles, extended from three weeks by overflow crowds, launches him to national fame."
+        },
+        {
+          "year": "1950",
+          "title": "Billy Graham Evangelistic Association",
+          "text": "Founds the BGEA in Minneapolis, organizing decades of crusades, the Hour of Decision radio program, and later Christianity Today magazine (1956)."
+        }
+      ]
     },
     {
       "id": "jstott",
       "name": "John Stott",
       "dates": "1921-2011",
       "tradition": "anglican",
-      "blurb": "Anglican evangelical scholar-pastor: Scripture supreme, penal-substitutionary atonement, Spirit-baptism at conversion with no second blessing, and social engagement as gospel fruit — evangelical conviction inside the prayer book and bishops."
+      "blurb": "Anglican evangelical scholar-pastor: Scripture supreme, penal-substitutionary atonement, Spirit-baptism at conversion with no second blessing, and social engagement as gospel fruit — evangelical conviction inside the prayer book and bishops.",
+      "born": 1921,
+      "died": 2011,
+      "impact": "John Robert Walmsley Stott was rector of All Souls Church in London for 25 years and a leader of the worldwide evangelical movement. His 1958 book Basic Christianity explained the faith to ordinary readers and has been translated into more than 60 languages, and he was a principal author of the 1974 Lausanne Covenant, evangelicalism's defining global manifesto.",
+      "theology": "An evangelical Anglican who stayed loyal to the Church of England when others urged secession, he models Reformed-leaning theology held inside bishops, prayer book, and parish. That is why he is listed under the Anglican tradition.",
+      "events": [
+        {
+          "year": "1950",
+          "title": "Rector of All Souls",
+          "text": "Becomes rector of All Souls, Langham Place in London, his only parish, transforming it into a center of clear expository preaching."
+        },
+        {
+          "year": "1958",
+          "title": "Basic Christianity",
+          "text": "Publishes Basic Christianity, which sells two million copies and becomes one of the most translated evangelical books ever written."
+        },
+        {
+          "year": "1974",
+          "title": "Lausanne Covenant",
+          "text": "Serves as a principal author of the Lausanne Covenant at the International Congress on World Evangelization in Switzerland."
+        }
+      ]
     },
     {
       "id": "amcpherson",
       "name": "Aimee Semple McPherson",
       "dates": "1890-1944",
       "tradition": "pentecostal",
-      "blurb": "Founder of the Foursquare Church; preached a ‘Foursquare Gospel’ of Jesus as Savior, Healer, Baptizer with the Holy Spirit, and Soon-Coming King. Taught Spirit baptism with tongues as a distinct second experience after conversion, and believed believers could fall from grace."
+      "blurb": "Founder of the Foursquare Church; preached a ‘Foursquare Gospel’ of Jesus as Savior, Healer, Baptizer with the Holy Spirit, and Soon-Coming King. Taught Spirit baptism with tongues as a distinct second experience after conversion, and believed believers could fall from grace.",
+      "born": 1890,
+      "died": 1944,
+      "impact": "Aimee Elizabeth Semple McPherson was a Canadian-born American Pentecostal evangelist, media pioneer, and founder of the International Church of the Foursquare Gospel. In the 1920s and 30s she was the most publicized Protestant evangelist in America, drawing tens of thousands to faith-healing meetings and pioneering the use of radio for preaching from her 5,300-seat Angelus Temple in Los Angeles, one of the first megachurches.",
+      "theology": "Her 'Foursquare Gospel' — Jesus as Savior, Healer, Baptizer with the Holy Spirit, and Soon-Coming King — makes her the defining early figure of the Pentecostal/Charismatic tradition in this quiz.",
+      "events": [
+        {
+          "year": "1908",
+          "title": "Conversion and call to preach",
+          "text": "Converted at 17 at a Pentecostal revival led by evangelist Robert Semple, whom she marries; after his death on the mission field she begins itinerant preaching."
+        },
+        {
+          "year": "1923",
+          "title": "Angelus Temple opens",
+          "text": "Opens the 5,300-seat Angelus Temple in Los Angeles and launches pioneering religious radio broadcasts, blending preaching with popular entertainment."
+        },
+        {
+          "year": "1927",
+          "title": "Foursquare Church founded",
+          "text": "Founds the International Church of the Foursquare Gospel, codifying her fourfold message of Christ as Savior, Healer, Spirit-Baptizer, and Coming King."
+        }
+      ]
     },
     {
       "id": "shauerwas",
       "name": "Stanley Hauerwas",
       "dates": "Contemporary",
       "tradition": "anabaptist",
-      "blurb": "America's best theologian (Time, 2001) and a committed Methodist whose signature is neo-Anabaptist Christian pacifism: he taught a generation that Jesus' nonviolence is the Gospel's political center and that the church's job is to bear witness, not to manage the empire."
+      "blurb": "America's best theologian (Time, 2001) and a committed Methodist whose signature is neo-Anabaptist Christian pacifism: he taught a generation that Jesus' nonviolence is the Gospel's political center and that the church's job is to bear witness, not to manage the empire.",
+      "born": 1940,
+      "died": null,
+      "impact": "Stanley Hauerwas taught for decades at Duke Divinity School, where he held the Gilbert T. Rowe chair in theological ethics. In 2001, Time magazine named him 'America's Best Theologian.'",
+      "theology": "He argues that the church's calling is to be a faithful witness to Jesus rather than to manage the world, and that Christians must reject violence because Jesus did. He is himself a committed Methodist, but his signature teaching — Christian pacifism learned from Mennonite thinkers — is why he is listed under the Anabaptist tradition here.",
+      "events": [
+        {
+          "year": "1984",
+          "title": "Joined Duke Divinity School",
+          "text": "Left the University of Notre Dame for Duke, where he became the Gilbert T. Rowe Professor of Theological Ethics and wrote his most influential work on church, character, and nonviolence."
+        },
+        {
+          "year": "2001",
+          "title": "Named “America's Best Theologian”",
+          "text": "Time magazine gave him the title in its “America's Best” series, making his pacifist, community-centered theology famous far beyond academia."
+        }
+      ]
     },
     {
       "id": "cscofield",
       "name": "C.I. Scofield",
       "dates": "1843-1921",
       "tradition": "dispensational",
-      "blurb": "His reference Bible systematized dispensational premillennialism for generations of readers."
+      "blurb": "His reference Bible systematized dispensational premillennialism for generations of readers.",
+      "born": 1843,
+      "died": 1921,
+      "impact": "Cyrus Ingerson Scofield was a Civil War veteran turned lawyer turned pastor, mentored in premillennial teaching by James Brookes, who pastored churches in Dallas and Massachusetts. His annotated study Bible made dispensationalism the default theology of 20th-century fundamentalism.",
+      "theology": "His Scofield Reference Bible (1909) divided history into seven dispensations, or eras of God's dealing with humanity, and taught a sharp distinction between Israel and the church with a future literal kingdom on earth. That system is what defines the Dispensationalist tradition in this quiz.",
+      "events": [
+        {
+          "year": "1879",
+          "title": "Conversion",
+          "text": "After years as a lawyer and Kansas politician, experiences a dramatic conversion and begins intensive Bible study."
+        },
+        {
+          "year": "1882",
+          "title": "Pastor in Dallas",
+          "text": "Becomes minister of the First Congregational Church of Dallas, Texas, where his dispensational teaching takes shape."
+        },
+        {
+          "year": "1909",
+          "title": "Scofield Reference Bible published",
+          "text": "Oxford University Press publishes his annotated Bible; its notes systematize dispensational premillennialism for generations of readers (revised 1917)."
+        }
+      ]
     },
     {
       "id": "ppalmer",
       "name": "Phoebe Palmer",
       "dates": "1807-1874",
       "tradition": "wesleyan",
-      "blurb": "Methodist ‘mother of the Holiness movement’; taught entire sanctification — a second, instantaneous work of grace she also called the baptism with the Holy Spirit — received by faith alone, and used Pentecost to defend women's right to preach."
+      "blurb": "Methodist ‘mother of the Holiness movement’; taught entire sanctification — a second, instantaneous work of grace she also called the baptism with the Holy Spirit — received by faith alone, and used Pentecost to defend women's right to preach.",
+      "born": 1807,
+      "died": 1874,
+      "impact": "Phoebe Palmer (1807–1874) was a Methodist evangelist and writer, considered one of the founders of the Holiness movement. She also used the story of Pentecost to argue that women have the right to preach.",
+      "theology": "She taught 'entire sanctification' — the idea that a Christian can experience a second, decisive work of God's grace that frees them from the power of sin in this life — and said it could be received simply by trusting God's promises. Her whole theology grew directly out of John Wesley's teaching on holiness, which is why she belongs under the Wesleyan tradition.",
+      "events": [
+        {
+          "year": "1837",
+          "title": "Experienced entire sanctification",
+          "text": "On July 26, 1837, Palmer experienced what John Wesley called “entire sanctification” — the decisive holiness experience she would spend the rest of her life teaching others to seek."
+        },
+        {
+          "year": "1859",
+          "title": "Published The Promise of the Father",
+          "text": "In this book she used the Pentecost story to defend women's right to preach, making her one of the earliest evangelical advocates for female ministry."
+        }
+      ]
     },
     {
       "id": "jmacarthur",
       "name": "John MacArthur",
-      "dates": "Contemporary",
+      "dates": "1939-2025",
       "tradition": "dispensational",
-      "blurb": "Verse-by-verse expositor and five-point Calvinist famous for Lordship Salvation and the cessationist ‘Strange Fire’ controversy; a self-described dispensationalist who keeps Israel and the church distinct and holds a pretribulational rapture."
+      "blurb": "Verse-by-verse expositor and five-point Calvinist famous for Lordship Salvation and the cessationist ‘Strange Fire’ controversy; a self-described dispensationalist who keeps Israel and the church distinct and holds a pretribulational rapture.",
+      "born": 1939,
+      "died": 2025,
+      "impact": "John MacArthur (1939–2025) was an American pastor who led Grace Community Church in Sun Valley, California, from 1969 until his death. He was famous for preaching verse-by-verse through the entire New Testament over 42 years, and for his 2013 Strange Fire conference.",
+      "theology": "He was known for the doctrine of 'Lordship Salvation' and for defending cessationism (the view that the miraculous sign gifts ended with the apostles). He described himself as a dispensationalist, teaching a sharp distinction between Israel and the church and a pretribulational rapture — that self-identified dispensationalism is why he is listed under the Dispensationalist tradition.",
+      "events": [
+        {
+          "year": "1969",
+          "title": "Became pastor of Grace Community Church",
+          "text": "Took the pulpit of the Sun Valley congregation, which he would lead for over five decades, building it into one of America's most influential conservative evangelical churches."
+        },
+        {
+          "year": "1977",
+          "title": "Grace to You began broadcasting",
+          "text": "His verse-by-verse Bible teaching program went national on radio and television, eventually reaching millions worldwide and funding The Master's Seminary."
+        }
+      ]
     },
     {
       "id": "cwalther",
       "name": "C.F.W. Walther",
       "dates": "1811-1887",
       "tradition": "lutheran",
-      "blurb": "First president of the Missouri Synod who made American Lutheranism confessional: justification by faith alone as the article everything hangs on, salvation as God's work alone (even rejecting election ‘in view of faith’), and Christ truly present in the Supper."
+      "blurb": "First president of the Missouri Synod who made American Lutheranism confessional: justification by faith alone as the article everything hangs on, salvation as God's work alone (even rejecting election ‘in view of faith’), and Christ truly present in the Supper.",
+      "born": 1811,
+      "died": 1887,
+      "impact": "C.F.W. Walther (1811–1887) was a German-American Lutheran pastor who became the first president of the Lutheran Church–Missouri Synod. His famous lectures on properly distinguishing Law from Gospel shaped generations of Lutheran preachers.",
+      "theology": "He insisted that being made right with God comes by faith alone and is entirely God's work — he even rejected the idea that God chooses people 'in view of' their future faith, calling that a road back to earning salvation. He is listed under the Lutheran tradition as one of its defining American architects.",
+      "events": [
+        {
+          "year": "1838",
+          "title": "Emigrated to the United States",
+          "text": "Left Saxony, Germany, with the Saxon Lutheran immigration, seeking the freedom to practice confessional Lutheranism without state-church control."
+        },
+        {
+          "year": "1847",
+          "title": "Elected first president of the LCMS",
+          "text": "Became the founding president of the Lutheran Church–Missouri Synod, setting its course as a confessional Lutheran body anchored in the Book of Concord."
+        }
+      ]
     },
     {
       "id": "eelliot",
       "name": "Elisabeth Elliot",
       "dates": "1926-2015",
       "tradition": "anglican",
-      "blurb": "Episcopalian missionary author; taught that suffering is God's refining gift and that Scripture ordains distinct, complementary roles for men and women."
+      "blurb": "Episcopalian missionary author; taught that suffering is God's refining gift and that Scripture ordains distinct, complementary roles for men and women.",
+      "born": 1926,
+      "died": 2015,
+      "impact": "Elisabeth Elliot (1926–2015) was an American missionary and author. After her husband Jim Elliot was killed in 1956 trying to reach the Waorani people of Ecuador, she went to live among the very tribe that killed him, then wrote more than 20 books on suffering, faithfulness, and obedience.",
+      "theology": "She taught that suffering is never wasted and that Scripture assigns distinct, complementary roles to men and women. She was raised among the Plymouth Brethren but spent the last 46 years of her life as an Episcopalian, which is why she is listed under the Anglican tradition.",
+      "events": [
+        {
+          "year": "1956",
+          "title": "Jim Elliot martyred",
+          "text": "Her husband Jim and four fellow missionaries were speared to death by Waorani warriors in January 1956 while attempting peaceful contact in eastern Ecuador."
+        },
+        {
+          "year": "1958",
+          "title": "Went to live with the Waorani",
+          "text": "Elliot moved into the tribe that had killed her husband, living among them for two years with her young daughter — one of the most famous acts of forgiveness in modern missions."
+        }
+      ]
     },
     {
       "id": "whuff",
       "name": "Wesley Huff",
       "dates": "Contemporary",
       "tradition": "baptist",
-      "blurb": "Reformed Baptist pastor-elder and Apologetics Canada apologist; defended the Bible's reliability through manuscript evidence to millions. Affirms sovereign electing grace, believer's baptism, and a cautious, non-normative view of the sign gifts."
+      "blurb": "Reformed Baptist pastor-elder and Apologetics Canada apologist; defended the Bible's reliability through manuscript evidence to millions. Affirms sovereign electing grace, believer's baptism, and a cautious, non-normative view of the sign gifts.",
+      "born": 1991,
+      "died": null,
+      "impact": "Wesley Huff (born 1991) is a Canadian apologist and theologian, currently pursuing a PhD in New Testament at Wycliffe College, University of Toronto, and serving with Apologetics Canada. He specializes in the history of ancient biblical manuscripts, and his January 2025 appearance on the Joe Rogan Experience brought the case for Scripture's reliability to millions of listeners.",
+      "theology": "He serves as a pastor-elder at West Toronto Baptist Church, whose confession teaches sovereign electing grace, believer's baptism by immersion, and elder-led congregational government. That Reformed Baptist ecclesiology is why he is listed under the Baptist tradition.",
+      "events": [
+        {
+          "year": "2024",
+          "title": "Debated Billy Carson",
+          "text": "His October 2024 debate with Billy Carson on Christian origins drew wide attention and established him as a leading public defender of the New Testament's reliability."
+        },
+        {
+          "year": "2025",
+          "title": "Appeared on the Joe Rogan Experience",
+          "text": "The January 2025 episode, focused on manuscript evidence for the Bible, was viewed millions of times and made him one of the most recognized apologists in the English-speaking world."
+        }
+      ]
     }
   ],
   "questions": [
