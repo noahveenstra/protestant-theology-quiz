@@ -94,7 +94,9 @@
         "calvin",
         "edwards",
         "sproul",
-        "barth"
+        "barth",
+        "cknechtle",
+        "sknechtle"
       ]
     },
     {
@@ -120,7 +122,9 @@
       "description": "Calvinistic in soteriology but baptistic in ecclesiology: believers' baptism by immersion, congregational government, and usually a memorialist Lord's Supper. Affirms the 1689 London Baptist Confession alongside strict biblical inerrancy.",
       "theologians": [
         "spurgeon",
-        "piper"
+        "piper",
+        "jpokluda",
+        "bcrawford"
       ]
     },
     {
@@ -128,7 +132,8 @@
       "name": "Pentecostal / Charismatic",
       "description": "Expects the miraculous gifts of the Spirit — tongues, prophecy, healing — to operate today, often with a distinct baptism in the Holy Spirit after conversion. Typically Arminian, credobaptist, premillennial, and expressive in worship.",
       "theologians": [
-        "tozer"
+        "tozer",
+        "rmadu"
       ]
     },
     {
@@ -263,6 +268,41 @@
       "dates": "1926-2020",
       "tradition": "anglican",
       "blurb": "Anglican evangelical whose Knowing God taught a generation to think biblically about God."
+    },
+    {
+      "id": "jpokluda",
+      "name": "Jonathan \"JP\" Pokluda",
+      "dates": "Contemporary",
+      "tradition": "baptist",
+      "blurb": "Lead pastor of Harris Creek Baptist Church in Waco; known for direct, Scripture-driven teaching to young adults."
+    },
+    {
+      "id": "rmadu",
+      "name": "Robert Madu",
+      "dates": "Contemporary",
+      "tradition": "pentecostal",
+      "blurb": "Lead pastor of Social Dallas; charismatic preacher known for high-energy, story-driven sermons."
+    },
+    {
+      "id": "bcrawford",
+      "name": "Bryce Crawford",
+      "dates": "Contemporary",
+      "tradition": "baptist",
+      "blurb": "Gen Z evangelist and apologist reaching millions online with street-level gospel conversations."
+    },
+    {
+      "id": "cknechtle",
+      "name": "Cliffe Knechtle",
+      "dates": "Contemporary",
+      "tradition": "reformed",
+      "blurb": "Traveling campus evangelist behind ‘Give Me An Answer’; decades of open-air Q&A with skeptics."
+    },
+    {
+      "id": "sknechtle",
+      "name": "Stuart Knechtle",
+      "dates": "Contemporary",
+      "tradition": "reformed",
+      "blurb": "Cliffe’s son and ministry partner; carrying the ‘Give Me An Answer’ campus dialogues to a new generation."
     }
   ],
   "questions": [
