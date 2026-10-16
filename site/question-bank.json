@@ -1,0 +1,3159 @@
+{
+ "axes": [
+  {
+   "id": "soteriology",
+   "label": "Soteriology",
+   "left": "Monergism (Calvinist)",
+   "right": "Synergism (Arminian)",
+   "description": "Whether salvation is God's work alone or involves genuine human cooperation. Lutheran monergism-with-resistible-grace does not map cleanly onto this binary."
+  },
+  {
+   "id": "baptism",
+   "label": "Baptism",
+   "left": "Credobaptism",
+   "right": "Paedobaptism",
+   "description": "Whether baptism is for professing believers only or also for their infant children."
+  },
+  {
+   "id": "spirit-gifts",
+   "label": "Spiritual Gifts",
+   "left": "Cessationist",
+   "right": "Continuationist",
+   "description": "Whether miraculous gifts like tongues and prophecy ceased with the apostles or continue today."
+  },
+  {
+   "id": "eschatology",
+   "label": "Eschatology",
+   "left": "Premillennial",
+   "right": "Amillennial",
+   "description": "Whether Christ returns before a future earthly millennium or reigns now from heaven. Postmillennial views (not confessionally defined in most standards) fall between the poles."
+  },
+  {
+   "id": "covenant",
+   "label": "Covenant and Dispensations",
+   "left": "Dispensational",
+   "right": "Covenant Theology",
+   "description": "Whether God works through distinct eras and peoples or one unfolding covenant of grace."
+  },
+  {
+   "id": "scripture",
+   "label": "Scripture",
+   "left": "Strict Inerrancy",
+   "right": "Infallibility",
+   "description": "Whether the Bible is without error in all it affirms, or fully authoritative and trustworthy without all traditions adopting strict-errorlessness language. NOTE: 'infallible' is the Assemblies of God's own term for the strong position (AG Statement Art. 1), so the pole labels describe vocabulary, not rank."
+  },
+  {
+   "id": "worship",
+   "label": "Worship",
+   "left": "Regulative Principle",
+   "right": "Normative Principle",
+   "description": "Whether worship must be explicitly commanded in Scripture or may include anything not forbidden."
+  },
+  {
+   "id": "polity",
+   "label": "Church Government",
+   "left": "Congregational",
+   "right": "Presbyterian-Episcopal",
+   "description": "Whether each local church governs itself or stands under wider church authority."
+  },
+  {
+   "id": "gender-roles",
+   "label": "Gender Roles",
+   "left": "Complementarian",
+   "right": "Egalitarian",
+   "description": "Whether Scripture reserves certain offices and roles by gender or opens all ministry to women."
+  },
+  {
+   "id": "assurance",
+   "label": "Faith and Assurance",
+   "left": "Lordship Salvation",
+   "right": "Free Grace",
+   "description": "Whether saving faith necessarily transforms the life or rests on belief alone. The pole labels come from an intra-Reformed debate; non-Reformed traditions land on the 'lordship' side by default, not by self-identification."
+  },
+  {
+   "id": "ordinances",
+   "label": "Baptism and Communion",
+   "left": "Memorialist",
+   "right": "Sacramental",
+   "description": "Whether the ordinances are symbols of grace already received or means by which grace is given."
+  },
+  {
+   "id": "sanctification",
+   "label": "Sanctification",
+   "left": "Entire Sanctification",
+   "right": "Progressive Only",
+   "description": "Whether a crisis experience of full cleansing is possible or holiness grows only gradually."
+  }
+ ],
+ "traditions": [
+  {
+   "id": "reformed",
+   "name": "Reformed / Calvinist",
+   "description": "Confesses God's sovereign grace in salvation: unconditional election, definite atonement, and perseverance of the saints. Worships by the regulative principle, baptizes believers' children, and reads the Bible through covenant theology. Includes Presbyterians and Reformed Baptists.",
+   "theologians": [
+    "barth",
+    "calvin",
+    "edwards",
+    "sproul",
+    "tkeller"
+   ]
+  },
+  {
+   "id": "lutheran",
+   "name": "Confessional Lutheran",
+   "description": "Centers on justification by faith alone and the real presence of Christ in Word and sacrament. Holds monergistic conversion with universal atonement, baptizes infants, and follows historic liturgy under the Lutheran confessions. Law and gospel frame its reading of Scripture.",
+   "theologians": [
+    "bonhoeffer",
+    "cwalther",
+    "luther"
+   ]
+  },
+  {
+   "id": "wesleyan",
+   "name": "Wesleyan / Arminian",
+   "description": "Teaches that God's prevenient grace frees every person to respond to the gospel, and that believers may fall from grace. Expects both gradual growth and crisis experiences of entire sanctification. Methodist and Holiness churches typically baptize infants and ordain women.",
+   "theologians": [
+    "ppalmer",
+    "tozer",
+    "wesley"
+   ]
+  },
+  {
+   "id": "baptist",
+   "name": "Confessional Baptist",
+   "description": "Baptistic in ecclesiology: believers' baptism by immersion, congregational government, and usually a memorialist Lord's Supper. Ranges from Calvinistic (1689 London Baptist Confession) to decisional revivalist (Billy Graham); all share strict biblical inerrancy.",
+   "theologians": [
+    "bgraham",
+    "jpokluda",
+    "piper",
+    "spurgeon",
+    "whuff"
+   ]
+  },
+  {
+   "id": "pentecostal",
+   "name": "Pentecostal / Charismatic",
+   "description": "Expects the miraculous gifts of the Spirit \u2014 tongues, prophecy, healing \u2014 to operate today, often with a distinct baptism in the Holy Spirit after conversion. Typically Arminian, credobaptist, premillennial, and expressive in worship.",
+   "theologians": [
+    "amcpherson",
+    "bcrawford",
+    "rmadu"
+   ]
+  },
+  {
+   "id": "anabaptist",
+   "name": "Anabaptist",
+   "description": "Baptizes only confessing believers into a disciplined, discipleship-shaped community. Emphasizes the Sermon on the Mount, simple worship, congregational discernment, and a costly obedience that proves faith genuine.",
+   "theologians": [
+    "menno",
+    "shauerwas"
+   ]
+  },
+  {
+   "id": "anglican",
+   "name": "Anglican",
+   "description": "Worships through the Book of Common Prayer with bishops, infant baptism, and a sacramental view of communion. Theologically broad \u2014 from Reformed to Anglo-Catholic \u2014 but classically holds Scripture, tradition, and reason together.",
+   "theologians": [
+    "eelliot",
+    "jstott",
+    "lewis",
+    "packer",
+    "wright"
+   ]
+  },
+  {
+   "id": "dispensational",
+   "name": "Dispensationalist",
+   "description": "Reads the Bible through distinct dispensations, keeps Israel and the church as separate peoples with separate destinies, and expects a pretribulational rapture and literal millennium. Usually credobaptist, memorialist, inerrantist, and 'free grace' on assurance.",
+   "theologians": [
+    "cknechtle",
+    "cscofield",
+    "jmacarthur",
+    "moody",
+    "sknechtle"
+   ]
+  }
+ ],
+ "theologians": [
+  {
+   "id": "calvin",
+   "name": "John Calvin",
+   "dates": "1509-1564",
+   "tradition": "reformed",
+   "blurb": "Genevan Reformer whose Institutes systematized the doctrines of grace.",
+   "born": 1509,
+   "died": 1564,
+   "impact": "John Calvin was the most influential Protestant thinker of the Reformation's second generation. From Geneva, Switzerland, he built a model Protestant city \u2014 with disciplined church life, schools, and a trained pastorate \u2014 that was copied across Europe. His followers, called Calvinists, became the majority faith in Scotland, the Netherlands, and parts of France and Hungary, and his ideas later traveled to North America and South Africa.",
+   "theology": "Calvin's Institutes of the Christian Religion (1536) gave Protestantism its first complete system of doctrine. He taught that God is absolutely sovereign in salvation \u2014 choosing who is saved apart from human merit, a teaching called predestination \u2014 and that worship must follow only what Scripture commands. He belongs under 'Reformed' because Reformed theology is essentially his theology: the doctrines of grace, covenant, and God's sovereignty that still define Presbyterian and Reformed churches.",
+   "events": [
+    {
+     "year": "1536",
+     "title": "Publishes the Institutes",
+     "text": "At 26, Calvin publishes the first edition of the Institutes of the Christian Religion in Basel \u2014 a compact defense of Protestant doctrine that he will keep expanding, reaching its final form in 1559."
+    },
+    {
+     "year": "1541",
+     "title": "Returns to Geneva",
+     "text": "Recalled by the city, Calvin implements his Ecclesiastical Ordinances: elder-led church government, disciplined moral life, and constant preaching that make Geneva the model Reformed city."
+    },
+    {
+     "year": "1559",
+     "title": "Founds the Academy of Geneva",
+     "text": "Calvin establishes a school to train Reformed pastors; it becomes the intellectual engine exporting Calvinism to France, Scotland, and the Netherlands."
+    }
+   ]
+  },
+  {
+   "id": "luther",
+   "name": "Martin Luther",
+   "dates": "1483-1546",
+   "tradition": "lutheran",
+   "blurb": "German Reformer who recovered justification by faith alone.",
+   "born": 1483,
+   "died": 1546,
+   "impact": "Martin Luther's protest against the sale of indulgences in 1517 split Western Christianity and launched the Protestant Reformation. His German translation of the New Testament put Scripture into ordinary people's hands and helped standardize the German language. Within his lifetime, much of Germany and Scandinavia broke with Rome, and the movement he started became the Lutheran Church \u2014 now one of the world's largest Protestant families.",
+   "theology": "Luther recovered the teaching that sinners are made right with God by faith alone, not by good works or purchased pardons \u2014 the doctrine of justification. He insisted Scripture alone is the final authority and that every baptized Christian belongs to a 'priesthood of all believers.' He anchors the 'Lutheran' bucket because Lutheran confessions are simply his teachings written down.",
+   "events": [
+    {
+     "year": "1517",
+     "title": "The 95 Theses",
+     "text": "On October 31, Luther posts 95 theses challenging the sale of indulgences, igniting a Europe-wide debate that becomes the Protestant Reformation."
+    },
+    {
+     "year": "1521",
+     "title": "Diet of Worms",
+     "text": "Summoned before the emperor, Luther refuses to recant \u2014 'Here I stand, I can do no other' \u2014 and is declared an outlaw; friends hide him away in Wartburg Castle."
+    },
+    {
+     "year": "1522",
+     "title": "German New Testament",
+     "text": "In hiding, Luther translates the New Testament into German in eleven weeks, putting Scripture into the people's language for the first time."
+    }
+   ]
+  },
+  {
+   "id": "wesley",
+   "name": "John Wesley",
+   "dates": "1703-1791",
+   "tradition": "wesleyan",
+   "blurb": "Founder of Methodism; preached prevenient grace and entire sanctification.",
+   "born": 1703,
+   "died": 1791,
+   "impact": "John Wesley founded Methodism, which grew from small London societies into a worldwide movement of tens of millions. An itinerant preacher, he is said to have preached some 40,000 sermons and traveled a quarter-million miles on horseback across Britain and Ireland. Methodism fueled social reform \u2014 opposing slavery, founding schools and orphanages \u2014 and reshaped English-speaking Protestantism.",
+   "theology": "Wesley taught that God's grace reaches out to every person first (prevenient grace), freeing each one to choose or reject salvation \u2014 the Arminian alternative to Calvinist predestination. He also taught 'entire sanctification,' a second work of grace in which a believer can be cleansed of inward sin in this life. He defines the 'Wesleyan' tradition: his name is on it.",
+   "events": [
+    {
+     "year": "1738",
+     "title": "Aldersgate: heart strangely warmed",
+     "text": "On May 24 at a meeting on Aldersgate Street, London, Wesley feels his 'heart strangely warmed' and trusts Christ alone for salvation \u2014 the spiritual turning point of his life."
+    },
+    {
+     "year": "1739",
+     "title": "Open-air preaching begins",
+     "text": "Barred from many pulpits, Wesley preaches outdoors to coal miners in Bristol and organizes the first Methodist societies \u2014 disciplined small groups that become the movement's backbone."
+    },
+    {
+     "year": "1784",
+     "title": "American Methodism launched",
+     "text": "Wesley sends instructions and ordained ministers to America; the Christmas Conference in Baltimore founds the Methodist Episcopal Church."
+    }
+   ]
+  },
+  {
+   "id": "edwards",
+   "name": "Jonathan Edwards",
+   "dates": "1703-1758",
+   "tradition": "reformed",
+   "blurb": "America's greatest Calvinist theologian; defended divine sovereignty and insisted communion is for visible saints only \u2014 a stand that cost him his Northampton pulpit.",
+   "born": 1703,
+   "died": 1758,
+   "impact": "Jonathan Edwards was the intellectual engine of the First Great Awakening, the 1730s\u201340s revivals that reshaped American religion. His sermon 'Sinners in the Hands of an Angry God' (1741) became a classic of American literature. He later served as a missionary to Native Americans and briefly as president of Princeton before his death in 1758.",
+   "theology": "Edwards was America's greatest Calvinist theologian: he defended God's absolute sovereignty, human moral inability, and original sin in works like Freedom of the Will. In Religious Affections he gave pastors a careful test for genuine conversion during revival. He sits under 'Reformed' because his thought is rooted in Puritan Calvinism \u2014 though he was Congregational, not Presbyterian, in church government.",
+   "events": [
+    {
+     "year": "1741",
+     "title": "'Sinners in the Hands of an Angry God'",
+     "text": "Preached at Enfield, Connecticut during the Great Awakening, this vivid sermon on divine judgment becomes the most famous sermon in American history."
+    },
+    {
+     "year": "1750",
+     "title": "Dismissed from Northampton",
+     "text": "Edwards insists that only people giving credible evidence of conversion may take communion \u2014 rejecting the looser Half-Way Covenant \u2014 and his congregation votes him out after 23 years."
+    },
+    {
+     "year": "1758",
+     "title": "Princeton presidency and death",
+     "text": "Edwards accepts the presidency of the College of New Jersey (Princeton) but dies weeks later, on March 22, from a smallpox inoculation."
+    }
+   ]
+  },
+  {
+   "id": "spurgeon",
+   "name": "Charles Spurgeon",
+   "dates": "1834-1892",
+   "tradition": "baptist",
+   "blurb": "Calvinistic Baptist \u2018Prince of Preachers\u2019; preached believer's baptism, biblical inerrancy, and Christ's premillennial return to thousands in Victorian London.",
+   "born": 1834,
+   "died": 1892,
+   "impact": "Charles Spurgeon, the 'Prince of Preachers,' drew crowds of 10,000 in Victorian London and preached to an estimated ten million people in his lifetime. His sermons were printed weekly and translated worldwide \u2014 he remains the most-published Christian author in history. He also founded a pastors' college, an orphanage, and almshouses, pairing massive evangelism with social care.",
+   "theology": "Spurgeon was a Particular (Calvinist) Baptist who preached sovereign grace with evangelistic urgency, opposing both hyper-Calvinism and theological liberalism. He defended believer's baptism by immersion, biblical inerrancy, and Christ's personal return. He is the model 'Baptist' in this quiz: Calvinistic in doctrine, baptistic in church life.",
+   "events": [
+    {
+     "year": "1854",
+     "title": "Pastor at 20",
+     "text": "Just four years after his conversion, Spurgeon becomes pastor of London's New Park Street Chapel; crowds quickly overflow the building."
+    },
+    {
+     "year": "1861",
+     "title": "Metropolitan Tabernacle opens",
+     "text": "A 6,000-seat church is built for his ministry; he preaches there to packed houses for 31 years while founding a college and orphanage."
+    },
+    {
+     "year": "1887",
+     "title": "The Downgrade Controversy",
+     "text": "Spurgeon publicly charges the Baptist Union with doctrinal decline and resigns from it, defending biblical inerrancy against liberal trends."
+    }
+   ]
+  },
+  {
+   "id": "lewis",
+   "name": "C.S. Lewis",
+   "dates": "1898-1963",
+   "tradition": "anglican",
+   "blurb": "Oxford scholar and Anglican whose Mere Christianity and Narnia shaped lay faith for generations; an Anglo-Catholic who believed in purgatory and made confession to a priest.",
+   "born": 1898,
+   "died": 1963,
+   "impact": "C. S. Lewis was the most beloved Christian writer of the 20th century for ordinary readers. His wartime BBC radio talks brought him national fame; The Chronicles of Narnia enchanted generations of children; Mere Christianity became the best-selling lay defense of the faith ever written. In 2013 he was honored with a memorial in Poets' Corner of Westminster Abbey.",
+   "theology": "Lewis was an Anglican lay theologian who defended 'mere Christianity' \u2014 the core all Christians share \u2014 through story, logic, and imagination. His famous 'trilemma' argued Jesus must be liar, lunatic, or Lord. His churchmanship leaned Anglo-Catholic: he believed in purgatory and made confession to a priest. He fits the 'Anglican' bucket as a lifelong Church of England layman.",
+   "events": [
+    {
+     "year": "1931",
+     "title": "Returns to Christianity",
+     "text": "After years as an atheist, long talks with J.R.R. Tolkien persuade Lewis that Christianity is the 'true myth'; he becomes, in his words, 'a very ordinary layman of the Church of England.'"
+    },
+    {
+     "year": "1942",
+     "title": "The Screwtape Letters",
+     "text": "His satirical letters from a senior demon become a bestseller, establishing Lewis as the most readable Christian apologist of his generation."
+    },
+    {
+     "year": "1950",
+     "title": "Narnia begins",
+     "text": "The Lion, the Witch and the Wardrobe is published \u2014 the first of seven Chronicles of Narnia that will enchant millions of children and carry Christian themes worldwide."
+    }
+   ]
+  },
+  {
+   "id": "barth",
+   "name": "Karl Barth",
+   "dates": "1886-1968",
+   "tradition": "reformed",
+   "blurb": "Swiss Reformed theologian who re-centered election on Jesus Christ himself \u2014 and late in life broke with his own tradition by opposing infant baptism.",
+   "born": 1886,
+   "died": 1968,
+   "impact": "Karl Barth is widely considered the greatest Protestant theologian of the 20th century \u2014 he even made the cover of Time magazine in 1962. He helped found Germany's Confessing Church, which resisted Nazi control of Protestantism, and was expelled from his Bonn professorship for refusing loyalty to Hitler. His students and readers, from Bonhoeffer to Hauerwas, carried his influence across continents.",
+   "theology": "Barth broke with 19th-century liberal theology by insisting God is 'wholly other' and known only through his own revelation in Jesus Christ. In his massive Church Dogmatics he re-centered the doctrine of election on Christ himself \u2014 Jesus as both the choosing God and the chosen human. He belongs under 'Reformed' as a Swiss Reformed minister, though he is a revisionist: late in life he even opposed infant baptism, breaking with his own tradition.",
+   "events": [
+    {
+     "year": "1919",
+     "title": "Commentary on Romans",
+     "text": "Barth's explosive commentary on Paul's letter to the Romans \u2014 rewritten in a second edition in 1922 \u2014 demolishes liberal theology and makes him famous overnight."
+    },
+    {
+     "year": "1932",
+     "title": "Begins the Church Dogmatics",
+     "text": "Barth starts publishing his multi-volume Church Dogmatics, the great systematic theology of the 20th century, completed in thirteen part-volumes by 1967."
+    },
+    {
+     "year": "1934",
+     "title": "The Barmen Declaration",
+     "text": "Barth is the principal author of the Confessing Church's Barmen Declaration, declaring Christ \u2014 not the F\u00fchrer \u2014 the church's only head."
+    }
+   ]
+  },
+  {
+   "id": "wright",
+   "name": "N.T. Wright",
+   "dates": "1948-",
+   "tradition": "anglican",
+   "blurb": "Anglican bishop of Durham and New Testament scholar; his \u2018New Perspective\u2019 redefined justification as God's declaration of covenant membership \u2014 a view most Reformed theologians reject.",
+   "born": 1948,
+   "died": null,
+   "impact": "Nicholas Thomas Wright served as Bishop of Durham from 2003 to 2010 and is one of the world's leading biblical scholars. His massive scholarly works on Jesus and the resurrection sit alongside popular books like Simply Christian.",
+   "theology": "He is best known for the 'New Perspective on Paul,' which re-reads justification as God's declaration of who belongs to his covenant people rather than the crediting of Christ's righteousness \u2014 a view that sparked a major debate with Reformed theologians like John Piper. He belongs in the Anglican tradition as a Church of England bishop formed by its liturgy and episcopal order.",
+   "events": [
+    {
+     "year": "1975",
+     "title": "Ordained in the Church of England",
+     "text": "Ordained as an Anglican priest after studying theology at Oxford, beginning a career divided between scholarship and church leadership."
+    },
+    {
+     "year": "2003",
+     "title": "Becomes Bishop of Durham",
+     "text": "Appointed Bishop of Durham, one of the senior bishoprics in the Church of England, serving until 2010."
+    },
+    {
+     "year": "2013",
+     "title": "Paul and the Faithfulness of God",
+     "text": "Publishes his 1,700-page magnum opus on the apostle Paul, described as the most comprehensive work on Paul in Christian history."
+    }
+   ]
+  },
+  {
+   "id": "piper",
+   "name": "John Piper",
+   "dates": "1946-",
+   "tradition": "baptist",
+   "blurb": "Reformed Baptist pastor of Bethlehem Baptist who taught \u2018Christian hedonism\u2019 \u2014 God is most glorified when we are most satisfied in him; a Calvinist in soteriology but a continuationist on the gifts.",
+   "born": 1946,
+   "died": null,
+   "impact": "John Piper led Bethlehem Baptist Church in Minneapolis for 33 years (1980-2013). His Desiring God ministry and the Ask Pastor John podcast, with over 2,000 episodes, made him a defining voice of the modern Reformed resurgence.",
+   "theology": "His 1986 book Desiring God introduced 'Christian hedonism,' the idea that God is most glorified when people find their deepest satisfaction in him. A five-point Calvinist who nonetheless believes the spiritual gifts continue today, he sits in the Baptist tradition because of his believer's-baptism convictions and congregational churchmanship.",
+   "events": [
+    {
+     "year": "1980",
+     "title": "Pastor of Bethlehem Baptist",
+     "text": "Becomes pastor for preaching at Bethlehem Baptist Church in Minneapolis, where he will serve for 33 years."
+    },
+    {
+     "year": "1986",
+     "title": "Desiring God published",
+     "text": "Publishes Desiring God: Meditations of a Christian Hedonist, the book that names his theology and later his worldwide teaching ministry."
+    },
+    {
+     "year": "2013",
+     "title": "Retirement from Bethlehem",
+     "text": "Steps down after 33 years to devote himself full-time to the Desiring God ministry of books, sermons, and the Ask Pastor John podcast."
+    }
+   ]
+  },
+  {
+   "id": "sproul",
+   "name": "R.C. Sproul",
+   "dates": "1939-2017",
+   "tradition": "reformed",
+   "blurb": "PCA Presbyterian who popularized Reformed theology through Ligonier Ministries; a staunch cessationist who taught the sign gifts ended with the apostles.",
+   "born": 1939,
+   "died": 2017,
+   "impact": "Robert Charles Sproul founded Ligonier Ministries and was described as the most influential promoter of the recovery of Reformed theology in the last century. He taught the doctrines of grace to millions through his daily Renewing Your Mind radio broadcast.",
+   "theology": "An ordained Presbyterian minister in the PCA, he defended the Bible's complete truthfulness as a chief architect of the 1978 Chicago Statement on Biblical Inerrancy. He belongs in the Reformed/Calvinist tradition as a confessional Presbyterian who made Calvinist theology understandable to ordinary believers.",
+   "events": [
+    {
+     "year": "1971",
+     "title": "Founds Ligonier Ministries",
+     "text": "Starts the Ligonier Valley Study Center in Pennsylvania, which grows into Ligonier Ministries, its Tabletalk magazine, and a library of teaching series."
+    },
+    {
+     "year": "1978",
+     "title": "Chicago Statement on Biblical Inerrancy",
+     "text": "Serves as a chief architect of the landmark Chicago Statement defending the Bible's complete truthfulness against liberal scholarship."
+    },
+    {
+     "year": "1982",
+     "title": "Renewing Your Mind goes on air",
+     "text": "Launches the daily radio broadcast that carries his plain-spoken theology teaching to a worldwide audience."
+    }
+   ]
+  },
+  {
+   "id": "menno",
+   "name": "Menno Simons",
+   "dates": "1496-1561",
+   "tradition": "anabaptist",
+   "blurb": "Dutch Anabaptist leader who gave his name to the Mennonites.",
+   "born": 1496,
+   "died": 1561,
+   "impact": "Menno Simons gave his name to the Mennonites. After the violent Anabaptist disaster at M\u00fcnster (1534\u201336), he gathered the scattered, persecuted movement and turned it peaceful \u2014 organizing congregations across the Netherlands and northern Germany through tireless travel and writing. His followers became one of the historic peace churches, known for pacifism and simple living on several continents.",
+   "theology": "Menno taught that baptism belongs only to believers who confess their faith \u2014 he found no scriptural warrant for baptizing infants \u2014 and that the church is a voluntary community of the committed. He preached nonresistance: Christians must not wield the sword or swear oaths, following Jesus' Sermon on the Mount. He is the defining figure of the 'Anabaptist' tradition in this quiz.",
+   "events": [
+    {
+     "year": "1536",
+     "title": "Breaks with Rome",
+     "text": "After years of doubting Catholic teaching on the Eucharist and infant baptism, Menno renounces his priesthood and joins the Anabaptists, who baptize him as a believer."
+    },
+    {
+     "year": "1539",
+     "title": "Foundation of Christian Doctrine",
+     "text": "Menno publishes his major doctrinal work, giving the scattered peaceful Anabaptists a coherent theology of believer's baptism, nonresistance, and discipleship."
+    }
+   ]
+  },
+  {
+   "id": "moody",
+   "name": "D.L. Moody",
+   "dates": "1837-1899",
+   "tradition": "dispensational",
+   "blurb": "America's most famous 19th-century evangelist; a premillennialist shaped by the Niagara Bible conferences who popularized dispensational ideas without systematizing them.",
+   "born": 1837,
+   "died": 1899,
+   "impact": "D. L. Moody was the most famous evangelist of 19th-century America. With singer Ira Sankey, his campaigns filled halls across America and Britain in the 1870s, and his plain-spoken gospel invitations became the template for modern mass evangelism. He founded the Moody Church in Chicago, Northfield schools, the Moody Bible Institute, and a publishing house that still operate today.",
+   "theology": "Moody preached a simple, decision-centered gospel: hear, believe, and choose Christ. Absorbing the premillennial teaching of the Niagara Bible conferences, he expected Christ's imminent return and helped popularize that outlook across evangelicalism. He sits in the 'Dispensationalist' bucket as its great popularizer \u2014 a better fit than any other, though he systematized nothing himself.",
+   "events": [
+    {
+     "year": "1855",
+     "title": "Converted in a Boston shoe store",
+     "text": "At 18, working as a shoe salesman, Moody is led to Christ by his Sunday school teacher Edward Kimball \u2014 the start of his evangelistic life."
+    },
+    {
+     "year": "1873",
+     "title": "British campaigns with Sankey",
+     "text": "Moody and singer Ira Sankey tour the British Isles for two years, drawing enormous crowds and making Moody internationally famous."
+    },
+    {
+     "year": "1886",
+     "title": "Founds the Chicago Evangelization Society",
+     "text": "Moody starts a school to train urban evangelists; it becomes the Moody Bible Institute, still training ministers today."
+    }
+   ]
+  },
+  {
+   "id": "tozer",
+   "name": "A.W. Tozer",
+   "dates": "1897-1963",
+   "tradition": "wesleyan",
+   "blurb": "Christian and Missionary Alliance pastor of the \u2018deeper life\u2019; taught that believers can know God's presence intimately, that holiness is a second work of grace, and that the Spirit's gifts continue but must be tested by Scripture.",
+   "born": 1897,
+   "died": 1963,
+   "impact": "Aiden Wilson Tozer spent 44 years in the Christian and Missionary Alliance, including 31 years at Southside Alliance Church in Chicago. With almost no formal schooling, he taught himself theology and became known as a '20th-century prophet' for books like The Pursuit of God and The Knowledge of the Holy, which called Christians to a deeper, more reverent experience of God.",
+   "theology": "His teaching that holiness is a 'second work of grace' after conversion comes from the holiness movement rooted in John Wesley's theology. That lineage is why he belongs in the Wesleyan/Arminian tradition here rather than among the Pentecostals who read him.",
+   "events": [
+    {
+     "year": "1919",
+     "title": "First pastorate",
+     "text": "Without any theological training, Tozer accepts his first church, a small storefront in Nutter Fort, West Virginia, beginning 44 years of ministry in the Christian and Missionary Alliance."
+    },
+    {
+     "year": "1948",
+     "title": "The Pursuit of God published",
+     "text": "Publishes The Pursuit of God, the book that makes his name and is still considered a Christian classic on hungering after God."
+    },
+    {
+     "year": "1950",
+     "title": "Editor of The Alliance Weekly",
+     "text": "Elected editor of his denomination's magazine (now Alliance Life), using it to warn the church against compromising with worldly concerns until his death."
+    }
+   ]
+  },
+  {
+   "id": "bonhoeffer",
+   "name": "Dietrich Bonhoeffer",
+   "dates": "1906-1945",
+   "tradition": "lutheran",
+   "blurb": "German Lutheran pastor executed for resisting the Nazis; preached \u2018costly grace\u2019 \u2014 discipleship that costs everything \u2014 and held the Lutheran real presence of Christ in communion.",
+   "born": 1906,
+   "died": 1945,
+   "impact": "Dietrich Bonhoeffer co-founded the Confessing Church that defied Hitler's attempt to Nazify German Protestantism. Drawn into the military resistance, he was arrested in 1943 and hanged at Flossenb\u00fcrg concentration camp on April 9, 1945 \u2014 just weeks before the war ended. He is remembered as a modern martyr, and his prison letters are read worldwide.",
+   "theology": "Bonhoeffer, a Lutheran pastor, preached 'costly grace' \u2014 forgiveness that demands real discipleship \u2014 against the 'cheap grace' of nominal Christianity. His book The Cost of Discipleship (1937) remains a modern classic, and he held the Lutheran teaching of Christ's real presence in communion. He anchors the 'Lutheran' bucket as a Confessing Church Lutheran formed entirely by that heritage.",
+   "events": [
+    {
+     "year": "1934",
+     "title": "Confessing Church founded",
+     "text": "Bonhoeffer helps lead German pastors who refuse Nazi control of the church; the Barmen Declaration becomes their charter of resistance."
+    },
+    {
+     "year": "1937",
+     "title": "The Cost of Discipleship",
+     "text": "Written from his underground seminary at Finkenwalde, Bonhoeffer's book contrasting 'cheap' and 'costly' grace becomes a modern classic."
+    },
+    {
+     "year": "1945",
+     "title": "Executed at Flossenb\u00fcrg",
+     "text": "Implicated in resistance plots against Hitler, Bonhoeffer is hanged on April 9, 1945 \u2014 just weeks before Germany surrenders."
+    }
+   ]
+  },
+  {
+   "id": "packer",
+   "name": "J.I. Packer",
+   "dates": "1926-2020",
+   "tradition": "anglican",
+   "blurb": "Anglican evangelical whose Knowing God taught a generation to think biblically about God; a Calvinist in soteriology who defended infant baptism and the Book of Common Prayer.",
+   "born": 1926,
+   "died": 2020,
+   "impact": "James Innell Packer was counted among the most influential evangelicals of the 20th century. His 1973 book Knowing God taught a generation to think carefully and warmly about who God is, he served as general editor of the English Standard Version of the Bible, and he spent his final decades teaching theology at Regent College in Vancouver.",
+   "theology": "An evangelical Anglican in the Calvinist tradition, he defended infant baptism and the Book of Common Prayer. That combination \u2014 Reformed-leaning theology held inside bishops, prayer book, and parish \u2014 is why he is listed under the Anglican tradition.",
+   "events": [
+    {
+     "year": "1944",
+     "title": "Conversion at Oxford",
+     "text": "Commits his life to Christ at an InterVarsity evangelistic service two weeks into his studies at Oxford University."
+    },
+    {
+     "year": "1973",
+     "title": "Knowing God published",
+     "text": "Publishes Knowing God, which sells over a million copies and is later ranked among the most influential evangelical books of the century."
+    },
+    {
+     "year": "2001",
+     "title": "General editor of the ESV",
+     "text": "Serves as general editor of the newly published English Standard Version Bible translation, now used by millions of Christians."
+    }
+   ]
+  },
+  {
+   "id": "jpokluda",
+   "name": "Jonathan \"JP\" Pokluda",
+   "dates": "Contemporary",
+   "tradition": "baptist",
+   "blurb": "Preaches eternal security \u2014 once you're born again, \u2018you cannot undo that birthing\u2019 \u2014 with a blunt, free-choice call to respond to the gospel, teaching Scripture as the final authority in all of life.",
+   "born": null,
+   "died": null,
+   "impact": "Jonathan 'JP' Pokluda previously led The Porch, a Dallas young-adult ministry that grew from 150 to more than 7,000 under his leadership, and he is the bestselling author of Welcome to Adulting. He is now the lead pastor of Harris Creek Baptist Church in Waco, Texas.",
+   "theology": "He preaches eternal security \u2014 that a person truly born again cannot lose salvation \u2014 with a blunt, decide-today call to respond to the gospel. He belongs under the Baptist tradition for his believer's-baptism, Scripture-as-final-authority, autonomous-church convictions.",
+   "events": [
+    {
+     "year": "2019",
+     "title": "Moved to Waco as Harris Creek lead pastor",
+     "text": "Left The Porch, the largest weekly young-adult gathering in the country, to lead the 145-year-old Harris Creek Baptist Church, bringing his direct, Scripture-driven teaching to a congregational pastorate."
+    }
+   ]
+  },
+  {
+   "id": "rmadu",
+   "name": "Robert Madu",
+   "dates": "Contemporary",
+   "tradition": "pentecostal",
+   "blurb": "Lead pastor of Social Dallas; a Pentecostal preacher whose church affirms Spirit-baptism, present-day spiritual gifts, and divine healing \u2014 preached in his signature high-energy, story-driven style.",
+   "born": 1984,
+   "died": null,
+   "impact": "Robert Madu (born 1984) is the lead pastor of Social Dallas, a church he and his wife Taylor launched in April 2021. Trained at Southwestern Assemblies of God University, he spent years as a traveling preacher before planting the church, and he is known for high-energy, story-driven sermons.",
+   "theology": "His church's statement of faith affirms Spirit-baptism as empowerment for witness, the present-day operation of spiritual gifts, and divine healing. That Pentecostal doctrine \u2014 not just his preaching style \u2014 is why he is listed under the Pentecostal tradition.",
+   "events": [
+    {
+     "year": "2021",
+     "title": "Launched Social Dallas",
+     "text": "Founded the church with his wife Taylor in April 2021, building one of the fastest-growing congregations in Dallas around engaging worship and his signature preaching."
+    }
+   ]
+  },
+  {
+   "id": "bcrawford",
+   "name": "Bryce Crawford",
+   "dates": "Contemporary",
+   "tradition": "pentecostal",
+   "blurb": "Preaches salvation by grace through faith with a Pentecostal edge \u2014 believers seeking the Holy Spirit's power for ministry, divine healing in the atonement, and Christ returning to reign on earth.",
+   "born": null,
+   "died": null,
+   "impact": "Bryce Crawford is a Gen Z street evangelist and founder of the Jesus in the Street ministry. At 17, after years of anxiety and depression, he describes a dramatic conversion on Christmas Day 2020 that redirected his life toward evangelism. He takes the gospel to streets, campuses, and festivals, and has built a massive online following through raw, face-to-face gospel conversations.",
+   "theology": "His ministry's statement of faith teaches that believers should seek the Holy Spirit's power for ministry and that healing is part of Christ's atonement \u2014 classic Pentecostal convictions, which is why he is listed here rather than under Baptist.",
+   "events": [
+    {
+     "year": "2020",
+     "title": "Dramatic conversion",
+     "text": "On Christmas Day 2020, at age 17, after years of depression and anxiety, Crawford describes a life-changing encounter with God at a Waffle House that ended his despair and launched him into ministry."
+    },
+    {
+     "year": "2026",
+     "title": "I Love Jesus US Tour",
+     "text": "From February to March 2026 he toured 22 cities in 18 states, combining preaching, worship, and street-level gospel conversations in one of the largest recent evangelistic tours by a Gen Z figure."
+    }
+   ]
+  },
+  {
+   "id": "cknechtle",
+   "name": "Cliffe Knechtle",
+   "dates": "Contemporary",
+   "tradition": "dispensational",
+   "blurb": "Campus evangelist who treats Christianity as reasonable rather than blind belief, inviting skeptics to examine the evidence and choose. His theology is classic dispensational-evangelical: believer's baptism by immersion, a pretribulational rapture, and a free-will response to God's grace.",
+   "born": 1954,
+   "died": null,
+   "impact": "Cliffe Knechtle (born 1954) is an American evangelist and the senior pastor of Grace Community Church in New Canaan, Connecticut. Since the late 1970s he has held open-air question-and-answer sessions on university campuses, inviting skeptics to examine the evidence for Christianity; his Give Me An Answer ministry, founded in 1991, now reaches millions online.",
+   "theology": "His church's confession teaches believer's baptism by immersion, a pretribulational rapture (the belief that Christ will remove the church before a coming tribulation), and a free-will response to God's grace. Those dispensational-evangelical distinctives are why he is listed under the Dispensationalist tradition.",
+   "events": [
+    {
+     "year": "1991",
+     "title": "Founded Give Me An Answer",
+     "text": "Launched the campus outreach ministry of open-air Q&A with skeptics, which grew from a television program into one of the most-watched apologetics channels online."
+    },
+    {
+     "year": "2001",
+     "title": "Became senior pastor of Grace Community Church",
+     "text": "Took the pastorate of the New Canaan, Connecticut congregation, continuing his campus evangelism alongside local church ministry."
+    }
+   ]
+  },
+  {
+   "id": "sknechtle",
+   "name": "Stuart Knechtle",
+   "dates": "Contemporary",
+   "tradition": "dispensational",
+   "blurb": "Cliffe's son and co-host of Give Me An Answer, sharing his father's dispensational-evangelical framework \u2014 believer's baptism, a pretribulational rapture, and a free-will response to grace \u2014 while bringing a pastoral-counselor's posture to campus dialogues.",
+   "born": 1988,
+   "died": null,
+   "impact": "Stuart Knechtle (born 1988) is the son of Cliffe Knechtle and co-host of the Give Me An Answer campus ministry, which he joined in 2015. He serves as an assistant pastor at Grace Community Church in New Canaan and brings a pastoral counselor's posture to the same open-air dialogues with skeptics.",
+   "theology": "He ministers under the same church confession as his father \u2014 believer's baptism, a pretribulational rapture (the belief that Christ will remove the church before a coming tribulation), and free-will soteriology \u2014 which places him in the Dispensationalist tradition here.",
+   "events": [
+    {
+     "year": "2015",
+     "title": "Joined Give Me An Answer",
+     "text": "Teamed up with his father Cliffe for campus dialogues, becoming the ministry's co-host and bringing a new generation's voice to its apologetics work."
+    }
+   ]
+  },
+  {
+   "id": "tkeller",
+   "name": "Tim Keller",
+   "dates": "1950-2023",
+   "tradition": "reformed",
+   "blurb": "PCA Presbyterian minister and self-identified Calvinist; an amillennial, paedobaptist, complementarian Reformed theologian who remained open to the charismatic gifts \u2014 best known for winsome apologetics to urban skeptics.",
+   "born": 1950,
+   "died": 2023,
+   "impact": "Timothy James Keller founded Redeemer Presbyterian Church in New York City in 1989. He became famous for presenting the Christian faith persuasively to urban skeptics, especially in his 2008 bestseller The Reason for God, carrying Reformed theology into the cultural mainstream.",
+   "theology": "An ordained minister in the Presbyterian Church in America and a self-described Calvinist (though raised in a Lutheran church), he is known for winsome apologetics. He sits in the Reformed/Calvinist tradition as a confessional Presbyterian whose apologetics brought Calvinist thought to a broad audience.",
+   "events": [
+    {
+     "year": "1989",
+     "title": "Founds Redeemer Presbyterian",
+     "text": "Plants Redeemer Presbyterian Church in Manhattan with his wife Kathy; it grows into a hub for church planting across New York City."
+    },
+    {
+     "year": "2008",
+     "title": "The Reason for God",
+     "text": "Publishes The Reason for God: Belief in an Age of Skepticism, which becomes a New York Times bestseller."
+    },
+    {
+     "year": "2020",
+     "title": "Pancreatic cancer diagnosis",
+     "text": "Announces a pancreatic cancer diagnosis and spends his final years writing and teaching about facing death with gospel hope."
+    }
+   ]
+  },
+  {
+   "id": "bgraham",
+   "name": "Billy Graham",
+   "dates": "1918-2018",
+   "tradition": "baptist",
+   "blurb": "Southern Baptist revivalist of the great crusades: preach \u2018the Bible says,\u2019 call \u2018whosoever will\u2019 to decide for Christ at the altar, and send converts back into their own churches. Decisional evangelism over doctrinal system.",
+   "born": 1918,
+   "died": 2018,
+   "impact": "William Franklin Graham Jr. preached to more people in person than anyone in history \u2014 over 200 million across 185 countries. His 1949 Los Angeles crusade made him a national figure, his simple call to decide for Christ shaped modern evangelicalism, and he counseled every U.S. president from Truman to Obama.",
+   "theology": "He was an ordained Southern Baptist minister, baptized by immersion and ordained in 1939. He belongs in the Baptist tradition as a lifelong Southern Baptist representing the decisional, revivalist stream of Baptist life rather than its Calvinist wing.",
+   "events": [
+    {
+     "year": "1934",
+     "title": "Conversion",
+     "text": "Makes a personal commitment to Christ at a Charlotte, North Carolina revival meeting led by evangelist Mordecai Ham."
+    },
+    {
+     "year": "1949",
+     "title": "Los Angeles crusade",
+     "text": "An eight-week tent crusade in Los Angeles, extended from three weeks by overflow crowds, launches him to national fame."
+    },
+    {
+     "year": "1950",
+     "title": "Billy Graham Evangelistic Association",
+     "text": "Founds the BGEA in Minneapolis, organizing decades of crusades, the Hour of Decision radio program, and later Christianity Today magazine (1956)."
+    }
+   ]
+  },
+  {
+   "id": "jstott",
+   "name": "John Stott",
+   "dates": "1921-2011",
+   "tradition": "anglican",
+   "blurb": "Anglican evangelical scholar-pastor: Scripture supreme, penal-substitutionary atonement, Spirit-baptism at conversion with no second blessing, and social engagement as gospel fruit \u2014 evangelical conviction inside the prayer book and bishops.",
+   "born": 1921,
+   "died": 2011,
+   "impact": "John Robert Walmsley Stott was rector of All Souls Church in London for 25 years and a leader of the worldwide evangelical movement. His 1958 book Basic Christianity explained the faith to ordinary readers and has been translated into more than 60 languages, and he was a principal author of the 1974 Lausanne Covenant, evangelicalism's defining global manifesto.",
+   "theology": "An evangelical Anglican who stayed loyal to the Church of England when others urged secession, he models Reformed-leaning theology held inside bishops, prayer book, and parish. That is why he is listed under the Anglican tradition.",
+   "events": [
+    {
+     "year": "1950",
+     "title": "Rector of All Souls",
+     "text": "Becomes rector of All Souls, Langham Place in London, his only parish, transforming it into a center of clear expository preaching."
+    },
+    {
+     "year": "1958",
+     "title": "Basic Christianity",
+     "text": "Publishes Basic Christianity, which sells two million copies and becomes one of the most translated evangelical books ever written."
+    },
+    {
+     "year": "1974",
+     "title": "Lausanne Covenant",
+     "text": "Serves as a principal author of the Lausanne Covenant at the International Congress on World Evangelization in Switzerland."
+    }
+   ]
+  },
+  {
+   "id": "amcpherson",
+   "name": "Aimee Semple McPherson",
+   "dates": "1890-1944",
+   "tradition": "pentecostal",
+   "blurb": "Founder of the Foursquare Church; preached a \u2018Foursquare Gospel\u2019 of Jesus as Savior, Healer, Baptizer with the Holy Spirit, and Soon-Coming King. Taught Spirit baptism with tongues as a distinct second experience after conversion, and believed believers could fall from grace.",
+   "born": 1890,
+   "died": 1944,
+   "impact": "Aimee Elizabeth Semple McPherson was a Canadian-born American Pentecostal evangelist, media pioneer, and founder of the International Church of the Foursquare Gospel. In the 1920s and 30s she was the most publicized Protestant evangelist in America, drawing tens of thousands to faith-healing meetings and pioneering the use of radio for preaching from her 5,300-seat Angelus Temple in Los Angeles, one of the first megachurches.",
+   "theology": "Her 'Foursquare Gospel' \u2014 Jesus as Savior, Healer, Baptizer with the Holy Spirit, and Soon-Coming King \u2014 makes her the defining early figure of the Pentecostal/Charismatic tradition in this quiz.",
+   "events": [
+    {
+     "year": "1908",
+     "title": "Conversion and call to preach",
+     "text": "Converted at 17 at a Pentecostal revival led by evangelist Robert Semple, whom she marries; after his death on the mission field she begins itinerant preaching."
+    },
+    {
+     "year": "1923",
+     "title": "Angelus Temple opens",
+     "text": "Opens the 5,300-seat Angelus Temple in Los Angeles and launches pioneering religious radio broadcasts, blending preaching with popular entertainment."
+    },
+    {
+     "year": "1927",
+     "title": "Foursquare Church founded",
+     "text": "Founds the International Church of the Foursquare Gospel, codifying her fourfold message of Christ as Savior, Healer, Spirit-Baptizer, and Coming King."
+    }
+   ]
+  },
+  {
+   "id": "shauerwas",
+   "name": "Stanley Hauerwas",
+   "dates": "Contemporary",
+   "tradition": "anabaptist",
+   "blurb": "America's best theologian (Time, 2001) and a committed Methodist whose signature is neo-Anabaptist Christian pacifism: he taught a generation that Jesus' nonviolence is the Gospel's political center and that the church's job is to bear witness, not to manage the empire.",
+   "born": 1940,
+   "died": null,
+   "impact": "Stanley Hauerwas taught for decades at Duke Divinity School, where he held the Gilbert T. Rowe chair in theological ethics. In 2001, Time magazine named him 'America's Best Theologian.'",
+   "theology": "He argues that the church's calling is to be a faithful witness to Jesus rather than to manage the world, and that Christians must reject violence because Jesus did. He is himself a committed Methodist, but his signature teaching \u2014 Christian pacifism learned from Mennonite thinkers \u2014 is why he is listed under the Anabaptist tradition here.",
+   "events": [
+    {
+     "year": "1984",
+     "title": "Joined Duke Divinity School",
+     "text": "Left the University of Notre Dame for Duke, where he became the Gilbert T. Rowe Professor of Theological Ethics and wrote his most influential work on church, character, and nonviolence."
+    },
+    {
+     "year": "2001",
+     "title": "Named \u201cAmerica's Best Theologian\u201d",
+     "text": "Time magazine gave him the title in its \u201cAmerica's Best\u201d series, making his pacifist, community-centered theology famous far beyond academia."
+    }
+   ]
+  },
+  {
+   "id": "cscofield",
+   "name": "C.I. Scofield",
+   "dates": "1843-1921",
+   "tradition": "dispensational",
+   "blurb": "His reference Bible systematized dispensational premillennialism for generations of readers.",
+   "born": 1843,
+   "died": 1921,
+   "impact": "Cyrus Ingerson Scofield was a Civil War veteran turned lawyer turned pastor, mentored in premillennial teaching by James Brookes, who pastored churches in Dallas and Massachusetts. His annotated study Bible made dispensationalism the default theology of 20th-century fundamentalism.",
+   "theology": "His Scofield Reference Bible (1909) divided history into seven dispensations, or eras of God's dealing with humanity, and taught a sharp distinction between Israel and the church with a future literal kingdom on earth. That system is what defines the Dispensationalist tradition in this quiz.",
+   "events": [
+    {
+     "year": "1879",
+     "title": "Conversion",
+     "text": "After years as a lawyer and Kansas politician, experiences a dramatic conversion and begins intensive Bible study."
+    },
+    {
+     "year": "1882",
+     "title": "Pastor in Dallas",
+     "text": "Becomes minister of the First Congregational Church of Dallas, Texas, where his dispensational teaching takes shape."
+    },
+    {
+     "year": "1909",
+     "title": "Scofield Reference Bible published",
+     "text": "Oxford University Press publishes his annotated Bible; its notes systematize dispensational premillennialism for generations of readers (revised 1917)."
+    }
+   ]
+  },
+  {
+   "id": "ppalmer",
+   "name": "Phoebe Palmer",
+   "dates": "1807-1874",
+   "tradition": "wesleyan",
+   "blurb": "Methodist \u2018mother of the Holiness movement\u2019; taught entire sanctification \u2014 a second, instantaneous work of grace she also called the baptism with the Holy Spirit \u2014 received by faith alone, and used Pentecost to defend women's right to preach.",
+   "born": 1807,
+   "died": 1874,
+   "impact": "Phoebe Palmer (1807\u20131874) was a Methodist evangelist and writer, considered one of the founders of the Holiness movement. She also used the story of Pentecost to argue that women have the right to preach.",
+   "theology": "She taught 'entire sanctification' \u2014 the idea that a Christian can experience a second, decisive work of God's grace that frees them from the power of sin in this life \u2014 and said it could be received simply by trusting God's promises. Her whole theology grew directly out of John Wesley's teaching on holiness, which is why she belongs under the Wesleyan tradition.",
+   "events": [
+    {
+     "year": "1837",
+     "title": "Experienced entire sanctification",
+     "text": "On July 26, 1837, Palmer experienced what John Wesley called \u201centire sanctification\u201d \u2014 the decisive holiness experience she would spend the rest of her life teaching others to seek."
+    },
+    {
+     "year": "1859",
+     "title": "Published The Promise of the Father",
+     "text": "In this book she used the Pentecost story to defend women's right to preach, making her one of the earliest evangelical advocates for female ministry."
+    }
+   ]
+  },
+  {
+   "id": "jmacarthur",
+   "name": "John MacArthur",
+   "dates": "1939-2025",
+   "tradition": "dispensational",
+   "blurb": "Verse-by-verse expositor and five-point Calvinist famous for Lordship Salvation and the cessationist \u2018Strange Fire\u2019 controversy; a self-described dispensationalist who keeps Israel and the church distinct and holds a pretribulational rapture.",
+   "born": 1939,
+   "died": 2025,
+   "impact": "John MacArthur (1939\u20132025) was an American pastor who led Grace Community Church in Sun Valley, California, from 1969 until his death. He was famous for preaching verse-by-verse through the entire New Testament over 42 years, and for his 2013 Strange Fire conference.",
+   "theology": "He was known for the doctrine of 'Lordship Salvation' and for defending cessationism (the view that the miraculous sign gifts ended with the apostles). He described himself as a dispensationalist, teaching a sharp distinction between Israel and the church and a pretribulational rapture \u2014 that self-identified dispensationalism is why he is listed under the Dispensationalist tradition.",
+   "events": [
+    {
+     "year": "1969",
+     "title": "Became pastor of Grace Community Church",
+     "text": "Took the pulpit of the Sun Valley congregation, which he would lead for over five decades, building it into one of America's most influential conservative evangelical churches."
+    },
+    {
+     "year": "1977",
+     "title": "Grace to You began broadcasting",
+     "text": "His verse-by-verse Bible teaching program went national on radio and television, eventually reaching millions worldwide and funding The Master's Seminary."
+    }
+   ]
+  },
+  {
+   "id": "cwalther",
+   "name": "C.F.W. Walther",
+   "dates": "1811-1887",
+   "tradition": "lutheran",
+   "blurb": "First president of the Missouri Synod who made American Lutheranism confessional: justification by faith alone as the article everything hangs on, salvation as God's work alone (even rejecting election \u2018in view of faith\u2019), and Christ truly present in the Supper.",
+   "born": 1811,
+   "died": 1887,
+   "impact": "C.F.W. Walther (1811\u20131887) was a German-American Lutheran pastor who became the first president of the Lutheran Church\u2013Missouri Synod. His famous lectures on properly distinguishing Law from Gospel shaped generations of Lutheran preachers.",
+   "theology": "He insisted that being made right with God comes by faith alone and is entirely God's work \u2014 he even rejected the idea that God chooses people 'in view of' their future faith, calling that a road back to earning salvation. He is listed under the Lutheran tradition as one of its defining American architects.",
+   "events": [
+    {
+     "year": "1838",
+     "title": "Emigrated to the United States",
+     "text": "Left Saxony, Germany, with the Saxon Lutheran immigration, seeking the freedom to practice confessional Lutheranism without state-church control."
+    },
+    {
+     "year": "1847",
+     "title": "Elected first president of the LCMS",
+     "text": "Became the founding president of the Lutheran Church\u2013Missouri Synod, setting its course as a confessional Lutheran body anchored in the Book of Concord."
+    }
+   ]
+  },
+  {
+   "id": "eelliot",
+   "name": "Elisabeth Elliot",
+   "dates": "1926-2015",
+   "tradition": "anglican",
+   "blurb": "Episcopalian missionary author; taught that suffering is God's refining gift and that Scripture ordains distinct, complementary roles for men and women.",
+   "born": 1926,
+   "died": 2015,
+   "impact": "Elisabeth Elliot (1926\u20132015) was an American missionary and author. After her husband Jim Elliot was killed in 1956 trying to reach the Waorani people of Ecuador, she went to live among the very tribe that killed him, then wrote more than 20 books on suffering, faithfulness, and obedience.",
+   "theology": "She taught that suffering is never wasted and that Scripture assigns distinct, complementary roles to men and women. She was raised among the Plymouth Brethren but spent the last 46 years of her life as an Episcopalian, which is why she is listed under the Anglican tradition.",
+   "events": [
+    {
+     "year": "1956",
+     "title": "Jim Elliot martyred",
+     "text": "Her husband Jim and four fellow missionaries were speared to death by Waorani warriors in January 1956 while attempting peaceful contact in eastern Ecuador."
+    },
+    {
+     "year": "1958",
+     "title": "Went to live with the Waorani",
+     "text": "Elliot moved into the tribe that had killed her husband, living among them for two years with her young daughter \u2014 one of the most famous acts of forgiveness in modern missions."
+    }
+   ]
+  },
+  {
+   "id": "whuff",
+   "name": "Wesley Huff",
+   "dates": "Contemporary",
+   "tradition": "baptist",
+   "blurb": "Reformed Baptist pastor-elder and Apologetics Canada apologist; defended the Bible's reliability through manuscript evidence to millions. Affirms sovereign electing grace, believer's baptism, and a cautious, non-normative view of the sign gifts.",
+   "born": 1991,
+   "died": null,
+   "impact": "Wesley Huff (born 1991) is a Canadian apologist and theologian, currently pursuing a PhD in New Testament at Wycliffe College, University of Toronto, and serving with Apologetics Canada. He specializes in the history of ancient biblical manuscripts, and his January 2025 appearance on the Joe Rogan Experience brought the case for Scripture's reliability to millions of listeners.",
+   "theology": "He serves as a pastor-elder at West Toronto Baptist Church, whose confession teaches sovereign electing grace, believer's baptism by immersion, and elder-led congregational government. That Reformed Baptist ecclesiology is why he is listed under the Baptist tradition.",
+   "events": [
+    {
+     "year": "2024",
+     "title": "Debated Billy Carson",
+     "text": "His October 2024 debate with Billy Carson on Christian origins drew wide attention and established him as a leading public defender of the New Testament's reliability."
+    },
+    {
+     "year": "2025",
+     "title": "Appeared on the Joe Rogan Experience",
+     "text": "The January 2025 episode, focused on manuscript evidence for the Bible, was viewed millions of times and made him one of the most recognized apologists in the English-speaking world."
+    }
+   ]
+  },
+  {
+   "id": "sfurtick",
+   "name": "Steven Furtick",
+   "dates": "Contemporary",
+   "tradition": "baptist",
+   "blurb": "Founding pastor of Elevation Church in Charlotte; pairs near-verbatim Baptist inerrancy language with charismatic-flavored preaching and a co-senior pastorate shared with his wife Holly.",
+   "born": 1980,
+   "died": null,
+   "impact": "Steven Furtick planted Elevation Church in Charlotte, North Carolina in February 2006; it has grown into a multisite megachurch with 20 campuses. His 2010 book Sun Stand Still became a bestseller built around \u201caudacious faith.\u201d In June 2023 Elevation withdrew from the Southern Baptist Convention weeks after it voted to exclude churches with female pastors \u2014 Holly Furtick remains titled co-senior pastor and preaches regularly.",
+   "theology": "Furtick is a synergist (+75) and credobaptist (\u221275) whose church statement echoes the Baptist Faith and Message on inerrancy almost verbatim (\u2212100). His preaching is charismatic in practice \u2014 \u201cI prophesy it over your life\u201d \u2014 with a continuationist lean (+50), normative expressive worship (+50), and an egalitarian pastorate (+75). Eschatology, covenant, assurance, and sanctification drew honest zeros: he takes no discernible position.",
+   "events": [
+    {
+     "year": "2006",
+     "title": "Plants Elevation Church",
+     "text": "Furtick and seven families plant Elevation in Charlotte as a Southern Baptist Convention church plant; it grows into a 20-campus multisite church."
+    },
+    {
+     "year": "2010",
+     "title": "Sun Stand Still",
+     "text": "Publishes Sun Stand Still, a call to audacious, miracle-expecting faith that becomes a bestseller and defines Elevation\u2019s theological brand."
+    },
+    {
+     "year": "2023",
+     "title": "Withdraws from the SBC",
+     "text": "Elevation voluntarily leaves the Southern Baptist Convention after it votes to exclude churches with female pastors, keeping Holly Furtick in the co-senior pastor title and pulpit."
+    }
+   ]
+  },
+  {
+   "id": "mmiller",
+   "name": "Michael Miller",
+   "dates": "Contemporary",
+   "tradition": "pentecostal",
+   "blurb": "Founder and senior pastor of UPPERROOM in Dallas, a charismatic prayer-and-worship movement built around a morning/noon/night prayer room.",
+   "born": null,
+   "died": null,
+   "impact": "Michael Miller started UPPERROOM as a small prayer meeting in an upstairs Dallas office in April 2010; it grew into a prayer-and-worship movement whose prayer room runs morning, noon, and night. His 2023 book His House, His Presence teaches that \u201cministry to the Lord is every believer\u2019s first and primary calling.\u201d UPPERROOM\u2019s worship collective has carried its spontaneous prayer-room songs around the world.",
+   "theology": "Miller is a full continuationist (+100) and credobaptist (\u2212100) with a high view of Scripture as \u201cinspired, infallible, and authoritative\u201d (+75) \u2014 deliberately infallible rather than inerrant. Worship is Spirit-led and spontaneous (+75), gender roles lean egalitarian (+50), ordinances lean memorialist (\u221225), and sanctification is progressive (+25). Eschatology, covenant, polity, and assurance are honest zeros.",
+   "events": [
+    {
+     "year": "2010",
+     "title": "A prayer meeting in an upper room",
+     "text": "Miller and his wife begin gathering people to pray for Dallas in a small upstairs office space; the prayer movement that becomes UPPERROOM is born."
+    },
+    {
+     "year": "2023",
+     "title": "His House, His Presence",
+     "text": "Publishes His House, His Presence, his book-length case for prioritizing intimacy with God and the power of prayer."
+    }
+   ]
+  },
+  {
+   "id": "cgroeschel",
+   "name": "Craig Groeschel",
+   "dates": "Contemporary",
+   "tradition": "baptist",
+   "blurb": "Founding pastor of Life.Church (1996), one of America\u2019s largest multisite churches, and creator of the YouVersion Bible App; a pragmatic, seeker-oriented evangelical.",
+   "born": 1967,
+   "died": null,
+   "impact": "Craig Groeschel founded Life.Church in Edmond, Oklahoma in 1996; it now spans 46 campuses as one centrally governed church. In 2008 he launched the YouVersion Bible App, which became the world\u2019s most-downloaded Bible app. His books Winning the War in Your Mind and The Power to Change teach habit-based spiritual transformation.",
+   "theology": "Groeschel is a synergist (+75) and credobaptist (\u2212100) with a high, near-inerrantist view of Scripture (\u221275). Worship is missionally pragmatic \u2014 \u201canything short of sin to reach people\u201d (+75); polity is centrally connectional (+50); gender roles are egalitarian (+75); sanctification is progressive and habit-based (+75). Spirit-gifts, eschatology, covenant, assurance, and ordinances are honest zeros.",
+   "events": [
+    {
+     "year": "1996",
+     "title": "Founds Life.Church",
+     "text": "Plants Life Covenant Church in Edmond, Oklahoma; it becomes Life.Church, one of the largest multisite churches in America."
+    },
+    {
+     "year": "2008",
+     "title": "Launches YouVersion",
+     "text": "Releases the YouVersion Bible App, putting the Bible on smartphones worldwide and making Life.Church a tech pioneer in ministry."
+    },
+    {
+     "year": "2021",
+     "title": "Winning the War in Your Mind",
+     "text": "Publishes his bestselling guide to renewing the mind, the flagship statement of his habit-based transformation theology."
+    }
+   ]
+  },
+  {
+   "id": "bjohnson",
+   "name": "Bill Johnson",
+   "dates": "Contemporary",
+   "tradition": "pentecostal",
+   "blurb": "Senior leader of Bethel Church in Redding since 1996 and the central teaching figure of the modern Third Wave charismatic movement.",
+   "born": 1951,
+   "died": null,
+   "impact": "Bill Johnson became senior leader of Bethel Church in Redding, California in 1996; under him it grew into the flagship of the Third Wave charismatic movement. His 2005 book When Heaven Invades Earth teaches that signs and wonders are the normal Christian life. In 2006 Bethel\u2019s membership voted to withdraw from the Assemblies of God and become independent.",
+   "theology": "Johnson is a full continuationist (+100) with a normative, presence-driven worship culture (+100), credobaptist practice (\u2212100), and an egalitarian leadership ethos (+75 \u2014 his late wife Beni served as co-senior pastor). Scripture is \u201cinspired and infallible\u201d (+50) without strict inerrancy language; polity is independent congregational (\u221250). Soteriology, eschatology, covenant, assurance, ordinances, and sanctification are honest zeros.",
+   "events": [
+    {
+     "year": "1996",
+     "title": "Senior leader of Bethel",
+     "text": "Johnson becomes senior leader of Bethel Church in Redding, launching its transformation into a charismatic movement center."
+    },
+    {
+     "year": "2005",
+     "title": "When Heaven Invades Earth",
+     "text": "Publishes his signature book arguing that believers can do the works Jesus did and that miracles are the normal Christian life."
+    },
+    {
+     "year": "2006",
+     "title": "Bethel leaves the Assemblies of God",
+     "text": "Bethel\u2019s membership votes to withdraw from the AG and become an independent, self-governing church under Johnson\u2019s leadership."
+    }
+   ]
+  },
+  {
+   "id": "mchandler",
+   "name": "Matt Chandler",
+   "dates": "Contemporary",
+   "tradition": "baptist",
+   "blurb": "Lead pastor of The Village Church since 2002 and former president of Acts 29; a self-described \u201cReformed and charismatic\u201d New Calvinist.",
+   "born": 1974,
+   "died": null,
+   "impact": "Matt Chandler has led The Village Church in Flower Mound, Texas since 2002, building it into a flagship of the New Calvinist movement. He led the Acts 29 church-planting network as president and chairman. His 2012 book The Explicit Gospel made him one of the most influential Reformed voices of his generation \u2014 while personally practicing the charismatic gifts.",
+   "theology": "Chandler is an explicit monergist (\u2212100) and credobaptist (\u2212100) with strict inerrancy (\u2212100) and progressive-only sanctification (+100). His distinctive break: a self-described \u201cReformed and charismatic\u201d continuationism (+75) \u2014 he has personally experienced tongues \u2014 cleanly separating him from MacArthur and Piper. Amillennial-leaning (+50), covenant-leaning (+50), congregational polity (\u221275), lordship assurance (\u221275), memorialist ordinances (\u221250). Worship and gender-roles are honest zeros.",
+   "events": [
+    {
+     "year": "2002",
+     "title": "Lead pastor of The Village Church",
+     "text": "Takes the pulpit at The Village Church in Flower Mound, Texas, growing it into a hub of the New Calvinist resurgence."
+    },
+    {
+     "year": "2012",
+     "title": "The Explicit Gospel",
+     "text": "Publishes his clearest statement of Calvinist soteriology for ordinary believers, cementing his influence among young Reformed evangelicals."
+    },
+    {
+     "year": "2012",
+     "title": "President of Acts 29",
+     "text": "Becomes president of the Acts 29 church-planting network, leading a global movement of church plants with Reformed convictions."
+    }
+   ]
+  },
+  {
+   "id": "fchan",
+   "name": "Francis Chan",
+   "dates": "Contemporary",
+   "tradition": "baptist",
+   "blurb": "Bestselling author of Crazy Love; resigned a California megachurch in 2010 to plant simple house churches; trained at The Master\u2019s Seminary.",
+   "born": 1967,
+   "died": null,
+   "impact": "Francis Chan pastored Cornerstone Community Church in Simi Valley until resigning in 2010, saying people \u201crelied on my voice too much.\u201d His 2008 book Crazy Love became a bestseller confronting lukewarm Christianity. He founded the We Are Church house-church network in San Francisco, leading it until 2020. In a January 2020 sermon he moved toward the early church\u2019s real-presence view of communion.",
+   "theology": "Chan leans monergist (\u221250) with credobaptist practice (\u221275), strict inerrancy (\u2212100), and continuationist gifts (+75). His 2020 communion shift gives him a sacramental ordinances lean (+50) \u2014 a Barth\u2019s-credobaptism-grade break for a Master\u2019s Seminary graduate. Normative simple worship (+75), congregational-leaning polity (\u221250), progressive sanctification (+75), lordship-leaning assurance (\u221275). Covenant, eschatology, and gender-roles are zeros.",
+   "events": [
+    {
+     "year": "2008",
+     "title": "Crazy Love",
+     "text": "Publishes Crazy Love, his confrontation of comfortable Christianity, which becomes a defining evangelical bestseller."
+    },
+    {
+     "year": "2010",
+     "title": "Leaves the megachurch",
+     "text": "Resigns from Cornerstone to plant We Are Church, a network of simple house churches in San Francisco built on all-member participation."
+    },
+    {
+     "year": "2020",
+     "title": "The communion sermon",
+     "text": "Preaches his January 2020 sermon moving toward the early church\u2019s real-presence view of the Lord\u2019s Supper, stunning his low-church audience."
+    }
+   ]
+  },
+  {
+   "id": "astanley",
+   "name": "Andy Stanley",
+   "dates": "Contemporary",
+   "tradition": "baptist",
+   "blurb": "Founding senior pastor of North Point Community Church; architect of seeker-sensitive multisite ministry; known for the controversial \u201cunhitch\u201d apologetic.",
+   "born": 1958,
+   "died": null,
+   "impact": "Andy Stanley founded North Point Community Church in Alpharetta, Georgia in 1995; it became one of America\u2019s largest churches and the template for seeker-sensitive multisite ministry. His 2012 book Deep & Wide codified the model. His 2018 \u201cunhitch from the Old Testament\u201d apologetic sparked wide debate, and in 2024 he publicly criticized the SBC for expelling Saddleback over women pastors.",
+   "theology": "Stanley is a mild synergist (+25) and credobaptist (\u221275) whose statement affirms inerrancy while his public theology decenters the Bible \u2014 \u201cmy final authority is Jesus\u201d (\u221225). Worship is fully seeker-sensitive and pragmatic (+75); gender roles lean egalitarian (+50); ordinances are memorialist (\u221250); sanctification is directional and progressive (+50). Spirit-gifts, eschatology, covenant, polity, and assurance are zeros.",
+   "events": [
+    {
+     "year": "1995",
+     "title": "Founds North Point",
+     "text": "Plants North Point Community Church in Alpharetta, Georgia, pioneering the seeker-sensitive multisite model."
+    },
+    {
+     "year": "2012",
+     "title": "Deep & Wide",
+     "text": "Publishes the playbook for attractional ministry, arguing churches should design weekend services for the unchurched."
+    },
+    {
+     "year": "2018",
+     "title": "\u201cUnhitch\u201d controversy",
+     "text": "His Aftermath series urges Christians to \u201cunhitch\u201d faith from the Old Testament, igniting a fierce debate over his doctrine of Scripture."
+    }
+   ]
+  },
+  {
+   "id": "rwarren",
+   "name": "Rick Warren",
+   "dates": "Contemporary",
+   "tradition": "baptist",
+   "blurb": "Founding pastor of Saddleback Church (1980\u20132022); author of The Purpose Driven Life; reversed 43 years of complementarianism to ordain women in 2021.",
+   "born": 1954,
+   "died": null,
+   "impact": "Rick Warren founded Saddleback Church in Lake Forest, California in 1980 and led it for 42 years. His 2002 book The Purpose Driven Life became one of the bestselling books in history. A Southern Baptist for 43 years, he reversed his position on women pastors on scriptural grounds in 2021 and ordained three women; Saddleback was removed from the SBC in 2023.",
+   "theology": "Warren is a mild synergist (+25) and credobaptist (\u2212100) with strict inerrancy (\u2212100) and fully normative, target-audience worship (+100). His operative doctrine is fully egalitarian (+100) though he rejects the label; polity is congregational (\u2212100); sanctification progressive (+100); ordinances memorialist (\u2212100); assurance leans lordship (\u221250); gifts mildly continuationist (+25, SHAPE). Covenant and eschatology are zeros.",
+   "events": [
+    {
+     "year": "1980",
+     "title": "Founds Saddleback",
+     "text": "Starts Saddleback Church in Lake Forest, California; it grows into one of the largest churches in America on purpose-driven principles."
+    },
+    {
+     "year": "2002",
+     "title": "The Purpose Driven Life",
+     "text": "Publishes 40 days of purpose; it becomes one of the bestselling nonfiction books of all time."
+    },
+    {
+     "year": "2021",
+     "title": "Ordains women pastors",
+     "text": "After 43 years complementarian, Warren reverses on scriptural grounds and ordains three women pastors, leading to Saddleback\u2019s 2023 SBC removal."
+    }
+   ]
+  },
+  {
+   "id": "tevans",
+   "name": "Tony Evans",
+   "dates": "Contemporary",
+   "tradition": "dispensational",
+   "blurb": "Founding pastor of Oak Cliff Bible Fellowship (1976); the first Black doctorate of theology from Dallas Theological Seminary; \u201ckingdom agenda\u201d teacher.",
+   "born": 1949,
+   "died": null,
+   "impact": "Tony Evans founded Oak Cliff Bible Fellowship in Dallas in 1976 and built it into one of America\u2019s most influential Black churches. He was the first Black person to earn a doctorate of theology from Dallas Theological Seminary. His Urban Alternative broadcast and 2019 Tony Evans Study Bible carried his \u201ckingdom agenda\u201d \u2014 God\u2019s comprehensive rule over every area of life \u2014 nationwide. He stepped down from OCBF\u2019s senior pastorate in 2024.",
+   "theology": "Evans is the batch\u2019s dispensational anchor: premillennial (\u2212100) with a pre-tribulation rapture, classic dispensational covenant categories (\u2212100), and DTS-formed strict inerrancy (\u2212100). Soteriology leans synergist (+25); baptism is credobaptist (\u221275); gifts are soft-continuationist (+25); assurance is free-grace (+75); sanctification progressive (+75); gender roles complementarian (\u221275); polity congregational-elder (\u221275). Ordinances and worship are zeros.",
+   "events": [
+    {
+     "year": "1976",
+     "title": "Founds Oak Cliff Bible Fellowship",
+     "text": "Plants OCBF in Dallas; it becomes a flagship Black church and the platform for his national teaching ministry."
+    },
+    {
+     "year": "2019",
+     "title": "Tony Evans Study Bible",
+     "text": "Releases his CSB study Bible, the first full study Bible by a Black American theologian, distilling decades of kingdom-agenda teaching."
+    },
+    {
+     "year": "2024",
+     "title": "Steps down from OCBF",
+     "text": "Announces he is stepping down from the senior pastorate of Oak Cliff Bible Fellowship after nearly five decades."
+    }
+   ]
+  },
+  {
+   "id": "dplatt",
+   "name": "David Platt",
+   "dates": "Contemporary",
+   "tradition": "baptist",
+   "blurb": "Lead pastor of McLean Bible Church; author of Radical; former president of the SBC International Mission Board; Reformed Baptist missions advocate.",
+   "born": 1979,
+   "died": null,
+   "impact": "David Platt\u2019s 2010 book Radical challenged American comfort Christianity and made him a leading missions voice. He served as president of the SBC International Mission Board from 2014 to 2018, then became lead pastor of McLean Bible Church in the Washington, DC area. His Secret Church gatherings teach marathon theology sessions to mobilize believers for the nations.",
+   "theology": "Platt is the only new pastor with all 12 axes researched: monergist (\u2212100), credobaptist (\u2212100), open-but-cautious continuationist (+50), premillennial (\u2212100), dispensational-leaning covenant (\u221250), strict inerrancy (\u2212100), normative worship (+50), congregational polity (\u221275), complementarian (\u2212100), lordship assurance (\u2212100), memorialist ordinances (\u221275), progressive sanctification (+100).",
+   "events": [
+    {
+     "year": "2010",
+     "title": "Radical",
+     "text": "Publishes Radical, his summons to lose American-comfort Christianity for risk-taking discipleship; it becomes a missions-movement landmark."
+    },
+    {
+     "year": "2014",
+     "title": "President of the IMB",
+     "text": "Elected president of the Southern Baptist Convention\u2019s International Mission Board, leading its global missionary force."
+    },
+    {
+     "year": "2021",
+     "title": "Secret Church 20",
+     "text": "Teaches his Secret Church intensive on God\u2019s covenants and government, displaying his dispensational-leaning covenant theology."
+    }
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "id": 1,
+   "text": "No one would choose God on their own; God must change the heart first.",
+   "category": "Soteriology",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "soteriology",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "lutheran": 2,
+    "wesleyan": -1,
+    "baptist": 2,
+    "anabaptist": -1,
+    "anglican": 1,
+    "dispensational": 1
+   }
+  },
+  {
+   "id": 2,
+   "text": "God wants everyone to be saved, and each person must accept or reject him.",
+   "category": "Soteriology",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "soteriology",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "wesleyan": 2,
+    "baptist": -2,
+    "pentecostal": 1,
+    "anabaptist": 2,
+    "anglican": 1,
+    "dispensational": -1
+   }
+  },
+  {
+   "id": 3,
+   "text": "God keeps hold of believers even in their worst seasons.",
+   "category": "Soteriology",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "soteriology",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "lutheran": 1,
+    "wesleyan": 1,
+    "baptist": 2,
+    "anabaptist": -1,
+    "anglican": 1,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 4,
+   "text": "Christ's death made salvation possible for all people, but it becomes effective only for those who believe.",
+   "category": "Soteriology",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "soteriology",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": 2,
+    "wesleyan": 2,
+    "baptist": -2,
+    "pentecostal": 2,
+    "anabaptist": 2,
+    "anglican": 1,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 5,
+   "text": "God's grace enables every person to respond to the gospel, but each person must freely choose to believe.",
+   "category": "Soteriology",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "soteriology",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "wesleyan": 2,
+    "baptist": -2,
+    "pentecostal": 1,
+    "anabaptist": 2,
+    "anglican": 1
+   }
+  },
+  {
+   "id": 6,
+   "text": "I believe God saved me because he knew I would choose him.",
+   "category": "Soteriology",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "soteriology",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "wesleyan": 2,
+    "baptist": -2,
+    "anglican": -1
+   }
+  },
+  {
+   "id": 8,
+   "text": "Regeneration (the new birth) happens before and causes a person's faith, not the other way around.",
+   "category": "Soteriology",
+   "tier": "advanced",
+   "axes": [
+    {
+     "axis": "soteriology",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "wesleyan": -2,
+    "baptist": 2,
+    "pentecostal": -1,
+    "anabaptist": -1
+   }
+  },
+  {
+   "id": 9,
+   "text": "God's grace in salvation cannot be resisted by those he intends to save.",
+   "category": "Soteriology",
+   "tier": "complete",
+   "axes": [
+    {
+     "axis": "soteriology",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "lutheran": -1,
+    "wesleyan": -2,
+    "baptist": 2,
+    "anabaptist": -2
+   }
+  },
+  {
+   "id": 10,
+   "text": "God has eternally decreed everything that happens, including who is saved and who is lost.",
+   "category": "Soteriology",
+   "tier": "complete",
+   "axes": [
+    {
+     "axis": "soteriology",
+     "direction": -1,
+     "weight": 3
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "lutheran": -1,
+    "wesleyan": -2,
+    "baptist": 2,
+    "pentecostal": -1,
+    "anabaptist": -2,
+    "anglican": -1
+   }
+  },
+  {
+   "id": 11,
+   "text": "A true Christian can, through persistent unbelief, finally lose their salvation.",
+   "category": "Soteriology",
+   "tier": "complete",
+   "axes": [
+    {
+     "axis": "soteriology",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": 2,
+    "wesleyan": 2,
+    "baptist": -2,
+    "anabaptist": 2,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 12,
+   "text": "The Holy Spirit's convicting work can be resisted and rejected by the sinner.",
+   "category": "Soteriology",
+   "tier": "complete",
+   "axes": [
+    {
+     "axis": "soteriology",
+     "direction": 1,
+     "weight": 1
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": 1,
+    "wesleyan": 2,
+    "baptist": -1,
+    "pentecostal": 1,
+    "anabaptist": 1,
+    "anglican": 1
+   }
+  },
+  {
+   "id": 15,
+   "text": "The Bible's authority rests on its saving message, not on being error-free in historical or scientific details.",
+   "category": "Scripture",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "scripture",
+     "direction": 1,
+     "weight": 3
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -1,
+    "wesleyan": 1,
+    "baptist": -2,
+    "pentecostal": -1,
+    "anglican": 2,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 19,
+   "text": "The Bible's authority comes from the God who speaks through it, not from a theory about how it was written.",
+   "category": "Scripture",
+   "tier": "advanced",
+   "axes": [
+    {
+     "axis": "scripture",
+     "direction": 1,
+     "weight": 1
+    }
+   ],
+   "traditions": {
+    "reformed": -1,
+    "wesleyan": 1,
+    "baptist": 2,
+    "anglican": 1,
+    "dispensational": -1
+   }
+  },
+  {
+   "id": 23,
+   "text": "Baptism is primarily a person's own decision to follow Christ.",
+   "category": "Sacraments/Ordinances",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "baptism",
+     "direction": -1,
+     "weight": 3
+    }
+   ],
+   "traditions": {
+    "reformed": -1,
+    "lutheran": -2,
+    "wesleyan": -1,
+    "baptist": 1,
+    "pentecostal": 2,
+    "anabaptist": 2,
+    "anglican": -2,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 24,
+   "text": "Babies should be welcomed into the faith through baptism.",
+   "category": "Sacraments/Ordinances",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "baptism",
+     "direction": 1,
+     "weight": 3
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "lutheran": 2,
+    "wesleyan": 2,
+    "baptist": -2,
+    "pentecostal": -2,
+    "anabaptist": -2,
+    "anglican": 2,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 25,
+   "text": "Baptism doesn't really count until someone is old enough to choose it themselves.",
+   "category": "Sacraments/Ordinances",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "baptism",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "wesleyan": -2,
+    "baptist": 2,
+    "pentecostal": 1,
+    "anabaptist": -2,
+    "anglican": -2,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 26,
+   "text": "Baptism is the New Testament counterpart to circumcision, marking out believers' children as part of God's covenant people.",
+   "category": "Sacraments/Ordinances",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "baptism",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "baptist": -2,
+    "pentecostal": -2,
+    "anabaptist": -2,
+    "anglican": 1,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 27,
+   "text": "A baby baptism doesn't really count \u2014 you should be baptized again once you believe for yourself.",
+   "category": "Sacraments/Ordinances",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "baptism",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "wesleyan": -2,
+    "baptist": 2,
+    "pentecostal": 1,
+    "anabaptist": 2,
+    "anglican": -2,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 29,
+   "text": "The mode of baptism doesn't matter \u2014 immersion, pouring, and sprinkling are all valid when done in the triune name.",
+   "category": "Sacraments/Ordinances",
+   "tier": "complete",
+   "axes": [
+    {
+     "axis": "baptism",
+     "direction": 1,
+     "weight": 1
+    }
+   ],
+   "traditions": {
+    "reformed": 1,
+    "baptist": -2,
+    "pentecostal": -1,
+    "anglican": 1,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 30,
+   "text": "Delaying baptism until a child is old enough to give a mature profession of faith is the wisest practice.",
+   "category": "Sacraments/Ordinances",
+   "tier": "complete",
+   "axes": [
+    {
+     "axis": "baptism",
+     "direction": -1,
+     "weight": 1
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "wesleyan": -2,
+    "baptist": 1,
+    "pentecostal": 1,
+    "anabaptist": 1,
+    "anglican": -1,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 31,
+   "text": "I expect God still does miracles like healing and prophecy today.",
+   "category": "Pneumatology",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "spirit-gifts",
+     "direction": 1,
+     "weight": 3
+    }
+   ],
+   "traditions": {
+    "reformed": -1,
+    "lutheran": -1,
+    "wesleyan": 1,
+    "pentecostal": 2,
+    "dispensational": -1
+   }
+  },
+  {
+   "id": 32,
+   "text": "Speaking in tongues is a valid practice for Christians today.",
+   "category": "Pneumatology",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "spirit-gifts",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -1,
+    "wesleyan": 1,
+    "pentecostal": 2,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 33,
+   "text": "I believe God still gives people specific words for others today.",
+   "category": "Pneumatology",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "spirit-gifts",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -1,
+    "wesleyan": 1,
+    "baptist": -1,
+    "pentecostal": 2,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 35,
+   "text": "Speaking in tongues is the expected initial sign of being baptized in the Holy Spirit.",
+   "category": "Pneumatology",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "spirit-gifts",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "wesleyan": -2,
+    "baptist": -2,
+    "pentecostal": 2,
+    "anglican": -1,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 36,
+   "text": "Christians should actively seek and practice spiritual gifts like healing and prophecy.",
+   "category": "Pneumatology",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "spirit-gifts",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -1,
+    "wesleyan": 1,
+    "pentecostal": 2,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 37,
+   "text": "The 'perfect' of 1 Corinthians 13 refers to the completion of the New Testament canon.",
+   "category": "Pneumatology",
+   "tier": "advanced",
+   "axes": [
+    {
+     "axis": "spirit-gifts",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "wesleyan": -1,
+    "pentecostal": -2,
+    "dispensational": 1
+   }
+  },
+  {
+   "id": 38,
+   "text": "The baptism in the Holy Spirit is a distinct experience after conversion.",
+   "category": "Pneumatology",
+   "tier": "complete",
+   "axes": [
+    {
+     "axis": "spirit-gifts",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "wesleyan": 1,
+    "baptist": -2,
+    "pentecostal": 2,
+    "anglican": -1,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 39,
+   "text": "Christians today should expect God to heal the sick in response to prayer.",
+   "category": "Pneumatology",
+   "tier": "complete",
+   "axes": [
+    {
+     "axis": "spirit-gifts",
+     "direction": 1,
+     "weight": 1
+    }
+   ],
+   "traditions": {
+    "reformed": 1,
+    "wesleyan": 1,
+    "pentecostal": 2,
+    "anglican": 1,
+    "dispensational": -1
+   }
+  },
+  {
+   "id": 40,
+   "text": "Jesus will return and establish a literal, earthly kingdom.",
+   "category": "Eschatology",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "eschatology",
+     "direction": -1,
+     "weight": 3
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "pentecostal": 2,
+    "anglican": -1,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 41,
+   "text": "I think Jesus is already reigning now \u2014 the end is more about him wrapping things up.",
+   "category": "Eschatology",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "eschatology",
+     "direction": 1,
+     "weight": 3
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "lutheran": 2,
+    "pentecostal": -1,
+    "anglican": 1,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 42,
+   "text": "I believe God still has special plans for the Jewish people.",
+   "category": "Eschatology",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "eschatology",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "wesleyan": 2,
+    "pentecostal": 2,
+    "anglican": -1,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 43,
+   "text": "I believe Christians will be raptured before the really bad stuff happens.",
+   "category": "Eschatology",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "eschatology",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "pentecostal": 1,
+    "anglican": -2,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 44,
+   "text": "The church is the continuation and fulfillment of Israel in God's plan.",
+   "category": "Eschatology",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "covenant",
+     "direction": 1,
+     "weight": 1
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "lutheran": 1,
+    "pentecostal": -1,
+    "anglican": 1,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 45,
+   "text": "Jesus could return at any moment, without any prophesied events needing to happen first.",
+   "category": "Eschatology",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "eschatology",
+     "direction": -1,
+     "weight": 1
+    }
+   ],
+   "traditions": {
+    "reformed": -1,
+    "wesleyan": -1,
+    "pentecostal": 2,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 49,
+   "text": "The Old Testament feels like a different era when God worked by different rules.",
+   "category": "Scripture",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "covenant",
+     "direction": -1,
+     "weight": 3
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "wesleyan": -1,
+    "baptist": -2,
+    "anabaptist": 1,
+    "anglican": -1,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 51,
+   "text": "Israel and the church are two distinct groups in God's plan.",
+   "category": "Scripture",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "covenant",
+     "direction": -1,
+     "weight": 3
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -1,
+    "pentecostal": 1,
+    "anglican": -1,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 52,
+   "text": "Christians are free from the Old Testament law and live entirely under grace.",
+   "category": "Scripture",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "covenant",
+     "direction": -1,
+     "weight": 1
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "wesleyan": -2,
+    "baptist": -2,
+    "anabaptist": 1,
+    "anglican": -1,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 53,
+   "text": "God's moral law, like the Ten Commandments, still guides Christian obedience today.",
+   "category": "Scripture",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "covenant",
+     "direction": 1,
+     "weight": 1
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "lutheran": 2,
+    "wesleyan": 2,
+    "baptist": 2,
+    "anglican": 1,
+    "dispensational": -1
+   }
+  },
+  {
+   "id": 54,
+   "text": "The church began at Pentecost as something entirely new, not as the continuation of Israel.",
+   "category": "Scripture",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "covenant",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "anglican": -1,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 55,
+   "text": "The 'covenant of works' with Adam and the 'covenant of grace' in Christ are the right framework for reading the whole Bible.",
+   "category": "Scripture",
+   "tier": "advanced",
+   "axes": [
+    {
+     "axis": "covenant",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "baptist": 1,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 56,
+   "text": "Prophecies given to Israel should be read literally as referring to ethnic Israel, not spiritually as referring to the church.",
+   "category": "Scripture",
+   "tier": "complete",
+   "axes": [
+    {
+     "axis": "covenant",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "wesleyan": 1,
+    "pentecostal": 1,
+    "anglican": -1,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 57,
+   "text": "The New Testament authors sometimes draw out a deeper meaning from Old Testament texts than the original author consciously intended.",
+   "category": "Scripture",
+   "tier": "complete",
+   "axes": [
+    {
+     "axis": "covenant",
+     "direction": 1,
+     "weight": 1
+    }
+   ],
+   "traditions": {
+    "reformed": 1,
+    "baptist": -1,
+    "anglican": 1,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 58,
+   "text": "Churches should not add worship elements merely because they are creative.",
+   "category": "Worship",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "worship",
+     "direction": -1,
+     "weight": 3
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "wesleyan": -1,
+    "baptist": 2,
+    "anglican": -1
+   }
+  },
+  {
+   "id": 59,
+   "text": "Churches should try creative new things in worship.",
+   "category": "Worship",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "worship",
+     "direction": 1,
+     "weight": 3
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -1,
+    "wesleyan": 1,
+    "baptist": -2,
+    "anglican": 1
+   }
+  },
+  {
+   "id": 62,
+   "text": "Only psalms should be sung in gathered worship; uninspired hymns are not permitted.",
+   "category": "Worship",
+   "tier": "advanced",
+   "axes": [
+    {
+     "axis": "worship",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": 1,
+    "lutheran": -2,
+    "wesleyan": -2,
+    "baptist": -2,
+    "anglican": -1
+   }
+  },
+  {
+   "id": 63,
+   "text": "A church's worship style should adapt to its local culture to reach people effectively.",
+   "category": "Worship",
+   "tier": "complete",
+   "axes": [
+    {
+     "axis": "worship",
+     "direction": 1,
+     "weight": 1
+    }
+   ],
+   "traditions": {
+    "reformed": -1,
+    "lutheran": 1,
+    "wesleyan": 1,
+    "baptist": -1,
+    "anglican": 1
+   }
+  },
+  {
+   "id": 66,
+   "text": "Each local church should answer to no one but God.",
+   "category": "Ecclesiology",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "polity",
+     "direction": -1,
+     "weight": 3
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "baptist": 2,
+    "anglican": -2
+   }
+  },
+  {
+   "id": 67,
+   "text": "Churches are healthier when they're accountable to leaders beyond their own walls.",
+   "category": "Ecclesiology",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "polity",
+     "direction": 1,
+     "weight": 3
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "lutheran": 2,
+    "baptist": -2,
+    "anglican": 2
+   }
+  },
+  {
+   "id": 68,
+   "text": "The final human authority in a local church is the congregation as a whole.",
+   "category": "Ecclesiology",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "polity",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "baptist": 2,
+    "anabaptist": 2,
+    "anglican": -2
+   }
+  },
+  {
+   "id": 69,
+   "text": "Pastors should be appointed by church leaders, not chosen by congregational vote.",
+   "category": "Ecclesiology",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "polity",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "baptist": -2,
+    "anabaptist": -2,
+    "anglican": 2
+   }
+  },
+  {
+   "id": 70,
+   "text": "An unbroken line of bishops back to the apostles matters for a church's legitimacy.",
+   "category": "Ecclesiology",
+   "tier": "advanced",
+   "axes": [
+    {
+     "axis": "polity",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "baptist": -2,
+    "anabaptist": -2,
+    "anglican": 2
+   }
+  },
+  {
+   "id": 72,
+   "text": "Local churches should cooperate in associations or conventions while remaining self-governing.",
+   "category": "Ecclesiology",
+   "tier": "complete",
+   "axes": [
+    {
+     "axis": "polity",
+     "direction": -1,
+     "weight": 1
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "baptist": 2,
+    "pentecostal": 1,
+    "anabaptist": 1,
+    "anglican": -1
+   }
+  },
+  {
+   "id": 73,
+   "text": "Communion is mainly about remembering what Jesus did.",
+   "category": "Sacraments/Ordinances",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "ordinances",
+     "direction": -1,
+     "weight": 3
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "wesleyan": -1,
+    "baptist": 1,
+    "pentecostal": 2,
+    "anabaptist": 2,
+    "anglican": -1,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 74,
+   "text": "Believers truly meet God in a special way in communion.",
+   "category": "Sacraments/Ordinances",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "ordinances",
+     "direction": 1,
+     "weight": 3
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "lutheran": 2,
+    "wesleyan": 2,
+    "baptist": -1,
+    "pentecostal": -1,
+    "anabaptist": -1,
+    "anglican": 2,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 75,
+   "text": "Baptism is mostly a public way of showing you're a Christian.",
+   "category": "Sacraments/Ordinances",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "ordinances",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "wesleyan": -2,
+    "baptist": -1,
+    "pentecostal": 1,
+    "anabaptist": -1,
+    "anglican": -2,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 76,
+   "text": "God uses baptism to convey grace and forgiveness to the recipient.",
+   "category": "Sacraments/Ordinances",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "ordinances",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": 1,
+    "lutheran": 2,
+    "wesleyan": 2,
+    "baptist": -2,
+    "pentecostal": -1,
+    "anabaptist": -1,
+    "anglican": 2,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 77,
+   "text": "Christ is spiritually present in the Lord's Supper in a special way, beyond his general presence everywhere.",
+   "category": "Sacraments/Ordinances",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "ordinances",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "lutheran": 1,
+    "wesleyan": 2,
+    "baptist": 2,
+    "anabaptist": -1,
+    "anglican": 1,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 79,
+   "text": "In communion, Christ's body and blood are truly present 'in, with, and under' the bread and wine.",
+   "category": "Sacraments/Ordinances",
+   "tier": "advanced",
+   "axes": [
+    {
+     "axis": "ordinances",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": 2,
+    "wesleyan": -2,
+    "baptist": -2,
+    "pentecostal": -1,
+    "anabaptist": -1,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 80,
+   "text": "Baptism replaces circumcision as the sign of belonging to God's covenant people.",
+   "category": "Sacraments/Ordinances",
+   "tier": "complete",
+   "axes": [
+    {
+     "axis": "ordinances",
+     "direction": 1,
+     "weight": 1
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "baptist": -2,
+    "anabaptist": -2,
+    "anglican": 1,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 81,
+   "text": "Baptism is necessary for salvation.",
+   "category": "Sacraments/Ordinances",
+   "tier": "complete",
+   "axes": [
+    {
+     "axis": "ordinances",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": 2,
+    "baptist": -2,
+    "pentecostal": -2,
+    "anabaptist": -1,
+    "anglican": 1,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 82,
+   "text": "I believe it's possible to reach a point where sin doesn't control you anymore.",
+   "category": "Christian life",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "sanctification",
+     "direction": -1,
+     "weight": 3
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "wesleyan": 2,
+    "baptist": -1,
+    "pentecostal": 1,
+    "anabaptist": 1,
+    "anglican": -1,
+    "dispensational": -1
+   }
+  },
+  {
+   "id": 83,
+   "text": "Believers will struggle against sin for the rest of their lives.",
+   "category": "Christian life",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "sanctification",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "lutheran": 2,
+    "wesleyan": -2,
+    "baptist": 2,
+    "pentecostal": 1,
+    "anglican": 2,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 84,
+   "text": "Growth in holiness happens gradually over a lifetime, not in a single crisis moment.",
+   "category": "Christian life",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "sanctification",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "lutheran": 2,
+    "wesleyan": -2,
+    "baptist": 2,
+    "anglican": 1,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 85,
+   "text": "A Christian can reach a state of not sinning willfully in this life.",
+   "category": "Christian life",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "sanctification",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "wesleyan": 2,
+    "baptist": -2,
+    "anglican": -1,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 86,
+   "text": "John Wesley's doctrine of entire sanctification is a faithful reading of Scripture.",
+   "category": "Christian life",
+   "tier": "advanced",
+   "axes": [
+    {
+     "axis": "sanctification",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "wesleyan": 2,
+    "baptist": -2,
+    "pentecostal": -1,
+    "anglican": -1,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 87,
+   "text": "Even the most mature Christians remain sinners who need daily repentance.",
+   "category": "Christian life",
+   "tier": "complete",
+   "axes": [
+    {
+     "axis": "sanctification",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "lutheran": 2,
+    "wesleyan": -1,
+    "baptist": 2,
+    "pentecostal": 1,
+    "anglican": 2,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 89,
+   "text": "The baptism in the Holy Spirit empowers believers for holy living and witness.",
+   "category": "Christian life",
+   "tier": "complete",
+   "axes": [
+    {
+     "axis": "sanctification",
+     "direction": -1,
+     "weight": 1
+    },
+    {
+     "axis": "spirit-gifts",
+     "direction": 1,
+     "weight": 1
+    }
+   ],
+   "traditions": {
+    "reformed": -1,
+    "wesleyan": 1,
+    "baptist": -1,
+    "pentecostal": 2,
+    "dispensational": -1
+   }
+  },
+  {
+   "id": 97,
+   "text": "If someone's life never changes, their faith was probably not genuine.",
+   "category": "Soteriology",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "assurance",
+     "direction": -1,
+     "weight": 3
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "lutheran": 1,
+    "wesleyan": 1,
+    "baptist": 2,
+    "pentecostal": 1,
+    "anabaptist": 2,
+    "anglican": 1,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 98,
+   "text": "Christians whose lives look messy can still have genuine faith.",
+   "category": "Soteriology",
+   "tier": "essential",
+   "axes": [
+    {
+     "axis": "assurance",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "lutheran": 1,
+    "wesleyan": 1,
+    "baptist": 1,
+    "anabaptist": -2,
+    "anglican": 1,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 99,
+   "text": "If someone claims to be a Christian but lives in unrepentant sin, we should doubt whether their faith is genuine.",
+   "category": "Soteriology",
+   "tier": "standard",
+   "axes": [
+    {
+     "axis": "assurance",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "lutheran": 1,
+    "wesleyan": 1,
+    "baptist": 2,
+    "pentecostal": 1,
+    "anabaptist": 2,
+    "anglican": 1,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 101,
+   "text": "Salvation requires receiving Jesus as Lord, not only as Savior.",
+   "category": "Soteriology",
+   "tier": "advanced",
+   "axes": [
+    {
+     "axis": "assurance",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "lutheran": 1,
+    "wesleyan": 1,
+    "baptist": 1,
+    "pentecostal": 1,
+    "anabaptist": 1,
+    "anglican": 1,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 102,
+   "text": "Assurance of salvation comes from trusting God's promise, not from examining your own obedience.",
+   "category": "Soteriology",
+   "tier": "complete",
+   "axes": [
+    {
+     "axis": "assurance",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "reformed": -1,
+    "lutheran": 2,
+    "wesleyan": -2,
+    "baptist": -1,
+    "pentecostal": 1,
+    "anabaptist": -1,
+    "anglican": 1,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 103,
+   "text": "The 'free grace' teaching associated with Dallas Seminary faithfully represents the gospel.",
+   "category": "Soteriology",
+   "tier": "complete",
+   "axes": [
+    {
+     "axis": "assurance",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "traditions": {
+    "lutheran": -1,
+    "wesleyan": -2,
+    "baptist": -1,
+    "pentecostal": -1,
+    "anabaptist": -2,
+    "anglican": -1,
+    "dispensational": 2
+   }
+  },
+  {
+   "id": 104,
+   "text": "Saving faith includes a commitment to obey Christ, even before a person understands all that obedience requires.",
+   "category": "Soteriology",
+   "tier": "complete",
+   "axes": [
+    {
+     "axis": "assurance",
+     "direction": -1,
+     "weight": 1
+    }
+   ],
+   "traditions": {
+    "reformed": 2,
+    "lutheran": 1,
+    "wesleyan": 1,
+    "baptist": 1,
+    "pentecostal": 1,
+    "anabaptist": 2,
+    "anglican": 1,
+    "dispensational": -2
+   }
+  },
+  {
+   "id": 105,
+   "text": "Once a person has believed, their eternal destiny is secure even if they later abandon the faith.",
+   "category": "Soteriology",
+   "tier": "complete",
+   "axes": [
+    {
+     "axis": "assurance",
+     "direction": 1,
+     "weight": 1
+    }
+   ],
+   "traditions": {
+    "reformed": -2,
+    "lutheran": -2,
+    "wesleyan": -2,
+    "baptist": -1,
+    "anabaptist": -2,
+    "anglican": -1,
+    "dispensational": 2
+   }
+  },
+  {
+   "axes": [
+    {
+     "axis": "scripture",
+     "direction": -1,
+     "weight": 3
+    }
+   ],
+   "category": "Scripture",
+   "id": 201,
+   "text": "The Bible is without error in everything it affirms, including its claims about history and the natural world.",
+   "tier": "essential",
+   "traditions": {
+    "anglican": -1,
+    "baptist": 2,
+    "dispensational": 2,
+    "lutheran": 1,
+    "pentecostal": 2,
+    "reformed": 2,
+    "wesleyan": -1
+   }
+  },
+  {
+   "axes": [
+    {
+     "axis": "scripture",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "category": "Scripture",
+   "id": 202,
+   "text": "Christians can trust the Bible partly because the church has recognized these books, without doubting them, across the centuries.",
+   "tier": "standard",
+   "traditions": {
+    "anglican": 2,
+    "baptist": -2,
+    "reformed": -2,
+    "wesleyan": 1
+   }
+  },
+  {
+   "axes": [
+    {
+     "axis": "scripture",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "category": "Scripture",
+   "id": 203,
+   "text": "A Christian's deepest certainty that the Bible is true comes from the Holy Spirit's inward witness, not from historical or rational proofs.",
+   "tier": "standard",
+   "traditions": {
+    "anglican": -1,
+    "baptist": 2,
+    "reformed": 2,
+    "wesleyan": -1
+   }
+  },
+  {
+   "axes": [
+    {
+     "axis": "scripture",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "category": "Scripture",
+   "id": 204,
+   "text": "Christians should not describe the Bible as 'inerrant,' since the word goes beyond what the church's confessions have historically claimed.",
+   "tier": "standard",
+   "traditions": {
+    "anabaptist": 1,
+    "anglican": 1,
+    "baptist": -1,
+    "dispensational": -2,
+    "lutheran": 1,
+    "reformed": -1,
+    "wesleyan": 1
+   }
+  },
+  {
+   "axes": [
+    {
+     "axis": "scripture",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "category": "Scripture",
+   "id": 205,
+   "text": "It is important for Christians to affirm that the Bible contains no errors.",
+   "tier": "standard",
+   "traditions": {
+    "anabaptist": -1,
+    "anglican": -1,
+    "baptist": 1,
+    "dispensational": 2,
+    "lutheran": -1,
+    "pentecostal": 2,
+    "reformed": 1,
+    "wesleyan": -1
+   }
+  },
+  {
+   "axes": [
+    {
+     "axis": "scripture",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "category": "Scripture",
+   "id": 206,
+   "text": "The Bible's authority comes from God alone, not from any human or churchly testimony about it.",
+   "tier": "standard",
+   "traditions": {
+    "anglican": -1,
+    "baptist": 2,
+    "dispensational": 1,
+    "lutheran": 1,
+    "pentecostal": 1,
+    "reformed": 2,
+    "wesleyan": -1
+   }
+  },
+  {
+   "axes": [
+    {
+     "axis": "scripture",
+     "direction": 1,
+     "weight": 1
+    }
+   ],
+   "category": "Scripture",
+   "id": 207,
+   "text": "Debates about the Bible's inerrancy distract Christians from its saving message.",
+   "tier": "advanced",
+   "traditions": {
+    "anglican": 1,
+    "baptist": -1,
+    "dispensational": -2,
+    "reformed": -1,
+    "wesleyan": 1
+   }
+  },
+  {
+   "axes": [
+    {
+     "axis": "worship",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "category": "Worship",
+   "id": 208,
+   "text": "It is fitting for churches to use musical instruments in gathered worship, not only voices.",
+   "tier": "standard",
+   "traditions": {
+    "anglican": 1,
+    "baptist": -1,
+    "lutheran": 1,
+    "reformed": -1,
+    "wesleyan": 1
+   }
+  },
+  {
+   "axes": [
+    {
+     "axis": "worship",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "category": "Worship",
+   "id": 209,
+   "text": "Churches should observe the historic Christian seasons (such as Advent, Lent, and Easter) in their worship life.",
+   "tier": "standard",
+   "traditions": {
+    "anglican": 2,
+    "baptist": -1,
+    "lutheran": 1,
+    "reformed": -1,
+    "wesleyan": 1
+   }
+  },
+  {
+   "axes": [
+    {
+     "axis": "worship",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "category": "Worship",
+   "id": 210,
+   "text": "Crosses, banners, and other visual art have a proper place in the room where a church gathers for worship.",
+   "tier": "standard",
+   "traditions": {
+    "anglican": 1,
+    "baptist": -1,
+    "lutheran": 1,
+    "reformed": -1
+   }
+  },
+  {
+   "axes": [
+    {
+     "axis": "worship",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "category": "Worship",
+   "id": 211,
+   "text": "It is wrong for a church to require its ministers to follow a prescribed prayer book.",
+   "tier": "advanced",
+   "traditions": {
+    "anglican": -2,
+    "baptist": 1,
+    "lutheran": -1,
+    "reformed": 1,
+    "wesleyan": -1
+   }
+  },
+  {
+   "axes": [
+    {
+     "axis": "worship",
+     "direction": -1,
+     "weight": 2
+    }
+   ],
+   "category": "Worship",
+   "id": 212,
+   "text": "Christians are still commanded to rest from ordinary work one day in seven.",
+   "tier": "advanced",
+   "traditions": {
+    "baptist": 2,
+    "dispensational": -1,
+    "lutheran": -2,
+    "reformed": 2
+   }
+  },
+  {
+   "axes": [
+    {
+     "axis": "eschatology",
+     "direction": -1,
+     "weight": 3
+    }
+   ],
+   "category": "Eschatology",
+   "id": 213,
+   "text": "A rebuilt temple in Jerusalem, with animal sacrifices, will be part of the future millennial kingdom.",
+   "tier": "advanced",
+   "traditions": {
+    "anglican": -1,
+    "baptist": -2,
+    "dispensational": 2,
+    "pentecostal": 1,
+    "reformed": -2
+   }
+  },
+  {
+   "axes": [
+    {
+     "axis": "eschatology",
+     "direction": 1,
+     "weight": 3
+    }
+   ],
+   "category": "Eschatology",
+   "id": 214,
+   "text": "The 'thousand years' of Revelation 20 describes Christ's present reign through the church, not a future earthly kingdom.",
+   "tier": "advanced",
+   "traditions": {
+    "dispensational": -2,
+    "lutheran": 1,
+    "pentecostal": -1,
+    "reformed": 1
+   }
+  },
+  {
+   "axes": [
+    {
+     "axis": "eschatology",
+     "direction": 1,
+     "weight": 2
+    }
+   ],
+   "category": "Eschatology",
+   "id": 215,
+   "text": "Certain prophesied events \u2014 like the worldwide spread of the gospel \u2014 must happen before Christ can return.",
+   "tier": "standard",
+   "traditions": {
+    "dispensational": -2,
+    "pentecostal": -2,
+    "reformed": 1,
+    "wesleyan": 1
+   }
+  },
+  {
+   "axes": [
+    {
+     "axis": "eschatology",
+     "direction": 1,
+     "weight": 3
+    }
+   ],
+   "category": "Eschatology",
+   "id": 216,
+   "text": "At Christ's return there will be one general resurrection and one final judgment of all people together.",
+   "tier": "essential",
+   "traditions": {
+    "anabaptist": 2,
+    "anglican": 1,
+    "baptist": 2,
+    "dispensational": -2,
+    "lutheran": 2,
+    "pentecostal": -2,
+    "reformed": 2
+   }
+  }
+ ]
+}
